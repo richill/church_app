@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <% if user_signed_in? %>
+          <li class="user_name"><%= link_to "#{current_user.firstname}'s Profile", user_path(current_user) %></li>
+          <li><%= link_to "Members", users_path %></li>
+          <li><%= link_to "Sign-out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Sign-in", new_user_session_path %></li>
+          <li><%= link_to "Sign-up", new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </header>
+
+    <%= yield %>
+
+  </body>
+</html>
