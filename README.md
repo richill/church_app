@@ -1,2 +1,1 @@
-# app_railsTemplate
-web application rails template
+# church_app
