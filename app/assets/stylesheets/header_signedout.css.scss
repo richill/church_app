@@ -4,13 +4,19 @@
   ===================================================*/
 
 .nav_section {
-  padding: 10px 15px;
+  padding: 0 !important;
   background-color: red;
 }
 
 .nav_inner_section {
   width: 1150px;
-  padding: 0px !important;
+  margin: auto;
+}
+
+.upper_header_content {
+  padding: 10px 15px;
+  background-color: orange;
+      // height: 50px;
 }
 
 .nav_list {
