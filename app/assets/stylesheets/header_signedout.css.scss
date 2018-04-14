@@ -23,6 +23,9 @@
 }
 
 .nav_list ul li {
+  font-size: 11px;
+  word-spacing: 1px;
+  letter-spacing: 1px;
   float: right;
   margin-left: 5px; 
   background-color: green;
@@ -30,6 +33,10 @@
   padding: 5px 10px;
 }
 
-// .nav_list ul li a {
+.nav_list ul li a {
+  color: #fff !important;
+}
 
-// }
+.nav_list ul li span {
+  color: #fff !important;
+}
