@@ -2,15 +2,20 @@
   <header class="nav_inner_section">
     <nav class="nav_list">
       <ul>
-        <li>hello</li>
-        <li><%= link_to "Home", root_path %></li>
         <% if user_signed_in? %>
           <li class="user_name"><%= link_to "#{current_user.firstname}'s Profile", user_path(current_user) %></li>
           <li><%= link_to "Members", users_path %></li>
           <li><%= link_to "Sign-out", destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to "Sign-in", new_user_session_path %></li>
-          <li><%= link_to "Sign-up", new_user_registration_path %></li>
+          <li>
+            <span><%= link_to "register", new_user_registration_path %></span>
+            <span><%= link_to "login", new_user_session_path %></span>
+          </li>
+          <li>
+            <span><i class="fa fa-home"></i></span>
+            <span><%= link_to "Homepage", root_path %></span>
+          </li>
+          <li>hello</li>
         <% end %>
       </ul>
     </nav>
