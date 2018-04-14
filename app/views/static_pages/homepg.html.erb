@@ -1,2 +1,6 @@
-<h1>Open Heavens Homepage</h1>
-<p>Find me in app/views/static_pages/homepg.html.erb</p>
+<% provide(:title, "Homepage") %>
+<div>
+  <%= render 'shared/header_signedout' %>
+  <%= render 'shared/content_homepg_signedout' %>
+  <%= render 'shared/footer' %>
+</div>
