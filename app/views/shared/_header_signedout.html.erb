@@ -20,9 +20,10 @@
             <span><i class="fa fa-home"></i></span>
             <span><%= link_to "Homepage", root_path %></span>
           </li>
-          <li>
-            <div><%= Date.today %></div>
-            <div><%= Date.today %></div>
+          <li class="date"><%= Date.today.strftime("%b %d, %Y") %></li>
+          <li class="hide">
+            <div><%= Date.today.strftime("%b") %></div>
+            <div><%= Date.today.strftime("%d") %></div>
           </li>
         <% end %>
       </ul>
