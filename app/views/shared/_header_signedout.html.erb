@@ -1,5 +1,5 @@
 <div class="medium-12 columns nav_section">
-  <header class="nav_inner_section">
+  <header class="medium-12 columns nav_inner_section">
     <nav class="nav_list">
       <ul>
         <% if user_signed_in? %>
@@ -8,8 +8,13 @@
           <li><%= link_to "Sign-out", destroy_user_session_path, method: :delete %></li>
         <% else %>
           <li>
+            <span>
+              <span><i class="fa fa-user"></i></span>
+              <span>for more</span>
+              <span><%= link_to "login", new_user_session_path %></span>
+            </span>
+            <span>|</span>
             <span><%= link_to "register", new_user_registration_path %></span>
-            <span><%= link_to "login", new_user_session_path %></span>
           </li>
           <li>
             <span><i class="fa fa-home"></i></span>
