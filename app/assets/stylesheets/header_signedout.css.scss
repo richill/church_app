@@ -74,11 +74,10 @@
 }
 
 .nav_list_lower ul li {
-  font-size: 11px;
-  word-spacing: 1px;
-  letter-spacing: 1px;
+  font-size: 14px;
+  // word-spacing: 1px;
+  // letter-spacing: 1px;
   float: right;
-  margin-left: 5px; 
   display: inline-block;
 }
 
@@ -86,6 +85,18 @@
 .listed_contents {
   padding: 0px !important;
   background-color: orange;
+}
+
+.nav_list_lower ul li a {
+  color: #fff !important;
+  display: inline-block;
+  background-color: blue;
+  padding: 10px 15px;
+}
+
+.nav_list_lower ul li a:hover {
+  background-color: green;
+  text-decoration: none;
 }
 
 
