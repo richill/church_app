@@ -4,38 +4,66 @@
     <div class="nav_inner_section">
       <!-- upper_header_content -->
       <div class="medium-12 columns upper_header_content">
-        <nav class="nav_list">
-          <ul>
-            <% if user_signed_in? %>
-              <li class="user_name"><%= link_to "#{current_user.firstname}'s Profile", user_path(current_user) %></li>
-              <li><%= link_to "Members", users_path %></li>
-              <li><%= link_to "Sign-out", destroy_user_session_path, method: :delete %></li>
-            <% else %>
-              <li>
-                <span>
-                  <span><i class="fa fa-user"></i></span>
-                  <span>for more</span>
-                  <span><%= link_to "login", new_user_session_path %></span>
-                </span>
-                <span>|</span>
-                <span><%= link_to "register", new_user_registration_path %></span>
-              </li>
-              <li>
-                <span><i class="fa fa-home"></i></span>
-                <span><%= link_to "Homepage", root_path %></span>
-              </li>
-              <li class="date"><%= Date.today.strftime("%b %d, %Y") %></li>
-            <% end %>
-          </ul>
-        </nav>
+        <div class="header_inner_content">
+          <nav class="nav_list_upper">
+            <ul>
+              <% if user_signed_in? %>
+                <li class="user_name"><%= link_to "#{current_user.firstname}'s Profile", user_path(current_user) %></li>
+                <li><%= link_to "Members", users_path %></li>
+                <li><%= link_to "Sign-out", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li>
+                  <span>
+                    <span><i class="fa fa-user"></i></span>
+                    <span>For more</span>
+                    <span><%= link_to "login", new_user_session_path %></span>
+                  </span>
+                  <span>|</span>
+                  <span><%= link_to "register", new_user_registration_path %></span>
+                </li>
+                <li>
+                  <span><i class="fa fa-home"></i></span>
+                  <span><%= link_to "homepage", root_path %></span>
+                </li>
+                <li class="date"><%= Date.today.strftime("%b %d, %Y") %></li>
+              <% end %>
+            </ul>
+          </nav>
+        </div>
       </div>
 
       <div class="clear"></div>
 
       <!-- lower_header_content -->
-      <div class="medium-12 columns lower_header_content">hello</div>
+      <div class="medium-12 columns lower_header_content">
+        <div class="header_inner_content">
+          <nav class="nav_list_lower">
+            <ul class="medium-12 columns listed_contents">  
+              <li><%= link_to "contact", "#" %></li>
+              <li><%= link_to "resources", "#" %></li>
+              <li><%= link_to "news", "#" %></li>
+              <li><%= link_to "i-connect", "#" %></li>
+              <li><%= link_to "events", "#" %></li>
+              <li><%= link_to "about us", "#" %></li>
+              <li><%= link_to "home", "#" %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
 
   </header>
 </div>
+
 <div class="clear"></div>
+
+
+
+
+
+
+
+
+
+
+
