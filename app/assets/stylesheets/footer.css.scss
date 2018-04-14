@@ -1,0 +1,43 @@
+/*===================================================
+    Page: footer
+    File: views/shared/_footer.html.erb
+  ===================================================*/
+
+.footer_section {
+  padding: 0 !important;
+  background-color: red;
+}
+
+.footer_section .footer_inner_main_section {
+  padding: 0px !important;
+}
+
+
+// ------------------------------
+//   footer_content
+// ------------------------------
+.footer_section .footer_content {
+  padding: 10px 15px;
+  background-color: #20232C;
+  color: #fff;
+}
+
+.footer_section .footer_inner_content {
+  width: 1150px;
+  margin: auto;
+}
+
+
+.left_content {
+  padding: 0px !important;
+  background-color: green;
+}
+
+.right_content {
+  padding: 0px !important;
+  background-color: red;
+}
+
+
+
+
