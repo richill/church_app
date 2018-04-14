@@ -12,10 +12,6 @@
   padding: 0px !important;
 }
 
-
-// ------------------------------
-//   footer_content
-// ------------------------------
 .footer_section .footer_content {
   padding: 10px 15px;
   background-color: #20232C;
@@ -27,21 +23,23 @@
   margin: auto;
 }
 
-.left_content {
+.footer_section .left_content {
   padding: 0px !important;
-  // background-color: green;
 }
 
-.right_content {
+.footer_section .right_content {
   padding: 0px !important;
-  // background-color: red;
 }
 
-.footer_header {
+.footer_section .footer_header {
   font-size: 35px;
   font-weight: 400;
   text-transform: capitalize;
   margin-bottom: 10px;
+}
+
+.footer_section .footer_text {
+  font-size: 12px;
 }
 
 .footer_text a {
@@ -54,7 +52,11 @@
   margin-top: 15px;
 }
 
-.service_times_section a {
+.footer_section .service_times_section {
+  font-size: 12px;
+}
+
+.footer_section .service_times_section a {
   font-weight: bold;
   font-size: 12px;
   color: #57738E !important;
@@ -63,10 +65,78 @@
   display: inline-block;
 }
 
-.day {
+.footer_section .day {
   text-transform: capitalize;;
   text-decoration: underline;
 }
+
+.footer_section .social_media_section {
+  margin-top: 25px;
+}
+
+.footer_section .social_media_section ul {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.footer_section .social_media_section ul li {
+  float: left;
+  margin-right: 15px;
+}
+
+.footer_section .social_media_section ul li a {
+  color: #fff !important;
+  font-size: 50px;
+}
+
+.footer_section .social_media_section ul li a:hover {
+  text-decoration: none !important;
+  color: #57738E !important;
+}
+
+.footer_section .site_links {
+  margin: 30px 0px 80px;
+}
+
+.footer_section .site_links ul {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.footer_section .site_links ul li {
+  float: left;
+  margin-right: 10px;
+}
+
+.footer_section .site_links ul li a {
+  color: #fff !important;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+.footer_section .mini_header {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+
+.footer_section .lower_content {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.footer_section .lower_content img {
+  width: 200px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
