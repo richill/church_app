@@ -5,7 +5,7 @@
 
 .nav_section {
   padding: 0 !important;
-  background-color: red;
+  background-color: transparent;
   margin-bottom: 50px;
 }
 
@@ -18,7 +18,7 @@
 // ------------------------------
 .nav_section .upper_header_content {
   padding: 10px 15px;
-  background-color: orange;
+  background: linear-gradient(#57738E, #1dc6df);
 }
 
 .nav_section .header_inner_content {
