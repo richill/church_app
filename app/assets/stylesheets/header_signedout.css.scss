@@ -94,12 +94,18 @@
   padding: 10px 15px;
   background-color: rgba(42, 44, 73, 0.1);
   border-bottom: solid 2px transparent;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .nav_section .nav_list_lower ul li a:hover {
   background-color: rgba(157, 198, 235, 0.6);
   border-bottom: solid 2px #57738E;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .lower_header_content .img_container {
