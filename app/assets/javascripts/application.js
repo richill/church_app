@@ -37,9 +37,9 @@ $(document).ready(function() {
       $("#linkContainer_aboutus").hide();
     });
     //Popup on click
-    $("#linkContainer_aboutus").click(function() {
-      return true;
-    });
+    // $("#linkContainer_aboutus").click(function() {
+    //   return true;
+    // });
   });
 
   // [nav links] link_serve
