@@ -1,10 +1,5 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
 gem 'rails', '~> 5.0.2'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
@@ -16,6 +11,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'foundation-rails'
+gem 'jquery-ui-rails'
 gem 'devise'
 
 group :development, :test do

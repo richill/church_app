@@ -42,13 +42,86 @@
           </div>
           <nav class="nav_list_lower">
             <ul class="medium-12 columns listed_contents">  
-              <li><%= link_to "contact", "#" %></li>
-              <li><%= link_to "resources", "#" %></li>
-              <li><%= link_to "news", "#" %></li>
-              <li><%= link_to "i-connect", "#" %></li>
-              <li><%= link_to "events", "#" %></li>
-              <li><%= link_to "about us", "#" %></li>
-              <li><%= link_to "home", "#", class: "active" %></li>
+             
+             <li>
+                <div><%= link_to 'contact', '#', id: "link_contact", class: "main_links" %></div>
+                <div id="linkContainer_contact">
+                  <div id="linkBody_contact" class="listed_link">
+                    <ul>
+                      <li><%= link_to "giving", "#" %></li>
+                      <li><%= link_to "service times", "#" %></li>
+                      <li><%= link_to "get connected", "#" %></li>
+                      <li><%= link_to "contact list", "#" %></li>
+                      <li><%= link_to "directions", "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div><%= link_to 'resources', '#', id: "link_resources", class: "main_links" %></div>
+                <div id="linkContainer_resources">
+                  <div id="linkBody_resources" class="listed_link">
+                    <ul>
+                      <li><%= link_to "multimedia portal", "#" %></li>
+                      <li><%= link_to "useful services", "#" %></li>
+                      <li><%= link_to "careers & volunteers", "#" %></li>
+                      <li><%= link_to "kids", "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li><div><%= link_to 'grow', '#', id: "link_grow", class: "main_links" %></div></li>
+              
+              <li>
+                <div><%= link_to 'events', '#', id: "link_events", class: "main_links" %></div>
+                <div id="linkContainer_events">
+                  <div id="linkBody_events" class="listed_link">
+                    <ul>
+                      <li><%= link_to "our people", "#" %></li>
+                      <li><%= link_to "our core values", "#" %></li>
+                      <li><%= link_to "statement of faith", "#" %></li>
+                      <li><%= link_to "who is Jesus", "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div><%= link_to 'connect', '#', id: "link_connect", class: "main_links" %></div>
+                <div id="linkContainer_connect">
+                  <div id="linkBody_connect" class="listed_link">
+                    <ul>
+                      <li><%= link_to "bible studies", "#" %></li>
+                      <li><%= link_to "minitries", "#" %></li>
+                      <li><%= link_to "discussions", "#" %></li>
+                      <li><%= link_to "youth zone", "#" %></li>
+                      <li><%= link_to "deep wells", "#" %></li>
+                      <li><%= link_to "galleries", "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li><div><%= link_to 'serve', '#', id: "link_serve", class: "main_links" %></div></li>
+              
+              <li>
+                <div><%= link_to 'aboutus', '#', id: "link_aboutus", class: "main_links" %></div>
+                <div id="linkContainer_aboutus">
+                  <div id="linkBody_aboutus" class="listed_link">
+                    <ul>
+                      <li><%= link_to "our people", "#" %></li>
+                      <li><%= link_to "our core values", "#" %></li>
+                      <li><%= link_to "statement of faith", "#" %></li>
+                      <li><%= link_to "who is Jesus", "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li><%= link_to "home", "#", class: "active main_links" %></li>
+
             </ul>
           </nav>
         </div>

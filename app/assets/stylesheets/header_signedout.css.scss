@@ -6,7 +6,7 @@
 .nav_section {
   padding: 0 !important;
   background-color: transparent;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .nav_section .nav_inner_main_section {
@@ -68,9 +68,9 @@
   padding: 0px;
 }
 
-.nav_list_lower {
-  float: right;
-}
+// .nav_list_lower {
+//   float: right;
+// }
 
 .nav_list_lower ul {
   margin: 0px !important;
@@ -78,6 +78,10 @@
 }
 
 .nav_section .nav_list_lower ul li {
+  font-size: 14px;
+}
+
+.nav_section .nav_list_lower ul .main_links {
   font-size: 14px;
   float: right;
   display: inline-block;
@@ -88,7 +92,7 @@
   background-color: transparent;
 }
 
-.nav_section .nav_list_lower ul li a {
+.nav_section .nav_list_lower ul li .main_links {
   color: #2A2C49 !important;
   display: inline-block;
   padding: 10px 15px;
@@ -108,7 +112,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.lower_header_content .img_container {
+.nav_section .lower_header_content .img_container {
   background-color: transparent;
   height: 76px;
   position: absolute;
@@ -116,10 +120,128 @@
   margin-top: 15px;
 }
 
-.lower_header_content .img_container img {
+.nav_section .lower_header_content .img_container img {
   width: 200px;
   position: absolute;
 }
+
+.nav_section .listed_link ul {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.nav_section .listed_link ul li {
+  float: left;
+  display: inline-block;
+}
+
+.nav_section .listed_link ul li a {
+  float: left !important;
+  font-size: 12px;
+  margin-right: 15px;
+  text-transform: capitalize;
+  color: #2A2C49 !important;
+}
+
+.nav_section .listed_link ul li a:hover {
+  text-decoration: underline !important;
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+
+// ------- link_aboutus -------
+.nav_section #linkContainer_aboutus {
+  background-color: rgba(42, 44, 73, 0.1);
+  overflow: visible;
+  position: absolute;
+  width: 629px;
+  z-index: 1000;
+  top: 41px;
+  left: 521px;
+  padding: 10px 15px;
+  display: none; /*info: Enable this after jquery implementation*/ 
+}
+
+.nav_section #linkBody_aboutus {
+  padding: 0px 0px 0px 0px !important;
+}
+
+
+// ------- link_connect -------
+.nav_section #linkContainer_connect {
+  background-color: rgba(42, 44, 73, 0.1);
+  overflow: visible;
+  position: absolute;
+  width: 629px;
+  z-index: 1000;
+  top: 41px;
+  left: 521px;
+  padding: 10px 15px;
+  display: none; /*info: Enable this after jquery implementation*/ 
+}
+
+.nav_section #linkBody_events {
+  padding: 0px 0px 0px 0px !important;
+}
+
+
+// ------- link_events -------
+.nav_section #linkContainer_events {
+  background-color: rgba(42, 44, 73, 0.1);
+  overflow: visible;
+  position: absolute;
+  width: 629px;
+  z-index: 1000;
+  top: 41px;
+  left: 521px;
+  padding: 10px 15px;
+  display: none; /*info: Enable this after jquery implementation*/ 
+}
+
+.nav_section #linkBody_events {
+  padding: 0px 0px 0px 0px !important;
+}
+
+
+// ------- link_resources -------
+.nav_section #linkContainer_resources {
+  background-color: rgba(42, 44, 73, 0.1);
+  overflow: visible;
+  position: absolute;
+  width: 629px;
+  z-index: 1000;
+  top: 41px;
+  left: 521px;
+  padding: 10px 15px;
+  display: none; /*info: Enable this after jquery implementation*/ 
+}
+
+.nav_section #linkBody_resources {
+  padding: 0px 0px 0px 0px !important;
+}
+
+
+// ------- link_contact -------
+.nav_section #linkContainer_contact {
+  background-color: rgba(42, 44, 73, 0.1);
+  overflow: visible;
+  position: absolute;
+  width: 629px;
+  z-index: 1000;
+  top: 41px;
+  left: 521px;
+  padding: 10px 15px;
+  display: none; /*info: Enable this after jquery implementation*/ 
+}
+
+.nav_section #linkBody_contact {
+  padding: 0px 0px 0px 0px !important;
+}
+
+
+
+
 
 
 
