@@ -3,6 +3,7 @@
     File: views/shared/_header_signedout.html.erb
   ===================================================*/
 
+// tab selection conetnt
 $(document).ready(function() {
   $("#content2_info").hide();
   $("#content3_info").hide();

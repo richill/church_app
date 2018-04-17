@@ -17,6 +17,11 @@
 // -----------------------------
 //     workings
 // -----------------------------
+.homepage_content {
+  margin-bottom: 30px;
+  padding: 0px !important;
+}
+
 .homepage_content .left_content {
   background-color: green;
   padding: 0px !important
@@ -25,7 +30,6 @@
 
 .homepage_content .main_section {
   background-color: blue;
-  margin-right: 25px;
   padding: 0px !important;
 }
 
@@ -68,13 +72,14 @@
   background-color: orange;
   width: 240px;
   padding: 15px;
-  height: 264px;
-  overflow: scroll;
-  position: relative;
+  height: 295px;
 }
 
 .title_content_info ul li {
-  position: absolute;
+  font-size: 10px;
+  overflow: scroll;
+  position: relative;
+  height: 265px;
 }
 
 .activecontent {
