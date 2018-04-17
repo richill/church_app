@@ -14,86 +14,102 @@
   margin-bottom: 30px;
 }
 
-// -----------------------------
-//     workings
-// -----------------------------
-.homepage_content {
+.activecontent {
+  background-color: rgba(42, 44, 73, 0.15) !important;
+}
+
+.content_homepg_signedout_section .homepage_content {
   margin-bottom: 30px;
   padding: 0px !important;
 }
 
-.homepage_content .left_content {
-  background-color: green;
+.content_homepg_signedout_section .left_content {
+  background-color: transparent;
   padding: 0px !important
 }
 
-
-.homepage_content .main_section {
-  background-color: blue;
+.content_homepg_signedout_section .left_content .main_section {
+  background-color: transparent;
   padding: 0px !important;
 }
 
-.homepage_content .main_section ul {
+.content_homepg_signedout_section .left_content .main_section ul {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.main_section ul .li_main {
+.content_homepg_signedout_section .left_content .main_section ul .li_main {
   float: left;
 }
 
-.li_main_left {
-  background-color: green;
+.content_homepg_signedout_section .left_content .li_main_left {
   width: 110px;
 }
 
-
-.title_content ul li {
+.content_homepg_signedout_section .left_content .title_content ul li {
   background-color: rgba(42, 44, 73, 0.1);
   width: 100%;
   display: inherit;
   font-size: 14px;
-  padding: 15px;
+  padding: 19px 15px;
   text-align: right;
+  font-size: 12px;
+  font-weight: bold;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.title_content ul li:hover {
+.content_homepg_signedout_section .left_content .title_content ul li:hover {
   text-decoration: none;
-  background-color: rgba(157, 198, 235, 0.6) !important;
+  cursor: pointer;
+  background-color: rgba(42, 44, 73, 0.15) !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
 .li_main_right {
-  background-color: orange;
+  background-color: rgba(42, 44, 73, 0.15);
   width: 240px;
   padding: 15px;
-  height: 295px;
+  height: 296px;
 }
 
-.title_content_info ul li {
+.content_homepg_signedout_section .left_content .title_content_info ul li {
   font-size: 10px;
   overflow: scroll;
   position: relative;
   height: 265px;
 }
 
-.activecontent {
-  background-color: rgba(157, 198, 235, 0.6) !important;
+.content_homepg_signedout_section .left_content #content1 {
+  color: #a1355b; 
+}
+
+.content_homepg_signedout_section .left_content #content2 {
+  color: #7fa135;
+}
+
+.content_homepg_signedout_section .left_content #content3 {
+  color: #357fa1; 
+}
+
+.content_homepg_signedout_section .left_content #content4 {
+  color: #a07b35; 
 }
 
 
 
-
-
-
-
+// -----------------------------
+//     workings
+// -----------------------------
 
 .homepage_content .right_content {
-  background-color: red;
+  background-color: rgba(42, 44, 73, 0.15);
   padding: 0px !important
+}
+
+.inner_right_content div {
+  height: 296px;
 }

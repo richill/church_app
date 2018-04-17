@@ -5,6 +5,7 @@
 
 // tab selection conetnt
 $(document).ready(function() {
+  $("#content1").addClass("activecontent");
   $("#content2_info").hide();
   $("#content3_info").hide();
   $("#content4_info").hide();
