@@ -13,3 +13,82 @@
   background-color: rgba(42, 44, 73, 0.1);
   margin-bottom: 30px;
 }
+
+// -----------------------------
+//     workings
+// -----------------------------
+.homepage_content .left_content {
+  background-color: green;
+  padding: 0px !important
+}
+
+
+.homepage_content .main_section {
+  background-color: blue;
+  margin-right: 25px;
+  padding: 0px !important;
+}
+
+.homepage_content .main_section ul {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.main_section ul .li_main {
+  float: left;
+}
+
+.li_main_left {
+  background-color: green;
+  width: 110px;
+}
+
+
+.title_content ul li {
+  background-color: rgba(42, 44, 73, 0.1);
+  width: 100%;
+  display: inherit;
+  font-size: 14px;
+  padding: 15px;
+  text-align: right;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.title_content ul li:hover {
+  text-decoration: none;
+  background-color: rgba(157, 198, 235, 0.6) !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.li_main_right {
+  background-color: orange;
+  width: 240px;
+  padding: 15px;
+  height: 264px;
+  overflow: scroll;
+  position: relative;
+}
+
+.title_content_info ul li {
+  position: absolute;
+}
+
+.activecontent {
+  background-color: rgba(157, 198, 235, 0.6) !important;
+}
+
+
+
+
+
+
+
+
+.homepage_content .right_content {
+  background-color: red;
+  padding: 0px !important
+}
