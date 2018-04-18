@@ -1,4 +1,4 @@
-<!-- _content_homepg_signedout.html.erb -->
+<!-- _content_homepg_signedout.html.erb [reponsive] -->
 <div class="medium-12 columns content_homepg_signedout_section">
   <div class="content_homepg_signedout_inner_section">
     <div class="medium-12 columns homepage_content">
@@ -46,11 +46,61 @@
     </div>
   </div>
 </div>
-<!-- _content_homepg_signedout.html.erb -->
+<!-- _content_homepg_signedout.html.erb [reponsive] -->
+
+<!-- _content_homepg_signedout.html.erb [non-reponsive] -->
+<div class="content_homepg_signedout_section">
+  <div class="content_homepg_signedout_inner_section">
+    <div class="homepage_content">
+
+      <div class="left_content">
+        <div class="inner_left_content">
+          <div class="main_section">
+            <ul>
+              <li class="li_main li_main_left">
+                <div class="title_content">
+                  <ul>
+                    <li id="content1">in pursuit of God</li>
+                    <li id="content2">discovering PURPOSE</li>
+                    <li id="content3">maximizing POTENTIAL</li>
+                    <li id="content4">impacting LIVES</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="li_main li_main_right">
+                <div class="title_content_info">
+                  <ul>
+                    <li id="content1_info">IN PURSUIT OF GOD: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                    <li id="content2_info">DISCOVERING PURPOSE: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                    <li id="content3_info">MAXIMIZING POTENTIAL: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                    <li id="content4_info">IMPACTING LIVES: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="right_content">
+        <div class="inner_right_content">
+          <div>right_content: carousel autoplay jquery</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- _content_homepg_signedout.html.erb [non-reponsive] -->
 
 
 
-<!-- _header_signedout.html.erb -->
+<!-- _header_signedout.html.erb [reponsive] -->
 <div class="medium-12 columns nav_section">
   <header class="medium-12 columns nav_inner_main_section">
     <div class="nav_inner_section">
@@ -184,11 +234,147 @@
   </header>
 </div>
 <div class="clear"></div>
-<!-- _header_signedout.html.erb -->
+<!-- _header_signedout.html.erb [reponsive] -->
+
+<!-- _header_signedout.html.erb [non-reponsive] -->
+<div class="nav_section">
+  <header class="nav_inner_main_section">
+    <div class="nav_inner_section">
+
+      <!-- upper_header_content -->
+      <div class="upper_header_content">
+        <div class="header_inner_content">
+          <nav class="nav_list_upper">
+            <ul>
+              <% if user_signed_in? %>
+                <li class="user_name"><%= link_to "#{current_user.firstname}'s Profile", user_path(current_user) %></li>
+                <li><%= link_to "Members", users_path %></li>
+                <li><%= link_to "Sign-out", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li>
+                  <span>
+                    <span><i class="fa fa-user"></i></span>
+                    <span>For more</span>
+                    <span><%= link_to "login", new_user_session_path %></span>
+                  </span>
+                  <span>|</span>
+                  <span><%= link_to "register", new_user_registration_path %></span>
+                </li>
+                <li>
+                  <span><i class="fa fa-home"></i></span>
+                  <span><%= link_to "homepage", root_path %></span>
+                </li>
+                <li class="date"><%= Date.today.strftime("%b %d, %Y") %></li>
+              <% end %>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+      <!-- lower_header_content -->
+      <div class="lower_header_content">
+        <div class="header_inner_content">
+          <div class="img_container">
+            <span><%= link_to (image_tag("img_logo00.png")), root_path %></span>
+          </div>
+          <nav class="nav_list_lower">
+            <ul class="listed_contents">  
+             
+             <li>
+                <div><%= link_to 'contact', '#', id: "link_contact", class: "main_links" %></div>
+                <div id="linkContainer_contact">
+                  <div id="linkBody_contact" class="listed_link">
+                    <ul>
+                      <li><%= link_to "giving", "#" %></li>
+                      <li><%= link_to "service times", "#" %></li>
+                      <li><%= link_to "get connected", "#" %></li>
+                      <li><%= link_to "contact list", "#" %></li>
+                      <li><%= link_to "directions", "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div><%= link_to 'resources', '#', id: "link_resources", class: "main_links" %></div>
+                <div id="linkContainer_resources">
+                  <div id="linkBody_resources" class="listed_link">
+                    <ul>
+                      <li><%= link_to "multimedia portal", "#" %></li>
+                      <li><%= link_to "useful services", "#" %></li>
+                      <li><%= link_to "careers & volunteers", "#" %></li>
+                      <li><%= link_to "kids", "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li><div><%= link_to 'grow', '#', id: "link_grow", class: "main_links" %></div></li>
+              
+              <li>
+                <div><%= link_to 'events', '#', id: "link_events", class: "main_links" %></div>
+                <div id="linkContainer_events">
+                  <div id="linkBody_events" class="listed_link">
+                    <ul>
+                      <li><%= link_to "our people", "#" %></li>
+                      <li><%= link_to "our core values", "#" %></li>
+                      <li><%= link_to "statement of faith", "#" %></li>
+                      <li><%= link_to "who is Jesus", "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div><%= link_to 'connect', '#', id: "link_connect", class: "main_links" %></div>
+                <div id="linkContainer_connect">
+                  <div id="linkBody_connect" class="listed_link">
+                    <ul>
+                      <li><%= link_to "bible studies", "#" %></li>
+                      <li><%= link_to "minitries", "#" %></li>
+                      <li><%= link_to "discussions", "#" %></li>
+                      <li><%= link_to "youth zone", "#" %></li>
+                      <li><%= link_to "deep wells", "#" %></li>
+                      <li><%= link_to "galleries", "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li><div><%= link_to 'serve', '#', id: "link_serve", class: "main_links" %></div></li>
+              
+              <li>
+                <div><%= link_to 'about us', '#', id: "link_aboutus", class: "main_links" %></div>
+                <div id="linkContainer_aboutus">
+                  <div id="linkBody_aboutus" class="listed_link">
+                    <ul>
+                      <li><%= link_to "our people", "#" %></li>
+                      <li><%= link_to "our core values", "#" %></li>
+                      <li><%= link_to "statement of faith", "#" %></li>
+                      <li><%= link_to "who is Jesus", "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li><%= link_to "home", "#", class: "active main_links" %></li>
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </header>
+</div>
+<div class="clear"></div>
+<!-- _header_signedout.html.erb [non-reponsive] -->
 
 
 
-<!-- _footer.html.erb -->
+<!-- _footer.html.erb [reponsive] -->
 <div class="medium-12 columns nav_section footer_section">
   <header class="medium-12 columns nav_inner_main_section footer_inner_main_section">
     <div class="footer_inner_section">
@@ -281,7 +467,102 @@
   </header>
 </div>
 <div class="clear"></div>
-<!-- _footer.html.erb -->
+<!-- _footer.html.erb [reponsive] -->
+
+<!-- _footer.html.erb [non-reponsive] -->
+<div class="footer_section">
+  <header class="nav_inner_main_section footer_inner_main_section">
+    <div class="footer_inner_section">
+
+      <!-- footer_content -->
+      <div class="footer_content">
+        <div class="footer_inner_content">
+          <div>
+            <!-- left_content -->
+            <div class="left_content">
+              <div class="footer_header">open heavens</div>
+              <div class="footer_text">Open Heavens is a registered Charity (1084577) and Company limited by guarantee in England.</div>
+              <div class="footer_text">If you need to speak to a <%= link_to " counsellor", "#" %> urgently, please call the church office on 020 8958 4040.</div>
+              <div class="footer_text">Please be sure to read our <%= link_to " privacy policy", "#" %></div>
+
+              <div class="rcc_logoimage_section">
+                <div>
+                  <span><%= link_to (image_tag("img_logo_rcc.png")), "http://rccg.org/", target:"_blank" %></span>
+                  <span class="text">Open Heavens Christian Centre Edgware is under The Redeemed Christian Church of God</span>
+                </div>
+              </div>
+
+              <div class="service_times_section">
+                <div><%= link_to "service times", "#" %></div>
+                <div class="day">sunday</div>
+                <div>Sunady Service: 10:00am to 12pm</div>
+                <div class="day" style="margin-top: 5px;">wednesday</div>
+                <div>Bible Study: 7pm to 8:30pm</div>
+              </div>
+
+              <div class="social_media_section">
+                <ul>
+                  <li><%= link_to '', 'https://www.youtube.com/channel/UC04lsiRC0cEgW6I_VqGW77A', class: "fa fa-youtube", target:"_blank" %></li>
+                  <li><%= link_to '', 'https://www.facebook.com/Open-Heavens-Christian-Centre-Edgware-London-189686507841221/', class: "fa fa-facebook-square", target:"_blank" %></li>
+                  <li><%= link_to '', 'https://twitter.com/OpenHeavensEdg', class: "fa fa-twitter-square", target:"_blank" %></li>
+                  <li class="hide"><%= link_to '', '#', class: "fa fa-linkedin-square", target:"_blank" %></li>
+                  <li><%= link_to '', '#', class: "fa fa-instagram", target:"_blank" %></li>
+                </ul>   
+              </div>
+              <div class="clear"></div>
+              <div class="site_links">
+                <ul>
+                  <li><%= link_to "home", "#" %></li>
+                  <li>|</li>
+                  <li><%= link_to "about us", "#" %></li>
+                  <li>|</li>
+                  <li><%= link_to "news", "#" %></li>
+                  <li>|</li>
+                  <li><%= link_to "events", "#" %></li>
+                  <li>|</li>
+                  <li><%= link_to "resources", "#" %></li>
+                  <li>|</li>
+                  <li><%= link_to "contacts", "#" %></li>
+                  <li>|</li>
+                  <li><%= link_to "communities & forum", "#" %></li>
+                  <li>|</li>
+                  <li><%= link_to "careers & volunteering", "#" %></li>
+                  <li>|</li>
+                  <li><%= link_to "multimedia portal", "#" %></li>
+                </ul>
+              </div>
+              <div>
+                2018 © All rights reserved
+              </div>
+            </div>
+
+            <!-- right_content -->
+            <div class="right_content">
+              <div class="footer_header">find us</div>
+              <div class="upper_content">
+                <div class="mini_header">open heavens christian centre</div>
+                <div>194 Broadfields Ave</div>
+                <div>Edgware HA8 8TF</div>
+                <div>London</div>
+                <div>HA8 8TF</div>
+              </div>
+              <div class="lower_content">
+                <div>T: 020 8958 4040</div>
+                <div>E: info@openheavens.org.uk</div>
+              </div>
+              <div class="lower_content">
+                <div><%= link_to (image_tag "img_alliance.png"), "#", target: "_blank" %></div>
+                <div>Membership no. 243238.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+<div class="clear"></div>
+<!-- _footer.html.erb [non-reponsive] -->
 
 
 
