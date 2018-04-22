@@ -112,7 +112,7 @@
 
 
 // -----------------------------
-//     carsouel
+//     begin-carsouel
 // -----------------------------
 .content_homepg_signedout_section .wrapper{
   width:100%;
@@ -250,44 +250,39 @@
 
 .content_homepg_signedout_section .slide:nth-child(3){
   background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-3.jpg);
- }
-
-
-
-
+}
 
 // -----------------------------
-//     workings
+//     end-carsouel
 // -----------------------------
 
 
 
-
-.bottom_content {
+.content_homepg_signedout_section .bottom_content {
   padding: 0px !important;
   margin-top: 25px;
 }
 
-.inner_bottom_content {
+.content_homepg_signedout_section .inner_bottom_content {
   height: 100px;
   background-color: transparent;
 }
 
-.img_icon_info ul {
+.content_homepg_signedout_section .img_icon_info ul {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.img_icon_info ul li {
+.content_homepg_signedout_section .img_icon_info ul li {
   float: left;
   margin-right: 10px;
 }
 
-.img_icon_info ul li:last-child {
+.content_homepg_signedout_section .img_icon_info ul li:last-child {
   margin-right: 0px;
 }
 
-.img_icon_info ul li a {
+.content_homepg_signedout_section .img_icon_info ul li a {
   color: #2A2C49 !important;
   background-color: rgba(42, 44, 73, 0.15) !important;
   display: inline-block;
@@ -300,23 +295,49 @@
   padding: 15px 0px;
 }
 
-.img_icon_info ul li a:hover {
+.content_homepg_signedout_section .img_icon_info ul li a:hover {
   opacity: 0.8;
   text-decoration: none;
 }
 
-.img_icon_info ul li i {
+.content_homepg_signedout_section .img_icon_info ul li i {
   font-size: 50px;
   margin-bottom: 5px;
 }
 
 
+// -----------------------------
+//     workings
+// -----------------------------
 
 
 
+.lower_content {
+  padding: 0px !important;
+  margin-top: 25px;
+  height: 300px;
+}
+
+.bottom_right {
+  padding-left: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.bottom_inner_right {
+  background-color: red;
+  height: 300px;
+}
 
 
+.bottom_left {
+  padding: 0px !important;
+}
 
+.bottom_inner_left {
+  background-color: green;
+  height: 300px;
+}
 
 
 
