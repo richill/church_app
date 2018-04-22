@@ -23,30 +23,30 @@
   padding: 0px !important;
 }
 
-.content_homepg_signedout_section .left_content {
+.content_homepg_signedout_section .right_main_content {
   background-color: transparent;
   padding: 0px !important
 }
 
-.content_homepg_signedout_section .left_content .main_section {
+.content_homepg_signedout_section .right_main_content .main_section {
   background-color: transparent;
   padding-right: 0px !important;
 }
 
-.content_homepg_signedout_section .left_content .main_section ul {
+.content_homepg_signedout_section .right_main_content .main_section ul {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.content_homepg_signedout_section .left_content .main_section ul .li_main {
+.content_homepg_signedout_section .right_main_content .main_section ul .li_main {
   float: left;
 }
 
-.content_homepg_signedout_section .left_content .li_main_left {
+.content_homepg_signedout_section .right_main_content .li_main_left {
   width: 110px;
 }
 
-.content_homepg_signedout_section .left_content .title_content ul li {
+.content_homepg_signedout_section .right_main_content .title_content ul li {
   background-color: rgba(42, 44, 73, 0.1);
   width: 100%;
   display: inherit;
@@ -60,7 +60,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.content_homepg_signedout_section .left_content .title_content ul li:hover {
+.content_homepg_signedout_section .right_main_content .title_content ul li:hover {
   text-decoration: none;
   cursor: pointer;
   background-color: rgba(42, 44, 73, 0.15) !important;
@@ -76,36 +76,36 @@
   height: 296px;
 }
 
-.content_homepg_signedout_section .left_content .title_content_info ul li {
+.content_homepg_signedout_section .right_main_content .title_content_info ul li {
   font-size: 10px;
   overflow: scroll;
   position: relative;
   height: 265px;
 }
 
-.content_homepg_signedout_section .left_content #content1 {
+.content_homepg_signedout_section .right_main_content #content1 {
   color: #a1355b; 
 }
 
-.content_homepg_signedout_section .left_content #content2 {
+.content_homepg_signedout_section .right_main_content #content2 {
   color: #7fa135;
 }
 
-.content_homepg_signedout_section .left_content #content3 {
+.content_homepg_signedout_section .right_main_content #content3 {
   color: #357fa1; 
 }
 
-.content_homepg_signedout_section .left_content #content4 {
+.content_homepg_signedout_section .right_main_content #content4 {
   color: #a07b35; 
 }
 
 
-.homepage_content .right_content {
+.homepage_content .left_main_content {
   background-color: rgba(42, 44, 73, 0.15);
   padding: 0px !important
 }
 
-.inner_right_content .carousel_section {
+.left_inner_main_content .carousel_section {
   height: 296px;
   overflow: hidden;
 }
