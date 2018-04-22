@@ -106,9 +106,8 @@
 //     carsouel
 // -----------------------------
 .wrapper{
-  width:90%;
+  width:100%;
   position:relative;
-  margin:5% auto 0;
 }
 
 .carousel{
@@ -169,7 +168,7 @@
 .indicators{
   width:100%;
   position: absolute;
-  bottom:0;
+  bottom: 130px;
   z-index: 4;
   padding:0;
   text-align: center;
