@@ -293,11 +293,17 @@
   font-weight: bold;
   text-transform: capitalize;
   padding: 15px 0px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .content_homepg_signedout_section .img_icon_info ul li a:hover {
   opacity: 0.8;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .content_homepg_signedout_section .img_icon_info ul li i {
