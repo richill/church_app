@@ -104,7 +104,7 @@
                 </div>
               </li>
 
-              <li><div><%= link_to 'serve', '#', id: "link_serve", class: "main_links" %></div></li>
+              <li><div><%= link_to 'serve', serve_path, id: "link_serve", class: "main_links" %></div></li>
               
               <li>
                 <div><%= link_to 'about us', about_us_path, id: "link_aboutus", class: "main_links" %></div>
@@ -120,7 +120,7 @@
                 </div>
               </li>
 
-              <li><%= link_to "home", "#", class: "active main_links" %></li>
+              <li><%= link_to "home", root_path, class: "active main_links" %></li>
 
             </ul>
           </nav>
