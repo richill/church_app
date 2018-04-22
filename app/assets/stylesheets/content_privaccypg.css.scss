@@ -1,0 +1,25 @@
+/*===================================================
+    Page: privacy page
+    File: views/shared/_content_privacypg.html.erb
+  ===================================================*/
+
+.content_privacypg_section {
+  padding: 0px !important;
+}
+
+.content_privacypg_section .content_privacypg_inner_section {
+  width: 1150px;
+  margin: auto;
+  background-color: rgba(42, 44, 73, 0.1);
+  margin-bottom: 30px;
+}
+
+.activecontent {
+  background-color: rgba(42, 44, 73, 0.15) !important;
+}
+
+.content_privacypg_section .privacypg_content {
+  margin-bottom: 30px;
+  padding: 0px !important;
+  background-color: rgba(42, 44, 73, 0.1);
+}
