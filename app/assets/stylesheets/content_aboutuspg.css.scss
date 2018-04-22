@@ -1,0 +1,25 @@
+/*===================================================
+    Page: about us page
+    File: views/shared/_content_aboutuspg.html.erb
+  ===================================================*/
+
+.content_aboutuspg_section {
+  padding: 0px !important;
+}
+
+.content_aboutuspg_section .content_aboutuspg_inner_section {
+  width: 1150px;
+  margin: auto;
+  background-color: rgba(42, 44, 73, 0.1);
+  margin-bottom: 30px;
+}
+
+.activecontent {
+  background-color: rgba(42, 44, 73, 0.15) !important;
+}
+
+.content_aboutuspg_section .aboutuspg_content {
+  margin-bottom: 30px;
+  padding: 0px !important;
+  background-color: rgba(42, 44, 73, 0.1);
+}

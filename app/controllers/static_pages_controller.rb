@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def privacypg
   end
+
+  def aboutuspg
+  end
 end
