@@ -422,10 +422,6 @@
   list-style-type: none;
 }
 
-.event_content ul li {
-  margin-bottom: 15px;
-}
-
 .evt_img_section {
   float: left;
 }
@@ -478,6 +474,10 @@
   margin-bottom: 5px;
 }
 
+.evt_title:hover {
+  text-decoration: underline !important;
+}
+
 
 .evt_minor_info {
   font-size: 10px;
@@ -487,7 +487,7 @@
 
 .bottom_line {
   border-bottom: 1px solid #2A2C49;
-  margin-top: 10px;
+  margin: 10px 0px;
   opacity: 0.05;
 }
 
