@@ -150,13 +150,29 @@
         <div class="inner_lower_content">
 
           <div class="medium-5 columns bottom_right">
-            <div class="bottom_inner_right">event_content</div>
+            <div class="bottom_inner_right">
+             
+
+              <div class="event_title">
+                <span>
+                  <%= link_to "http://www.youtube.com/embed/vBq9pvvaYoY", target:"_blank" do %>
+                  <span><i class="fa fa-calendar-alt"></i></span>
+                  <span>Events</span>
+                  <% end %>
+                </span>
+                <span class="event_header"><%= link_to "view all events", "#", target:"_blank" %></span>
+              </div>
+
+              <div class="event_content">event_content</div>
+
+
+
+            </div>
           </div>
 
           <div class="medium-7 columns bottom_left">
             <div class="bottom_inner_left">
               <!-- <div><%# embed(blog.link) %> note:https://stackoverflow.com/questions/5909121/converting-a-regular-youtube-link-into-an-embedded-video</div> -->
-              
               <div class="video_title">
                 <span>
                   <%= link_to "http://www.youtube.com/embed/vBq9pvvaYoY", target:"_blank" do %>
@@ -164,7 +180,6 @@
                   <span>Abundant Life Easter Special - Pastor Daniel Akhazemea</span>
                   <% end %>
                 </span>
-                
                 <span class="video_header"><%= link_to "view more videos", "#", target:"_blank" %></span>
               </div>
               <div>
