@@ -155,7 +155,7 @@
 
               <div class="event_title">
                 <span>
-                  <%= link_to "http://www.youtube.com/embed/vBq9pvvaYoY", target:"_blank" do %>
+                  <%= link_to "#", target:"_blank" do %>
                   <span><i class="fa fa-calendar"></i></span>
                   <span>Events</span>
                   <% end %>
@@ -163,7 +163,30 @@
                 <span class="event_header"><%= link_to "view all events", "#", target:"_blank" %></span>
               </div>
 
-              <div class="event_content">event_content</div>
+              <div class="event_content">
+                <ul>
+                  <li>
+                    <div>
+                      <span class="evt_img_section">
+                        <div class="evt_img_outter">
+                          <div class="evt_img"><%= link_to (image_tag("img_sample.jpg")), "#" %></div>
+                        </div>
+                      </span>
+                      <span class="event_info_section">
+                          <%= link_to "#", target:"_blank" do %>
+                          <div class="evt_title"><%= truncate("contact 5 prayer night", length: 30) %></div>
+                          <div class="evt_minor_info evt_address">194-198 broadfields avenue, edgware, ha8 8ql</div>
+                          <div class="evt_minor_info evt_time">20:00h - 03:00h</div>
+                          <div class="evt_minor_info evt_city_country">london, united kingdom</div>
+                        <% end %>
+                      </span>
+                    </div>
+                    <div class="bottom_line"></div>
+                  </li>
+                  <li>event2</li>
+                  <li>event3</li>
+                </ul>
+              </div>
 
 
 
@@ -180,7 +203,7 @@
                   <span>Abundant Life Easter Special - Pastor Daniel Akhazemea</span>
                   <% end %>
                 </span>
-                <span class="video_header"><%= link_to "view more videos", "#", target:"_blank" %></span>
+                <span class="video_header"><%= link_to "view more videos", "https://www.youtube.com/channel/UC04lsiRC0cEgW6I_VqGW77A/videos", target:"_blank" %></span>
               </div>
               <div>
                 <iframe src="http://www.youtube.com/embed/vBq9pvvaYoY" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
