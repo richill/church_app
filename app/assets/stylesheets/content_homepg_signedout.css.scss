@@ -319,7 +319,7 @@
 .content_homepg_signedout_section .lower_content {
   padding: 0px !important;
   margin-top: 25px;
-  height: 300px;
+  // height: 300px;
 }
 
 .content_homepg_signedout_section .bottom_right {
@@ -330,7 +330,7 @@
 
 .content_homepg_signedout_section .bottom_inner_right {
   background-color: red;
-  height: 300px;
+  height: 376px;
   padding: 15px;
 }
 
@@ -340,12 +340,30 @@
 }
 
 .content_homepg_signedout_section .bottom_inner_left {
-  background-color: green;
-  height: 300px;
+  background-color: rgba(42, 44, 73, 0.1);
+  // height: 300px;
   padding: 15px;
+  overflow: hidden;
+}
+
+.video_title a {
+  color: #2A2C49 !important;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-size: 14px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 
+.video_title a:hover {
+  text-decoration: none;
+  color: #a07b35 !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
 
 
 
