@@ -1,144 +1,43 @@
+<!-- new content NAV -->
+<div class="off-canvas-wrap responsive_banner_signedout_section" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left tab-bar-section">
+        <!-- <h1 class="title">Foundation</h1> -->
+        <h1 class="title">
+          <ul class="inline-list">
+            <li class="image_logo"><%= link_to(image_tag("img-logo-five.png", :alt =>  "alt text", :class =>"#"), home_path) %></li>
+            <li class="image_text"><%= link_to(image_tag("img-logo-four.png", :alt =>  "alt text", :class =>"#"), home_path) %></li>
+          </ul>
+        </h1>
+      </section>
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+    </nav>
+    <aside class="right-off-canvas-menu">
+      <ul class="off-canvas-list responsive_nav_list">
+        <!-- <li><label>Menu</label></li> -->
+        <li class="link"><%= link_to 'home ', home_path %></li>
+        <li class="link"><%= link_to 'for employers ', userr_session_path %></li>
+        <li class="link"><%= link_to 'jobs', search_adverts_path %></li>
+        <li class="link"><%= link_to 'about us', about_path %></li>
+        <li class="link"><%= link_to 'companies', companies_path %></li>
+        <li class="link"><%= link_to 'career advise', news_path %></li>
+        <li class="link"><%= link_to 'careers', careers_adverts_path %></li>
+        <li class="link"><%= link_to 'events', listed_events_path %></li>
+        <li class="link"><%= link_to 'invite', invite_path %></li>
+        <li class="link"><%= link_to 'signin', userj_session_path %></li>
+        <li class="link"><%= link_to 'signup', new_userj_registration_path %></li>
+        <li class="link"><%= link_to 'contact us', contact_us_path %></li>
+      </ul>
+    </aside>
 
-html, body{
-  background: #eee;
-  width: 100%;
-}
+    <section class="main-section">
+      <div><%= render 'shared/content_eventspg' %></div>
+      <div><%= render 'shared/footer' %></div>
+    </section>
 
-.wrapper{
-  width:90%;
-  position:relative;
-  margin:5% auto 0;
-}
-
-.carousel{
-  width: 100%;
-  position: relative;
-  padding-top: 60%;
-  overflow: hidden;
-}
-
-.inner{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top:0;
-  left: 0;
-}
-
-.slide{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top:0;
-  right:0;
-  left:0;
-  z-index: 1;
-  opacity: 0;
-}
-
-.slide.active,
-.slide.left,
-.slide.right{
-  z-index: 2;
-  opacity: 1;
-}
-
-.js-reset-left{left:auto}
-
-.slide.left{
-  left:-100%;
-  right:0;
-}
-
-.slide.right{
-  right:-100%;
-  left: auto;
-}
-
-.transition .slide.left{left:0%}
-.transition .slide.right{right:0%}
-
-.transition .slide.shift-right{right: 100%;left:auto}
-.transition .slide.shift-left{left: 100%;right:auto}
-
-.transition .slide{
-  transition-property: right, left, margin;
-}
-
-.indicators{
-  width:100%;
-  position: absolute;
-  bottom:0;
-  z-index: 4;
-  padding:0;
-  text-align: center;
-}
-
-.indicators li{
-  width: 13px;
-  height: 13px;
-  display: inline-block;
-  margin: 5px;
-  background: #fff;
-  list-style-type: none;
-  border-radius: 50%;
-  cursor:pointer;
-  transition:background 0.3s ease-out;
-}
-
-.indicators li.active{background:#93278f}
-
-.indicators li:hover{background-color:#2b2b2b}
-
-.arrow{
-  width: 20px;
-  height: 20px;
-  position:absolute;
-  top:50%;
-  z-index:5;
-  border-top:3px solid #fff;
-  border-right:3px solid #fff;
-  cursor:pointer;
-  transition:border-color 0.3s ease-out;
-}
-
-.arrow:hover{border-color:#93278f}
-
-.arrow-left{
-  left:20px;
-  transform:rotate(225deg);
-}
-
-.arrow-right{
-  right:20px;
-  transform:rotate(45deg);
-}
-
-.slide{
-  text-align:center;
-  padding-top:25%;
-  background-size:cover;
-}
-
-h1{
-  width:100px;
-  height:100px;
-  background-color:rgba(146, 45, 141,0.7);
-  margin:auto;
-  line-height:100px;
-  color:#fff;
-  font-size:2.4em;
-  border-radius:50%;
-}
-
-.slide:nth-child(1){
-  background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-1.jpg);
- }
-
-.slide:nth-child(2){
-  background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-2.jpg);
-}
-
-.slide:nth-child(3){
-  background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-3.jpg);
- }
+    <a class="exit-off-canvas"></a>
+  </div>
+</div>
