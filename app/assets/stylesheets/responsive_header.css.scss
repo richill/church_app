@@ -9,6 +9,10 @@
   padding: 15px;
 }
 
+.responsive_header_inner_section {
+  margin-top: 5px;
+}
+
 .rep_inner_logo {
   background-color: transparent;
   width: 188px;
@@ -40,3 +44,42 @@
   font-size: 9px;
   margin-top: 5px;
 }
+
+.rep_button {
+  text-align: center;
+  font-size: 25px;
+  padding: 10px 0px;
+}
+
+.rep_button a {
+  color: #fff !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.rep_button a:hover {
+  text-decoration: none;
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
