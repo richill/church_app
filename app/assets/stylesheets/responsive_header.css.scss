@@ -2,3 +2,41 @@
     Page: responsive header
     File: views/shared/_responsive_header.html.erb
   ===================================================*/
+
+.responsive_header_section {
+  background-color: #2A2C49;
+  color: #fff;
+  padding: 15px;
+}
+
+.rep_inner_logo {
+  background-color: transparent;
+  width: 188px;
+  text-align: center;
+  margin: auto;
+}
+
+.rep_inner_logo img {
+  width: 100px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.rep_inner_logo a {
+  color: #fff !important;
+}
+
+.rep_inner_logo a:hover {
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.rep_logo_title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 9px;
+  margin-top: 5px;
+}
