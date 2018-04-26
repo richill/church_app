@@ -1,6 +1,7 @@
 <% provide(:title, "Homepage") %>
-<div>
+<div class="desktop_view show-for-medium-up">
   <%= render 'shared/header_signedout' %>
   <%= render 'shared/content_homepg_signedout' %>
   <%= render 'shared/footer' %>
 </div>
+<div class="mobile_view show-for-small-only"><%= render 'shared/responsive_content_homepg_signedout' %></div> 

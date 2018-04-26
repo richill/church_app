@@ -1,0 +1,43 @@
+<!-- new content NAV -->
+<div class="off-canvas-wrap responsive_banner_signedout_section" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left tab-bar-section">
+        <!-- <h1 class="title">Foundation</h1> -->
+        <h1 class="title">
+          <ul class="inline-list">
+            <li class="image_logo"><%= link_to(image_tag("img-logo-five.png", :alt =>  "alt text", :class =>"#"), "#") %></li>
+            <li class="image_text"><%= link_to(image_tag("img-logo-four.png", :alt =>  "alt text", :class =>"#"), "#") %></li>
+          </ul>
+        </h1>
+      </section>
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+    </nav>
+    <aside class="right-off-canvas-menu">
+      <ul class="off-canvas-list responsive_nav_list">
+        <!-- <li><label>Menu</label></li> -->
+        <li class="link"><%= link_to 'home ', "#" %></li>
+        <li class="link"><%= link_to 'for employers ', "#" %></li>
+        <li class="link"><%= link_to 'jobs', "#" %></li>
+        <li class="link"><%= link_to 'about us', "#" %></li>
+        <li class="link"><%= link_to 'companies', "#" %></li>
+        <li class="link"><%= link_to 'career advise', "#" %></li>
+        <li class="link"><%= link_to 'careers', "#" %></li>
+        <li class="link"><%= link_to 'events', "#" %></li>
+        <li class="link"><%= link_to 'invite', "#" %></li>
+        <li class="link"><%= link_to 'signin', "#" %></li>
+        <li class="link"><%= link_to 'signup', "#" %></li>
+        <li class="link"><%= link_to 'contact us', "#" %></li>
+      </ul>
+    </aside>
+
+    <section class="main-section">
+      <div><%= render 'shared/content_homepg_signedout' %></div>
+      <div><%= render 'shared/footer' %></div>
+    </section>
+
+    <a class="exit-off-canvas"></a>
+  </div>
+</div>
