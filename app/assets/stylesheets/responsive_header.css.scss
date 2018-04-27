@@ -9,10 +9,6 @@
   padding: 15px;
 }
 
-.responsive_header_inner_section {
-  margin-top: 5px;
-}
-
 .rep_inner_logo {
   background-color: transparent;
   width: 188px;
@@ -29,6 +25,7 @@
 
 .rep_inner_logo a {
   color: #fff !important;
+  text-decoration: none !important;
 }
 
 .rep_inner_logo a:hover {
@@ -64,6 +61,11 @@
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+}
+
+
+.rep_content {
+  background-color: red;
 }
 
 
