@@ -104,10 +104,36 @@
                 </div>
               </li>
 
-              <li><div><%= link_to 'serve', serve_path, id: "link_serve", class: "main_links" %></div></li>
-              
+              <li>
+                <div><%= link_to 'serve', about_us_path, id: "link_serve", class: "main_links" %></div>
+                <div id="linkContainer_serve">
+                  <div id="linkBody_serve" class="listed_link">
+                    <ul>
+                      <li><%= link_to "in our church", "#" %></li>
+                      <li><%= link_to "in our community", "#" %></li>
+                      <li><%= link_to "around the world", "#" %></li>
+                      <li><%= link_to "got a minitry idea", "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
               <li>
                 <div><%= link_to 'about us', about_us_path, id: "link_aboutus", class: "main_links" %></div>
+                <div id="linkContainer_aboutus">
+                  <div id="linkBody_aboutus" class="listed_link">
+                    <ul>
+                      <li><%= link_to "about OHCC", "#" %></li>
+                      <li><%= link_to "mission & vision statement", "#" %></li>
+                      <li><%= link_to "our people", "#" %></li>
+                      <li><%= link_to "statement of faith", "#" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              
+              <li class="hide">
+                <div><%# link_to 'about us', about_us_path, id: "link_aboutus", class: "main_links" %></div>
                 <div id="linkContainer_aboutus">
                   <div id="linkBody_aboutus" class="listed_link">
                     <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">

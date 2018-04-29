@@ -45,12 +45,21 @@ $(document).ready(function() {
   // [nav links] link_serve
   $(document).ready(function() {
     $("#link_serve").mouseover(function() {
+      $("#linkContainer_serve").fadeToggle(300);
       $("#linkContainer_aboutus").fadeOut("slow");
       $("#linkContainer_connect").fadeOut("slow");
       $("#linkContainer_events").fadeOut("slow");
       $("#linkContainer_resources").fadeOut("slow");
       $("#linkContainer_contact").fadeOut("slow");
       return false;
+    });
+    //Document Click hiding the popup 
+    $(document).click(function() {
+      $("#linkContainer_serve").hide();
+    });
+    //Popup on click
+    $("#linkContainer_serve").click(function() {
+      return true;
     });
   });
 
