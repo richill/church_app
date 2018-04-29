@@ -105,6 +105,12 @@
   background-color: rgba(42, 44, 73, 0.15);
   padding: 0px !important
 }
+@media only screen and (max-width: 1160px) {
+  .homepage_content .left_main_content {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
 
 .left_inner_main_content .carousel_section {
   height: 296px;
