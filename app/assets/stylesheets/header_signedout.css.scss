@@ -221,6 +221,24 @@
 }
 
 
+// ------- link_grow -------
+.nav_section #linkContainer_grow {
+  background-color: rgba(42, 44, 73, 0.1);
+  overflow: visible;
+  position: absolute;
+  width: 634px;
+  z-index: 1000;
+  top: 41px;
+  left: 516px;
+  padding: 10px 15px;
+  display: none; /*info: Enable this after jquery implementation*/ 
+}
+
+.nav_section #linkBody_grow {
+  padding: 0px 0px 0px 0px !important;
+}
+
+
 // ------- link_resources -------
 .nav_section #linkContainer_resources {
   background-color: rgba(42, 44, 73, 0.1);

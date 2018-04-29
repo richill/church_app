@@ -106,12 +106,21 @@ $(document).ready(function() {
   // [nav links] link_grow
   $(document).ready(function() {
     $("#link_grow").mouseover(function() {
+      $("#linkContainer_grow").fadeToggle(300);
       $("#linkContainer_aboutus").fadeOut("slow");
       $("#linkContainer_connect").fadeOut("slow");
       $("#linkContainer_events").fadeOut("slow");
       $("#linkContainer_resources").fadeOut("slow");
       $("#linkContainer_contact").fadeOut("slow");
       return false;
+    });
+    //Document Click hiding the popup 
+    $(document).click(function() {
+      $("#linkContainer_grow").hide();
+    });
+    //Popup on click
+    $("#linkContainer_grow").click(function() {
+      return true;
     });
   });
 
