@@ -19,17 +19,31 @@
   color: #fff;
 }
 
-.footer_section .footer_inner_content {
-  width: 1150px;
-  margin: auto;
+@media only screen and (min-width: 1160px) {
+  .footer_section .footer_inner_content {
+    width: 1150px;
+    margin: auto;
+  }
 }
 
 .footer_section .left_content {
   padding: 0px !important;
 }
+@media only screen and (max-width: 1160px) {
+  .footer_section .left_content {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
 
 .footer_section .right_content {
   padding: 0px !important;
+}
+@media only screen and (max-width: 1160px) {
+  .footer_section .right_content {
+    width: 100% !important;
+    float: none;
+  }
 }
 
 .footer_section .footer_header {
@@ -51,8 +65,12 @@
 
 .footer_section .rcc_logoimage_section {
   margin-top: 15px;
-  width: 415px;
   background-color: transparent;
+}
+@media only screen and (min-width: 1160px) {
+  .footer_section .rcc_logoimage_section {
+    width: 415px;
+  }
 }
 
 .footer_section .rcc_logoimage_section img {
@@ -168,12 +186,11 @@
   width: 200px;
 }
 
-
-
-// ---------------------------
-//   workings
-// ---------------------------
-
+@media only screen and (max-width: 1160px) {
+  .footer_section .copyrights_content {
+    text-align: center;
+  }
+}
 
 
 
