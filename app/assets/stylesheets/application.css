@@ -65,7 +65,16 @@ a:hover {
   text-decoration: none !important;
 }
 
+@media only screen and (max-width: 600px) {
+  .header_non_responsive {
+    display: none;
+  }
+}
 
-
+@media only screen and (min-width: 600px) {
+  .header_responsive {
+    display: none;
+  }
+}
 
 
