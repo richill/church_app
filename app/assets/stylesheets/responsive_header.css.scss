@@ -63,16 +63,26 @@
   -o-transition: all 0.3s ease;
 }
 
-
 .rep_content {
-  background-color: red;
+  background-color: transparent;
 }
 
 
+.menu_items a {
+  color: #fff !important;
+  text-transform: capitalize;
+  font-weight: bold;
+}
 
 
+.is-accordion-submenu-parent > a::after {
+  border-color: #fff transparent transparent;
+}
 
 
+.menu.nested {
+      background-color: rgba(32, 35, 44, 0.2);
+}
 
 
 
