@@ -1,43 +1,19 @@
-<!-- new content NAV -->
-<div class="off-canvas-wrap responsive_banner_signedout_section" data-offcanvas>
-  <div class="inner-wrap">
-    <nav class="tab-bar">
-      <section class="left tab-bar-section">
-        <!-- <h1 class="title">Foundation</h1> -->
-        <h1 class="title">
-          <ul class="inline-list">
-            <li class="image_logo"><%= link_to(image_tag("img-logo-five.png", :alt =>  "alt text", :class =>"#"), home_path) %></li>
-            <li class="image_text"><%= link_to(image_tag("img-logo-four.png", :alt =>  "alt text", :class =>"#"), home_path) %></li>
-          </ul>
-        </h1>
-      </section>
-      <section class="right-small">
-        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
-      </section>
-    </nav>
-    <aside class="right-off-canvas-menu">
-      <ul class="off-canvas-list responsive_nav_list">
-        <!-- <li><label>Menu</label></li> -->
-        <li class="link"><%= link_to 'home ', home_path %></li>
-        <li class="link"><%= link_to 'for employers ', userr_session_path %></li>
-        <li class="link"><%= link_to 'jobs', search_adverts_path %></li>
-        <li class="link"><%= link_to 'about us', about_path %></li>
-        <li class="link"><%= link_to 'companies', companies_path %></li>
-        <li class="link"><%= link_to 'career advise', news_path %></li>
-        <li class="link"><%= link_to 'careers', careers_adverts_path %></li>
-        <li class="link"><%= link_to 'events', listed_events_path %></li>
-        <li class="link"><%= link_to 'invite', invite_path %></li>
-        <li class="link"><%= link_to 'signin', userj_session_path %></li>
-        <li class="link"><%= link_to 'signup', new_userj_registration_path %></li>
-        <li class="link"><%= link_to 'contact us', contact_us_path %></li>
-      </ul>
-    </aside>
+<div class="medium-12 columns responsive_header_section">
+  <div class="responsive_header_inner_section">
+    <div class="rep_logo">
+      <div class="rep_inner_logo">
+        <%= link_to "#" do %>
+          <div><%= image_tag("img_logo02.png") %></div>
+          <div class="rep_logo_title">open heavens christian church</div>
+        <% end %>
+      </div>
+    </div>
+    <div class="rep_button">
+      <%= link_to '', '#', id: "menu_toggle", class: "fa fa-bars" %>
+    </div>
+    <div class="rep_content menu_wrap hide">
+      <div class="menu_items">rep_content</div>
+    </div>
 
-    <section class="main-section">
-      <div><%= render 'shared/content_eventspg' %></div>
-      <div><%= render 'shared/footer' %></div>
-    </section>
-
-    <a class="exit-off-canvas"></a>
   </div>
 </div>
