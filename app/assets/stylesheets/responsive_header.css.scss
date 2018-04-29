@@ -9,53 +9,53 @@
   padding: 15px;
 }
 
-.rep_inner_logo {
+.responsive_header_section .rep_inner_logo {
   background-color: transparent;
   width: 188px;
   text-align: center;
   margin: auto;
 }
 
-.rep_inner_logo img {
+.responsive_header_section .rep_inner_logo img {
   width: 100px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.rep_inner_logo a {
+.responsive_header_section .rep_inner_logo a {
   color: #fff !important;
   text-decoration: none !important;
 }
 
-.rep_inner_logo a:hover {
+.responsive_header_section .rep_inner_logo a:hover {
   opacity: 0.5;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.rep_logo_title {
+.responsive_header_section .rep_logo_title {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 9px;
   margin-top: 5px;
 }
 
-.rep_button {
+.responsive_header_section .rep_button {
   text-align: center;
   font-size: 25px;
   padding: 10px 0px;
 }
 
-.rep_button a {
+.responsive_header_section .rep_button a {
   color: #fff !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.rep_button a:hover {
+.responsive_header_section .rep_button a:hover {
   text-decoration: none;
   opacity: 0.5;
   -webkit-transition: all 0.3s ease;
@@ -63,25 +63,22 @@
   -o-transition: all 0.3s ease;
 }
 
-.rep_content {
+.responsive_header_section .rep_content {
   background-color: transparent;
 }
 
-
-.menu_items a {
+.responsive_header_section .menu_items a {
   color: #fff !important;
   text-transform: capitalize;
   font-weight: bold;
 }
 
-
-.is-accordion-submenu-parent > a::after {
+.responsive_header_section .is-accordion-submenu-parent > a::after {
   border-color: #fff transparent transparent;
 }
 
-
-.menu.nested {
-      background-color: rgba(32, 35, 44, 0.2);
+.responsive_header_section .menu.nested {
+  background-color: rgba(32, 35, 44, 0.2);
 }
 
 
