@@ -13,6 +13,11 @@
   background-color: rgba(42, 44, 73, 0.1);
   margin-bottom: 30px;
 }
+@media only screen and (max-width: 1160px) {
+  .content_privacypg_section .content_privacypg_inner_section {
+    width: 100% !important;
+  }
+}
 
 .content_privacypg_section .privacypg_content {
   margin-bottom: 30px;
@@ -23,6 +28,12 @@
   font-size: 10px;
   text-transform: capitalize;
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 1160px) {
+  .content_privacypg_section .tree_line {
+    margin-top: 25px;
+    padding: 0px 15px !important;
+  }
 }
 
 .content_privacypg_section .tree_line a {
@@ -40,6 +51,12 @@
 .content_privacypg_section .info_left_content {
   padding: 0px !important;
 }
+@media only screen and (max-width: 1160px) {
+  .content_privacypg_section .info_left_content {
+    width: 100% !important;
+    padding: 0px 15px !important;
+  }
+}
 
 .content_privacypg_section .info_left_content .page_header {
   font-size: 30px;
@@ -51,7 +68,6 @@
 .content_privacypg_section .info_left_content .page_img {
   margin-bottom: 15px;
   opacity: 0.8;
-  height: 230px;
   overflow: hidden;
 }
 
@@ -83,17 +99,26 @@
 }
 
 .content_privacypg_section .info_right_content {
+  padding: 0px !important;
   background-color: transparent;
 }
-
-.content_privacypg_section .info_right_content {
-  padding: 0px !important;
+@media only screen and (max-width: 1160px) {
+  .content_privacypg_section .info_right_content {
+    width: 100% !important;
+    padding: 0px 15px !important;
+  }
 }
-
 
 .content_privacypg_section .info_right_content .side_information {
   padding: 15px 30px 30px 60px;
   color: #2A2C49;
+}
+@media only screen and (max-width: 1160px) {
+  .content_privacypg_section .info_right_content .side_information {
+    padding: 30px 0px;
+    border-top: 1px solid rgba(42, 44, 73, 0.03);
+    margin-top: 15px;
+  }
 }
 
 .content_privacypg_section .info_right_content .serv_title {
