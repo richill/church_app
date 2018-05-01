@@ -82,22 +82,73 @@
   color: #a1355b !important;
 }
 
-
-
-
-// ----------------------------
-//   workings
-// ----------------------------
-.info_right_content {
-  background-color: green;
+.content_privacypg_section .info_right_content {
+  background-color: transparent;
 }
 
-.info_right_content {
+.content_privacypg_section .info_right_content {
   padding: 0px !important;
 }
 
 
+.content_privacypg_section .info_right_content .side_information {
+  padding: 15px 30px 30px 60px;
+  color: #2A2C49;
+}
 
+.content_privacypg_section .info_right_content .serv_title {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.content_privacypg_section .info_right_content .serv_day {
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.content_privacypg_section .info_right_content .serv_info {
+  margin-bottom: 25px;
+}
+
+.content_privacypg_section .info_right_content .page_button {
+  background-color: #2A2C49;
+  padding-bottom: 5px;
+  border-radius: 6px;
+  width: 170px;
+}
+
+.content_privacypg_section .info_right_content .page_button a {
+  display: inline-block;
+  background: linear-gradient(#57738E, #9DC6EB);
+  color: #fff !important;
+  padding: 15px 0px;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 170px;
+  text-align: center;
+}
+
+.content_privacypg_section .info_right_content .page_button a:hover {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_privacypg_section .info_right_content .page_button:hover {
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_privacypg_section .info_right_content .weblink a {
+  color: #a1355b !important;
+}
 
 
 
