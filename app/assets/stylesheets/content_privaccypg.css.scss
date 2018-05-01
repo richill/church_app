@@ -17,10 +17,25 @@
 .content_privacypg_section .privacypg_content {
   margin-bottom: 30px;
   padding: 0px !important;
-  background-color: rgba(42, 44, 73, 0.1);
+  // background-color: rgba(42, 44, 73, 0.1);
 }
 
 
 // ----------------------------
 //   workings
 // ----------------------------
+
+.tree_line {
+  font-size: 12px;
+  font-size: 10px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+
+.tree_line a {
+  color: #2A2C49 !important;
+}
+
+.current_page {
+  color: #a07b35;
+}
