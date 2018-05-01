@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   root 'static_pages#homepg'
   get     'about-us',           to: 'static_pages#aboutuspg'
+  get     'donate',              to: 'static_pages#donatepg'
   get     'privacy',            to: 'static_pages#privacypg'
   get     'serve',              to: 'static_pages#servepg'
 

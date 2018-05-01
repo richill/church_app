@@ -5,6 +5,9 @@ class StaticPagesController < ApplicationController
   def aboutuspg
   end
 
+  def donatepg
+  end
+
   def privacypg
   end
 
