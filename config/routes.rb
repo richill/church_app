@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   root 'static_pages#homepg'
   get     'about-us',                 to: 'static_pages#aboutuspg'
+  get     'around-the-world',         to: 'static_pages#aroundworldpg'
   get     'donations',                to: 'static_pages#donatepg'
   get     'mission-vision-statement', to: 'static_pages#missionvisionpg'
   get     'our-people',               to: 'static_pages#ourpeoplepg'

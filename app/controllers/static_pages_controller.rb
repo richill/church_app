@@ -5,6 +5,9 @@ class StaticPagesController < ApplicationController
   def aboutuspg
   end
 
+  def aroundworldpg
+  end
+
   def donatepg
   end
 
@@ -13,6 +16,20 @@ class StaticPagesController < ApplicationController
 
   def ourpeoplepg
   end
+
+
+
+
+  def ourchurchpg
+  end
+
+  def ourcommunitypg
+  end
+
+
+
+
+
 
   def privacypg
   end
