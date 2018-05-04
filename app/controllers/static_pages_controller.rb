@@ -17,21 +17,11 @@ class StaticPagesController < ApplicationController
   def ourchurchpg
   end
 
-  def ourpeoplepg
-  end
-
-
-
-
-  
-
   def ourcommunitypg
   end
 
-
-
-
-
+  def ourpeoplepg
+  end
 
   def privacypg
   end

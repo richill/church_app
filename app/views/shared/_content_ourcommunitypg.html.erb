@@ -1,0 +1,29 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_ourcommunitypg_section">
+  <div class="content_ourcommunitypg_inner_section">
+    <div class="medium-12 columns ourcommunitypg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">our community</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">our community</div>
+            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+            <h1>our ourcommunitypg content goes here</h1>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
