@@ -1,1 +1,50 @@
-<h1>content_missionvisionpg</h1>
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_missionvisionpg_section">
+  <div class="content_missionvisionpg_inner_section">
+    <div class="medium-12 columns missionvisionpg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">mission & vision statement</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">mission & vision statement</div>
+            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+            <div>
+              <div class="paragraph_content">
+                <div><b>Mission Statement</b></div>
+                To build a family of believers from all races with the realisation of who they are in Christ, prepared and empowered by the Holy Spirit to minister the gospel of Jesus Christ and positively impact their environment through declaration of the whole counsel of God by words and deeds.
+              </div>
+
+              <div class="paragraph_content">
+                <div><b>Our Vision Statement</b></div>
+                Our goal is to preach and demonstrate the gospel of Jesus Christ through the power of the Holy Spirit to meet the needs of the hurting and enrich the faith of believers. Our expectation is that people embrace the word of God and apply it to their lives in order to experience growth in every area of their lives and affect their environment for God. The various ministries available within the church have been designed to meet this goal.
+              </div>
+
+              <div class="paragraph_content listed_donation_links">
+                <div><b>Our Beliefs</b></div>
+                <ul>
+                  <li><%= link_to "get connected", "#", target:"_blank" %></li>
+                  <li><%= link_to "kidz & teenage corner", "#", target:"_blank" %></li>
+                  <li><%= link_to "thanksgiving", "#", target:"_blank" %></li>
+                  <li><%= link_to "upcoming events", "#", target:"_blank" %></li>
+                  <li><%= link_to "service times", "#", target:"_blank" %></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
