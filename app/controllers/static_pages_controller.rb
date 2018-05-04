@@ -11,6 +11,9 @@ class StaticPagesController < ApplicationController
   def missionvisionpg
   end
 
+  def ourpeoplepg
+  end
+
   def privacypg
   end
 

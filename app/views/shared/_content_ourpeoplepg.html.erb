@@ -1,0 +1,52 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_ourpeoplepg_section">
+  <div class="content_ourpeoplepg_inner_section">
+    <div class="medium-12 columns ourpeoplepg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">Our People</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">our people</div>
+            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+            <div>
+              <div class="paragraph_content">Our core value can be summarised in those five simple words, because at Open Heavens Church people come first. Though our origins can be found in a prayer group of about twenty individuals, our quest to make a difference in the lives of the people we’ve come into contact with has seen thousands pass through our doors, the diversity of their backgrounds and histories making us indeed a house ‘for all the nations’.</div>
+
+              <div class="paragraph_content">Our primary pursuit is the establishment of God’s Kingdom on earth and we have recognised that God has not created anyone to be insignificant. It is in this pursuit of Him that we have realised that every man must discover the purpose for his creation and maximise the innate potential placed in him by a benevolent Creator in order to positively impact the lives of those less fortunate than ourselves.</div>
+
+              <div class="paragraph_content">The church was founded as a church plant of Freedom Hall, a parish of the Redeemed Christian Church of God (RCCG), in Lagos, Nigeria in April 1994, and the progress we have made since those humble beginnings serves as a constant reminder that God can use the seemingly insignificant to make a difference.</div>
+
+              <div class="paragraph_content">Our passion for the growth and development of the individual is reflected in the vision of the Church, and we are committed to making a positive impact in our local and the international community.</div>
+
+              <div class="paragraph_content">Today Open Heavens Church is still growing rapidly. We run three family services each Sunday, in addition to services for children (Kidz First), teens (TM4:12) and youth (Raised Up In Christ).</div>
+
+              <div class="paragraph_content">Whatever your background, culture or race, at Open Heavens Church you can find a home for yourself and your family. So join us as we ‘pursue God, discover our purpose, maximise our potential while impacting other lives’.</div>
+
+              <div class="paragraph_content listed_donation_links">
+                <div class="pymt_img"><%# image_tag("img_paypal.png") %></div>
+                <ul>
+                  <li><%= link_to "get connected", "#", target:"_blank" %></li>
+                  <li><%= link_to "kidz & teenage corner", "#", target:"_blank" %></li>
+                  <li><%= link_to "thanksgiving", "#", target:"_blank" %></li>
+                  <li><%= link_to "upcoming events", "#", target:"_blank" %></li>
+                  <li><%= link_to "service times", "#", target:"_blank" %></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
