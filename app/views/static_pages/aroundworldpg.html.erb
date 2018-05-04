@@ -1,6 +1,7 @@
 <% provide(:title, "Around the World") %>
 <div>
-  <%= render 'shared/header_signedout' %>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header_signedout' %></div>
   <%= render 'shared/content_aroundworldpg' %>
   <%= render 'shared/footer' %>
 </div>
