@@ -14,14 +14,16 @@ class StaticPagesController < ApplicationController
   def missionvisionpg
   end
 
+  def ourchurchpg
+  end
+
   def ourpeoplepg
   end
 
 
 
 
-  def ourchurchpg
-  end
+  
 
   def ourcommunitypg
   end

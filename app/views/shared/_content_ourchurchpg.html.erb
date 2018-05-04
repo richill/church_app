@@ -1,0 +1,29 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_ourchurchpg_section">
+  <div class="content_ourchurchpg_inner_section">
+    <div class="medium-12 columns ourchurchpg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">our church</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">our church</div>
+            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+            <h1>content_ourchurchpg</h1>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
