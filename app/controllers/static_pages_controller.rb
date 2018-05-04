@@ -8,6 +8,9 @@ class StaticPagesController < ApplicationController
   def donatepg
   end
 
+  def missionvisionpg
+  end
+
   def privacypg
   end
 
