@@ -27,12 +27,15 @@
 
               <div class="paragraph_content listed_donation_links">
                 <div><b>Our Beliefs</b></div>
-                <ul>
-                  <li><%= link_to "get connected", "#", target:"_blank" %></li>
-                  <li><%= link_to "kidz & teenage corner", "#", target:"_blank" %></li>
-                  <li><%= link_to "thanksgiving", "#", target:"_blank" %></li>
-                  <li><%= link_to "upcoming events", "#", target:"_blank" %></li>
-                  <li><%= link_to "service times", "#", target:"_blank" %></li>
+                <ul class="vertical menu accordion-menu" data-accordion-menu>
+                  <li>
+                    <a href="#">Item 1</a>
+                    <ul class="menu vertical nested">
+                      <li><a href="#">Item 1A</a></li>
+                      <li><a href="#">Item 1B</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Item 2</a></li>
                 </ul>
               </div>
             </div>
