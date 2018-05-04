@@ -19,4 +19,7 @@ class StaticPagesController < ApplicationController
 
   def servepg
   end
+
+  def statementfaithpg
+  end
 end
