@@ -103,12 +103,17 @@
   list-style-type: none;
 }
 
+.content_missionvisionpg_section .listed_donation_links ul li span {
+  padding: 8px 0px 15px;
+  display: inline-block;
+}
+
 .content_missionvisionpg_section .listed_donation_links ul li {
   margin-bottom: 5px !important;
 }
 
 .content_missionvisionpg_section .listed_donation_links ul li a {
-  background: linear-gradient(#57738E, #9DC6EB);
+  background: #2A2C49;
   color: #fff !important;
   height: 50px;
   display: inherit;
@@ -138,6 +143,37 @@
 .content_missionvisionpg_section .pymt_img img {
   width: 200px;
 }
+
+.content_missionvisionpg_section .is-accordion-submenu-parent > a::after {
+  border-color: #fff transparent transparent !important;
+}
+
+
+
+// ----------------------------
+//   workings
+// ----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
