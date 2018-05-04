@@ -66,32 +66,7 @@
 
 
         <!-- info_right_content -->
-        <div class="medium-4 columns info_right_content">
-          <div class="side_information">
-            <div class="serv_title">service times & directions</div>
-            <div class="serv_info">
-              <div class="serv_day">sundays</div>
-              <span><i class="fa fa-clock-o"></i></span>
-              <span>10:00AM to 12:00PM</span>
-            </div>
-            <div class="serv_info">
-              <div class="serv_day">wednesday</div>
-              <span><i class="fa fa-clock-o"></i></span>
-              <span>07:00PM to 08:30PM</span>
-            </div>
-            <div class="serv_info">
-              <div>Open Heavens Christian Centre</div>
-              <div>194 Broadfields Ave</div>
-              <div>Edgware</div>
-              <div>HA8 8TF</div>
-            </div>
-            <div class="serv_info">
-              <div>T: 020 8958 4040</div>
-              <div>E: <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span></div>
-            </div>
-            <div class="page_button"><%= link_to "get directions", "https://www.google.co.uk/maps/dir/''/openheavens+broadfields/data=!4m5!4m4!1m0!1m2!1m1!1s0x4876169a9a168589:0x154338d949634999?sa=X&ved=0ahUKEwjJ7ODJk-XaAhWBN8AKHUk1APEQ9RcIfjAL", target:"_blank" %></div>
-          </div>
-        </div>
+        <%= render 'shared/content_service_times' %>
         <!-- info_right_content -->
       </div>
 
