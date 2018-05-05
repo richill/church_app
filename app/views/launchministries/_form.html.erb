@@ -1,23 +1,61 @@
-<%= simple_form_for(@launchministry) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :firstname %>
-    <%= f.input :lastname %>
-    <%= f.input :email %>
-    <%= f.input :mobile %>
-    <%= f.input :homenumber %>
-    <%= f.input :worknumber %>
-    <%= f.input :address %>
-    <%= f.input :city %>
-    <%= f.input :postcode %>
-    <%= f.input :mininstryidea %>
-    <%= f.input :mininstrydescription %>
-    <%= f.input :ministryneed %>
-    <%= f.input :ministrymission %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_ministryideapg_section">
+  <div class="content_ministryideapg_inner_section">
+    <div class="medium-12 columns ministryideapg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">new minsitry launch</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">new minsitry launch</div>
+            <!-- <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div> -->
+            <div class="paragraph_content">
+              <div><b>Launch a Ministry</b></div>
+              <span>Do you have a great idea for a new ministry here at Shoreline and the passion to lead it? You’ve come to the right page!</span>
+            </div>
+
+            <div class="launchminstry_form_section">
+              <%= simple_form_for(@launchministry) do |f| %>
+                <%= f.error_notification %>
+
+                <div class="form-inputs">
+                  <%= f.input :firstname %>
+                  <%= f.input :lastname %>
+                  <%= f.input :email %>
+                  <%= f.input :mobile %>
+                  <%= f.input :homenumber %>
+                  <%= f.input :worknumber %>
+                  <%= f.input :address %>
+                  <%= f.input :city %>
+                  <%= f.input :postcode %>
+                  <%= f.input :mininstryidea %>
+                  <%= f.input :mininstrydescription %>
+                  <%= f.input :ministryneed %>
+                  <%= f.input :ministrymission %>
+                </div>
+                <div class="form-actions">
+                  <%= f.button :submit %>
+                </div>
+              <% end %>
+            </div>
+
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
   </div>
-<% end %>
+</div>
