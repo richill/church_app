@@ -1,0 +1,2 @@
+module LaunchministriesHelper
+end

@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Launchministries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>Homenumber</th>
+      <th>Worknumber</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Postcode</th>
+      <th>Mininstryidea</th>
+      <th>Mininstrydescription</th>
+      <th>Ministryneed</th>
+      <th>Ministrymission</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @launchministries.each do |launchministry| %>
+      <tr>
+        <td><%= launchministry.firstname %></td>
+        <td><%= launchministry.lastname %></td>
+        <td><%= launchministry.email %></td>
+        <td><%= launchministry.mobile %></td>
+        <td><%= launchministry.homenumber %></td>
+        <td><%= launchministry.worknumber %></td>
+        <td><%= launchministry.address %></td>
+        <td><%= launchministry.city %></td>
+        <td><%= launchministry.postcode %></td>
+        <td><%= launchministry.mininstryidea %></td>
+        <td><%= launchministry.mininstrydescription %></td>
+        <td><%= launchministry.ministryneed %></td>
+        <td><%= launchministry.ministrymission %></td>
+        <td><%= link_to 'Show', launchministry %></td>
+        <td><%= link_to 'Edit', edit_launchministry_path(launchministry) %></td>
+        <td><%= link_to 'Destroy', launchministry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Launchministry', new_launchministry_path %>

@@ -1,0 +1,2 @@
+class Launchministry < ApplicationRecord
+end

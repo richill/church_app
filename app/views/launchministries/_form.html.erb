@@ -1,0 +1,23 @@
+<%= simple_form_for(@launchministry) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :firstname %>
+    <%= f.input :lastname %>
+    <%= f.input :email %>
+    <%= f.input :mobile %>
+    <%= f.input :homenumber %>
+    <%= f.input :worknumber %>
+    <%= f.input :address %>
+    <%= f.input :city %>
+    <%= f.input :postcode %>
+    <%= f.input :mininstryidea %>
+    <%= f.input :mininstrydescription %>
+    <%= f.input :ministryneed %>
+    <%= f.input :ministrymission %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
