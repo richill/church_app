@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427151112) do
+ActiveRecord::Schema.define(version: 20180505164539) do
+
+  create_table "launchministries", force: :cascade do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "email"
+    t.string   "mobile"
+    t.string   "homenumber"
+    t.string   "worknumber"
+    t.string   "address"
+    t.string   "city"
+    t.string   "postcode"
+    t.text     "mininstryidea"
+    t.text     "mininstrydescription"
+    t.text     "ministryneed"
+    t.text     "ministrymission"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "firstname"
