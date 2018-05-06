@@ -139,9 +139,13 @@
   width: 200px;
 }
 
+.launchministryform_section .launchminstry_main_form {
+  margin-top: 30px;
+}
+
 
 // ---------------------------
-//   workings
+//   buttons workings
 // ---------------------------
 
 .form_btns {
@@ -151,7 +155,7 @@
   font-weight: bold;
   color: #fff !important;
   text-transform: uppercase;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .form_btns ul {
@@ -208,6 +212,85 @@ input[type="submit"]:hover {
 }
 
 
+
+// ---------------------------
+//   form workings
+// ---------------------------
+
+
+
+label {
+  color: #a1355b;
+  text-transform: capitalize;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.info_sub_content ul {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.info_sub_content ul li {
+  width: 375px;
+}
+
+.form_left {
+  float: left;
+  margin-right: 10px;
+}
+
+.form_right {
+  float: right;
+}
+
+[type='text'] {
+  border: transparent;
+  box-shadow: none !important;
+  border-bottom: 1px solid #E8E9EB;
+  color: #2A2C49 !important;
+  // text-transform: capitalize;
+}
+
+[type='text']:focus {
+  border: transparent;
+  border-bottom: 1px solid #a1355b;
+  box-shadow: none !important;
+  font-size: 13px;
+  color: #2A2C49 !important;
+}
+
+[type='email'] {
+  border: transparent;
+  box-shadow: none !important;
+  border-bottom: 1px solid #E8E9EB;
+  color: #2A2C49 !important;
+  // text-transform: capitalize;
+}
+
+[type='email']:focus {
+  border: transparent;
+  border-bottom: 1px solid #a1355b;
+  box-shadow: none !important;
+  font-size: 13px;
+  color: #2A2C49 !important;
+  // text-transform: capitalize;
+}
+
+textarea {
+  border: transparent;
+  border-bottom: 1px solid #E8E9EB;
+  box-shadow: none !important;
+  color: #2A2C49 !important;
+}
+
+textarea:focus {
+  border: transparent;
+  border-bottom: 1px solid #a1355b;
+  box-shadow: none !important;
+  font-size: 13px;
+  color: #2A2C49 !important;
+}
 
 
 

@@ -15,7 +15,7 @@
             <div class="page_header">new minsitry launch</div>
             <div class="paragraph_content">
               <div><b>Launch a Ministry</b></div>
-              <span>Do you have a great idea for a new ministry here at Shoreline and the passion to lead it? You’ve come to the right page!</span>
+              <span>Do you have a great idea for a new ministry here at Open Heavens Church and the passion to lead it? Completing this New Ministry Launch form begins the application process for new ministries here at Open Heavens Church.</span>
             </div>
 
             <div class="launchminstry_main_form">
@@ -23,19 +23,58 @@
                 <%= f.error_notification %>
 
                 <div class="form-inputs">
-                  <%= f.input :firstname %>
-                  <%= f.input :lastname %>
-                  <%= f.input :email %>
-                  <%= f.input :mobile %>
-                  <%= f.input :homenumber %>
-                  <%= f.input :worknumber %>
-                  <%= f.input :address %>
-                  <%= f.input :city %>
-                  <%= f.input :postcode %>
-                  <%= f.input :mininstryidea %>
-                  <%= f.input :mininstrydescription %>
-                  <%= f.input :ministryneed %>
-                  <%= f.input :ministrymission %>
+                  <div class="info_sub_content">
+                    <ul>
+                      <li class="form_left"><%= f.input :firstname, label: false, placeholder: "First Name" %></li>
+                      <li class="form_right"><%= f.input :lastname, label: false, placeholder: "Last Name" %></li>
+                    </ul>
+                  </div>
+                  <div class="clear"></div>
+                  
+                  <div class="info_sub_content">
+                    <ul>
+                      <li class="form_left"><%= f.input :email, label: false, placeholder: "Email" %></li>
+                      <li class="form_right"><%= f.input :mobile, label: false, placeholder: "Mobile" %></li>
+                    </ul>
+                  </div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content">
+                    <ul>
+                      <li class="form_left"><%= f.input :homenumber, label: false, placeholder: "Home Number" %></li>
+                      <li class="form_right"><%= f.input :worknumber, label: false, placeholder: "Work Number" %></li>
+                    </ul>
+                  </div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :address, label: false, placeholder: "Address" %></div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content">
+                    <ul>
+                      <li class="form_left"><%= f.input :city, label: false, placeholder: "City" %></li>
+                      <li class="form_right"><%= f.input :postcode, label: false, placeholder: "Postcode" %></li>
+                    </ul>
+                  </div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :mininstryidea, label: "What is a short name for your ministry idea? Ministry names should make obvious the function of the ministry and the fact that it belongs to Shoreline (e.g., Shoreline Runners Group, not Road Runners)", placeholder: "Type Your Answer" %></div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :mininstrydescription, label: "Please describe your ministry idea.", placeholder: "Type Your Answer" %></div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :ministryneed, label: "What is the need you would like to meet and how did you identify it?", placeholder: "Type Your Answer" %></div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :ministrymission, label: "What is your ministry's mission statement?", placeholder: "Type Your Answer" %></div>
+                  <div class="clear"></div>
+
+
+                  
+                
+                  
+            
                 </div>
                 <div class="form_btns">
                   <ul>
