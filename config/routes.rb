@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get     'privacy',                  to: 'static_pages#privacypg'
   get     'serve',                    to: 'static_pages#servepg'
   get     'statement-of-faith',       to: 'static_pages#statementfaithpg'
+  get     'thank-you',                to: 'static_pages#thankyoupg'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

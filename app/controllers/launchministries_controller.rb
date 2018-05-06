@@ -28,7 +28,7 @@ class LaunchministriesController < ApplicationController
 
     respond_to do |format|
       if @launchministry.save
-        format.html { redirect_to mininstry_idea_path, notice: 'Launchministry was successfully created.' }
+        format.html { redirect_to thank_you_path, notice: 'Launchministry was successfully created.' }
         format.json { render :show, status: :created, location: @launchministry }
       else
         format.html { render :new }

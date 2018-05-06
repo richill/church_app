@@ -37,4 +37,7 @@ class StaticPagesController < ApplicationController
 
   def statementfaithpg
   end
+
+  def thankyoupg
+  end
 end
