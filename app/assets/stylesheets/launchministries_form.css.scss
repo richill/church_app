@@ -159,6 +159,11 @@
 .launchministryform_section .launchminstry_main_form .info_sub_content ul li {
   width: 375px;
 }
+@media only screen and (max-width: 1160px) {
+  .launchministryform_section .launchminstry_main_form .info_sub_content ul li {
+    width: 100% !important;
+  }
+}
 
 .launchministryform_section .launchminstry_main_form .form_left {
   float: left;
@@ -228,6 +233,12 @@
   list-style-type: none;
 }
 
+@media only screen and (max-width: 1160px) {
+  .launchministryform_section .launchminstry_main_form .form_btns ul li {
+    width: 100% !important;
+  }
+}
+
 .launchministryform_section .launchminstry_main_form .form_btns ul .cancel_btn {
   float: left;
 }
@@ -245,6 +256,12 @@
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
+@media only screen and (max-width: 1160px) {
+  .launchministryform_section .launchminstry_main_form .cancel_btn a {
+    width: 100% !important;
+    margin-bottom: 5px;
+  }
+}
 
 .launchministryform_section .launchminstry_main_form .cancel_btn a:hover {
   opacity: 0.8;
@@ -257,6 +274,11 @@
 .launchministryform_section .launchminstry_main_form .form_btns ul .submit_btn {
   float: right;
 }
+@media only screen and (max-width: 1160px) {
+  .launchministryform_section .launchminstry_main_form .form_btns ul .submit_btn {
+    width: 100% !important;
+  }
+}
 
 .launchminstry_main_form input[type="submit"] {
   text-transform: uppercase;
@@ -267,6 +289,11 @@
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+}
+@media only screen and (max-width: 1160px) {
+  .launchminstry_main_form input[type="submit"] {
+    width: 100% !important;
+  }
 }
 
 .launchministryform_section .launchminstry_main_form input[type="submit"]:hover {
