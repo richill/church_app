@@ -11,6 +11,9 @@ class StaticPagesController < ApplicationController
   def donatepg
   end
 
+  def gdprpg
+  end
+
   def ministryideapg
   end
 

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get     'about-us',                 to: 'static_pages#aboutuspg'
   get     'around-the-world',         to: 'static_pages#aroundworldpg'
   get     'donations',                to: 'static_pages#donatepg'
+  get     'gdpr',                     to: 'static_pages#gdprpg'
   get     'ministry-idea',            to: 'static_pages#ministryideapg'
   get     'mission-vision-statement', to: 'static_pages#missionvisionpg'
   get     'our-church',               to: 'static_pages#ourchurchpg'

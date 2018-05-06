@@ -1,0 +1,48 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_gdprpg_section">
+  <div class="content_gdprpg_inner_section">
+    <div class="medium-12 columns gdprpg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">GDPR</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">general data protection regulation (GDPR)</div>
+            <div class="page_img"><%# image_tag("img_bannerimg.jpg") %></div>
+            <div>
+              <div class="paragraph_content">Your privacy is important to us and we would like to continue to communicate with Parish members in a way that is in line with UK law on data protection.</div>
+
+              <div class="paragraph_content"> The General Data Protection Regulation (GDPR) is coming into effect on <b>25th May 2018</b> and as a result of the chnages in data protection laws, we need your consent for us to continue to contact you.</div>
+
+              <div class="paragraph_content"> By registering as a member of the Open Heavens Platform, you are confirming that you are consenting to RCCG OPEN HEAVENS CHRISTIAN CHURCH Parish, holding and processing your personal data for the purpose outline in our privacy notice available at <span><%= link_to "www.openheavens.org.uk", privacy_path, class: "weblink" %></span>.</div>
+
+              <div class="paragraph_content">
+                <ul>
+                  <li>You consent to the Church contacting you by post, phone or email</li>
+                  <li>You consent to be kept informed about news, events, activities and services at RCCG OPEN HEAVENS CHRISTIAN CHURCH CENTRE Parish <i>(note you can unsubscribe from he church e-bullentin at anytime)</i></li>
+                  <li>You consent to for your details to be included in the members list which may be circulated to heads of departments of minitries within the Parish.</li>
+                  <li>You consent to your contact details to be shared with RCCG OPEN HEAVENS CHRISTIAN CHURCH CENTRE UK Central Office so they can keep you informed about news, events, activities and services that will be occuring in RCCG UK and which are directly relevant to the role you undertake in the Parish</li>
+                </ul>
+              </div>
+
+              <div class="paragraph_content">You can withdraw or change your consent at anytime by contacting the Parish Administrator at <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span>. Please note that all processing of your personal data will cease once you have withdrawn your consent, other than where this is required by law, but this will not affect any data that has already been processed prior to this point.</div>
+
+              <div class="paragraph_content"><b>Charity Number: 1084577</b></div>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
