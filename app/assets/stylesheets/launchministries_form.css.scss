@@ -140,6 +140,72 @@
 }
 
 
+// ---------------------------
+//   workings
+// ---------------------------
+
+.form_btns {
+  // background-color: red;
+  height: 100px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff !important;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.form_btns ul {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.form_btns ul .cancel_btn {
+  float: left;
+}
+
+.cancel_btn a {
+  background-color: #a1355b !important;
+  color: #fff !important;
+  display: inline-block;
+  height: 50px;
+  text-align: center;
+  padding: 16px 0px;
+  width: 380px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.cancel_btn a:hover {
+  opacity: 0.8;
+  text-decoration: none !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.form_btns ul .submit_btn {
+  float: right;
+}
+
+input[type="submit"] {
+  text-transform: uppercase;
+  width: 380px;
+  background-color: #2A2C49 !important;
+  border-radius: 3px;
+  height: 50px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
 
 
 
