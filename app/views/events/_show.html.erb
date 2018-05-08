@@ -17,44 +17,42 @@
         <div class="medium-8 columns info_left_content">
           <div class="page_information">
             <div class="page_header"><%= @event.name %></div>
+
+            <div class="date_category">
+              <span>
+                <span class="evt_subheader">date:</span>
+                <span><%= "#{@event.start_time.strftime("%b %d %Y")} [#{@event.start_time.strftime("%I:%M%p")}]" %> - <%= "#{@event.end_time.strftime("%b %d %Y")} [#{@event.end_time.strftime("%I:%M%p")}]" %></span>
+              </span>
+              <span class="evt_divider">|</span>
+              <span>
+                <span class="evt_subheader">category:</span>
+                <span class="evt_category">
+                  <% if @event.category_event_id.present? %>
+                    <%= link_to "#{@event.category_event.name}", "#" %>
+                  <% end %>
+                </span> 
+              </span>
+            </div>
+
             <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
             <div class="event_section">
 
-              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+              <div class="paragraph_content"><%= @event.description %></div>
 
-              <div>
-                <b>location</b>
-                <div>Open Heavens Christian Centre, 194 Broadfields Ave, Edgware HA8 8TF, London, HA8 8TF</div>
-                <div>see map: google link</div>
+              <div class="paragraph_content">
+                <b class="evt_location">location</b>
+                <div>
+                  <span><%= @event.address %></span>
+                  <span><%= @event.city %></span>
+                  <span><%= @event.category_country.name %></span>
+                  <span><%= @event.postcode %></span>
+                </div>
               </div>
 
-
-
-
-
-
-              <p id="notice"><%= notice %></p>
-
-              <div><%= @event.description %></div>
-              <div><%= @event.address %>, </div>
-
-       
-              <p>
-                <strong>Category:</strong>
-                <% if @event.category_event_id.present? %>
-                  <%= @event.category_event.name %>
-                <% end %>
-              </p>
-
-              <p>
-                <strong>Start time:</strong>
-                <%= @event.start_time %>
-              </p>
-
-              <p>
-                <strong>End time:</strong>
-                <%= @event.end_time %>
-              </p>
+              <div class="paragraph_content">
+                <span class="evt_map">see map:</span>
+                <span class="evt_maplink"><%= link_to "View Map", "#{@event.linkmap}", target:"_blank" %></span>
+              </div>
 
               <div>
                 <%= link_to 'Edit', edit_event_path(@event) %> |
