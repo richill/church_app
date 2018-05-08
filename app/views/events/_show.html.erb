@@ -9,7 +9,7 @@
         <span><i class="fa fa-angle-right"></i></span>
         <span><%= link_to "calendar events", events_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span class="current_page"><%= @event.name %></span>
+        <span class="current_page"><%= (@event.name).truncate(50) %></span>
       </div>
 
       <div class="medium-12 columns page_main_content">
@@ -17,6 +17,7 @@
         <div class="medium-8 columns info_left_content">
           <div class="page_information">
             <div class="page_header"><%= @event.name %></div>
+            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
             <div class="event_section">
 
               <p id="notice"><%= notice %></p>
