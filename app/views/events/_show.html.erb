@@ -23,14 +23,14 @@
                 <span class="evt_subheader">date:</span>
                 <span><%= "#{@event.start_time.strftime("%b %d %Y")} [#{@event.start_time.strftime("%I:%M%p")}]" %> - <%= "#{@event.end_time.strftime("%b %d %Y")} [#{@event.end_time.strftime("%I:%M%p")}]" %></span>
               </span>
-              <span class="evt_divider">|</span>
-              <span>
-                <span class="evt_subheader">category:</span>
-                <span class="evt_category">
-                  <% if @event.category_event_id.present? %>
+              <% if @event.category_event_id.present? %>
+                <span class="evt_divider">|</span>
+                <span>
+                  <span class="evt_subheader">category:</span>
+                  <span class="evt_category">
                     <%= link_to "#{@event.category_event.name}", "#" %>
-                  <% end %>
-                </span> 
+                  </span>
+                <% end %> 
               </span>
             </div>
 
@@ -39,20 +39,28 @@
 
               <div class="paragraph_content"><%= @event.description %></div>
 
-              <div class="paragraph_content">
-                <b class="evt_location">location</b>
-                <div>
-                  <span><%= @event.address %></span>
-                  <span><%= @event.city %></span>
-                  <span><%= @event.category_country.name %></span>
-                  <span><%= @event.postcode %></span>
+              <% if @event.address.present? %>
+                <div class="paragraph_content">
+                  <b class="evt_location">location</b>
+                  <div>
+                    <span><%= @event.address %></span>
+                    <span><%= @event.city %></span>
+                    <span>
+                      <% if @event.category_country.present? %>
+                        <%= @event.category_country.name %>
+                      <% end %>
+                    </span>
+                    <span><%= @event.postcode %></span>
+                  </div>
                 </div>
-              </div>
+              <% end %>
 
-              <div class="paragraph_content">
-                <span class="evt_map">see map:</span>
-                <span class="evt_maplink"><%= link_to "View Map", "#{@event.linkmap}", target:"_blank" %></span>
-              </div>
+              <% if @event.linkmap.present? %>
+                <div class="paragraph_content">
+                  <span class="evt_map">see map:</span>
+                  <span class="evt_maplink"><%= link_to "View Map", "#{@event.linkmap}", target:"_blank" %></span>
+                </div>
+              <% end %>
 
               <div>
                 <%= link_to 'Edit', edit_event_path(@event) %> |
