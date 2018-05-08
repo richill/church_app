@@ -92,11 +92,11 @@
               </li>
               
               <li>
-                <div><%= link_to 'events', '#', id: "link_events", class: "main_links" %></div>
+                <div><%= link_to 'events', events_path, id: "link_events", class: "main_links" %></div>
                 <div id="linkContainer_events">
                   <div id="linkBody_events" class="listed_link">
                     <ul>
-                      <li><%= link_to "calendar event", "#" %></li>
+                      <li><%= link_to "calendar event", events_path %></li>
                       <li><%= link_to "youth events", "#" %></li>
                       <li><%= link_to "church events", "#" %></li>
                       <li><%= link_to "community events", "#" %></li>

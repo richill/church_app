@@ -1,0 +1,42 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns eventindex_section">
+  <div class="eventindex_inner_section">
+    <div class="medium-12 columns eventindex_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "events", events_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">calendar events</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">calendar events</div>
+            <div class="">
+              
+              <%= month_calendar events: @events do |date, events| %>
+                <%= date.strftime("%b %d") %>
+                <div>
+                  <ul>
+                    <% events.each do |meeting| %>
+                      <li><%=link_to "#{meeting.name}", event_path(meeting) %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>

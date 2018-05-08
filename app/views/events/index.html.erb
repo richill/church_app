@@ -1,46 +1,11 @@
-<div class="hide">
-  <%= month_calendar(attribute: :starts_at) do |date| %>
-    <%= date.strftime("%b %d, %Y") %>
-  <% end %>
+<% provide(:title, "Calendar Events") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header_signedout' %></div>
+  <%= render 'index' %>
+  <%= render 'shared/footer' %>
 </div>
 
-<%= month_calendar events: @events do |date, events| %>
-  <%= date %>
 
-  <% events.each do |meeting| %>
-    <div>
-      <%=link_to "#{meeting.name}", event_path(meeting) %>
-    </div>
-  <% end %>
-<% end %>
 
-<div class="old_content">
-  <div>------------------------------------------------------------------------</div>
-  <p id="notice"><%= notice %></p>
-  <h1>Events</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Start time</th>
-        <th>End time</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
 
-    <tbody>
-      <% @events.each do |event| %>
-        <tr>
-          <td><%= event.name %></td>
-          <td><%= event.start_time.strftime("%b %d, %Y") %></td>
-          <td><%= event.end_time.strftime("%b %d, %Y") %></td>
-          <td><%= link_to 'Show', event %></td>
-          <td><%= link_to 'Edit', edit_event_path(event) %></td>
-          <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <br>
-  <%= link_to 'New Event', new_event_path %>
-</div>
