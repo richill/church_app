@@ -1,0 +1,61 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns eventshow_section">
+  <div class="eventshow_inner_section">
+    <div class="medium-12 columns eventshow_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "events", events_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "calendar events", events_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page"><%= @event.name %></span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header"><%= @event.name %></div>
+            <div class="event_section">
+
+              <p id="notice"><%= notice %></p>
+
+              <p>
+                <strong>Name:</strong>
+                <%= @event.name %>
+              </p>
+
+              <p>
+                <strong>Start time:</strong>
+                <%= @event.start_time %>
+              </p>
+
+              <p>
+                <strong>End time:</strong>
+                <%= @event.end_time %>
+              </p>
+
+              <div>
+                <%= link_to 'Edit', edit_event_path(@event) %> |
+                <%= link_to 'Back', events_path %>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+

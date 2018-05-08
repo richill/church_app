@@ -1,19 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, "#{@event.name}") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header_signedout' %></div>
+  <%= render 'show' %>
+  <%= render 'shared/footer' %>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
 
-<p>
-  <strong>Start time:</strong>
-  <%= @event.start_time %>
-</p>
 
-<p>
-  <strong>End time:</strong>
-  <%= @event.end_time %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
