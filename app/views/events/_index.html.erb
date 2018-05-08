@@ -22,7 +22,7 @@
                 <div>
                   <ul>
                     <% events.each do |meeting| %>
-                      <li><%=link_to "#{meeting.name}", event_path(meeting) %></li>
+                      <li><%=link_to "#{(meeting.name).truncate(40)}" " - #{meeting.start_time.strftime("%I:%M%p")}", event_path(meeting) %></li>
                     <% end %>
                   </ul>
                 </div>
