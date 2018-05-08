@@ -13,6 +13,7 @@ gem 'font-awesome-rails'
 gem 'foundation-rails'
 gem 'jquery-ui-rails'
 gem 'devise'
+gem "simple_calendar", "~> 2.0"
 
 group :development, :test do
   gem 'byebug', platform: :mri
