@@ -6,6 +6,14 @@
     <%= f.input :start_time %>
     <%= f.input :end_time %>
     <%= f.association :category_event, collection: CategoryEvent.all, prompt: "select a category", label: "Event Category" %>
+
+    <%= f.input :description %>
+    <%= f.input :address %>
+    <%= f.input :city %>
+    <%= f.association :category_country, collection: CategoryCountry.all, prompt: "select a category", label: "Country Category" %>
+    <%= f.input :postcode %>
+    <%= f.input :link %>
+    <%# f.input :image %>
   </div>
 
   <div class="form-actions">
