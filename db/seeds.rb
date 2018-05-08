@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+CategoryEvent.delete_all
+ce01 = CategoryEvent.create!(name:'Youth Events')
+ce02 = CategoryEvent.create!(name:'Church Events')
+ce03 = CategoryEvent.create!(name:'Community Events')
+ce04 = CategoryEvent.create!(name:'National Events')

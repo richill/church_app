@@ -5,6 +5,7 @@
     <%= f.input :name %>
     <%= f.input :start_time %>
     <%= f.input :end_time %>
+    <%= f.association :category_event, collection: CategoryEvent.all, prompt: "select a category", label: "Event Category" %>
   </div>
 
   <div class="form-actions">
