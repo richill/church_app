@@ -8,7 +8,7 @@
 
 
 CategoryEvent.delete_all
-ce01 = CategoryEvent.create!(name:'Youth Events')
-ce02 = CategoryEvent.create!(name:'Church Events')
-ce03 = CategoryEvent.create!(name:'Community Events')
-ce04 = CategoryEvent.create!(name:'National Events')
+ce01 = CategoryEvent.create!(name:'Youth Event')
+ce02 = CategoryEvent.create!(name:'Church Event')
+ce03 = CategoryEvent.create!(name:'Community Event')
+ce04 = CategoryEvent.create!(name:'National Event')

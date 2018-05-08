@@ -28,6 +28,13 @@
               </p>
 
               <p>
+                <strong>Category:</strong>
+                <% if @event.category_event_id.present? %>
+                  <%= @event.category_event.name %>
+                <% end %>
+              </p>
+
+              <p>
                 <strong>Start time:</strong>
                 <%= @event.start_time %>
               </p>
