@@ -66,7 +66,7 @@ class EventsController < ApplicationController
   end
 
   def youtheventspg
-    @events = Event.youth_events.expired_events
+    @events = Event.youth_events
   end
 
   def churcheventspg
