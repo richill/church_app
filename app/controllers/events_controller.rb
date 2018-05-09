@@ -65,6 +65,22 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  def youtheventspg
+    @events = Event.youth_events.expired_events
+  end
+
+  def churcheventspg
+    @events = Event.church_events
+  end
+
+  def communityeventspg
+    @events = Event.community_events
+  end
+
+  def nationaleventspg
+    @events = Event.national_events
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event

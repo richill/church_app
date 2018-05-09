@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   resources :events do
     collection do
       get     'calendar-events',                 to: 'events#calendareventspg'
+      get     'youth-events',                    to: 'events#youtheventspg'
+      get     'church-events',                   to: 'events#churcheventspg'
+      get     'community-events',                to: 'events#communityeventspg'
+      get     'national-events',                 to: 'events#nationaleventspg'
     end
   end
 

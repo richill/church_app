@@ -15,4 +15,11 @@ class Event < ApplicationRecord
 
   belongs_to :category_event, dependent: :destroy
   belongs_to :category_country, dependent: :destroy
+
+  scope :expired_events, -> {where(['end_time < ?', Date.current])}
+
+  scope :youth_events, ->() { joins(:category_event).where('category_events.name' => "Youth Event") } 
+  scope :church_events, ->() { joins(:category_event).where('category_events.name' => "Church Event") }  
+  scope :community_events, ->() { joins(:category_event).where('category_events.name' => "Community Event") }  
+  scope :national_events, ->() { joins(:category_event).where('category_events.name' => "National Event") }   
 end
