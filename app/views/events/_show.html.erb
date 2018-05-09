@@ -7,7 +7,17 @@
         <span><i class="fa fa-angle-right"></i></span>
         <span><%= link_to "events", events_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span><%= link_to "calendar events", events_path %></span>
+        <span>
+          <% if @event.category_event.name == "Youth Event" %>
+            <%= link_to "Youth Events", youth_events_events_path %>
+          <% elsif @event.category_event.name == "Church Event" %>
+            <%= link_to "Church Events", church_events_events_path %>
+          <% elsif @event.category_event.name == "Community Event" %>
+            <%= link_to "Community Events", community_events_events_path %>
+          <% elsif @event.category_event.name == "National Event" %>
+            <%= link_to "National Event", national_events_events_path %>
+          <% end %>
+        </span>
         <span><i class="fa fa-angle-right"></i></span>
         <span class="current_page"><%= (@event.name).truncate(50) %></span>
       </div>
@@ -28,7 +38,15 @@
                 <span>
                   <span class="evt_subheader">category:</span>
                   <span class="evt_category">
-                    <%= link_to "#{@event.category_event.name}", "#" %>
+                    <% if @event.category_event.name == "Youth Event" %>
+                      <%= link_to "Youth Events", youth_events_events_path %>
+                    <% elsif @event.category_event.name == "Church Event" %>
+                      <%= link_to "Church Events", church_events_events_path %>
+                    <% elsif @event.category_event.name == "Community Event" %>
+                      <%= link_to "Community Events", community_events_events_path %>
+                    <% elsif @event.category_event.name == "National Event" %>
+                      <%= link_to "National Event", national_events_events_path %>
+                    <% end %>
                   </span>
                 <% end %> 
               </span>
