@@ -1,19 +1,34 @@
+<h1>event calendar page</h1>
 <div class="pages_boarder"></div>
-<div class="medium-12 columns eventindex_section">
-  <div class="eventindex_inner_section">
-    <div class="medium-12 columns eventindex_content">
+<div class="medium-12 columns conetnt_calendareventspg_section">
+  <div class="conetnt_calendareventspg_inner_section">
+    <div class="medium-12 columns calendareventspg_content">
       <div class="tree_line">
         <span><%= link_to "home", root_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span class="current_page">events</span>
+        <span><%= link_to "events", events_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">calendar events</span>
       </div>
 
       <div class="medium-12 columns page_main_content">
         <!-- info_left_content -->
         <div class="medium-8 columns info_left_content">
           <div class="page_information">
-            <div class="page_header">listed events</div>
-            <div class="calendar_section">listed events</div>
+            <div class="page_header">calendar events</div>
+            <div class="calendar_section">
+
+              <%= month_calendar events: @events do |date, events| %>
+                <%= date.strftime("%b %d") %>
+                <div>
+                  <ul>
+                    <% events.each do |meeting| %>
+                      <li><%=link_to "#{(meeting.name).truncate(40)}" " - #{meeting.start_time.strftime("%I:%M%p")}", event_path(meeting) %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+            </div>
             <div><%= link_to 'New Event', new_event_path %></div>
           </div>
         </div>

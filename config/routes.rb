@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :events
+  resources :events do
+    collection do
+      get     'calendar-events',                 to: 'events#calendareventspg'
+    end
+  end
+
   resources :launchministries
   devise_for :users
   resources :users
