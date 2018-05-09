@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def homepg
+    @events = Event.all
   end
 
   def aboutuspg
