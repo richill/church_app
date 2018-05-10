@@ -61,6 +61,10 @@ class LaunchministriesController < ApplicationController
     end
   end
 
+  def ministriespg
+    @launchministries = Launchministry.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_launchministry

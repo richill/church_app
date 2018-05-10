@@ -9,7 +9,12 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :launchministries
+  resources :launchministries do
+    collection do
+      get     'listed-ministries',                 to: 'events#ministriespg'
+    end
+  end
+  
   devise_for :users
   resources :users
   
