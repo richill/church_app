@@ -5,7 +5,7 @@
       <div class="tree_line">
         <span><%= link_to "home", root_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span><%= link_to "events", events_path %></span>
+        <span><%= link_to "connect", events_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
         <span class="current_page">minitries</span>
       </div>
@@ -17,37 +17,24 @@
             <div class="page_header">minitries</div>
             <div class="calendar_section">
               <!-- listed ministries -->
-              <div class="event_content">
-                <div class="event_inner_content">
+              <div class="ministry_content">
+                <div class="ministry_inner_content">
                   <ul>
-                    <% @events.each do |event| %>
+                    <% @launchministries.each do |minstry| %>
                       <li>
                         <div>
-                          <span class="evt_img_section">
-                            <div class="evt_img_outter">
-                              <div class="evt_img"><%= link_to (image_tag("img_sample.jpg")), "#" %></div>
+                          <span class="ministry_img_section">
+                            <div class="ministry_img_outter">
+                              <div class="ministry_img"><%= link_to (image_tag("img_sample.jpg")), "#" %></div>
                             </div>
                           </span>
-                          <span class="event_info_section">
-                            <%= link_to event_path(event), target:"_blank" do %>
-                              <div class="evt_title"><%= truncate("#{event.name}", length: 45) %></div>
-                              <div class="evt_minor_info evt_time">
-                                <span><b>date:</b></span>
-                                <span><%= event.start_time.strftime("%b %d %Y") %></span>  
-                                <span class="listevt_divider">|</span>
-                                <span><b>time:</b></span>
-                                <span><%= "#{event.start_time.strftime("%I:%M%p")}" %> - <%= "#{event.end_time.strftime("%I:%M%p")}" %></span>
-                              </div>
-                              <div class="evt_minor_info evt_address"><b>location:</b> <%= truncate("#{event.address}", length: 60) %></div>
-                              <div class="evt_minor_info evt_city_country">
-                                <span><b>city:</b></span>
-                                <span><%= event.city %></span>
-                                <span><b>country:</b></span>
-                                <span><%= event.category_country.name %></span>
-                              </div>
-                              <div class="evt_minor_info evt_address">
-                                <span><b>category:</b></span>
-                                <span class="evt_category"><%= event.category_event.name %></span>
+                          <span class="ministry_info_section">
+                            <%= link_to launchministry_path(minstry), target:"_blank" do %>
+                              <div class="ministry_title"><%= truncate("#{minstry.mininstryidea}", length: 45) %></div>
+                              <div class="ministry_minor_info ministry_address"><b>location:</b> <%= truncate("#{minstry.mininstrydescription}", length: 250) %></div>
+                              <div class="ministry_minor_info ministry_address">
+                                <span><b>minstry director:</b></span>
+                                <span class="evt_category"><%= minstry.firstname %> <%= minstry.lastname %></span>
                               </div>
                             <% end %>
                           </span>

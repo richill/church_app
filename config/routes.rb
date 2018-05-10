@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :launchministries do
     collection do
-      get     'listed-ministries',                 to: 'events#ministriespg'
+      get     'listed-ministries',                 to: 'launchministries#ministriespg'
     end
   end
   
