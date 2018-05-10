@@ -31,7 +31,7 @@
                           <span class="ministry_info_section">
                             <%= link_to launchministry_path(minstry), target:"_blank" do %>
                               <div class="ministry_title"><%= truncate("#{minstry.mininstryidea}", length: 45) %></div>
-                              <div class="ministry_minor_info ministry_address"><b>location:</b> <%= truncate("#{minstry.mininstrydescription}", length: 250) %></div>
+                              <div class="ministry_minor_info ministry_address"><b>about ministry:</b> <%= truncate("#{minstry.mininstrydescription}", length: 250) %></div>
                               <div class="ministry_minor_info ministry_address">
                                 <span><b>minstry director:</b></span>
                                 <span class="evt_category"><%= minstry.firstname %> <%= minstry.lastname %></span>
