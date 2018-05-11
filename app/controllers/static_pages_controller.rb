@@ -13,6 +13,9 @@ class StaticPagesController < ApplicationController
     @launchministries = Launchministry.all
   end
 
+  def childrenteenpg  
+  end
+
   def donatepg
   end
 
