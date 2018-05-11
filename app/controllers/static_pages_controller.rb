@@ -41,4 +41,7 @@ class StaticPagesController < ApplicationController
 
   def thankyoupg
   end
+
+  def youthpg
+  end
 end

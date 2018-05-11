@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get     'serve',                    to: 'static_pages#servepg'
   get     'statement-of-faith',       to: 'static_pages#statementfaithpg'
   get     'thank-you',                to: 'static_pages#thankyoupg'
+  get     'youth',                    to: 'static_pages#youthpg'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
