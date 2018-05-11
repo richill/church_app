@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   root 'static_pages#homepg'
   get     'about-us',                 to: 'static_pages#aboutuspg'
   get     'around-the-world',         to: 'static_pages#aroundworldpg'
+  get     'connect',                  to: 'static_pages#connectdpg'
   get     'donations',                to: 'static_pages#donatepg'
   get     'gdpr',                     to: 'static_pages#gdprpg'
   get     'ministry-idea',            to: 'static_pages#ministryideapg'

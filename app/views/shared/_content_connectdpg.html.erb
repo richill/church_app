@@ -1,0 +1,47 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_connectdpg_section">
+  <div class="content_connectdpg_inner_section">
+    <div class="medium-12 columns connectdpg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">connect</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">connect at open heavens church</div>
+            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+            <div>
+              <div class="paragraph_content">
+                <span>
+                  The Connections Ministry serves Christ by helping people finding their place to serve and identifying ways to grow in their faith and thrive at our church by developing meaningful relationships in appropriate ministry settings. We are the bridge between the individual and the numerous ministries of Open Heavens Church.
+                </span>
+                <div><%= link_to "first time visitor registration", new_user_registration_path, class: "registration_btn" %></div>
+                
+              </div>
+
+              <div class="paragraph_content">
+                <b>Listed Ministries</b>
+                <ul>
+                  <% @launchministries.each do |minstry| %>
+                    <li><%= link_to "#{minstry.mininstryidea}", launchministry_path(minstry), class: "weblink" %></li>
+                  <% end %>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
