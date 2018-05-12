@@ -42,8 +42,8 @@
                             <div class="action_btns">
                               <span><%= link_to "edit gallery", edit_gallery_path(gallery) %></span>
                               <span><%= link_to "delete gallery", gallery, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-                              <span><%= link_to "view gallery photos", gallery_path(gallery) %></span>
                               <span><%= link_to "add photos to gallery", new_gallery_photo_path(gallery) %></span>
+                              <span><%= link_to "view gallery photos", gallery_path(gallery) %></span>
                               <span class="hide"><%= link_to 'New Gallery', new_gallery_path %></span>
                             </div>
                           </span>
