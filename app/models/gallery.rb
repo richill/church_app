@@ -1,4 +1,5 @@
 class Gallery < ApplicationRecord
+  has_many :photos
 
   def self.desc_order
     order('created_at DESC')
