@@ -1,29 +1,9 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, "Gallery Photos") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header_signedout' %></div>
+  <%= render 'show' %>
+  <%= render 'shared/footer' %>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @gallery.name %>
-</p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @gallery.date %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @gallery.description %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @gallery.image %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @gallery.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_gallery_path(@gallery) %> |
-<%= link_to 'Back', galleries_path %>

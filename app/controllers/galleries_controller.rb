@@ -10,6 +10,7 @@ class GalleriesController < ApplicationController
   # GET /galleries/1
   # GET /galleries/1.json
   def show
+    @gallery_photos = @gallery.photos
   end
 
   # GET /galleries/new

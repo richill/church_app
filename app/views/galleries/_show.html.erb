@@ -1,0 +1,85 @@
+
+<div class="pages_boarder"></div>
+<div class="medium-12 columns galleryshow_section">
+  <div class="galleryshow_inner_section">
+    <div class="medium-12 columns galleryshow_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "connect", connect_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "galleries", galleries_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page"><%= @gallery.name %></span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header"><%= @gallery.name %></div>
+            <div class="paragraph_content">
+              <span><%= truncate("#{@gallery.description}", length: 300) %></span>
+              <span><%= link_to "view", "#", class: "weblink" %></span>
+            </div>
+            <div class="gallery_section">
+              <!-- listed gallery photos -->
+              <div class="gallery_content">
+                <div class="gallery_inner_content">
+                  <ul>
+                    <% @gallery_photos.each do |photo| %>
+                      <li><%= photo.description %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+              <!-- listed gallery photos -->
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="old_content">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @gallery.name %>
+  </p>
+
+  <p>
+    <strong>Date:</strong>
+    <%= @gallery.date %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @gallery.description %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= @gallery.image %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= @gallery.user_id %>
+  </p>
+
+  <%= link_to 'Edit', edit_gallery_path(@gallery) %> |
+  <%= link_to 'Back', galleries_path %>
+</div>
