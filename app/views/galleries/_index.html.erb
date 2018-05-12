@@ -32,7 +32,7 @@
                             <%= link_to gallery_path(gallery), target:"_blank" do %>
                               <div class="gallery_title"><%= truncate("#{gallery.name}", length: 45) %></div>
                               <div class="gallery_minor_info gallery_time">
-                                <span><b>date:</b></span>
+                                <span><b>event date:</b></span>
                                 <span><%= gallery.date.strftime("%b %d %Y") %></span>  
                                 <span class="listgallery_divider">|</span>
                                 <span><b>time:</b></span>
