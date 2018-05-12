@@ -22,7 +22,8 @@ class PhotosController < ApplicationController
     @photo = @gallery.photos.create(photo_params)
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to([@photo.gallery, @photo], notice: 'photo was successfully created.') }
+        # format.html { redirect_to([@photo.gallery, @photo], notice: 'photo was successfully created.') }
+        format.html { redirect_to(gallery_path(@gallery), notice: 'photo was successfully created.') }
         format.json  { render json: @photo, status: :created, location: @photo }
       else
         format.html { render action: "new" }
