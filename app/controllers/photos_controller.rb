@@ -1,6 +1,102 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @blogs = Blog.all
+  end
+
+  def show
+  end
+
+  def new
+    @user = User.friendly.find(params[:user_id])
+    @blog = @user.blogs.build
+  end
+
+  def edit
+    @user = User.friendly.find(params[:user_id])
+  end
+
+  def create
+    @user = User.friendly.find(params[:user_id])
+    @blog = @user.blogs.create(blog_params)
+    respond_to do |format|
+      if @blog.save
+        format.html { redirect_to([@blog.user, @blog], notice: 'Blog was successfully created.') }
+        format.json  { render json: @blog, status: :created, location: @blog }
+      else
+        format.html { render action: "new" }
+        format.json  { render json: @blog.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @blog.update_attributes(blog_params)
+        format.html { redirect_to([@blog.user, @blog], notice: 'Blog was successfully updated.') }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @blog.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+    @user = User.friendly.find(params[:user_id])
+    @blog = @user.blogs.find(params[:id])
+    @blog.destroy
+    redirect_to blogs_path
+  end
+
+
+  private
+  def set_photo
+    @photo = Photo.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def photo_params
+    params.require(:photo).permit(:name, :image, :gallery_id)
+  end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class PhotosController < ApplicationController
+  before_action :set_photo, only: [:show, :edit, :update, :destroy]
+
   # GET /photos
   # GET /photos.json
   def index
