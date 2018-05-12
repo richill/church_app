@@ -21,7 +21,7 @@
                 <div class="gallery_inner_content">
                   <ul>
                     <% @galleries.each do |gallery| %>
-                      <li>
+                      <li class="listed_galleries">
                         <div>
                           <span class="gallery_img_section">
                             <div class="gallery_img_outter">
@@ -38,9 +38,16 @@
                                 <span><b>time:</b></span>
                                 <span>9:00AM - 06:00PM<%# "#{event.start_time.strftime("%I:%M%p")}" %> - <%# "#{event.end_time.strftime("%I:%M%p")}" %></span>
                               </div>
-                              <div class="gallery_minor_info gallery_description"><%= truncate("#{gallery.description}", length: 250) %></div>
+                              <div class="gallery_minor_info gallery_description"><%= truncate("#{gallery.description}", length: 130) %></div>
                             <% end %>
+                            <div class="action_btns">
+                              <span><%= link_to "edit gallery", "#" %></span>
+                              <span><%= link_to "delete gallery", "#" %></span>
+                              <span><%= link_to "view gallery photos", "#" %></span>
+                              <span><%= link_to "add photos to gallery", "#" %></span>
+                            </div>
                           </span>
+
                         </div>
                       </li>
                       <div class="clear"></div>
@@ -67,7 +74,7 @@
 
 
 
-<div class="old_content">
+<div class="old_content hide">
   <p id="notice"><%= notice %></p>
   <h1>Galleries</h1>
   <table>
