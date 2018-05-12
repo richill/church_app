@@ -2,52 +2,52 @@ class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
   def index
-    @blogs = Blog.all
+    @photos = Photo.all
   end
 
   def show
   end
 
   def new
-    @user = User.friendly.find(params[:user_id])
-    @blog = @user.blogs.build
+    @gallery = Gallery.find(params[:gallery_id])
+    @photo = @gallery.photos.build
   end
 
   def edit
-    @user = User.friendly.find(params[:user_id])
+    @gallery = gallery.find(params[:gallery_id])
   end
 
   def create
-    @user = User.friendly.find(params[:user_id])
-    @blog = @user.blogs.create(blog_params)
+    @gallery = Gallery.find(params[:gallery_id])
+    @photo = @gallery.photos.create(photo_params)
     respond_to do |format|
-      if @blog.save
-        format.html { redirect_to([@blog.user, @blog], notice: 'Blog was successfully created.') }
-        format.json  { render json: @blog, status: :created, location: @blog }
+      if @photo.save
+        format.html { redirect_to([@photo.gallery, @photo], notice: 'photo was successfully created.') }
+        format.json  { render json: @photo, status: :created, location: @photo }
       else
         format.html { render action: "new" }
-        format.json  { render json: @blog.errors, status: :unprocessable_entity }
+        format.json  { render json: @photo.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def update
     respond_to do |format|
-      if @blog.update_attributes(blog_params)
-        format.html { redirect_to([@blog.user, @blog], notice: 'Blog was successfully updated.') }
+      if @photo.update_attributes(photo_params)
+        format.html { redirect_to([@photo.gallery, @photo], notice: 'photo was successfully updated.') }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @blog.errors, status: :unprocessable_entity }
+        format.json { render json: @photo.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def destroy
-    @user = User.friendly.find(params[:user_id])
-    @blog = @user.blogs.find(params[:id])
-    @blog.destroy
-    redirect_to blogs_path
+    @gallery = Gallery.find(params[:gallery_id])
+    @photo = @gallery.photos.find(params[:id])
+    @photo.destroy
+    redirect_to photos_path
   end
 
 

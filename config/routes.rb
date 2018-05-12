@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   resources :photos
   resources :galleries
+
+  resources :galleries do
+    resources :photos
+  end
+
   resources :events do
     collection do
       get     'calendar-events',                 to: 'events#calendareventspg'
