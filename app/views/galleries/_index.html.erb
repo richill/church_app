@@ -23,13 +23,12 @@
                     <% @galleries.each do |gallery| %>
                       <li class="listed_galleries">
                         <div>
-                          <span class="gallery_img_section">
-                            <div class="gallery_img_outter">
-                              <div class="gallery_img"><%= link_to (image_tag("img_sample.jpg")), "#" %></div>
-                            </div>
-                          </span>
+                          <div class="gallery_img_section">
+                            <div class="gallery_img_outter"></div>
+                            <div class="gallery_img"><%= link_to (image_tag("img_smapleimg.png")), gallery_path(gallery) %></div>
+                          </div>
                           <span class="gallery_info_section">
-                            <%= link_to gallery_path(gallery), target:"_blank" do %>
+                            <%= link_to gallery_path(gallery) do %>
                               <div class="gallery_title"><%= truncate("#{gallery.name}", length: 45) %></div>
                               <div class="gallery_minor_info gallery_time">
                                 <span><b>event date:</b></span>
@@ -41,10 +40,11 @@
                               <div class="gallery_minor_info gallery_description"><%= truncate("#{gallery.description}", length: 130) %></div>
                             <% end %>
                             <div class="action_btns">
-                              <span><%= link_to "edit gallery", "#" %></span>
-                              <span><%= link_to "delete gallery", "#" %></span>
-                              <span><%= link_to "view gallery photos", "#" %></span>
+                              <span><%= link_to "edit gallery", edit_gallery_path(gallery) %></span>
+                              <span><%= link_to "delete gallery", gallery, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                              <span><%= link_to "view gallery photos", gallery_path(gallery) %></span>
                               <span><%= link_to "add photos to gallery", "#" %></span>
+                              <span class="hide"><%= link_to 'New Gallery', new_gallery_path %></span>
                             </div>
                           </span>
 
@@ -72,38 +72,3 @@
 
 
 
-
-
-<div class="old_content hide">
-  <p id="notice"><%= notice %></p>
-  <h1>Galleries</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Date</th>
-        <th>Description</th>
-        <th>Image</th>
-        <th>User</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @galleries.each do |gallery| %>
-        <tr>
-          <td><%= gallery.name %></td>
-          <td><%= gallery.date %></td>
-          <td><%= gallery.description %></td>
-          <td><%= gallery.image %></td>
-          <td><%= gallery.user_id %></td>
-          <td><%= link_to 'Show', gallery %></td>
-          <td><%= link_to 'Edit', edit_gallery_path(gallery) %></td>
-          <td><%= link_to 'Destroy', gallery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <br>
-  <%= link_to 'New Gallery', new_gallery_path %>
-</div>
