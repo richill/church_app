@@ -83,14 +83,6 @@
   margin-bottom: 3px;
 }
 
-// .galleryshow_section .info_left_content .paragraph_content ul {
-//   margin: 0px;
-// }
-
-// .galleryshow_section .info_left_content .paragraph_content ul li {
-//   margin-bottom: 5px;
-// }
-
 .galleryshow_section .info_left_content .paragraph_content .weblink {
   color: #a1355b !important;
 }
@@ -134,95 +126,91 @@
   padding: 5px;
 }
 
-.galleryshow_section .gallery_content .gallery_img_section {
-  height: 137px;
-  width: 200px;
+.galleryshow_section .gallery_photos_content .cover_section {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.galleryshow_section .gallery_photos_content .cover_section .main_list {
   float: left;
-  position: relative;
 }
 
-.galleryshow_section .gallery_content .gallery_img_outter {
-  height: 128px;
-  width: 190px;
-  margin-bottom: 10px;
-  border: 1px solid #E8E9EB;
+.galleryshow_section .first_section {
+  margin-right: 8px;
 }
 
-.galleryshow_section .gallery_content .gallery_img {
-  height: 132px;
-  width: 193px;
-  margin-bottom: 10px;
-  border: 1px solid #E8E9EB;
-  background-color: green;
-  position: absolute;
-  top: 5px;
-  left: 5px;
+.galleryshow_section .second_section {
+  width: 125px;
+  padding: 0px 7px;
+  height: 424px;
   overflow: hidden;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
 }
 
-.galleryshow_section .gallery_content .gallery_img:hover {
-  opacity: 0.5;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
+.galleryshow_section .gallery_photos_inner_content ul {
+  margin: 0px !important;
+  list-style-type: none;
 }
 
-.galleryshow_section .gallery_content .gallery_info_section {
-  height: 105px;
+.galleryshow_section .gallery_photos_inner_content ul li {
+  float: left;
+  margin-right: 10px;
+}
+
+.galleryshow_section .gallery_photos_inner_content ul li:last-child {
+  margin-right: 0px;
+}
+
+.galleryshow_section .gallery_photo_outter_img {
+  padding: 5px;
+  border: 1px solid #E8E9EB;
+  margin-bottom: 9px;
+}
+
+.galleryshow_section .gallery_photo_img {
+  height: 65px;
+  width: 100px;
+  overflow: hidden; 
+}
+
+.galleryshow_section .gallery_photo_intial_outter_img {
+  padding: 5px;
+  border: 1px solid #E8E9EB;
+  margin-bottom: 10px;
+}
+
+.galleryshow_section .gallery_photo_intial_img {
+  width: 620px;
+  height: 409px;
+  overflow: hidden;
+}
+
+.galleryshow_section .view_all {
   display: inline-block;
-  padding: 5px 0px;
-  margin-left: 2px;
-}
-@media only screen and (min-width: 1160px) {
-  .galleryshow_section .gallery_content .gallery_info_section {
-    width: 70%;
-  }
-}
-
-.galleryshow_section .gallery_content .gallery_info_section a {
+  background-color: rgba(42, 44, 73, 0.05);
   color: #2A2C49 !important;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-}
-
-.galleryshow_section .gallery_content .gallery_info_section a:hover {
-  text-decoration: none !important;
-  opacity: 0.6 !important;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-}
-
-.galleryshow_section .gallery_content .gallery_info_section .gallery_title {
-  font-size: 20px;
+  height: 77px;
+  width: 100%;
+  text-align: center;
+  padding: 27px 0px;
+  border: 1px solid #E8E9EB;
   font-weight: bold;
-  text-transform: capitalize;
-  margin-bottom: 15px;
+  font-size: 12px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
-.galleryshow_section .gallery_content .gallery_title:hover {
-  text-decoration: none !important;
+.galleryshow_section .view_all:hover {
+  background-color: rgba(42, 44, 73, 0.1);
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
-.galleryshow_section .gallery_content .gallery_minor_info {
-  font-size: 13px;
-  margin: 10px 0px;
-  text-transform: capitalize;
-  line-height: 17px;
+.galleryshow_section .listgallery_divider {
+  margin: 0px 5px;
 }
-
-// ----------------------------
-//   workings
-// ----------------------------
-
-
-
-
-
 
 
 

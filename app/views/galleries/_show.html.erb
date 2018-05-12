@@ -18,20 +18,52 @@
         <div class="medium-8 columns info_left_content">
           <div class="page_information">
             <div class="page_header"><%= @gallery.name %></div>
+            <div class="date_category">
+              <span>
+                <span class="evt_subheader">event date:</span>
+                <span><%= @gallery.date.strftime("%b %d %Y") %></span>
+                <span class="listgallery_divider">|</span>
+                <span><b>Time:</b></span>
+                <span>9:00AM - 06:00PM<%# "#{event.start_time.strftime("%I:%M%p")}" %>  <%# "#{event.end_time.strftime("%I:%M%p")}" %></span>
+              </span>
+            </div>
+
+      
+
             <div class="paragraph_content">
               <span><%= truncate("#{@gallery.description}", length: 300) %></span>
               <span><%= link_to "view", "#", class: "weblink" %></span>
             </div>
-            <div class="gallery_section">
+            <div class="gallery_photos_section">
               <!-- listed gallery photos -->
-              <div class="gallery_content">
-                <div class="gallery_inner_content">
-                  <ul>
-                    <% @gallery_photos.each do |photo| %>
-                      <li><%= photo.description %></li>
-                    <% end %>
-                  </ul>
-                </div>
+              <div class="gallery_photos_content">
+
+                <ul class="cover_section">
+                  <li class="main_list first_section">
+                    <div class="gallery_photo_intial_outter_img">
+                      <div class="gallery_photo_intial_img"><%= image_tag("img_smapleimg.png") %></div>
+                    </div>
+                  </li>
+                  <li class="main_list second_section">
+                    <div class="gallery_photos_inner_content">
+                      <ul>
+                        <% @gallery_photos.limit(4).each do |photo| %>
+                          <li>
+                            <div class="gallery_photo_outter_img">
+                              <div class="gallery_photo_img"><%= image_tag("img_smapleimg.png") %></div>
+                            </div>
+                          </li>
+                        <% end %>
+                        <div><%= link_to "view photos", "#", class: "view_all" %></div>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+
+                
+                
+
+
               </div>
               <!-- listed gallery photos -->
             </div>
@@ -46,40 +78,4 @@
 
     </div>
   </div>
-</div>
-
-
-
-
-
-<div class="old_content">
-  <p id="notice"><%= notice %></p>
-
-  <p>
-    <strong>Name:</strong>
-    <%= @gallery.name %>
-  </p>
-
-  <p>
-    <strong>Date:</strong>
-    <%= @gallery.date %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= @gallery.description %>
-  </p>
-
-  <p>
-    <strong>Image:</strong>
-    <%= @gallery.image %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= @gallery.user_id %>
-  </p>
-
-  <%= link_to 'Edit', edit_gallery_path(@gallery) %> |
-  <%= link_to 'Back', galleries_path %>
 </div>
