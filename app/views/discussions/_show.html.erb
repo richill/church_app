@@ -25,7 +25,7 @@
                 <span><b>Time:</b></span>
                 <span><%= @discussion.created_at.strftime("%I:%M%p") %></span>
                 <span class="listpage_divider">|</span>
-                <span><i class="fa fa-comments"></i> <span>11 comments</span></span>
+                <span><i class="fa fa-comments"></i> <span><%= @discussion.comments.count %> comments</span></span>
               </span>
             </div>
             <div class="paragraph_content">
@@ -39,16 +39,11 @@
             <div class="discussions_section">
               <!-- listed comments photos -->
               <div class="discussions_content">
-      
-
                 <div>
-                  <div>comments</div>
+                  <div class="comment_header">comments</div>
                   <%= render "shared/content_comment_form" %>
                   <%= render "shared/content_comments" %>
                 </div>
-
-
-
               </div>
               <!-- listed comments photos -->
             </div>

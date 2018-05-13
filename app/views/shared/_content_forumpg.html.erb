@@ -35,7 +35,7 @@
                                 <span><b>created:</b></span>
                                 <span><%= discussion.created_at.strftime("%b %d %Y") %></span>  
                                 <span class="listpage_divider">|</span>
-                                <span><i class="fa fa-comments"></i> <span>11 comments</span></span>
+                                <span><i class="fa fa-comments"></i> <span><%= discussion.comments.count %> comments</span></span>
                               </div>
                               <div class="page_minor_info page_description"><%= truncate("#{discussion.description}", length: 200) %></div>
                             <% end %>
