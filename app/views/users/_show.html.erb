@@ -1,0 +1,33 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns usershow_section">
+  <div class="usershow_inner_section">
+    <div class="medium-12 columns usershow_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">profile</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <h1>Hello <%= @user.firstname %> <%= @user.lastname %>!</h1>
+            <div class="hide">
+              <% if current_user == @user || current_user.admin? %>
+              <%= link_to 'Edit', edit_user_path(@user) %> |
+              <% end %>
+              <%= link_to 'Back', users_path %>
+            </div>   
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,17 +1,12 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, "#{@user.firstname}") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header_signedout' %></div>
+  <%= render 'show' %>
+  <%= render 'shared/footer' %>
+</div>
 
-<p>
-  <strong>Firstname:</strong>
-  <%= @user.firstname %>
-</p>
 
-<p>
-  <strong>Lastname:</strong>
-  <%= @user.lastname %>
-</p>
 
-<% if current_user == @user || current_user.admin? %>
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<% end %>
 
-<%= link_to 'Back', users_path %>
+

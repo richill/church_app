@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :discussions
+  resources :discussions do
+    resources :comments, only: [:create, :destroy] 
+  end
+  
   resources :photos
   resources :galleries
 
@@ -24,7 +27,9 @@ Rails.application.routes.draw do
   end
   
   devise_for :users
-  resources :users
+  resources :users do
+    resources :comments, only: [:create, :destroy] 
+  end
   
   root 'static_pages#homepg'
   get     'about-us',                 to: 'static_pages#aboutuspg'

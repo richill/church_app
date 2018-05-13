@@ -8,9 +8,24 @@
           <nav class="nav_list_upper">
             <ul>
               <% if user_signed_in? %>
-                <li class="user_name"><%= link_to "#{current_user.firstname}'s Profile", user_path(current_user) %></li>
-                <li><%= link_to "Members", users_path %></li>
-                <li><%= link_to "Sign-out", destroy_user_session_path, method: :delete %></li>
+                <li>
+                  <span>
+                    <span><i class="fa fa-user"></i></span>
+                    <span><%= link_to "#{current_user.firstname}'s Profile", user_path(current_user) %></span>
+                  </span>
+                  <span>|</span>
+                  <span><%= link_to "Sign-out", destroy_user_session_path, method: :delete %></span>
+                </li>
+                <li>
+                  <span><i class="fa fa-credit-card"></i></span>
+                  <span><%= link_to "donate", donations_path %></span>
+                </li>
+                <!-- <li><%# link_to "Members", users_path %></li> -->
+                <li>
+                  <span><i class="fa fa-home"></i></span>
+                  <span><%= link_to "homepage", root_path %></span>
+                </li>
+                <li class="date"><%= Date.today.strftime("%b %d, %Y") %></li>
               <% else %>
                 <li>
                   <span>
