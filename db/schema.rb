@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180513111455) do
+ActiveRecord::Schema.define(version: 20180513112051) do
 
   create_table "category_countries", force: :cascade do |t|
     t.string   "name"
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20180513111455) do
     t.string   "image"
     t.integer  "category_country_id"
     t.string   "linkmap"
+    t.string   "slug"
+    t.index ["slug"], name: "index_events_on_slug", unique: true
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -61,6 +63,8 @@ ActiveRecord::Schema.define(version: 20180513111455) do
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "slug"
+    t.index ["slug"], name: "index_galleries_on_slug", unique: true
   end
 
   create_table "launchministries", force: :cascade do |t|
@@ -79,6 +83,8 @@ ActiveRecord::Schema.define(version: 20180513111455) do
     t.text     "ministrymission"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.string   "slug"
+    t.index ["slug"], name: "index_launchministries_on_slug", unique: true
   end
 
   create_table "photos", force: :cascade do |t|
@@ -87,6 +93,8 @@ ActiveRecord::Schema.define(version: 20180513111455) do
     t.datetime "updated_at",  null: false
     t.integer  "gallery_id"
     t.text     "description"
+    t.string   "slug"
+    t.index ["slug"], name: "index_photos_on_slug", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -109,9 +117,11 @@ ActiveRecord::Schema.define(version: 20180513111455) do
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
     t.boolean  "admin"
+    t.string   "slug"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["slug"], name: "index_users_on_slug", unique: true
   end
 
 end
