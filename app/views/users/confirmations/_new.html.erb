@@ -1,0 +1,51 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns user_confirmationnew_section">
+  <div class="user_confirmationnew_inner_section">
+    <div class="medium-12 columns user_confirmationnew_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">resend confirmation</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">Resend confirmation instructions</div>
+            <div class="paragraph_content">
+              <span>Instructions For Activating Your Open Heavens Account Would Be Sent To Your Stated Email Address. Your privacy is important to us, please do take the time to review our <%= link_to "Privacy Policy", privacy_path, class: "weblink" %> and <%= link_to "GDPR", gdpr_path, class: "weblink" %></span>
+            </div>
+            <div class="page_main_form">
+              <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+                <%= f.error_notification %>
+                <%= f.full_error :confirmation_token %>
+
+                <div class="form-inputs">
+                  <div class="info_sub_content"><%= f.input :email, required: true, autofocus: true, label: false, placeholder: "Email" %></div>
+                </div>
+
+                <div class="form-actions">
+                  <%= f.button :submit, "Resend confirmation instructions" %>
+                </div>
+              <% end %>
+              <div class="shared_links"><%= render "users/shared/links" %></div>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

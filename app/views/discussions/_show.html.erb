@@ -12,9 +12,9 @@
         <span class="current_page"><%= @discussion.topic %></span>
       </div>
 
-      <div class="medium-8 columns page_main_content">
+      <div class="page_main_content">
         <!-- info_left_content -->
-        <div class="medium-12 columns info_left_content">
+        <div class="medium-8 columns info_left_content">
           <div class="page_information">
             <div class="page_header"><%= @discussion.topic %></div>
             <div class="date_category">
@@ -32,7 +32,7 @@
               <span><%= truncate("#{@discussion.description}", length: 300) %></span>
               <span><%= link_to "view", "#", class: "weblink" %></span>
               <div class="action_btn">
-                <span><%= link_to "edit discussion topic", "#" %></span>
+                <span><%= link_to "edit discussion topic", edit_discussion_path(@discussion) %></span>
                 <span><%= link_to "delete discussion topic", "#" %></span>
               </div>
             </div>

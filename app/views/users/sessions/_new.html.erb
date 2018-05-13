@@ -71,32 +71,3 @@
 
 
 
-
-
-
-
-
-<div class="medium-12 columns content_sessionnew_section hide">
-  <div class="content_sessionnew_inner_section">
-    <div>
-      
-      <h2>Log in hello</h2>
-      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-inputs">
-          <%= f.input :email, required: false, autofocus: true %>
-          <%= f.input :password, required: false %>
-          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-        </div>
-        <div class="form-actions">
-          <%= f.button :submit, "Log in" %>
-        </div>
-      <% end %>
-      <%= render "users/shared/links" %>
-
-    </div>
-  </div>
-</div>
-
-
-
-
