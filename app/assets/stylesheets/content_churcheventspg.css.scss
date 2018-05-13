@@ -199,14 +199,6 @@
   border: 2px solid #dddddd !important;
 }
 
-
-
-// ---------------------------
-//   workings
-// ---------------------------
-
-
-
 .content_churcheventspg_section .event_content .event_content {
   background-color: #fff;
   width: 100%;
@@ -222,6 +214,11 @@
 
 .content_churcheventspg_section .event_content .evt_img_section {
   float: left;
+}
+@media only screen and (max-width: 1160px) {
+  .content_churcheventspg_section .event_content .evt_img_section {
+    display: none;
+  }
 }
 
 .content_churcheventspg_section .event_content .evt_img_outter {

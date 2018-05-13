@@ -149,6 +149,12 @@
   margin: 0px 50px;
   display: inline-block;
 }
+@media only screen and (max-width: 600px) {
+  .conetnt_calendareventspg_section .calendar-title {
+    font-size: 12px !important;
+    margin: 0px 5px !important;
+  }
+}
 
 .conetnt_calendareventspg_section .calendar_section ul {
   margin: 0px;
@@ -183,6 +189,14 @@
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+}
+@media only screen and (max-width: 600px) {
+  .conetnt_calendareventspg_section .calendar-heading a {
+    font-size: 12px !important;
+    width: 125px;
+    height: 30px;
+    padding: 6px;
+  }
 }
 
 .conetnt_calendareventspg_section .calendar-heading a:hover {
