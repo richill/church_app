@@ -1,7 +1,5 @@
 <div class="comment_form">
   <%= form_for [@commentable, @comment] do |f| %>
-    <%#render 'shared/content_error_messages', object: f.object %>
-
     <div class="field">
       <%= f.hidden_field :user_id %>
       <%= f.text_area :content, rows: 8, placeholder: "Write a comment..."  %>
