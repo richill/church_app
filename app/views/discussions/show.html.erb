@@ -1,14 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, "Discussion | #{@discussion.topic}") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header_signedout' %></div>
+  <%= render 'show' %>
+  <%= render 'shared/footer' %>
+</div>
 
-<p>
-  <strong>Topic:</strong>
-  <%= @discussion.topic %>
-</p>
 
-<p>
-  <strong>Topic:</strong>
-  <%= @discussion.image %>
-</p>
 
-<%= link_to 'Edit', edit_discussion_path(@discussion) %> |
-<%= link_to 'Back', discussions_path %>
