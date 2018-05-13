@@ -1,28 +1,83 @@
-<div class="medium-12 columns content_registrationnew_section">
-  <div class="content_registrationnew_inner_section">
-    <div>
+<div class="pages_boarder"></div>
+<div class="medium-12 columns user_registrationnew_section">
+  <div class="user_registrationnew_inner_section">
+    <div class="medium-12 columns user_registrationnew_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">registration</span>
+      </div>
 
-      <h2>Registration</h2>
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= f.error_notification %>
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">registration</div>
+            <div class="paragraph_content">
+              <span>After you create an account on the Open Heavens website, please note that your account will be verified by an administrator as soon as possible before you can login and use it. This serves to safeguard your information and ensure a safer environment for the younger users.</span>
+              <span>By clicking on the "CREATE NEW ACCOUNT" button, you agree to our <%= link_to "Privacy Policy", privacy_path, class: "weblink" %> | <%= link_to "GDPR", gdpr_path, class: "weblink" %></span>
+            </div>
 
-        <div class="form-inputs">
-          <%= f.text_field :firstname, placeholder: "firstname" %>
-          <%= f.text_field :lastname, placeholder: "lastname" %>
-          <%= f.input :email, required: true, autofocus: true %>
-          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-          <%= f.input :password_confirmation, required: true %>
+            <div class="page_main_form">
+              <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                <%= f.error_notification %>
+
+                <div class="form-inputs">
+                  <div class="info_sub_content">
+                    <ul>
+                      <li class="form_left"><%= f.input :firstname, label: false, placeholder: "First Name" %></li>
+                      <li class="form_right"><%= f.input :lastname, label: false, placeholder: "Last Name" %></li>
+                    </ul>
+                  </div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :email, required: true, autofocus: true, label: false, placeholder: "Email" %></div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %></div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :password_confirmation, required: true %></div>
+                  <div class="clear"></div>
+
+                </div>
+                <div class="form-actions">
+                  <%= f.button :submit, "create new account" %>
+                </div>
+              <% end %>
+              <div class="shared_links"><%= render "users/shared/links" %></div>
+            </div>
+          </div>
         </div>
+        <!-- info_left_content -->
 
-        <div class="form-actions">
-          <%= f.button :submit, "Sign up" %>
-        </div>
-      <% end %>
-      <%= render "users/shared/links" %>
-      
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
