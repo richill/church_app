@@ -12,9 +12,9 @@
         <span class="current_page"><%= @discussion.topic %></span>
       </div>
 
-      <div class="medium-12 columns page_main_content">
+      <div class="medium-8 columns page_main_content">
         <!-- info_left_content -->
-        <div class="medium-8 columns info_left_content">
+        <div class="medium-12 columns info_left_content">
           <div class="page_information">
             <div class="page_header"><%= @discussion.topic %></div>
             <div class="date_category">
@@ -42,7 +42,7 @@
                 <div>
                   <div class="comment_header"><i class="fa fa-comments"></i> <span>comments</span></div>
                   <%= render "shared/content_comment_form" %>
-                  <%= render "shared/content_comments" %>
+                  <%# render "shared/content_comments" %>
                 </div>
               </div>
               <!-- listed comments photos -->
