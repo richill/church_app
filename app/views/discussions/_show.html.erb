@@ -31,7 +31,7 @@
             <div class="paragraph_content">
               <span><%= truncate("#{@discussion.description}", length: 300) %></span>
               <span><%= link_to "view", "#", class: "weblink" %></span>
-              <div class="action_btn">
+              <div class="action_btn hide">
                 <span><%= link_to "edit discussion topic", edit_discussion_path(@discussion) %></span>
                 <span><%= link_to "delete discussion topic", "#" %></span>
               </div>
