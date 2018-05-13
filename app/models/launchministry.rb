@@ -1,4 +1,7 @@
 class Launchministry < ApplicationRecord
+  extend FriendlyId
+  friendly_id :slug_launchministries, use: :slugged
+
   validates_presence_of :firstname, presence: true, message: "can't be blank"
   validates_presence_of :lastname, presence: true, message: "can't be blank"
   validates_presence_of :email, presence: true, message: "can't be blank"
@@ -10,4 +13,10 @@ class Launchministry < ApplicationRecord
   validates_presence_of :mininstrydescription, presence: true, message: "can't be blank"
   validates_presence_of :ministryneed, presence: true, message: "can't be blank"
   validates_presence_of :ministrymission, presence: true, message: "can't be blank"
+
+  def slug_launchministries
+    [
+      :mininstryidea
+    ]
+  end
 end

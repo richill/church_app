@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180513112051) do
+ActiveRecord::Schema.define(version: 20180513112628) do
 
   create_table "category_countries", force: :cascade do |t|
     t.string   "name"
@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 20180513112051) do
     t.integer  "gallery_id"
     t.text     "description"
     t.string   "slug"
+    t.string   "name"
     t.index ["slug"], name: "index_photos_on_slug", unique: true
   end
 

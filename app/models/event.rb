@@ -1,4 +1,6 @@
 class Event < ApplicationRecord
+  extend FriendlyId
+  friendly_id :slug_events, use: :slugged
 
   # validates_presence_of :name, presence: true, message: "can't be blank"
   # validates_presence_of :start_time, presence: true, message: "can't be blank"
@@ -21,5 +23,11 @@ class Event < ApplicationRecord
   scope :youth_events, ->() { joins(:category_event).where('category_events.name' => "Youth Event") } 
   scope :church_events, ->() { joins(:category_event).where('category_events.name' => "Church Event") }  
   scope :community_events, ->() { joins(:category_event).where('category_events.name' => "Community Event") }  
-  scope :national_events, ->() { joins(:category_event).where('category_events.name' => "National Event") }   
+  scope :national_events, ->() { joins(:category_event).where('category_events.name' => "National Event") }
+
+  def slug_events
+    [
+      :name
+    ]
+  end  
 end
