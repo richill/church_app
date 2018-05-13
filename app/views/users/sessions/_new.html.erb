@@ -1,4 +1,84 @@
-<div class="medium-12 columns content_sessionnew_section">
+<div class="pages_boarder"></div>
+<div class="medium-12 columns user_registrationnew_section">
+  <div class="user_registrationnew_inner_section">
+    <div class="medium-12 columns user_registrationnew_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">login</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">user account</div>
+            <div class="paragraph_content">
+              <span>Welcome back! Clicking on the "LOG IN" button to access relevant site content. Your privacy is important to us, please do take the time to review our <%= link_to "Privacy Policy", privacy_path, class: "weblink" %> and <%= link_to "GDPR", gdpr_path, class: "weblink" %></span>
+            </div>
+            <div class="page_main_form">
+              <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <div class="form-inputs">
+                  <div class="info_sub_content"><%= f.input :email, required: false, autofocus: true, label: false, placeholder: "Email" %></div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :password, required: false %></div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %></div>
+                </div>
+
+                <div class="form-actions">
+                  <%= f.button :submit, "Log in" %>
+                </div>
+              <% end %>
+              <div class="shared_links"><%= render "users/shared/links" %></div>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="medium-12 columns content_sessionnew_section hide">
   <div class="content_sessionnew_inner_section">
     <div>
       
