@@ -14,6 +14,7 @@ gem 'foundation-rails'
 gem 'jquery-ui-rails'
 gem 'devise'
 gem "simple_calendar", "~> 2.0"
+gem 'friendly_id', '~> 5.1.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
