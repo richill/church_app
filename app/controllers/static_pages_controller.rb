@@ -20,6 +20,7 @@ class StaticPagesController < ApplicationController
   end
 
   def forumpg
+    @discussions = Discussion.all
   end
 
   def gdprpg

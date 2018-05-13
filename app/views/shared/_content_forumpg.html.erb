@@ -1,1 +1,65 @@
-<h1>content_forumpg</h1>
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_forumpg_section">
+  <div class="content_forumpg_inner_section">
+    <div class="medium-12 columns content_forumpg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "connect", connect_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">forum</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">discussion topics</div>
+            <div class="calendar_section">
+              <!-- listed events -->
+              <div class="page_content">
+                <div class="page_inner_content">
+                  <ul>
+                    <% @discussions.each do |discussion| %>
+                      <li>
+                        <div>
+                          <span class="page_img_section">
+                            <div class="page_img_outter">
+                              <div class="page_img"><%= link_to (image_tag("img_sample.jpg")), discussion_path(discussion) %></div>
+                            </div>
+                          </span>
+                          <span class="page_info_section">
+                            <%= link_to discussion_path(discussion) do %>
+                              <div class="page_title"><%= truncate("#{discussion.topic}", length: 45) %></div>
+                              <div class="page_minor_info page_time">
+                                <span><b>created:</b></span>
+                                <span><%= discussion.created_at.strftime("%b %d %Y") %></span>  
+                                <span class="listpage_divider">|</span>
+                                <span><i class="fa fa-comments"></i> <span>11 comments</span></span>
+                              </div>
+                              <div class="page_minor_info page_description"><%= truncate("#{discussion.description}", length: 200) %></div>
+                            <% end %>
+                          </span>
+                        </div>
+                      </li>
+                      <div class="clear"></div>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+              <!-- listed events -->
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
