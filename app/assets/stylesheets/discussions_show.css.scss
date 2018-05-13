@@ -253,7 +253,14 @@
   font-weight: bold;
 }
 
-
+.discussionshow_section .page_information {
+  padding: 0px !important;
+}
+@media only screen and (max-width: 1160px) {
+  .discussionshow_section .page_information {
+    width: 100% !important;
+  }
+}
 
 
 

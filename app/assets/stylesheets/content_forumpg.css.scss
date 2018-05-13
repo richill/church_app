@@ -215,6 +215,12 @@
 .content_forumpg_section .page_content .page_img_section {
   float: left;
 }
+@media only screen and (max-width: 850px) {
+  .content_forumpg_section .page_content .page_img_section  {
+    display: none;
+  }
+}
+
 
 .content_forumpg_section .page_content .page_img_outter {
   height: 135px;
@@ -256,6 +262,11 @@
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
+@media only screen and (min-width: 850px) {
+  .content_forumpg_section .page_content .page_info_section a  {
+    width: 575px;
+  }
+}
 
 .content_forumpg_section .page_content .page_info_section a:hover {
   text-decoration: none !important;
@@ -270,6 +281,7 @@
   font-weight: bold;
   text-transform: capitalize;
   margin-bottom: 15px;
+  line-height: 25px;
 }
 
 .content_forumpg_section .page_content .page_title:hover {

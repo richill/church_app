@@ -23,6 +23,11 @@
 .comments_list_inner_section .image_name_container {
   padding-left: 0px !important;
 }
+@media only screen and (max-width: 680px) {
+  .comments_list_inner_section .image_name_container {
+    display: none;
+  }
+}
 
 .comments_list_inner_section .name a {
   color: #a1355b !important;

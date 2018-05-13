@@ -199,17 +199,13 @@
   border: 2px solid #dddddd !important;
 }
 
-
-
-// ---------------------------
-//   workings
-// ---------------------------
-
-
-
-
 .content_ministriespg_section .ministry_content .ministry_img_section {
   float: left;
+}
+@media only screen and (max-width: 1160px) {
+  .content_ministriespg_section .ministry_content .ministry_img_section {
+    display: none;
+  }
 }
 
 .content_ministriespg_section .ministry_content .ministry_img_outter {
@@ -266,6 +262,7 @@
   font-weight: bold;
   text-transform: capitalize;
   margin-bottom: 15px;
+  line-height: 25px;
 }
 
 .content_ministriespg_section .ministry_content .ministry_title:hover {

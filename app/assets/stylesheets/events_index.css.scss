@@ -215,6 +215,11 @@
 .eventindex_section .event_content .evt_img_section {
   float: left;
 }
+@media only screen and (max-width: 1160px) {
+  .eventindex_section .event_content .evt_img_section  {
+    display: none;
+  }
+}
 
 .eventindex_section .event_content .evt_img_outter {
   height: 135px;
@@ -270,6 +275,7 @@
   font-weight: bold;
   text-transform: capitalize;
   margin-bottom: 15px;
+  line-height: 25px;
 }
 
 .eventindex_section .event_content .evt_title:hover {
