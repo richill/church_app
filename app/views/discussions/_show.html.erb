@@ -1,7 +1,7 @@
 <div class="pages_boarder"></div>
-<div class="medium-12 columns galleryshow_section">
-  <div class="galleryshow_inner_section">
-    <div class="medium-12 columns galleryshow_content">
+<div class="medium-12 columns discussionshow_section">
+  <div class="discussionshow_inner_section">
+    <div class="medium-12 columns discussionshow_content">
       <div class="tree_line">
         <span><%= link_to "home", root_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
@@ -19,25 +19,29 @@
             <div class="page_header"><%= @discussion.topic %></div>
             <div class="date_category">
               <span>
-                <span class="evt_subheader">created date:</span>
+                <span class="page_subheader">created date:</span>
                 <span><%= @discussion.created_at.strftime("%b %d %Y") %></span>
-                <span class="listgallery_divider">|</span>
+                <span class="listpage_divider">|</span>
                 <span><b>Time:</b></span>
                 <span><%= @discussion.created_at.strftime("%I:%M%p") %></span>
-                <span class="listgallery_divider">|</span>
+                <span class="listpage_divider">|</span>
                 <span><i class="fa fa-comments"></i> <span>11 comments</span></span>
               </span>
             </div>
             <div class="paragraph_content">
               <span><%= truncate("#{@discussion.description}", length: 300) %></span>
               <span><%= link_to "view", "#", class: "weblink" %></span>
+              <div class="action_btn">
+                <span><%= link_to "edit discussion topic", "#" %></span>
+                <span><%= link_to "delete discussion topic", "#" %></span>
+              </div>
             </div>
-            <div class="gallery_photos_section">
-              <!-- listed gallery photos -->
-              <div class="gallery_photos_content">
+            <div class="discussions_section">
+              <!-- listed comments photos -->
+              <div class="discussions_content">
                 comment section
               </div>
-              <!-- listed gallery photos -->
+              <!-- listed comments photos -->
             </div>
           </div>
         </div>
@@ -52,20 +56,3 @@
   </div>
 </div>
 
-
-<div class="old_content">
-  <p id="notice"><%= notice %></p>
-
-  <p>
-    <strong>Topic:</strong>
-    <%= @discussion.topic %>
-  </p>
-
-  <p>
-    <strong>Topic:</strong>
-    <%= @discussion.image %>
-  </p>
-
-  <%= link_to 'Edit', edit_discussion_path(@discussion) %> |
-  <%= link_to 'Back', discussions_path %>
-</div>

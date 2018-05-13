@@ -20,7 +20,7 @@
               <div class="page_content">
                 <div class="page_inner_content">
                   <ul>
-                    <% @discussions.each do |discussion| %>
+                    <% @discussions.order('created_at DESC').each do |discussion| %>
                       <li>
                         <div>
                           <span class="page_img_section">
