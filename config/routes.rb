@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get     'connect',                  to: 'static_pages#connectdpg'
   get     'children-teenage-corner',  to: 'static_pages#childrenteenpg'
   get     'donations',                to: 'static_pages#donatepg'
+  get     'forum',                    to: 'static_pages#forumpg'
   get     'gdpr',                     to: 'static_pages#gdprpg'
   get     'ministry-idea',            to: 'static_pages#ministryideapg'
   get     'mission-vision-statement', to: 'static_pages#missionvisionpg'
