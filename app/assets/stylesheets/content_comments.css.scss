@@ -1,0 +1,64 @@
+/*===================================================
+    Page: comment form
+    File: views/discussions/_show.html.erb
+  ===================================================*/
+
+.comments_list_inner_section ul {
+  margin: 0px;
+  list-style-type: none;
+}
+
+.comments_list_inner_section ul li {
+  margin: 0px !important;
+}
+
+.comments_list_inner_section .user_comment {
+  margin-top: 25px;
+}
+
+.comments_list_inner_section .comment_content_container {
+  padding: 0px !important;
+}
+
+.comments_list_inner_section .image_name_container {
+  padding-left: 0px !important;
+}
+
+.comments_list_inner_section .name a {
+  color: #a1355b !important;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+
+.comments_list_inner_section .comment {
+  color: #2A2C49;
+  font-size: 12px;
+}
+
+.comments_list_inner_section .minor_links {
+  margin: 0px;
+  font-size: 9px !important;
+  text-transform: capitalize;
+  line-height: 14px !important;
+  display: inline-block;
+  background: #fff;
+  color: #2A2C49 !important;
+  height: 23px;
+  padding: 5px 10px !important;
+  background-color: #E8E9EB !important;
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+.comments_list_inner_section .minor_links a {
+  color: #2A2C49 !important;
+}
+
+
+
+
+
+
+
+

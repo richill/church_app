@@ -3,18 +3,17 @@
     File: views/discussions/_show.html.erb
   ===================================================*/
 
-textarea {
+.comment_form_section .comment_form textarea {
   height: 60px !important;
   margin-bottom: -3px !important;
 }
 
-input[type="submit"] {
+.comment_form_section .comment_form input[type="submit"] {
   margin: 0px;
   font-size: 12px !important;
   text-transform: capitalize;
   line-height: 14px !important;
   display: inline-block;
-  background: #fff;
   color: #fff !important;
   background-color: #2A2C49 !important;
   height: 27px;
@@ -25,10 +24,26 @@ input[type="submit"] {
   -o-transition: all 0.3s ease;
 }
 
-input[type="submit"]:hover {
+.comment_form_section .comment_form input[type="submit"]:hover {
   color: #2A2C49 !important;
   background-color: #E8E9EB !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s 
 }
+
+.non_member_comment {
+  color: #2A2C49 !important;
+  font-size: 11px !important;
+}
+
+.non_member_comment a {
+  color: #a1355b !important;
+}
+
+
+
+
+
+
+

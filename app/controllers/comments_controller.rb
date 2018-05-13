@@ -44,6 +44,9 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @discussion = Discussion.friendly.find(params[:discussion_id])
+    @comment = @discussion.comment.find(params[:id])
+
     @comment.destroy
     respond_to do |format|
       format.html { redirect_to [@commentable], notice: 'Comment was successfully destroyed.' }

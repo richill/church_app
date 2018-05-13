@@ -1,11 +1,22 @@
-<div class="comment_form">
-  <%= form_for [@commentable, @comment] do |f| %>
-    <div class="field">
-      <%= f.hidden_field :user_id %>
-      <%= f.text_area :content, rows: 8, placeholder: "Write a comment..."  %>
+<% if user_signed_in? %>
+  <div class="comment_form_section">
+    <div class="comment_form">
+      <%= form_for [@commentable, @comment] do |f| %>
+        <div class="field">
+          <%= f.hidden_field :user_id %>
+          <%= f.text_area :content, rows: 8, placeholder: "Post a comment..."  %>
+        </div>
+        <div class="actions button_section">
+          <%= f.submit "Post", class: 'comment_submit_btn' %>
+        </div>
+      <% end %>
     </div>
-    <div class="actions button_section">
-      <%= f.submit "Post", class: 'comment_submit_btn' %>
+    <% else %>
+    <div class="non_member_comment">
+      <span>You need to be a registered member to post a comment</span>
+      <span><%= link_to "register", new_user_registration_path %></span>
+      <span>or</span>
+      <span><%= link_to "login", new_user_session_path %></span>
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
