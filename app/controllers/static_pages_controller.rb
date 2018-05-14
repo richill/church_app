@@ -26,6 +26,9 @@ class StaticPagesController < ApplicationController
   def gdprpg
   end
 
+  def growpg
+  end
+
   def ministryideapg
   end
 
