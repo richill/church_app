@@ -46,6 +46,7 @@ Rails.application.routes.draw do
   get     'our-community',            to: 'static_pages#ourcommunitypg'
   get     'our-people',               to: 'static_pages#ourpeoplepg'
   get     'privacy',                  to: 'static_pages#privacypg'
+  get     'receive-christ',           to: 'static_pages#receivechristpg'
   get     'serve',                    to: 'static_pages#servepg'
   get     'statement-of-faith',       to: 'static_pages#statementfaithpg'
   get     'thank-you',                to: 'static_pages#thankyoupg'

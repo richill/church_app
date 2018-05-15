@@ -47,6 +47,9 @@ class StaticPagesController < ApplicationController
   def privacypg
   end
 
+  def receivechristpg
+  end
+
   def servepg
   end
 

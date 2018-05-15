@@ -1,0 +1,52 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_growpg_section">
+  <div class="content_growpg_inner_section">
+    <div class="medium-12 columns growpg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "grow", grow_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">Receive Christ</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">Receive Christ</div>
+            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+            <div>
+
+              <div>
+                <div class="medium-8 columns main_left_section">
+                  <div class="paragraph_content">Everyone has room to grow as a follower of Christ. Open Heavens Community Church provides a wide variety of opportunities for personal growth from the newest believer to the those with years of experience. As a church, we’re committed to helping you find the right path to spiritual development that will meet you where you are and take you where God has called you to flourish. Take some time and look around these areas for growth from specific Bible Studies to Growth Groups to Leadership Development.</div>
+                </div>
+                <div class="medium-4 columns main_right_section paragraph_content">
+                  <ul>
+                    <li><%= link_to "receive Christ", "#", class: "weblink"  %></li>
+                    <li><%= link_to "next steps", "#", class: "weblink" %></li>
+                    <li><%= link_to "the bible and you", "#", class: "weblink" %></li>
+                    <li><%= link_to "leadership development", "#", class: "weblink" %></li>
+                    <li><%= link_to "small groups", "#", class: "weblink" %></li>
+                  </ul>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
