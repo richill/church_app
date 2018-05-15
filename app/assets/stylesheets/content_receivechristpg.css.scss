@@ -3,113 +3,111 @@
     File: views/shared/_content_donatepg.html.erb
   ===================================================*/
 
-.content_growpg_section {
+.content_receivechristpg_section {
   padding: 0px !important;
 }
 
-.content_growpg_section .content_growpg_inner_section {
+.content_receivechristpg_section .content_receivechristpg_inner_section {
   width: 1150px;
   margin: auto;
   background-color: rgba(42, 44, 73, 0.1);
   margin-bottom: 30px;
 }
 @media only screen and (max-width: 1160px) {
-  .content_growpg_section .content_growpg_inner_section {
+  .content_receivechristpg_section .content_receivechristpg_inner_section {
     width: 100% !important;
   }
 }
 
-.content_growpg_section .growpg_content {
+.content_receivechristpg_section .receivechristpg_content {
   margin-bottom: 30px;
   padding: 0px !important;
 }
 
-.content_growpg_section .tree_line {
+.content_receivechristpg_section .tree_line {
   font-size: 10px;
   text-transform: capitalize;
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 1160px) {
-  .content_growpg_section .tree_line {
+  .content_receivechristpg_section .tree_line {
     margin-top: 25px;
     padding: 0px 15px !important;
   }
 }
 
-.content_growpg_section .tree_line a {
+.content_receivechristpg_section .tree_line a {
   color: #2A2C49 !important;
 }
 
-.content_growpg_section .current_page {
+.content_receivechristpg_section .current_page {
   color: #a07b35;
 }
 
-.content_growpg_section .page_main_content {
+.content_receivechristpg_section .page_main_content {
   padding: 0px !important;
 }
 
-.content_growpg_section .info_left_content {
+.content_receivechristpg_section .info_left_content {
   padding: 0px !important;
 }
 @media only screen and (max-width: 1160px) {
-  .content_growpg_section .info_left_content {
+  .content_receivechristpg_section .info_left_content {
     width: 100% !important;
     padding: 0px 15px !important;
   }
 }
 
-.content_growpg_section .info_left_content .page_header {
+.content_receivechristpg_section .info_left_content .page_header {
   font-size: 30px;
   font-weight: bold;
   text-transform: capitalize;
   color: #2A2C49;
 }
 
-.content_growpg_section .info_left_content .page_img {
+.content_receivechristpg_section .info_left_content .page_img {
   margin-bottom: 15px;
   opacity: 0.8;
   overflow: hidden;
 }
 
-.content_growpg_section .info_left_content .paragraph_content {
+.content_receivechristpg_section .info_left_content .paragraph_content {
   margin-bottom: 15px;
   color: #2A2C49;
 }
 
-.content_growpg_section .info_left_content .paragraph_content .sub_header {
+.content_receivechristpg_section .info_left_content .paragraph_content .sub_header {
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 3px;
 }
 
-.content_growpg_section .info_left_content .paragraph_content ul {
-  margin: 0px 0px 0px 55px;
-  font-size: 14px;
-  text-transform: capitalize;
+.content_receivechristpg_section .info_left_content .paragraph_content ul {
+  margin-top: 0px;
 }
 
-.content_growpg_section .info_left_content .paragraph_content ul li {
+.content_receivechristpg_section .info_left_content .paragraph_content ul li {
   margin-bottom: 15px;
 }
 
-.content_growpg_section .info_left_content .paragraph_content .weblink {
+.content_receivechristpg_section .info_left_content .paragraph_content .weblink {
   color: #a1355b !important;
 }
 
-.content_growpg_section .info_left_content .paragraph_content .weblink a {
+.content_receivechristpg_section .info_left_content .paragraph_content .weblink a {
   color: #a1355b !important;
 }
 
-.content_growpg_section .listed_donation_links ul li {
+.content_receivechristpg_section .listed_donation_links ul li {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.content_growpg_section .listed_donation_links ul li {
+.content_receivechristpg_section .listed_donation_links ul li {
   margin-bottom: 5px !important;
 }
 
-.content_growpg_section .listed_donation_links ul li a {
+.content_receivechristpg_section .listed_donation_links ul li a {
   background: linear-gradient(#57738E, #9DC6EB);
   color: #fff !important;
   height: 50px;
@@ -125,7 +123,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.content_growpg_section .listed_donation_links ul li a:hover {
+.content_receivechristpg_section .listed_donation_links ul li a:hover {
   opacity: 0.8;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
@@ -133,24 +131,29 @@
   -o-transition: all 0.3s ease;
 }
 
-.content_growpg_section .pymt_img {
+.content_receivechristpg_section .pymt_img {
   margin: 30px 0px 10px;
 }
 
-.content_growpg_section .pymt_img img {
+.content_receivechristpg_section .pymt_img img {
   width: 200px;
 }
 
-.content_growpg_section .main_left_section {
+.content_receivechristpg_section .main_left_section {
   padding: 0px !important;
 }
 
-.content_growpg_section .main_right_section {
+.content_receivechristpg_section .main_right_section {
   padding: 0px !important;
 }
 
 
-
+.content_receivechristpg_section .quote {
+  color: rgba(42, 44, 73, 0.7) !important;
+  font-style: italic;
+  font-size: 16px;
+  padding: 0px 25px;
+}
 
 
 
