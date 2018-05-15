@@ -30,7 +30,7 @@ class StaticPagesController < ApplicationController
   end
 
   def leadershipdevelopmentpg  
-    @events = Event.all 
+    @events = Event.leadership_events 
   end
 
   def ministryideapg

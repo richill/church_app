@@ -22,7 +22,7 @@
                 <div class="divider"></div>
                 <div class="event_inner_content">
                   <ul>
-                    <% @events.leadership_events.each do |event| %>
+                    <% @events.order('created_at DESC').each do |event| %>
                       <li>
                         <div>
                           <span class="evt_img_section">
