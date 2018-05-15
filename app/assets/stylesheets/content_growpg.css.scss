@@ -83,11 +83,13 @@
 }
 
 .content_growpg_section .info_left_content .paragraph_content ul {
-  margin: 0px;
+  margin: 0px 0px 0px 55px;
+  font-size: 14px;
+  text-transform: capitalize;
 }
 
 .content_growpg_section .info_left_content .paragraph_content ul li {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .content_growpg_section .info_left_content .paragraph_content .weblink {
@@ -139,7 +141,13 @@
   width: 200px;
 }
 
+.main_left_section {
+  padding: 0px !important;
+}
 
+.main_right_section {
+  padding: 0px !important;
+}
 
 
 
