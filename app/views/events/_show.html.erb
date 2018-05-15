@@ -50,6 +50,8 @@
                       <%= link_to "Community Events", community_events_events_path %>
                     <% elsif @event.category_event.name == "National Event" %>
                       <%= link_to "National Event", national_events_events_path %>
+                    <% elsif @event.category_event.name == "Leadership Forum Event" %>
+                      <%= link_to "Leadership Forum", leadership_development_path %>
                     <% end %>
                   </span>
                 <% end %> 
