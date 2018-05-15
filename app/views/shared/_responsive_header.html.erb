@@ -76,8 +76,14 @@
           <li>
             <%= link_to "member", "#" %>
             <ul class="menu vertical nested">
-              <li><%= link_to "login", "#" %></li>
-              <li><%= link_to "register", "#" %></li>
+              <% if user_signed_in? %>
+                <li><span><%= link_to "#{current_user.firstname}'s Profile", user_path(current_user) %></li>
+                <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to "login", new_user_session_path %></li>
+                <li><%= link_to "register", new_user_registration_path %></li>
+              <% end %>
+
             </ul>
           </li>
           <li>
