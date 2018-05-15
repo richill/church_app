@@ -24,6 +24,7 @@ class Event < ApplicationRecord
   scope :church_events, ->() { joins(:category_event).where('category_events.name' => "Church Event") }  
   scope :community_events, ->() { joins(:category_event).where('category_events.name' => "Community Event") }  
   scope :national_events, ->() { joins(:category_event).where('category_events.name' => "National Event") }
+  scope :leadership_events, ->() { joins(:category_event).where('category_events.name' => "Leadership Forum Event") }
 
   def slug_events
     [

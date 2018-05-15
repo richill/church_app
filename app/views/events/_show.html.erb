@@ -5,7 +5,9 @@
       <div class="tree_line">
         <span><%= link_to "home", root_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span><%= link_to "events", events_path %></span>
+        <% if @event.category_event.name == "Leadership Forum Event" %>
+          <span><%= link_to "grow", grow_path %></span>
+        <% end %>
         <span><i class="fa fa-angle-right"></i></span>
         <span>
           <% if @event.category_event.name == "Youth Event" %>
@@ -16,6 +18,8 @@
             <%= link_to "Community Events", community_events_events_path %>
           <% elsif @event.category_event.name == "National Event" %>
             <%= link_to "National Event", national_events_events_path %>
+          <% elsif @event.category_event.name == "Leadership Forum Event" %>
+            <%= link_to "Leadership Development", leadership_development_path %>
           <% end %>
         </span>
         <span><i class="fa fa-angle-right"></i></span>

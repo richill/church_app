@@ -29,6 +29,10 @@ class StaticPagesController < ApplicationController
   def growpg
   end
 
+  def leadershipdevelopmentpg  
+    @events = Event.all 
+  end
+
   def ministryideapg
   end
 
