@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   get     'forum',                    to: 'static_pages#forumpg'
   get     'gdpr',                     to: 'static_pages#gdprpg'
   get     'grow',                     to: 'static_pages#growpg'
+  get     'next-steps',               to: 'static_pages#nextstepspg'
   get     'ministry-idea',            to: 'static_pages#ministryideapg'
   get     'mission-vision-statement', to: 'static_pages#missionvisionpg'
   get     'our-church',               to: 'static_pages#ourchurchpg'

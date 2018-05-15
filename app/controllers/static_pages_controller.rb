@@ -35,6 +35,9 @@ class StaticPagesController < ApplicationController
   def missionvisionpg
   end
 
+  def nextstepspg 
+  end
+
   def ourchurchpg
   end
 
