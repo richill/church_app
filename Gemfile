@@ -23,12 +23,14 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'byebug'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem "better_errors"
   gem 'awesome_print'
+  gem 'quiet_assets'
 end
 
 group :production do

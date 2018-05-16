@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   root 'static_pages#homepg'
   get     'about-us',                 to: 'static_pages#aboutuspg'
   get     'around-the-world',         to: 'static_pages#aroundworldpg'
+  get     'bible-and-you',            to: 'static_pages#bibleandyoupg'
   get     'connect',                  to: 'static_pages#connectdpg'
   get     'children-teenage-corner',  to: 'static_pages#childrenteenpg'
   get     'donations',                to: 'static_pages#donatepg'

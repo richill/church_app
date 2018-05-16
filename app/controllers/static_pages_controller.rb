@@ -9,6 +9,9 @@ class StaticPagesController < ApplicationController
   def aroundworldpg
   end
 
+  def bibleandyoupg  
+  end
+
   def connectdpg
     @launchministries = Launchministry.all
   end
