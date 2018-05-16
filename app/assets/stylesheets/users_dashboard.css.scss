@@ -5,6 +5,7 @@
 
 .users_dashboard_section {
   padding: 0px !important;
+  border-top: 1px solid #2A2C49;
 }
 
 .users_dashboard_section .users_dashboard_inner_section {
@@ -19,136 +20,58 @@
   }
 }
 
-.users_dashboard_section .users_dashboard_content {
-  margin-bottom: 30px;
+
+// ------------------------------
+//   workings
+// ------------------------------
+
+.users_dashboard_section .main_container {
   padding: 0px !important;
 }
 
-.users_dashboard_section .tree_line {
-  font-size: 10px;
-  text-transform: capitalize;
-  margin-bottom: 20px;
-}
-@media only screen and (max-width: 1160px) {
-  .users_dashboard_section .tree_line {
-    margin-top: 25px;
-    padding: 0px 15px !important;
-  }
-}
-
-.users_dashboard_section .tree_line a {
-  color: #2A2C49 !important;
-}
-
-.users_dashboard_section .current_page {
-  color: #a07b35;
-}
-
-.users_dashboard_section .page_main_content {
+.users_dashboard_section .left_admin_content {
+  background-color: #2A2C49;
   padding: 0px !important;
 }
 
-.users_dashboard_section .info_left_content {
+.users_dashboard_section .right_admin_content {
+  background-color: green;
   padding: 0px !important;
 }
-@media only screen and (max-width: 1160px) {
-  .users_dashboard_section .info_left_content {
-    width: 100% !important;
-    padding: 0px 15px !important;
-  }
-}
 
-.users_dashboard_section .info_left_content .page_header {
-  font-size: 30px;
-  font-weight: bold;
-  text-transform: capitalize;
-  color: #2A2C49;
-}
+// ------------------------------
+//   workings
+// ------------------------------
 
-.users_dashboard_section .info_left_content .page_img {
-  margin-bottom: 15px;
-  opacity: 0.8;
-  overflow: hidden;
-}
-
-.users_dashboard_section .info_left_content .paragraph_content {
-  margin-bottom: 15px;
-  color: #2A2C49;
-}
-
-.users_dashboard_section .info_left_content .paragraph_content .sub_header {
-  font-weight: bold;
-  margin-top: 25px;
-  margin-bottom: 3px;
-}
-
-.users_dashboard_section .info_left_content .paragraph_content ul {
-  margin: 0px;
-}
-
-.users_dashboard_section .info_left_content .paragraph_content ul li {
-  margin-bottom: 5px;
-}
-
-.users_dashboard_section .info_left_content .paragraph_content .weblink {
-  color: #a1355b !important;
-}
-
-.users_dashboard_section .info_left_content .paragraph_content .weblink a {
-  color: #a1355b !important;
-}
-
-.users_dashboard_section .listed_donation_links ul li {
+.left_admin_content ul {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.users_dashboard_section .listed_donation_links ul li {
-  margin-bottom: 5px !important;
+.left_admin_content li {
+  height: 60px;
+  border-bottom: 1px solid #57738E;
 }
 
-.users_dashboard_section .listed_donation_links ul li a {
-  background: linear-gradient(#57738E, #9DC6EB);
+.left_admin_content a {
   color: #fff !important;
-  height: 50px;
   display: inherit;
-  padding: 17px;
-  text-align: center;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: bold;
+  padding: 21px 28px;
   text-transform: capitalize;
+  height: 60px;
+  font-size: 12px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.users_dashboard_section .listed_donation_links ul li a:hover {
-  opacity: 0.8;
+.left_admin_content a:hover {
   text-decoration: none;
+  opacity: 0.4 !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
-
-.users_dashboard_section .pymt_img {
-  margin: 30px 0px 10px;
-}
-
-.users_dashboard_section .pymt_img img {
-  width: 200px;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 

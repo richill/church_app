@@ -1,6 +1,7 @@
 /*===================================================
     Page: header signedout nav
     File: views/shared/_header.html.erb
+    File: views/shared/_header_admin.html.erb
   ===================================================*/
 
 .nav_section {
@@ -275,9 +276,13 @@
 }
 
 
-
-
-
+// ------------------------------
+//   File: _header_admin.html.erb
+// ------------------------------
+.nav_admin_section {
+  background-color: transparent;
+  height: 48px !important;
+}
 
 
 
