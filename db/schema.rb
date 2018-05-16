@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180516221104) do
+ActiveRecord::Schema.define(version: 20180516221305) do
 
   create_table "category_countries", force: :cascade do |t|
     t.string   "name"
@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(version: 20180516221104) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.string   "slug"
+    t.boolean  "approve"
     t.index ["slug"], name: "index_launchministries_on_slug", unique: true
   end
 

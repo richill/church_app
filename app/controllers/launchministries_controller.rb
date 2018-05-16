@@ -73,6 +73,6 @@ class LaunchministriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def launchministry_params
-      params.require(:launchministry).permit(:firstname, :lastname, :email, :mobile, :homenumber, :worknumber, :address, :city, :postcode, :mininstryidea, :mininstrydescription, :ministryneed, :ministrymission)
+      params.require(:launchministry).permit(:firstname, :lastname, :email, :mobile, :homenumber, :worknumber, :address, :city, :postcode, :mininstryidea, :mininstrydescription, :ministryneed, :ministrymission, :approve)
     end
 end
