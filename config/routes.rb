@@ -29,6 +29,9 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users do
     resources :comments, only: [:create, :destroy] 
+    member do
+      get 'dashboard'
+    end
   end
   
   root 'static_pages#homepg'

@@ -1,0 +1,47 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns users_dashboard_section">
+  <div class="users_dashboard_inner_section">
+    <div class="medium-12 columns users_dashboard_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">donations</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">giving at open heavens Christian Centre</div>
+            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+            <div>
+              <div class="paragraph_content">In a bid to fulfil our charitable objectives, Open Heavens Christian Centre relies primarily on voluntary donations. In addition to our regular methods of giving, which includes Service (cash, cheques and card payments) and Postal Collections, Standing Orders, Direct Credits; Text Donations and Payroll Giving, donations can also be made to the charity online.</div>
+
+              <div class="paragraph_content">Open Heavens Christian Centre is a member of the Fundraising Standards Board and adheres to a strict policy of fairness and transparency in all its fundraising activities. If you would like to make a voluntary donation online, please click on the link below.</div>
+
+              <div class="paragraph_content">We are thankful for your continued support! You can Donate either via PayPal or directly with your card through our Charities Aid Foundation account. </div>
+
+              <div class="paragraph_content listed_donation_links">
+                <div class="pymt_img"><%= image_tag("img_paypal.png") %></div>
+                <ul>
+                  <li><%= link_to "tithes", "#", target:"_blank" %></li>
+                  <li><%= link_to "offerings", "#", target:"_blank" %></li>
+                  <li><%= link_to "thanksgiving", "#", target:"_blank" %></li>
+                  <li><%= link_to "welfare", "#", target:"_blank" %></li>
+                  <li><%= link_to "blessed to be a blessing", "#", target:"_blank" %></li>
+                  <li><%= link_to "others", "#", target:"_blank" %></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
