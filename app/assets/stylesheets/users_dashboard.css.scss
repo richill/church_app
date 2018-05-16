@@ -20,58 +20,101 @@
   }
 }
 
-
-// ------------------------------
-//   workings
-// ------------------------------
-
 .users_dashboard_section .main_container {
   padding: 0px !important;
 }
+
+// ------------------------------
+//   left_section
+// ------------------------------
 
 .users_dashboard_section .left_admin_content {
   background-color: #2A2C49;
   padding: 0px !important;
 }
 
-.users_dashboard_section .right_admin_content {
-  background-color: green;
-  padding: 0px !important;
-}
+
+
+
 
 // ------------------------------
-//   workings
+//   workings_left
 // ------------------------------
 
-.left_admin_content ul {
+.users_dashboard_section .left_admin_content ul {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.left_admin_content li {
-  height: 60px;
+.users_dashboard_section .left_admin_content li {
+  height: 50px;
   border-bottom: 1px solid #57738E;
 }
 
-.left_admin_content a {
+.users_dashboard_section .left_admin_content a {
   color: #fff !important;
   display: inherit;
-  padding: 21px 28px;
+  padding: 16px 28px;
   text-transform: capitalize;
-  height: 60px;
+  height: 50px;
   font-size: 12px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.left_admin_content a:hover {
+.users_dashboard_section .left_admin_content a:hover {
   text-decoration: none;
   opacity: 0.4 !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
+
+// ------------------------------
+//   workings_right
+// ------------------------------
+
+.users_dashboard_section .right_admin_content {
+  background-color: rgba(42, 44, 73, 0.05);
+  min-height: 500px;
+  padding: 0px !important;
+}
+
+.users_dashboard_section .right_admin_content .tree_line {
+  font-size: 11px !important;
+  background-color: #fff;
+  height: 50px;
+  color: #2A2C49;
+  padding: 17px 15px;
+}
+
+.users_dashboard_section .right_admin_content .tree_line a {
+  display: inline-block;
+  font-size: 11px !important;
+  color: #2A2C49 !important;
+}
+
+.users_dashboard_section .right_admin_content .tree_line .current_page {
+  color: #a07b35;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
