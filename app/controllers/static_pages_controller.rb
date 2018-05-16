@@ -63,6 +63,9 @@ class StaticPagesController < ApplicationController
   def servepg
   end
 
+  def smallgroupspg
+  end
+
   def statementfaithpg
   end
 
