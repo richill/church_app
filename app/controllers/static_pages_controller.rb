@@ -61,6 +61,7 @@ class StaticPagesController < ApplicationController
   end
 
   def recreadingplan
+    @recommendedreadings = Recommendedreading.all
   end
 
   def servepg

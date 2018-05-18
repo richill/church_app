@@ -16,7 +16,21 @@
           <div class="page_information">
             <div class="page_header">recommended reading plan</div>
             <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
-            <div>
+            <div class="paragraph_content listed_readings_links">
+              <ul>
+              <% @recommendedreadings.each do |recommendedreading| %>
+                <li><%= recommendedreading.filename %></li>
+                <li><%= recommendedreading.fileattachment %></li>
+                <li><%= recommendedreading.notes %></li>
+                <li>
+                  <span><%= link_to 'Show', recommendedreading %></span>
+                  <span></span>
+                  <span><%= link_to 'Edit', edit_recommendedreading_path(recommendedreading) %></span>
+                  <span></span>
+                  <span><%= link_to 'Destroy', recommendedreading, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                </li>
+              <% end %>
+              </ul>
               <div class="paragraph_content">In a bid to fulfil our charitable objectives, Open Heavens Christian Centre relies primarily on voluntary donations. In addition to our regular methods of giving, which includes Service (cash, cheques and card payments) and Postal Collections, Standing Orders, Direct Credits; Text Donations and Payroll Giving, donations can also be made to the charity online.</div>
             </div>
           </div>

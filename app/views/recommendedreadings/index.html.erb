@@ -5,7 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Fileattachment</th>
+      <th>file name</th>
+      <th>attachment</th>
+      <th>file notes</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,7 +15,9 @@
   <tbody>
     <% @recommendedreadings.each do |recommendedreading| %>
       <tr>
+        <td><%= recommendedreading.filename %></td>
         <td><%= recommendedreading.fileattachment %></td>
+        <td><%= recommendedreading.notes %></td>
         <td><%= link_to 'Show', recommendedreading %></td>
         <td><%= link_to 'Edit', edit_recommendedreading_path(recommendedreading) %></td>
         <td><%= link_to 'Destroy', recommendedreading, method: :delete, data: { confirm: 'Are you sure?' } %></td>
