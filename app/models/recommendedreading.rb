@@ -1,0 +1,2 @@
+class Recommendedreading < ApplicationRecord
+end

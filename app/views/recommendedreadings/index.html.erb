@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recommendedreadings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fileattachment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recommendedreadings.each do |recommendedreading| %>
+      <tr>
+        <td><%= recommendedreading.fileattachment %></td>
+        <td><%= link_to 'Show', recommendedreading %></td>
+        <td><%= link_to 'Edit', edit_recommendedreading_path(recommendedreading) %></td>
+        <td><%= link_to 'Destroy', recommendedreading, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recommendedreading', new_recommendedreading_path %>

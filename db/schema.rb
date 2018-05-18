@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180516221305) do
+ActiveRecord::Schema.define(version: 20180518133817) do
 
   create_table "category_countries", force: :cascade do |t|
     t.string   "name"
@@ -123,6 +123,12 @@ ActiveRecord::Schema.define(version: 20180516221305) do
     t.string   "slug"
     t.string   "name"
     t.index ["slug"], name: "index_photos_on_slug", unique: true
+  end
+
+  create_table "recommendedreadings", force: :cascade do |t|
+    t.string   "fileattachment"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :recommendedreadings
   resources :discussions do
     resources :comments, only: [:create, :destroy] 
   end
