@@ -60,6 +60,9 @@ class StaticPagesController < ApplicationController
   def receivechristpg
   end
 
+  def recreadingplan
+  end
+
   def servepg
   end
 

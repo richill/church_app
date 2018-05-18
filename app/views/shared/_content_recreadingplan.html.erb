@@ -1,0 +1,38 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_donatepg_section">
+  <div class="content_donatepg_inner_section">
+    <div class="medium-12 columns donatepg_content">
+      <div class="tree_line">
+        <span><%= link_to "grow", grow_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "next steps", next_steps_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">recommended reading plan</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">recommended reading plan</div>
+            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+            <div>
+              <div class="paragraph_content">In a bid to fulfil our charitable objectives, Open Heavens Christian Centre relies primarily on voluntary donations. In addition to our regular methods of giving, which includes Service (cash, cheques and card payments) and Postal Collections, Standing Orders, Direct Credits; Text Donations and Payroll Giving, donations can also be made to the charity online.</div>
+
+              <div class="paragraph_content">Open Heavens Christian Centre is a member of the Fundraising Standards Board and adheres to a strict policy of fairness and transparency in all its fundraising activities. If you would like to make a voluntary donation online, please click on the link below.</div>
+
+              <div class="paragraph_content">We are thankful for your continued support! You can Donate either via PayPal or directly with your card through our Charities Aid Foundation account. </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
