@@ -1,7 +1,7 @@
 <div class="pages_boarder"></div>
-<div class="medium-12 columns discussionshow_section">
-  <div class="discussionshow_inner_section">
-    <div class="medium-12 columns discussionshow_content">
+<div class="medium-12 columns smallgroupsshow_section">
+  <div class="smallgroupsshow_inner_section">
+    <div class="medium-12 columns smallgroupsshow_content">
       <div class="tree_line">
         <span><%= link_to "home", root_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
@@ -36,13 +36,45 @@
                 <span><%= link_to "delete group name", "#" %></span>
               </div>
             </div>
-            <div class="discussions_section">
+            <div class="member_section">
               <!-- listed members -->
-              <div class="discussions_content">
+              <div class="member_content">
                 <div>
-                  <div class="comment_header"><i class="fa fa-users"></i> <span>members</span></div>
-                  <%# render "shared/content_comment_form" %>
-                  <%# render "shared/content_comments" %>
+                  <div class="member_header"><i class="fa fa-users"></i> <span>members</span></div>
+                  <div class="member_container">
+                    <ul>
+                      <li>
+                        <div class="minor_section">
+                          <div><%= link_to (image_tag("img-profile-image-default.png")), "#" %></div>
+                          <div class="username"><%= link_to truncate("richill", length: 9), "#" %></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="minor_section">
+                          <div><%= link_to (image_tag("img-profile-image-default.png")), "#" %></div>
+                          <div class="username"><%= link_to truncate("edem", length: 9), "#" %></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="minor_section">
+                          <div><%= link_to (image_tag("img-profile-image-default.png")), "#" %></div>
+                          <div class="username"><%= link_to truncate("adeola", length: 9), "#" %></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="minor_section">
+                          <div><%= link_to (image_tag("img-profile-image-default.png")), "#" %></div>
+                          <div class="username"><%= link_to truncate("efe", length: 9), "#" %></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="minor_section">
+                          <div><%= link_to (image_tag("img-profile-image-default.png")), "#" %></div>
+                          <div class="username"><%= link_to truncate("amaka", length: 9), "#" %></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <!-- listed members -->
