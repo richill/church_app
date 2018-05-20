@@ -199,7 +199,7 @@
   border: 2px solid #dddddd !important;
 }
 
-.content_smallgroupspg_section .event_content .event_content {
+.content_smallgroupspg_section .page_content .page_content {
   background-color: #fff;
   width: 100%;
   height: 314px;
@@ -207,27 +207,28 @@
   padding: 10px;
 }
 
-.content_smallgroupspg_section .event_content .event_content ul {
+.content_smallgroupspg_section .page_content .page_content ul {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.content_smallgroupspg_section .event_content .evt_img_section {
+.content_smallgroupspg_section .page_content .page_img_section {
   float: left;
 }
-@media only screen and (max-width: 1160px) {
-  .content_smallgroupspg_section .event_content .evt_img_section  {
+@media only screen and (max-width: 850px) {
+  .content_smallgroupspg_section .page_content .page_img_section  {
     display: none;
   }
 }
 
-.content_smallgroupspg_section .event_content .evt_img_outter {
+
+.content_smallgroupspg_section .page_content .page_img_outter {
   height: 135px;
   width: 200px;
   margin-bottom: 10px;
 }
 
-.content_smallgroupspg_section .event_content .evt_img {
+.content_smallgroupspg_section .page_content .page_img {
   background-color: transparent;
   height: 100%;
   overflow: hidden;
@@ -236,33 +237,38 @@
   -o-transition: all 0.3s ease;
 }
 
-.content_smallgroupspg_section .event_content .evt_img:hover {
+.content_smallgroupspg_section .page_content .page_img:hover {
   opacity: 0.5;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.content_smallgroupspg_section .event_content .event_info_section {
+.content_smallgroupspg_section .page_content .page_info_section {
   height: 105px;
   display: inline-block;
   padding: 5px 0px;
   margin-left: 2px;
 }
 @media only screen and (min-width: 1160px) {
-  .content_smallgroupspg_section .event_content .event_info_section {
+  .content_smallgroupspg_section .page_content .page_info_section {
     width: 70%;
   }
 }
 
-.content_smallgroupspg_section .event_content .event_info_section a {
+.content_smallgroupspg_section .page_content .page_info_section a {
   color: #2A2C49 !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
+@media only screen and (min-width: 850px) {
+  .content_smallgroupspg_section .page_content .page_info_section a  {
+    width: 575px;
+  }
+}
 
-.content_smallgroupspg_section .event_content .event_info_section a:hover {
+.content_smallgroupspg_section .page_content .page_info_section a:hover {
   text-decoration: none !important;
   opacity: 0.6 !important;
   -webkit-transition: all 0.3s ease;
@@ -270,52 +276,57 @@
   -o-transition: all 0.3s ease;
 }
 
-.content_smallgroupspg_section .event_content .event_info_section .evt_title {
+.content_smallgroupspg_section .page_content .page_info_section .page_title {
   font-size: 20px;
   font-weight: bold;
   text-transform: capitalize;
+  margin-bottom: 15px;
   line-height: 25px;
 }
 
-.content_smallgroupspg_section .event_content .evt_title:hover {
+.content_smallgroupspg_section .page_content .page_title:hover {
   text-decoration: none !important;
 }
 
-.content_smallgroupspg_section .event_content .evt_minor_info {
+.content_smallgroupspg_section .page_content .page_minor_info {
   font-size: 13px;
   margin: 10px 0px;
   text-transform: capitalize;
 }
 
-.content_smallgroupspg_section .event_inner_content ul li {
+.content_smallgroupspg_section .page_content .page_description {
+  line-height: 20px;
+}
+
+.content_smallgroupspg_section .page_inner_content ul li {
   margin-bottom: 19px;
 }
 @media only screen and (min-width: 750px) {
-  .content_smallgroupspg_section .event_inner_content ul li {
+  .content_smallgroupspg_section .page_inner_content ul li {
     height: 160px;
     border-bottom: 1px solid rgba(42, 44, 73, 0.05);
   }
 }
 @media only screen and (max-width: 750px) {
-  .content_smallgroupspg_section .event_inner_content ul li {
+  .content_smallgroupspg_section .page_inner_content ul li {
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(42, 44, 73, 0.05);
   }
 }
 
-.content_smallgroupspg_section .listevt_divider {
+.content_smallgroupspg_section .listpage_divider {
   margin: 0px 5px;
 }
 
-.content_smallgroupspg_section .evt_category {
+.content_smallgroupspg_section .page_category {
   color: #a1355b !important
 }
 
-.content_smallgroupspg_section .divider {
-  border-bottom: 1px solid #2A2C49;
-  margin: 30px 0px;
-  opacity: 0.05;
-}
+
+
+
+
+
 
 
 

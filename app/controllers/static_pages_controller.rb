@@ -73,6 +73,7 @@ class StaticPagesController < ApplicationController
   end
 
   def smallgroupspg
+    @smallgroups = Smallgroup.all
   end
 
   def statementfaithpg

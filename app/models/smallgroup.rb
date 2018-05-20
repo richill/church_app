@@ -1,0 +1,2 @@
+class Smallgroup < ApplicationRecord
+end

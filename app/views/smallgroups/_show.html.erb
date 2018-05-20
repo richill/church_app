@@ -5,47 +5,47 @@
       <div class="tree_line">
         <span><%= link_to "home", root_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span><%= link_to "connect", connect_path %></span>
+        <span><%= link_to "grow", grow_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span><%= link_to "forum", forum_path %></span>
+        <span class="current_page"><%= link_to "small groups", small_groups_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span class="current_page"><%= @discussion.topic %></span>
+        <span class="current_page"><%= @smallgroup.name %></span>
       </div>
 
       <div class="page_main_content">
         <!-- info_left_content -->
         <div class="info_left_content">
           <div class="medium-8 columns page_information">
-            <div class="page_header"><%= @discussion.topic %></div>
+            <div class="page_header"><%= @smallgroup.name %></div>
             <div class="date_category">
               <span>
                 <span class="page_subheader"><b>Created date:</b></span>
-                <span><%= @discussion.created_at.strftime("%b %d %Y") %></span>
+                <span><%= @smallgroup.created_at.strftime("%b %d %Y") %></span>
                 <span class="listpage_divider">|</span>
                 <span><b>Time:</b></span>
-                <span><%= @discussion.created_at.strftime("%I:%M%p") %></span>
+                <span><%= @smallgroup.created_at.strftime("%I:%M%p") %></span>
                 <span class="listpage_divider">|</span>
-                <span><i class="fa fa-comments"></i> <span><%= @discussion.comments.count %> comments</span></span>
+                <span><i class="fa fa-users"></i> <span>5 members</span></span>
               </span>
             </div>
             <div class="paragraph_content">
-              <span><%= truncate("#{@discussion.description}", length: 300) %></span>
+              <span><%= truncate("#{@smallgroup.descriptin}", length: 300) %></span>
               <span><%= link_to "view", "#", class: "weblink" %></span>
               <div class="action_btn hide">
-                <span><%= link_to "edit discussion topic", edit_discussion_path(@discussion) %></span>
-                <span><%= link_to "delete discussion topic", "#" %></span>
+                <span><%= link_to "edit group name", edit_discussion_path(@smallgroup) %></span>
+                <span><%= link_to "delete group name", "#" %></span>
               </div>
             </div>
             <div class="discussions_section">
-              <!-- listed comments photos -->
+              <!-- listed members -->
               <div class="discussions_content">
                 <div>
-                  <div class="comment_header"><i class="fa fa-comments"></i> <span>comments</span></div>
-                  <%= render "shared/content_comment_form" %>
-                  <%= render "shared/content_comments" %>
+                  <div class="comment_header"><i class="fa fa-users"></i> <span>members</span></div>
+                  <%# render "shared/content_comment_form" %>
+                  <%# render "shared/content_comments" %>
                 </div>
               </div>
-              <!-- listed comments photos -->
+              <!-- listed members -->
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180520090618) do
+ActiveRecord::Schema.define(version: 20180520105909) do
 
   create_table "category_countries", force: :cascade do |t|
     t.string   "name"
@@ -132,6 +132,14 @@ ActiveRecord::Schema.define(version: 20180520090618) do
     t.text     "notes"
     t.string   "filename"
     t.string   "link"
+  end
+
+  create_table "smallgroups", force: :cascade do |t|
+    t.string   "name"
+    t.text     "descriptin"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
