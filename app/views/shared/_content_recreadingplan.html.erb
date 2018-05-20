@@ -24,10 +24,12 @@
                   <span><i class="fa fa-download"></i></span>
                   <span class="file_text"><%= link_to "Downlaod & Print #{recommendedreading.filename}", "#" %></span>
                   <span>
+                    <% if user_signed_in? && current_user.admin? %>
                     <span>|</span>
                     <span><%= link_to 'Show', recommendedreading, class: "weblink" %></span>
                     <span><%= link_to 'Edit', edit_recommendedreading_path(recommendedreading), class: "weblink" %></span>
                     <span><%= link_to 'Delete', recommendedreading, method: :delete, data: { confirm: 'Are you sure?' }, class: "weblink" %></span>
+                    <% end %>
                   </span>
                 </li>
                 <li><%= recommendedreading.fileattachment %></li>

@@ -16,6 +16,10 @@ class User < ApplicationRecord
     ]
   end
 
+  def admin?
+    self.admin.present?
+  end
+
   protected
   # deactivates confirmable
   def confirmation_required?
