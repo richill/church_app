@@ -15,23 +15,24 @@
         <div class="medium-8 columns info_left_content">
           <div class="page_information">
             <div class="page_header">recommended reading plan</div>
-            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+            <div class="paragraph_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div class="divider"></div>
             <div class="paragraph_content listed_readings_links">
               <ul>
               <% @recommendedreadings.each do |recommendedreading| %>
-                <li><%= recommendedreading.filename %></li>
-                <li><%= recommendedreading.fileattachment %></li>
-                <li><%= recommendedreading.notes %></li>
-                <li>
-                  <span><%= link_to 'Show', recommendedreading %></span>
-                  <span></span>
-                  <span><%= link_to 'Edit', edit_recommendedreading_path(recommendedreading) %></span>
-                  <span></span>
-                  <span><%= link_to 'Destroy', recommendedreading, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                <li class="file">
+                  <span><i class="fa fa-download"></i></span>
+                  <span class="file_text"><%= link_to "Downlaod & Print #{recommendedreading.filename}", "#" %></span>
+                  <span>
+                    <span>|</span>
+                    <span><%= link_to 'Show', recommendedreading, class: "weblink" %></span>
+                    <span><%= link_to 'Edit', edit_recommendedreading_path(recommendedreading), class: "weblink" %></span>
+                    <span><%= link_to 'Delete', recommendedreading, method: :delete, data: { confirm: 'Are you sure?' }, class: "weblink" %></span>
+                  </span>
                 </li>
+                <li><%= recommendedreading.fileattachment %></li>
               <% end %>
               </ul>
-              <div class="paragraph_content">In a bid to fulfil our charitable objectives, Open Heavens Christian Centre relies primarily on voluntary donations. In addition to our regular methods of giving, which includes Service (cash, cheques and card payments) and Postal Collections, Standing Orders, Direct Credits; Text Donations and Payroll Giving, donations can also be made to the charity online.</div>
             </div>
           </div>
         </div>

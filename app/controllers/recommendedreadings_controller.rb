@@ -69,6 +69,6 @@ class RecommendedreadingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recommendedreading_params
-      params.require(:recommendedreading).permit(:fileattachment, :notes, :filename)
+      params.require(:recommendedreading).permit(:fileattachment, :notes, :filename, :link)
     end
 end
