@@ -13,6 +13,7 @@ ce02 = CategoryEvent.create!(name:'Church Event')
 ce03 = CategoryEvent.create!(name:'Community Event')
 ce04 = CategoryEvent.create!(name:'National Event')
 ce05 = CategoryEvent.create!(name:'Leadership Forum Event')
+ce06 = CategoryEvent.create!(name:'Baptism Class Event')
 
 
 CategoryCountry.delete_all

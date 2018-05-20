@@ -54,7 +54,7 @@ Rails.application.routes.draw do
   get     'our-people',               to: 'static_pages#ourpeoplepg'
   get     'privacy',                  to: 'static_pages#privacypg'
   get     'receive-christ',           to: 'static_pages#receivechristpg'
-  get     'recommeded-reading-plan',  to: 'static_pages#recreadingplan'
+  get     'recommeded-reading-plan',  to: 'static_pages#recreadingplanpg'
   get     'serve',                    to: 'static_pages#servepg'
   get     'small-groups',             to: 'static_pages#smallgroupspg'
   get     'statement-of-faith',       to: 'static_pages#statementfaithpg'

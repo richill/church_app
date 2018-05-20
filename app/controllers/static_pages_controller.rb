@@ -9,6 +9,10 @@ class StaticPagesController < ApplicationController
   def aroundworldpg
   end
 
+  def baptismpg
+    @events = Event.baptism_events 
+  end
+
   def bibleandyoupg  
   end
 
@@ -60,7 +64,7 @@ class StaticPagesController < ApplicationController
   def receivechristpg
   end
 
-  def recreadingplan
+  def recreadingplanpg
     @recommendedreadings = Recommendedreading.all
   end
 
