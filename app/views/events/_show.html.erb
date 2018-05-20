@@ -5,21 +5,31 @@
       <div class="tree_line">
         <span><%= link_to "home", root_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <% if @event.category_event.name == "Leadership Forum Event" %>
-          <span><%= link_to "grow", grow_path %></span>
-        <% end %>
-        <span><i class="fa fa-angle-right"></i></span>
         <span>
           <% if @event.category_event.name == "Youth Event" %>
-            <%= link_to "Youth Events", youth_events_events_path %>
+            <span><%= link_to "events", events_path %></span>
+            <span><i class="fa fa-angle-right"></i></span>
+            <span><%= link_to "Youth Events", youth_events_events_path %></span>
           <% elsif @event.category_event.name == "Church Event" %>
-            <%= link_to "Church Events", church_events_events_path %>
+            <span><%= link_to "events", events_path %></span>
+            <span><i class="fa fa-angle-right"></i></span>
+            <span><%= link_to "Church Events", church_events_events_path %></span>
           <% elsif @event.category_event.name == "Community Event" %>
-            <%= link_to "Community Events", community_events_events_path %>
+            <span><%= link_to "events", events_path %></span>
+            <span><i class="fa fa-angle-right"></i></span>
+            <span><%= link_to "Community Events", community_events_events_path %></span>
           <% elsif @event.category_event.name == "National Event" %>
-            <%= link_to "National Event", national_events_events_path %>
+            <span><%= link_to "events", events_path %></span>
+            <span><i class="fa fa-angle-right"></i></span>
+            <span><%= link_to "National Event", national_events_events_path %></span>
           <% elsif @event.category_event.name == "Leadership Forum Event" %>
-            <%= link_to "Leadership Development", leadership_development_path %>
+            <span><%= link_to "grow", grow_path %></span>
+            <span><i class="fa fa-angle-right"></i></span>
+            <span><%= link_to "Leadership Development", leadership_development_path %></span>
+          <% elsif @event.category_event.name == "Baptism Class Event" %>
+            <span><%= link_to "grow", grow_path %></span>
+            <span><i class="fa fa-angle-right"></i></span>
+            <span><%= link_to "next steps", next_steps_path %></span>
           <% end %>
         </span>
         <span><i class="fa fa-angle-right"></i></span>
@@ -52,6 +62,8 @@
                       <%= link_to "National Event", national_events_events_path %>
                     <% elsif @event.category_event.name == "Leadership Forum Event" %>
                       <%= link_to "Leadership Forum", leadership_development_path %>
+                    <% elsif @event.category_event.name == "Baptism Class Event" %>
+                      <%= link_to "Baptism", baptism_path %>
                     <% end %>
                   </span>
                 <% end %> 

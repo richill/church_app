@@ -7,18 +7,24 @@
         <span><i class="fa fa-angle-right"></i></span>
         <span><%= link_to "grow", grow_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span class="current_page">leadership development</span>
+        <span><%= link_to "next steps", next_steps_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">baptism</span>
       </div>
 
       <div class="medium-12 columns page_main_content">
         <!-- info_left_content -->
         <div class="medium-8 columns info_left_content">
           <div class="page_information">
-            <div class="page_header">leadership development</div>
+            <div class="page_header">Are you interested in being baptized?</div>
             <div class="calendar_section">
               <!-- listed events -->
               <div class="event_content">
-                <div class="paragraph_content">The goal of the leadership community is to help leaders and those interested in leadership sharpen their leadership skills. You do not have to be actively engaged in leadership to participate. The resources and training opportunities will be valuable for those in positions of leadership in business and in our community. The leadership events are open to all…please invite friends and co-workers from the community. To be included in Open Heavens’s Leadership Community group, or for additional information contact <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span>. You will be notified of upcoming events and other leadership development opportunities and resources.</div>
+                <div class="paragraph_content">Have your children asked questions about baptism? Well we’ve got introduction classes for families with children, teens, and adults. Please review our options below and sign up today!</div>
+                <div class="paragraph_content">
+                  <b>Family Baptism Class</b>
+                  <span>Children are required to attend our Family Baptism Class. In the class we explain what baptism is all about in a way that kids can clearly understand, explaining what it means to become a Christ follower & why we get baptized. Please sign up for the Family Baptism Class online or email  <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span> for more information.</span> 
+                </div>
                 <div class="divider"></div>
                 <div class="event_inner_content">
                   <ul>
@@ -50,8 +56,8 @@
                               <div class="evt_minor_info evt_address">
                                 <span><b>category:</b></span>
                                 <span class="evt_category">
-                                  <% if event.category_event.name == "Leadership Forum Event" %>
-                                    <%= "Leadership Forum" %>
+                                  <% if event.category_event.name == "Baptism Class Event" %>
+                                    <%= "Baptism" %>
                                   <% end %>
                                 </span>
                               </div>
