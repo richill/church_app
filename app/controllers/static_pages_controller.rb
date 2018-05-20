@@ -13,7 +13,8 @@ class StaticPagesController < ApplicationController
     @events = Event.baptism_events 
   end
 
-  def bibleandyoupg  
+  def bibleandyoupg 
+    @events = Event.biblestudies_events  
   end
 
   def connectdpg

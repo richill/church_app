@@ -1,31 +1,74 @@
 <div class="pages_boarder"></div>
-<div class="medium-12 columns content_bibleandyoupg_section">
-  <div class="content_bibleandyoupg_inner_section">
-    <div class="medium-12 columns bibleandyoupg_content">
+<div class="medium-12 columns content_baptismpg_section">
+  <div class="content_baptismpg_inner_section">
+    <div class="medium-12 columns baptismpg_content">
       <div class="tree_line">
         <span><%= link_to "home", root_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
         <span><%= link_to "grow", grow_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span class="current_page">the bible & you</span>
+        <span class="current_page">the bible and you</span>
       </div>
 
       <div class="medium-12 columns page_main_content">
         <!-- info_left_content -->
         <div class="medium-8 columns info_left_content">
           <div class="page_information">
-            <div class="page_header">the bible and you</div>
+            <div class="page_header">Are you interested in being baptized?</div>
             <div class="calendar_section">
-              <!-- listed studies -->
+              <!-- listed events -->
               <div class="event_content">
-                <div class="paragraph_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+                <div class="paragraph_content">Have your children asked questions about baptism? Well we’ve got introduction classes for families with children, teens, and adults. Please review our options below and sign up today!</div>
+                <div class="paragraph_content">
+                  <b>Family Baptism Class</b>
+                  <span>Children are required to attend our Family Baptism Class. In the class we explain what baptism is all about in a way that kids can clearly understand, explaining what it means to become a Christ follower & why we get baptized. Please sign up for the Family Baptism Class online or email  <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span> for more information.</span> 
+                </div>
                 <div class="divider"></div>
                 <div class="event_inner_content">
-                  <h1>bibleandyoupg content goes here</h1>
+                  <ul>
+                    <% @events.order('created_at DESC').each do |event| %>
+                      <li>
+                        <div>
+                          <span class="evt_img_section">
+                            <div class="evt_img_outter">
+                              <div class="evt_img"><%= link_to (image_tag("img_sample.jpg")), event_path(event) %></div>
+                            </div>
+                          </span>
+                          <span class="event_info_section">
+                            <%= link_to event_path(event) do %>
+                              <div class="evt_title"><%= truncate("#{event.name}", length: 45) %></div>
+                              <div class="evt_minor_info evt_time">
+                                <span><b>date:</b></span>
+                                <span><%= event.start_time.strftime("%b %d %Y") %></span>  
+                                <span class="listevt_divider">|</span>
+                                <span><b>time:</b></span>
+                                <span><%= "#{event.start_time.strftime("%I:%M%p")}" %> - <%= "#{event.end_time.strftime("%I:%M%p")}" %></span>
+                              </div>
+                              <div class="evt_minor_info evt_address"><b>location:</b> <%= truncate("#{event.address}", length: 60) %></div>
+                              <div class="evt_minor_info evt_city_country">
+                                <span><b>city:</b></span>
+                                <span><%= event.city %></span>
+                                <span><b>country:</b></span>
+                                <span><%= event.category_country.name %></span>
+                              </div>
+                              <div class="evt_minor_info evt_address">
+                                <span><b>category:</b></span>
+                                <span class="evt_category">
+                                  <% if event.category_event.name == "Baptism Class Event" %>
+                                    <%= "Baptism" %>
+                                  <% end %>
+                                </span>
+                              </div>
+                            <% end %>
+                          </span>
+                        </div>
+                      </li>
+                      <div class="clear"></div>
+                    <% end %>
+                  </ul>
                 </div>
               </div>
-              <!-- listed studies -->
+              <!-- listed events -->
             </div>
           </div>
         </div>

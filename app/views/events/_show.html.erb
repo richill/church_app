@@ -30,6 +30,10 @@
             <span><%= link_to "grow", grow_path %></span>
             <span><i class="fa fa-angle-right"></i></span>
             <span><%= link_to "next steps", next_steps_path %></span>
+          <% elsif @event.category_event.name == "Bible Study Event" %>
+            <span><%= link_to "grow", grow_path %></span>
+            <span><i class="fa fa-angle-right"></i></span>
+            <span><%= link_to "The Bible And You", bible_and_you_path %></span>
           <% end %>
         </span>
         <span><i class="fa fa-angle-right"></i></span>
@@ -64,6 +68,8 @@
                       <%= link_to "Leadership Forum", leadership_development_path %>
                     <% elsif @event.category_event.name == "Baptism Class Event" %>
                       <%= link_to "Baptism", baptism_path %>
+                    <% elsif @event.category_event.name == "Bible Study Event" %>
+                      <%= link_to "Bible Study", bible_and_you_path %>
                     <% end %>
                   </span>
                 <% end %> 
