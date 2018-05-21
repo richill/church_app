@@ -1,0 +1,56 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_servicetimespg_section">
+  <div class="content_servicetimespg_inner_section">
+    <div class="medium-12 columns servicetimespg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "contact", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">service times</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">open heavens service times</div>
+            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+            <div>
+              <div class="paragraph_content">Free this weekend? Why not come along to Open House Christian Centre where worship is genuine, the Word from God is accurately represented and emphasis is given on the importance of an honest fellowship with God and a transparent approach to our relationship with others. We can't wait to see you, your friends & family!</div>
+
+              <div class="paragraph_content">Here is a list of service times: </div>
+
+              <div class="paragraph_content">
+                <b>Monthly Communion Service</b>
+                <div><i class="fa fa-clock-o"></i> Every first Wednesday of the Month at 07:00pm</div>
+              </div>
+
+              <div class="paragraph_content">
+                <b>Sunday Service</b>
+                <div><i class="fa fa-clock-o"></i> Open Heavens Church: [Sundays] 10:00am - 12pm</div>
+              </div>
+
+              <div class="paragraph_content">
+                <b>Bible Studies</b>
+                <div><i class="fa fa-clock-o"></i> Open Heavens Church: [Wednesdays] 07:00pm - 08:30pm</div>
+                <div><span>View our</span> <%= link_to "Bible Studies", bible_and_you_path, class: "weblink" %> <span>page</span></div>
+              </div><br/>
+
+              <div class="paragraph_content">
+                <b>Church Office</b>
+                <div><i class="fa fa-clock-o"></i> The Church Office is open every weekday from 10:00am - 5:30pm.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>

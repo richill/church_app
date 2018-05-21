@@ -72,6 +72,9 @@ class StaticPagesController < ApplicationController
   def servepg
   end
 
+  def servicetimespg
+  end
+
   def smallgroupspg
     @smallgroups = Smallgroup.all
   end
