@@ -20,6 +20,9 @@ class StaticPagesController < ApplicationController
   def contactpg  
   end
 
+  def contactlistpg  
+  end
+
   def connectdpg
     @launchministries = Launchministry.all
   end
