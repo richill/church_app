@@ -30,7 +30,7 @@ class StaticPagesController < ApplicationController
   def childrenteenpg  
   end
 
-  def getconnectedpg
+  def directionpg  
   end
 
   def donatepg
@@ -38,6 +38,9 @@ class StaticPagesController < ApplicationController
 
   def forumpg
     @discussions = Discussion.all
+  end
+
+  def getconnectedpg
   end
 
   def gdprpg

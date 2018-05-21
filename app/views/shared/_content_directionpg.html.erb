@@ -1,23 +1,23 @@
 <div class="pages_boarder"></div>
-<div class="medium-12 columns content_contactlistpg_section">
-  <div class="content_contactlistpg_inner_section">
-    <div class="medium-12 columns contactlistpg_content">
+<div class="medium-12 columns content_directionpg_section">
+  <div class="content_directionpg_inner_section">
+    <div class="medium-12 columns directionpg_content">
       <div class="tree_line">
         <span><%= link_to "home", root_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
         <span><%= link_to "contact", contact_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span class="current_page">contact list</span>
+        <span class="current_page">directions</span>
       </div>
 
       <div class="medium-12 columns page_main_content">
         <!-- info_left_content -->
         <div class="medium-8 columns info_left_content">
           <div class="page_information">
-            <div class="page_header">contact list</div>
-            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+            <div class="page_header">directions to open heavens church</div>
+            <div class="page_img"><%= link_to (image_tag("img_road_map.png")), "https://www.google.co.uk/maps/dir/''/open+heavens+broadfields/data=!4m5!4m4!1m0!1m2!1m1!1s0x4876169a9a168589:0x154338d949634999?sa=X&ved=0ahUKEwiA6PHA05bbAhWkKMAKHQMqDigQ9RcImgEwCw" %></div>
             <div>
-              <div class="paragraph_content">We welcome visitors at Open Heavens Christian Centre Edgware and would love to have you join us in church this weekend.</div>
+              <div class="paragraph_content">We welcome visitors at Open Heavens Christian Centre Edgware and would love to have you join us in church this weekend. <%= link_to "Get Directions", "https://www.google.co.uk/maps/dir/''/open+heavens+broadfields/data=!4m5!4m4!1m0!1m2!1m1!1s0x4876169a9a168589:0x154338d949634999?sa=X&ved=0ahUKEwiA6PHA05bbAhWkKMAKHQMqDigQ9RcImgEwCw", class: "weblink" %></div>
               
 
               <div class="paragraph_cover">
@@ -48,24 +48,21 @@
               <div class="divider"></div>
 
               <div class="paragraph_content">
-                <span><i class="fa fa-building"></i> <b>Counselling:</b></span>
-                <span>07961 777 316 (Emergencies Only)</span>
+                <b>By Tube</b>
+                <div>Edgware Station [Northern Line - Edgware Branch]</div>
               </div>
 
               <div class="paragraph_content">
-                <span><i class="fa fa-building"></i> <b>Appointments Helpline:</b></span>
-                <span>0208 208 8909</span>
+                <b>By Road</b>
+                <div>Braofields is situated off the M1. Turn into Broadfields Avenue and follow directions around. <%= link_to "Get Directions", "https://www.google.co.uk/maps/dir/''/open+heavens+broadfields/data=!4m5!4m4!1m0!1m2!1m1!1s0x4876169a9a168589:0x154338d949634999?sa=X&ved=0ahUKEwiA6PHA05bbAhWkKMAKHQMqDigQ9RcImgEwCw", class: "weblink" %></div>
               </div>
 
               <div class="paragraph_content">
-                <span><i class="fa fa-building"></i> <b>Alpha Course:</b></span>
-                <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span>
+                <b>By Bus</b>
+                <div class="direction_img">Buses from Edgware Station are: 288. <%= link_to "view bus map", "https://tfl.gov.uk/bus/route/288/", class: "weblink" %></div>
+                <div class="page_img"><%= link_to (image_tag("img_bus_map.png")), "https://tfl.gov.uk/bus/route/288/" %></div>
               </div>
 
-              <div class="paragraph_content">
-                <span><i class="fa fa-building"></i> <b>Leagal Team:</b></span>
-                <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span>
-              </div>
             </div>
           </div>
         </div>
