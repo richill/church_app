@@ -46,6 +46,7 @@ Rails.application.routes.draw do
   get     'children-teenage-corner',  to: 'static_pages#childrenteenpg'
   get     'donations',                to: 'static_pages#donatepg'
   get     'forum',                    to: 'static_pages#forumpg'
+  get     'get-connected',            to: 'static_pages#getconnectedpg'
   get     'gdpr',                     to: 'static_pages#gdprpg'
   get     'grow',                     to: 'static_pages#growpg'
   get     'leadership-development',   to: 'static_pages#leadershipdevelopmentpg'

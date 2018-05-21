@@ -27,6 +27,9 @@ class StaticPagesController < ApplicationController
   def childrenteenpg  
   end
 
+  def getconnectedpg
+  end
+
   def donatepg
   end
 
