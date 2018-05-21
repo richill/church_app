@@ -41,6 +41,7 @@ Rails.application.routes.draw do
   get     'around-the-world',         to: 'static_pages#aroundworldpg'
   get     'baptism',                  to: 'static_pages#baptismpg'
   get     'bible-and-you',            to: 'static_pages#bibleandyoupg'
+  get     'contact',                  to: 'static_pages#contactpg'
   get     'connect',                  to: 'static_pages#connectdpg'
   get     'children-teenage-corner',  to: 'static_pages#childrenteenpg'
   get     'donations',                to: 'static_pages#donatepg'
@@ -58,9 +59,7 @@ Rails.application.routes.draw do
   get     'receive-christ',           to: 'static_pages#receivechristpg'
   get     'recommeded-reading-plan',  to: 'static_pages#recreadingplanpg'
   get     'serve',                    to: 'static_pages#servepg'
-
   get     'service-times',            to: 'static_pages#servicetimespg'
-  
   get     'small-groups',             to: 'static_pages#smallgroupspg'
   get     'statement-of-faith',       to: 'static_pages#statementfaithpg'
   get     'thank-you',                to: 'static_pages#thankyoupg'

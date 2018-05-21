@@ -17,6 +17,9 @@ class StaticPagesController < ApplicationController
     @events = Event.biblestudies_events  
   end
 
+  def contactpg  
+  end
+
   def connectdpg
     @launchministries = Launchministry.all
   end

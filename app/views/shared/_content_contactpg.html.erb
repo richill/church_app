@@ -1,0 +1,47 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_contactpg_section">
+  <div class="content_contactpg_inner_section">
+    <div class="medium-12 columns contactpg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">Contact</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">contact us</div>
+            <div>
+              <div class="paragraph_content">Open Heavens Church is situated at Broadfields, very close to Edgware Station, Tube and Bus Stations. The location of the church is very accessible by car, tube, bus and walking, some of the best ways to get to Open Heavens Church are listed below; </div>
+
+              <div class="paragraph_content">
+                <b>By Tube</b>
+                <div>Edgware Station [Northern Line - Edgware Branch]</div>
+              </div>
+
+              <div class="paragraph_content">
+                <b>By Road</b>
+                <div>Braofields is situated off the M1. Turn into Broadfields Avenue and follow around into Broadfields Avenue.</div>
+                <div class="page_img"><%= link_to (image_tag("img_road_map.png")), "https://www.google.co.uk/maps/dir/''/open+heavens+broadfields/data=!4m5!4m4!1m0!1m2!1m1!1s0x4876169a9a168589:0x154338d949634999?sa=X&ved=0ahUKEwiA6PHA05bbAhWkKMAKHQMqDigQ9RcImgEwCw" %></div>
+              </div>
+
+              <div class="paragraph_content">
+                <b>By Bus</b>
+                <div class="direction_img">Buses from Edgware Station are: 288. <%= link_to "view bus map", "https://tfl.gov.uk/bus/route/288/", class: "weblink" %></div>
+                <div class="page_img"><%= link_to (image_tag("img_bus_map.png")), "https://tfl.gov.uk/bus/route/288/" %></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
