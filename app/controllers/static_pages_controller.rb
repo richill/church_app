@@ -81,6 +81,9 @@ class StaticPagesController < ApplicationController
     @recommendedreadings = Recommendedreading.all
   end
 
+  def resourcespg
+  end
+
   def servepg
   end
 
@@ -95,6 +98,9 @@ class StaticPagesController < ApplicationController
   end
 
   def thankyoupg
+  end
+
+  def thebiblepg
   end
 
   def youthpg

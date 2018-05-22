@@ -1,0 +1,50 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_recreadingplan_section">
+  <div class="content_recreadingplan_inner_section">
+    <div class="medium-12 columns recreadingplan_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "resoures", grow_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">the bible</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">the bible</div>
+            <div class="paragraph_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div class="divider"></div>
+            <div class="paragraph_content listed_readings_links">
+              <ul>
+              <% @recommendedreadings.each do |recommendedreading| %>
+                <li class="file">
+                  <span><i class="fa fa-download"></i></span>
+                  <span class="file_text"><%= link_to "Downlaod & Print #{recommendedreading.filename}", "#" %></span>
+                  <span>
+                    <% if user_signed_in? && current_user.admin? %>
+                    <span>|</span>
+                    <span><%= link_to 'Show', recommendedreading, class: "weblink" %></span>
+                    <span><%= link_to 'Edit', edit_recommendedreading_path(recommendedreading), class: "weblink" %></span>
+                    <span><%= link_to 'Delete', recommendedreading, method: :delete, data: { confirm: 'Are you sure?' }, class: "weblink" %></span>
+                    <% end %>
+                  </span>
+                </li>
+                <li><%= recommendedreading.fileattachment %></li>
+              <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>

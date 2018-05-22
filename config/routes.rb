@@ -61,11 +61,13 @@ Rails.application.routes.draw do
   get     'privacy',                  to: 'static_pages#privacypg'
   get     'receive-christ',           to: 'static_pages#receivechristpg'
   get     'recommeded-reading-plan',  to: 'static_pages#recreadingplanpg'
+  get     'resources',                to: 'static_pages#resourcespg'
   get     'serve',                    to: 'static_pages#servepg'
   get     'service-times',            to: 'static_pages#servicetimespg'
   get     'small-groups',             to: 'static_pages#smallgroupspg'
   get     'statement-of-faith',       to: 'static_pages#statementfaithpg'
   get     'thank-you',                to: 'static_pages#thankyoupg'
+  get     'the-bible',                to: 'static_pages#thebiblepg'
   get     'youth',                    to: 'static_pages#youthpg'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
