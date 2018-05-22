@@ -1,0 +1,59 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_mediaandcomepg_section">
+  <div class="content_mediaandcomepg_inner_section">
+    <div class="medium-12 columns mediaandcomepg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "resoures", resources_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "media & communications", media_and_communication_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">support</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">support</div>
+            <div class="paragraph_content">Welcome to the Open Heavens Multimedia Department where our mission is "Enhancing Your Worship Experience".</div>
+            <div class="paragraph_content">This mission was born out of a desire to use media technologies to help individuals (both Christians and the unchurched) to develop more intimate relationship with God through various forms and styles of worship.</div>
+            <div class="paragraph_content">The department fondly is grounded on 3 core values: Spirituality, Team Work and Excellence. The MMD family is made up of 5 teams, which jointly enlist over 80 volunteer members.</div>
+            <div class="paragraph_content">The Multimedia Department is the ministry arm of the Open Heavens Media Centre.</div>
+            <div class="paragraph_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div class="divider"></div>
+            <div class="paragraph_content">For more information about or from the Multimedia Department and/or to request Multimedia Services, kindly send an email to <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span> or view relevant documents below:</div>
+            <div class="paragraph_content"><b>Attachments</b></div>
+            <div class="paragraph_content listed_readings_links">
+              <ul>
+                <li class="file">
+                  <span><i class="fa fa-wpforms"></i></span>
+                  <span class="file_text"><%= link_to "MMD_Video_Storyboard_Template_v01.00.pdf", "#" %></span>
+                </li>
+                <li class="file">
+                  <span><i class="fa fa-wpforms"></i></span>
+                  <span class="file_text"><%= link_to "MMD_Production_Meeting_Checklist_2009_v01.00.pdf", "#" %></span>
+                </li>
+                <li class="file">
+                  <span><i class="fa fa-wpforms"></i></span>
+                  <span class="file_text"><%= link_to "MMD_Admin_Team_Job_Descriptions_v01.00.pdf", "#" %></span>
+                </li>
+                <li class="file">
+                  <span><i class="fa fa-wpforms"></i></span>
+                  <span class="file_text"><%= link_to "mmd_rfs_form_issue_2011_editable_v02.00_x.pdf", "#" %></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -67,6 +67,7 @@ Rails.application.routes.draw do
   get     'service-times',            to: 'static_pages#servicetimespg'
   get     'small-groups',             to: 'static_pages#smallgroupspg'
   get     'statement-of-faith',       to: 'static_pages#statementfaithpg'
+  get     'support',                  to: 'static_pages#supportpg'
   get     'thank-you',                to: 'static_pages#thankyoupg'
   get     'the-bible',                to: 'static_pages#thebiblepg'
   get     'useful-services',          to: 'static_pages#usefulservicespg'

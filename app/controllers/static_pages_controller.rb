@@ -100,6 +100,9 @@ class StaticPagesController < ApplicationController
   def statementfaithpg
   end
 
+  def supportpg 
+  end
+
   def thankyoupg
   end
 
