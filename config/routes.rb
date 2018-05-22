@@ -53,6 +53,7 @@ Rails.application.routes.draw do
   get     'grow',                     to: 'static_pages#growpg'
   get     'leadership-development',   to: 'static_pages#leadershipdevelopmentpg'
   get     'next-steps',               to: 'static_pages#nextstepspg'
+  get     'media-and-communication',  to: 'static_pages#mediaandcomepg'
   get     'ministry-idea',            to: 'static_pages#ministryideapg'
   get     'mission-vision-statement', to: 'static_pages#missionvisionpg'
   get     'our-church',               to: 'static_pages#ourchurchpg'
@@ -68,6 +69,7 @@ Rails.application.routes.draw do
   get     'statement-of-faith',       to: 'static_pages#statementfaithpg'
   get     'thank-you',                to: 'static_pages#thankyoupg'
   get     'the-bible',                to: 'static_pages#thebiblepg'
+  get     'useful-services',          to: 'static_pages#usefulservicespg'
   get     'youth',                    to: 'static_pages#youthpg'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

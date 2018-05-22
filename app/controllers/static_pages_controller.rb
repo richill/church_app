@@ -53,6 +53,9 @@ class StaticPagesController < ApplicationController
     @events = Event.leadership_events 
   end
 
+  def mediaandcomepg
+  end
+
   def ministryideapg
   end
 
@@ -101,6 +104,9 @@ class StaticPagesController < ApplicationController
   end
 
   def thebiblepg
+  end
+
+  def usefulservicespg  
   end
 
   def youthpg
