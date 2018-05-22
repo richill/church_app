@@ -41,6 +41,7 @@ Rails.application.routes.draw do
   get     'around-the-world',         to: 'static_pages#aroundworldpg'
   get     'baptism',                  to: 'static_pages#baptismpg'
   get     'bible-and-you',            to: 'static_pages#bibleandyoupg'
+  get     'broadfields-resource',     to: 'static_pages#broadfieldresoucepg'
   get     'contact',                  to: 'static_pages#contactpg'
   get     'contact-list',             to: 'static_pages#contactlistpg'
   get     'connect',                  to: 'static_pages#connectdpg'

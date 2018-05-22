@@ -17,6 +17,9 @@ class StaticPagesController < ApplicationController
     @events = Event.biblestudies_events  
   end
 
+  def broadfieldresoucepg 
+  end
+
   def contactpg  
   end
 
