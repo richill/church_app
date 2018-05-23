@@ -1,0 +1,80 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_careersvolunteerspg_section">
+  <div class="content_careersvolunteerspg_inner_section">
+    <div class="medium-12 columns careersvolunteerspg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "resources", resources_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">careers & volunteers</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">careers & volunteers</div>
+            <div class="paragraph_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div class="divider"></div>
+            <div class="paragraph_content listed_readings_links">
+              <ul>
+                <li class="file">
+                  <div class="jobpost_content">
+                    <div class="header"><%= link_to "babysitter", "#" %></div>
+                    <div class="minor_info">
+                      <span class="min_header">posted:</span><span class="min_content">22 days ago</span>
+                      <span class="min_divider">|</span>
+                      <span class="min_header">location:</span><span class="min_content">UK/London</span>
+                      <span class="min_divider">|</span>
+                      <span class="min_header">position:</span><span class="min_content">part-time hours</span>
+                    </div>
+                    <div class="content"><%= link_to truncate("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", length: 200), "#" %> <span class="view"><%= link_to "view", "#" %></span></div>
+                    <div class="category"><%= link_to "domestic household", "#" %></div>
+                  </div>
+                </li>
+
+                <li class="file">
+                  <div class="jobpost_content">
+                    <div class="header"><%= link_to "sales person", "#" %></div>
+                    <div class="minor_info">
+                      <span class="min_header">posted:</span><span class="min_content">22 days ago</span>
+                      <span class="min_divider">|</span>
+                      <span class="min_header">location:</span><span class="min_content">UK/London</span>
+                      <span class="min_divider">|</span>
+                      <span class="min_header">position:</span><span class="min_content">internship</span>
+                    </div>
+                    <div class="content"><%= link_to truncate("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", length: 200), "#" %> <span class="view"><%= link_to "view", "#" %></span></div>
+                    <div class="category"><%= link_to "business development", "#" %></div>
+                  </div>
+                </li>
+
+                <li class="file">
+                  <div class="jobpost_content">
+                    <div class="header"><%= link_to "sound engineer", "#" %></div>
+                    <div class="minor_info">
+                      <span class="min_header">posted:</span><span class="min_content">22 days ago</span>
+                      <span class="min_divider">|</span>
+                      <span class="min_header">location:</span><span class="min_content">UK/London</span>
+                      <span class="min_divider">|</span>
+                      <span class="min_header">position:</span><span class="min_content">volunteer</span>
+                    </div>
+                    <div class="content"><%= link_to truncate("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", length: 200), "#" %> <span class="view"><%= link_to "view", "#" %></span></div>
+                    <div class="category"><%= link_to "business development", "#" %></div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>

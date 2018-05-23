@@ -23,6 +23,9 @@ class StaticPagesController < ApplicationController
   def contactpg  
   end
 
+  def careersvolunteerspg  
+  end
+
   def contactlistpg  
   end
 
