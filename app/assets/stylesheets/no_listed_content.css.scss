@@ -3,6 +3,15 @@
     File: views/events/_no_listed_content.html.erb
   ===================================================*/
 
-.eventindex_section {
-  padding: 0px !important;
+.nolisted_content .info_display {
+  color: #2A2C49;
+  background-color: rgba(42, 44, 73, 0.05);
+  position: relative;
+  padding: 15px 18px;
+  border: 1px solid #E8E9EB;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
 }
