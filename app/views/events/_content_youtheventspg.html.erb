@@ -16,49 +16,57 @@
           <div class="page_information">
             <div class="page_header">youth events</div>
             <div class="calendar_section">
-              <!-- listed events -->
-              <div class="event_content">
-                <div class="event_inner_content">
-                  <ul>
-                    <% @events.each do |event| %>
-                      <li>
-                        <div>
-                          <span class="evt_img_section">
-                            <div class="evt_img_outter">
-                              <div class="evt_img"><%= link_to (image_tag("img_sample.jpg")), event_path(event) %></div>
-                            </div>
-                          </span>
-                          <span class="event_info_section">
-                            <%= link_to event_path(event), target:"_blank" do %>
-                              <div class="evt_title"><%= truncate("#{event.name}", length: 45) %></div>
-                              <div class="evt_minor_info evt_time">
-                                <span><b>date:</b></span>
-                                <span><%= event.start_time.strftime("%b %d %Y") %></span>  
-                                <span class="listevt_divider">|</span>
-                                <span><b>time:</b></span>
-                                <span><%= "#{event.start_time.strftime("%I:%M%p")}" %> - <%= "#{event.end_time.strftime("%I:%M%p")}" %></span>
+
+              <% if @events.present? %>
+                <!-- listed events -->
+                <div class="event_content">
+                  <div class="event_inner_content">
+                    <ul>
+                      <% @events.each do |event| %>
+                        <li>
+                          <div>
+                            <span class="evt_img_section">
+                              <div class="evt_img_outter">
+                                <div class="evt_img"><%= link_to (image_tag("img_sample.jpg")), event_path(event) %></div>
                               </div>
-                              <div class="evt_minor_info evt_address"><b>location:</b> <%= truncate("#{event.address}", length: 60) %></div>
-                              <div class="evt_minor_info evt_city_country">
-                                <span><b>city:</b></span>
-                                <span><%= event.city %></span>
-                                <span><b>country:</b></span>
-                                <span><%= event.category_country.name %></span>
-                              </div>
-                              <div class="evt_minor_info evt_address">
-                                <span><b>category:</b></span>
-                                <span class="evt_category"><%= event.category_event.name %></span>
-                              </div>
-                            <% end %>
-                          </span>
-                        </div>
-                      </li>
-                      <div class="clear"></div>
-                    <% end %>
-                  </ul>
+                            </span>
+                            <span class="event_info_section">
+                              <%= link_to event_path(event), target:"_blank" do %>
+                                <div class="evt_title"><%= truncate("#{event.name}", length: 45) %></div>
+                                <div class="evt_minor_info evt_time">
+                                  <span><b>date:</b></span>
+                                  <span><%= event.start_time.strftime("%b %d %Y") %></span>  
+                                  <span class="listevt_divider">|</span>
+                                  <span><b>time:</b></span>
+                                  <span><%= "#{event.start_time.strftime("%I:%M%p")}" %> - <%= "#{event.end_time.strftime("%I:%M%p")}" %></span>
+                                </div>
+                                <div class="evt_minor_info evt_address"><b>location:</b> <%= truncate("#{event.address}", length: 60) %></div>
+                                <div class="evt_minor_info evt_city_country">
+                                  <span><b>city:</b></span>
+                                  <span><%= event.city %></span>
+                                  <span><b>country:</b></span>
+                                  <span><%= event.category_country.name %></span>
+                                </div>
+                                <div class="evt_minor_info evt_address">
+                                  <span><b>category:</b></span>
+                                  <span class="evt_category"><%= event.category_event.name %></span>
+                                </div>
+                              <% end %>
+                            </span>
+                          </div>
+                        </li>
+                        <div class="clear"></div>
+                      <% end %>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <!-- listed events -->
+                <!-- listed events -->
+              <% else %>
+                <!-- no_listed_info -->
+                  <div><%= render "shared/no_listed_content" %></div>
+                <!-- no_listed_info -->
+              <% end %>
+              
             </div>
           </div>
         </div>

@@ -14,6 +14,7 @@
           <div class="page_information">
             <div class="page_header">listed events</div>
             <div class="calendar_section">
+
               <% if @events.present? %>
                 <!-- listed events -->
                 <div class="event_content">
@@ -63,6 +64,7 @@
                 <div><%= render "shared/no_listed_content" %></div>
                 <!-- no_listed_info -->
               <% end %>
+              
             </div>
           </div>
         </div>
