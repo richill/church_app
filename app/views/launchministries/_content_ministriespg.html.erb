@@ -16,36 +16,44 @@
           <div class="page_information">
             <div class="page_header">minitries</div>
             <div class="calendar_section">
-              <!-- listed ministries -->
-              <div class="ministry_content">
-                <div class="ministry_inner_content">
-                  <ul>
-                    <% @launchministries.each do |minstry| %>
-                      <li>
-                        <div>
-                          <span class="ministry_img_section">
-                            <div class="ministry_img_outter">
-                              <div class="ministry_img"><%= link_to (image_tag("img_sample.jpg")), launchministry_path(minstry) %></div>
-                            </div>
-                          </span>
-                          <span class="ministry_info_section">
-                            <%= link_to launchministry_path(minstry) do %>
-                              <div class="ministry_title"><%= truncate("#{minstry.mininstryidea}", length: 45) %></div>
-                              <div class="ministry_minor_info ministry_address"><b>about ministry:</b> <%= truncate("#{minstry.mininstrydescription}", length: 250) %></div>
-                              <div class="ministry_minor_info ministry_address">
-                                <span><b>minstry director:</b></span>
-                                <span class="evt_category"><%= minstry.firstname %> <%= minstry.lastname %></span>
+
+              <% if @launchministries.present? %>
+                <!-- listed ministries -->
+                <div class="ministry_content">
+                  <div class="ministry_inner_content">
+                    <ul>
+                      <% @launchministries.each do |minstry| %>
+                        <li>
+                          <div>
+                            <span class="ministry_img_section">
+                              <div class="ministry_img_outter">
+                                <div class="ministry_img"><%= link_to (image_tag("img_sample.jpg")), launchministry_path(minstry) %></div>
                               </div>
-                            <% end %>
-                          </span>
-                        </div>
-                      </li>
-                      <div class="clear"></div>
-                    <% end %>
-                  </ul>
+                            </span>
+                            <span class="ministry_info_section">
+                              <%= link_to launchministry_path(minstry) do %>
+                                <div class="ministry_title"><%= truncate("#{minstry.mininstryidea}", length: 45) %></div>
+                                <div class="ministry_minor_info ministry_address"><b>about ministry:</b> <%= truncate("#{minstry.mininstrydescription}", length: 250) %></div>
+                                <div class="ministry_minor_info ministry_address">
+                                  <span><b>minstry director:</b></span>
+                                  <span class="evt_category"><%= minstry.firstname %> <%= minstry.lastname %></span>
+                                </div>
+                              <% end %>
+                            </span>
+                          </div>
+                        </li>
+                        <div class="clear"></div>
+                      <% end %>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <!-- listed ministries -->
+                <!-- listed ministries -->
+              <% else %>
+                <!-- no_listed_info -->
+                <div><%= render "shared/no_listed_content" %></div>
+                <!-- no_listed_info -->
+              <% end %>
+
             </div>
           </div>
         </div>
