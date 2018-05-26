@@ -139,6 +139,32 @@
   width: 200px;
 }
 
+.content_ministryideapg_section .siginregister_btn {
+  cursor: pointer;
+  background: linear-gradient(#57738E, #9DC6EB);
+  color: #fff !important;
+  height: 50px;
+  display: inherit;
+  padding: 17px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_ministryideapg_section .siginregister_btn:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+
 
 
 
