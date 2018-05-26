@@ -16,52 +16,61 @@
           <div class="page_information">
             <div class="page_header">leadership development</div>
             <div class="calendar_section">
+
               <!-- listed events -->
               <div class="event_content">
                 <div class="paragraph_content">The goal of the leadership community is to help leaders and those interested in leadership sharpen their leadership skills. You do not have to be actively engaged in leadership to participate. The resources and training opportunities will be valuable for those in positions of leadership in business and in our community. The leadership events are open to all…please invite friends and co-workers from the community. To be included in Open Heavens’s Leadership Community group, or for additional information contact <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span>. You will be notified of upcoming events and other leadership development opportunities and resources.</div>
                 <div class="divider"></div>
                 <div class="event_inner_content">
-                  <ul>
-                    <% @events.order('created_at DESC').each do |event| %>
-                      <li>
-                        <div>
-                          <span class="evt_img_section">
-                            <div class="evt_img_outter">
-                              <div class="evt_img"><%= link_to (image_tag("img_sample.jpg")), event_path(event) %></div>
-                            </div>
-                          </span>
-                          <span class="event_info_section">
-                            <%= link_to event_path(event) do %>
-                              <div class="evt_title"><%= truncate("#{event.name}", length: 45) %></div>
-                              <div class="evt_minor_info evt_time">
-                                <span><b>date:</b></span>
-                                <span><%= event.start_time.strftime("%b %d %Y") %></span>  
-                                <span class="listevt_divider">|</span>
-                                <span><b>time:</b></span>
-                                <span><%= "#{event.start_time.strftime("%I:%M%p")}" %> - <%= "#{event.end_time.strftime("%I:%M%p")}" %></span>
+                  <% if @events.present? %>
+                    <!-- listed events -->
+                    <ul>
+                      <% @events.order('created_at DESC').each do |event| %>
+                        <li>
+                          <div>
+                            <span class="evt_img_section">
+                              <div class="evt_img_outter">
+                                <div class="evt_img"><%= link_to (image_tag("img_sample.jpg")), event_path(event) %></div>
                               </div>
-                              <div class="evt_minor_info evt_address"><b>location:</b> <%= truncate("#{event.address}", length: 60) %></div>
-                              <div class="evt_minor_info evt_city_country">
-                                <span><b>city:</b></span>
-                                <span><%= event.city %></span>
-                                <span><b>country:</b></span>
-                                <span><%= event.category_country.name %></span>
-                              </div>
-                              <div class="evt_minor_info evt_address">
-                                <span><b>category:</b></span>
-                                <span class="evt_category">
-                                  <% if event.category_event.name == "Leadership Forum Event" %>
-                                    <%= "Leadership Forum" %>
-                                  <% end %>
-                                </span>
-                              </div>
-                            <% end %>
-                          </span>
-                        </div>
-                      </li>
-                      <div class="clear"></div>
-                    <% end %>
-                  </ul>
+                            </span>
+                            <span class="event_info_section">
+                              <%= link_to event_path(event) do %>
+                                <div class="evt_title"><%= truncate("#{event.name}", length: 45) %></div>
+                                <div class="evt_minor_info evt_time">
+                                  <span><b>date:</b></span>
+                                  <span><%= event.start_time.strftime("%b %d %Y") %></span>  
+                                  <span class="listevt_divider">|</span>
+                                  <span><b>time:</b></span>
+                                  <span><%= "#{event.start_time.strftime("%I:%M%p")}" %> - <%= "#{event.end_time.strftime("%I:%M%p")}" %></span>
+                                </div>
+                                <div class="evt_minor_info evt_address"><b>location:</b> <%= truncate("#{event.address}", length: 60) %></div>
+                                <div class="evt_minor_info evt_city_country">
+                                  <span><b>city:</b></span>
+                                  <span><%= event.city %></span>
+                                  <span><b>country:</b></span>
+                                  <span><%= event.category_country.name %></span>
+                                </div>
+                                <div class="evt_minor_info evt_address">
+                                  <span><b>category:</b></span>
+                                  <span class="evt_category">
+                                    <% if event.category_event.name == "Leadership Forum Event" %>
+                                      <%= "Leadership Forum" %>
+                                    <% end %>
+                                  </span>
+                                </div>
+                              <% end %>
+                            </span>
+                          </div>
+                        </li>
+                        <div class="clear"></div>
+                      <% end %>
+                    </ul>
+                    <!-- listed events -->
+                  <% else %>
+                    <!-- no_listed_info -->
+                    <div><%= render "shared/no_listed_content" %></div>
+                    <!-- no_listed_info -->
+                  <% end %>
                 </div>
               </div>
               <!-- listed events -->

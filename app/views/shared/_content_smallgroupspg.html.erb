@@ -16,38 +16,46 @@
           <div class="page_information">
             <div class="page_header">small groups</div>
             <div class="calendar_section">
-              <!-- listed events -->
-              <div class="page_content">
-                <div class="page_inner_content">
-                  <ul>
-                    <% @smallgroups.order('created_at DESC').each do |group| %>
-                      <li>
-                        <div>
-                          <span class="page_img_section">
-                            <div class="page_img_outter">
-                              <div class="page_img"><%= link_to (image_tag("img_sample.jpg")), smallgroup_path(group) %></div>
-                            </div>
-                          </span>
-                          <span class="page_info_section">
-                            <%= link_to smallgroup_path(group) do %>
-                              <div class="page_title"><%= truncate("#{group.name}", length: 45) %></div>
-                              <div class="page_minor_info page_time">
-                                <span><b>created:</b></span>
-                                <span><%= group.created_at.strftime("%b %d %Y") %></span>  
-                                <span class="listpage_divider">|</span>
-                                <span><i class="fa fa-users"></i> <span>5 members</span></span>
+
+              <% if @smallgroups.present? %>
+                <!-- listed groups -->
+                <div class="page_content">
+                  <div class="page_inner_content">
+                    <ul>
+                      <% @smallgroups.order('created_at DESC').each do |group| %>
+                        <li>
+                          <div>
+                            <span class="page_img_section">
+                              <div class="page_img_outter">
+                                <div class="page_img"><%= link_to (image_tag("img_sample.jpg")), smallgroup_path(group) %></div>
                               </div>
-                              <div class="page_minor_info page_description"><%= truncate("#{group.descriptin}", length: 200) %></div>
-                            <% end %>
-                          </span>
-                        </div>
-                      </li>
-                      <div class="clear"></div>
-                    <% end %>
-                  </ul>
+                            </span>
+                            <span class="page_info_section">
+                              <%= link_to smallgroup_path(group) do %>
+                                <div class="page_title"><%= truncate("#{group.name}", length: 45) %></div>
+                                <div class="page_minor_info page_time">
+                                  <span><b>created:</b></span>
+                                  <span><%= group.created_at.strftime("%b %d %Y") %></span>  
+                                  <span class="listpage_divider">|</span>
+                                  <span><i class="fa fa-users"></i> <span>5 members</span></span>
+                                </div>
+                                <div class="page_minor_info page_description"><%= truncate("#{group.descriptin}", length: 200) %></div>
+                              <% end %>
+                            </span>
+                          </div>
+                        </li>
+                        <div class="clear"></div>
+                      <% end %>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <!-- listed events -->
+                <!-- listed groups -->
+              <% else %>
+                <!-- no_listed_info -->
+                <div><%= render "shared/no_listed_content" %></div>
+                <!-- no_listed_info -->
+              <% end %>
+              
             </div>
           </div>
         </div>
