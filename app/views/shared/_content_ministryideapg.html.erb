@@ -42,15 +42,12 @@
 
             <div class="paragraph_content listed_donation_links">
               <ul>
-
-                <li class="siginregister_btn" data-open="mondal_siginregister">Click me for a modal</li>
-                <div class="reveal" id="mondal_siginregister" data-reveal>
-                  <span><%= render 'shared/modal_sigin_register' %></span>
-                </div>
-                
-                <li><%= link_to "Minsitry proposal Application", new_launchministry_path %></li>
-
-
+                <% if user_signed_in? %>
+                  <li><%= link_to "Minsitry proposal Application", new_launchministry_path %></li>
+                <% else %>
+                  <li class="ministry_application_btn" data-open="modal_ministry_application">Minsitry proposal Application</li>
+                  <div><%= render 'shared/modal_ministry_application' %></div>
+                <% end %>
               </ul>
             </div>
           </div>
