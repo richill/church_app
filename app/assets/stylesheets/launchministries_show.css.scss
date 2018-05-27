@@ -211,8 +211,9 @@
   margin: 0px 5px;
 }
 
-.launchministrieshow_section .page_category a {
+.launchministrieshow_section .page_name a {
   color: #a1355b !important;
+  text-transform: capitalize !important;
 }
 
 .launchministrieshow_section .evt_location {
@@ -229,7 +230,9 @@
 }
 
 
-
+.launchministrieshow_section .contact_info ul {
+  margin-left: 30px !important
+}
 
 
 

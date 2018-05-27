@@ -26,7 +26,7 @@
               <span class="page_divider">|</span>
               <span>
                 <span class="page_subheader">ministry director:</span>
-                <span class="page_category"><%= link_to "#{@launchministry.firstname} #{@launchministry.lastname}", "#" %></span>
+                <span class="page_name"><%= link_to "#{@launchministry.firstname} #{@launchministry.lastname}", "#" %></span>
               </span>
             </div>
 
@@ -51,11 +51,11 @@
               <div class="paragraph_content contact_info">
                 <b>Contact:</b>
                 <ul>
-                  <li>Church contact: <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span></li>
+                  <li>Church Office: <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span></li>
                   <li>Ministry Director: [<%= "#{@launchministry.firstname} #{@launchministry.lastname}" %>] <span class="weblink"><%= mail_to "#{@launchministry.email}" %></span></li>
                 </ul>
               </div>
-              <div>
+              <div class="hide">
                 <%= link_to 'Edit', edit_launchministry_path(@launchministry) %> |
                 <%= link_to 'Back', launchministries_path %>
               </div>
