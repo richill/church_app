@@ -1,5 +1,5 @@
 <div class="reveal modal_general_design" id="<%= dom_id(@gallery) %>_gallery_content" data-reveal>
-  <div class="modal_header">gallery | <%= @gallery.name %></div>
+  <div class="modal_header"><%= truncate("#{@gallery.name}", length: 40) %></div>
   <div class="modal_content">
     <div><%= @gallery.description %></div>
   </div>
