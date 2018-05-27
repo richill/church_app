@@ -61,6 +61,7 @@ Rails.application.routes.draw do
   get     'our-church',               to: 'static_pages#ourchurchpg'
   get     'our-community',            to: 'static_pages#ourcommunitypg'
   get     'our-people',               to: 'static_pages#ourpeoplepg'
+  get     'practical-needs',          to: 'static_pages#practicalneedspg'
   get     'privacy',                  to: 'static_pages#privacypg'
   get     'receive-christ',           to: 'static_pages#receivechristpg'
   get     'recommeded-reading-plan',  to: 'static_pages#recreadingplanpg'

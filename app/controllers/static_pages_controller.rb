@@ -80,6 +80,9 @@ class StaticPagesController < ApplicationController
   def ourpeoplepg
   end
 
+  def practicalneedspg
+  end
+
   def privacypg
   end
 
