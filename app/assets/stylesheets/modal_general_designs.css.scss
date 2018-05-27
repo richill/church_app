@@ -1,0 +1,36 @@
+/*===================================================
+    Page: modal
+    File: views/shared/_modal_gallery_info.html.erb
+  ===================================================*/
+
+.modal_general_design {
+  background-color: #E8E9EB;
+  padding-bottom: 30px !important;
+  outline: none !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.modal_general_design .modal_header {
+  background: #57738E;
+  border-bottom: 1px solid #2A2C49;
+  color: #fff;
+  padding: 15px;
+  font-size: 20px;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+.modal_general_design .modal_content {
+  background-color: #fff;
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #D4D4D4 !important;
+  border-radius: 2px !important;
+}
+
+.modal_general_design .weblink {
+  color: #a1355b !important;
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
