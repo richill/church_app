@@ -1,73 +1,80 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns launchministrieshow_section">
+  <div class="launchministrieshow_inner_section">
+    <div class="medium-12 columns launchministrieshow_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "connect", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "ministries", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page"><%= (@launchministry.mininstryidea).truncate(50) %></span>
+      </div>
 
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header"><%= @launchministry.mininstryidea %></div>
 
-<div class="hide">
-  <p id="notice"><%= notice %></p>
+            <div class="date_category">
+              <span>
+                <span class="page_subheader">created:</span>
+                <span><%= "#{@launchministry.created_at.strftime("%b %d %Y")}" %></span>
+              </span>
+              <span class="page_divider">|</span>
+              <span>
+                <span class="page_subheader">ministry director:</span>
+                <span class="page_category"><%= link_to "#{@launchministry.firstname} #{@launchministry.lastname}", "#" %></span>
+              </span>
+            </div>
 
-  <p>
-    <strong>Firstname:</strong>
-    <%= @launchministry.firstname %>
-  </p>
+            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+            <div class="page_section">
 
-  <p>
-    <strong>Lastname:</strong>
-    <%= @launchministry.lastname %>
-  </p>
+              <div class="paragraph_content">
+                <b>Ministry Description:</b>
+                <span><%= @launchministry.mininstrydescription %></span>
+              </div>
 
-  <p>
-    <strong>Email:</strong>
-    <%= @launchministry.email %>
-  </p>
+              <div class="paragraph_content">
+                <b>Ministry Mission:</b>
+                <span><%= @launchministry.ministrymission %></span>
+              </div>
 
-  <p>
-    <strong>Mobile:</strong>
-    <%= @launchministry.mobile %>
-  </p>
+              <div class="paragraph_content">
+                <b>Ministry Location:</b>
+                <span><%= @launchministry.address %>, <%= @launchministry.city %>, <%= @launchministry.postcode %></span>
+              </div>
 
-  <p>
-    <strong>Homenumber:</strong>
-    <%= @launchministry.homenumber %>
-  </p>
+              <div class="paragraph_content contact_info">
+                <b>Contact:</b>
+                <ul>
+                  <li>Church contact: <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span></li>
+                  <li>Ministry Director: [<%= "#{@launchministry.firstname} #{@launchministry.lastname}" %>] <span class="weblink"><%= mail_to "#{@launchministry.email}" %></span></li>
+                </ul>
+              </div>
+              <div>
+                <%= link_to 'Edit', edit_launchministry_path(@launchministry) %> |
+                <%= link_to 'Back', launchministries_path %>
+              </div>
 
-  <p>
-    <strong>Worknumber:</strong>
-    <%= @launchministry.worknumber %>
-  </p>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
 
-  <p>
-    <strong>Address:</strong>
-    <%= @launchministry.address %>
-  </p>
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
 
-  <p>
-    <strong>City:</strong>
-    <%= @launchministry.city %>
-  </p>
-
-  <p>
-    <strong>Postcode:</strong>
-    <%= @launchministry.postcode %>
-  </p>
-
-  <p>
-    <strong>Mininstryidea:</strong>
-    <%= @launchministry.mininstryidea %>
-  </p>
-
-  <p>
-    <strong>Mininstrydescription:</strong>
-    <%= @launchministry.mininstrydescription %>
-  </p>
-
-  <p>
-    <strong>Ministryneed:</strong>
-    <%= @launchministry.ministryneed %>
-  </p>
-
-  <p>
-    <strong>Ministrymission:</strong>
-    <%= @launchministry.ministrymission %>
-  </p>
-
-  <%= link_to 'Edit', edit_launchministry_path(@launchministry) %> |
-  <%= link_to 'Back', launchministries_path %>
+    </div>
+  </div>
 </div>
+
+
+
+
+

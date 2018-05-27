@@ -1,64 +1,64 @@
 /*===================================================
-    Page: event page
-    File: views/events/_show.html.erb
+    Page: launch ministry show page
+    File: views/launchministries/_show.html.erb
   ===================================================*/
 
-.eventshow_section {
+.launchministrieshow_section {
   padding: 0px !important;
 }
 
-.eventshow_section .eventshow_inner_section {
+.launchministrieshow_section .launchministrieshow_inner_section {
   width: 1150px;
   margin: auto;
   background-color: rgba(42, 44, 73, 0.1);
   margin-bottom: 30px;
 }
 @media only screen and (max-width: 1160px) {
-  .eventshow_section .eventshow_inner_section {
+  .launchministrieshow_section .launchministrieshow_inner_section {
     width: 100% !important;
   }
 }
 
-.eventshow_section .eventshow_content {
+.launchministrieshow_section .launchministrieshow_content {
   margin-bottom: 30px;
   padding: 0px !important;
 }
 
-.eventshow_section .tree_line {
+.launchministrieshow_section .tree_line {
   font-size: 10px;
   text-transform: capitalize;
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 1160px) {
-  .eventshow_section .tree_line {
+  .launchministrieshow_section .tree_line {
     margin-top: 25px;
     padding: 0px 15px !important;
   }
 }
 
-.eventshow_section .tree_line a {
+.launchministrieshow_section .tree_line a {
   color: #2A2C49 !important;
 }
 
-.eventshow_section .current_page {
+.launchministrieshow_section .current_page {
   color: #a07b35;
 }
 
-.eventshow_section .page_main_content {
+.launchministrieshow_section .page_main_content {
   padding: 0px !important;
 }
 
-.eventshow_section .info_left_content {
+.launchministrieshow_section .info_left_content {
   padding: 0px !important;
 }
 @media only screen and (max-width: 1160px) {
-  .eventshow_section .info_left_content {
+  .launchministrieshow_section .info_left_content {
     width: 100% !important;
     padding: 0px 15px !important;
   }
 }
 
-.eventshow_section .info_left_content .page_header {
+.launchministrieshow_section .info_left_content .page_header {
   font-size: 30px;
   font-weight: bold;
   text-transform: capitalize;
@@ -67,49 +67,49 @@
   margin-bottom: 10px;
 }
 
-.eventshow_section .info_left_content .page_img {
+.launchministrieshow_section .info_left_content .page_img {
   margin-bottom: 15px;
   opacity: 0.8;
   overflow: hidden;
 }
 
-.eventshow_section .info_left_content .paragraph_content {
+.launchministrieshow_section .info_left_content .paragraph_content {
   margin-bottom: 15px;
   color: #2A2C49;
 }
 
-.eventshow_section .info_left_content .paragraph_content .sub_header {
+.launchministrieshow_section .info_left_content .paragraph_content .sub_header {
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 3px;
 }
 
-.eventshow_section .info_left_content .paragraph_content ul {
+.launchministrieshow_section .info_left_content .paragraph_content ul {
   margin: 0px;
 }
 
-.eventshow_section .info_left_content .paragraph_content ul li {
+.launchministrieshow_section .info_left_content .paragraph_content ul li {
   margin-bottom: 5px;
 }
 
-.eventshow_section .info_left_content .paragraph_content .weblink {
+.launchministrieshow_section .info_left_content .paragraph_content .weblink {
   color: #a1355b !important;
 }
 
-.eventshow_section .info_left_content .paragraph_content .weblink a {
+.launchministrieshow_section .info_left_content .paragraph_content .weblink a {
   color: #a1355b !important;
 }
 
-.eventshow_section .listed_donation_links ul li {
+.launchministrieshow_section .listed_donation_links ul li {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.eventshow_section .listed_donation_links ul li {
+.launchministrieshow_section .listed_donation_links ul li {
   margin-bottom: 5px !important;
 }
 
-.eventshow_section .listed_donation_links ul li a {
+.launchministrieshow_section .listed_donation_links ul li a {
   background: linear-gradient(#57738E, #9DC6EB);
   color: #fff !important;
   height: 50px;
@@ -125,7 +125,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.eventshow_section .listed_donation_links ul li a:hover {
+.launchministrieshow_section .listed_donation_links ul li a:hover {
   opacity: 0.8;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
@@ -133,31 +133,31 @@
   -o-transition: all 0.3s ease;
 }
 
-.eventshow_section .pymt_img {
+.launchministrieshow_section .pymt_img {
   margin: 30px 0px 10px;
 }
 
-.eventshow_section .pymt_img img {
+.launchministrieshow_section .pymt_img img {
   width: 200px;
 }
 
-.eventshow_section .calendar-heading {
+.launchministrieshow_section .calendar-heading {
   margin: 15px 0px;
 }
 
-.eventshow_section .calendar-title {
+.launchministrieshow_section .calendar-title {
   font-size: 20px;
   font-weight: bold;
   margin: 0px 50px;
   display: inline-block;
 }
 
-.eventshow_section .calendar_section ul {
+.launchministrieshow_section .calendar_section ul {
   margin: 0px;
   list-style-type: none;
 }
 
-.eventshow_section .calendar_section ul li a {
+.launchministrieshow_section .calendar_section ul li a {
   margin: 0px;
   font-size: 10px !important;
   text-transform: capitalize;
@@ -166,7 +166,7 @@
   color: #a1355b !important;
 }
 
-.eventshow_section .calendar-heading a {
+.launchministrieshow_section .calendar-heading a {
   background: #2A2C49;
   font-size: 12px !important;
   display: inline-block;
@@ -184,7 +184,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.eventshow_section .calendar-heading a:hover {
+.launchministrieshow_section .calendar-heading a:hover {
   background: #2A2C49 !important;
   opacity: 0.8 !important;
   text-decoration: none;
@@ -193,38 +193,38 @@
   -o-transition: all 0.3s ease;
 }
 
-.eventshow_section .simple-calendar table {
+.launchministrieshow_section .simple-calendar table {
   border: 2px solid #dddddd !important;
 }
 
-.eventshow_section .date_category {
+.launchministrieshow_section .date_category {
   margin-bottom: 10px;
   color: #2A2C49;
 }
 
-.eventshow_section .evt_subheader {
+.launchministrieshow_section .page_subheader {
   font-weight: bold;
   text-transform: capitalize;
 }
 
-.eventshow_section .evt_divider {
+.launchministrieshow_section .page_divider {
   margin: 0px 5px;
 }
 
-.eventshow_section .evt_category a {
+.launchministrieshow_section .page_category a {
   color: #a1355b !important;
 }
 
-.eventshow_section .evt_location {
+.launchministrieshow_section .evt_location {
   text-transform: capitalize;
 }
 
-.eventshow_section .evt_map {
+.launchministrieshow_section .evt_map {
   font-weight: bold;
   text-transform: capitalize;
 }
 
-.eventshow_section .evt_maplink a {
+.launchministrieshow_section .evt_maplink a {
   color: #a1355b !important;
 }
 
