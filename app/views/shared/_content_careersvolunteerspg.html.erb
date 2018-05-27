@@ -37,11 +37,14 @@
                         <span class="min_header">position:</span><span class="min_content">part-time hours</span>
                       </div>
                       <div class="content"><%= link_to truncate("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", length: 200), "#" %> <span class="view"><%= link_to "view", "#" %></span></div>
-                      
-                      <div>
+                      <div class="listed_btns">
                         <span class="category"><%= link_to "domestic household", "#" %></span>
-                        <span class="apply_btn"><%= link_to "apply", "#" %></span>
-                        <span class="apply_btn"><%= link_to "apply not sigined in", "#" %></span>
+                        <% if user_signed_in? %>
+                          <span class="apply_btn"><%= link_to "apply", "#" %></span>
+                        <% else %>
+                          <span class="apply_notsiginedin_btn" data-open="modal_ministry_application">apply</span>
+                          <span><%= render 'shared/modal_registration_login' %></span>
+                        <% end %>
                       </div>
                     </div>
                   </li>
@@ -57,7 +60,15 @@
                         <span class="min_header">position:</span><span class="min_content">internship</span>
                       </div>
                       <div class="content"><%= link_to truncate("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", length: 200), "#" %> <span class="view"><%= link_to "view", "#" %></span></div>
-                      <div class="category"><%= link_to "business development", "#" %></div>
+                      <div class="listed_btns">
+                        <span class="category"><%= link_to "business development", "#" %></span>
+                        <% if user_signed_in? %>
+                          <span class="apply_btn"><%= link_to "apply", "#" %></span>
+                        <% else %>
+                          <span class="apply_notsiginedin_btn" data-open="modal_ministry_application">apply</span>
+                          <span><%= render 'shared/modal_registration_login' %></span>
+                        <% end %>
+                      </div>
                     </div>
                   </li>
 
@@ -72,7 +83,15 @@
                         <span class="min_header">position:</span><span class="min_content">volunteer</span>
                       </div>
                       <div class="content"><%= link_to truncate("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum", length: 200), "#" %> <span class="view"><%= link_to "view", "#" %></span></div>
-                      <div class="category"><%= link_to "business development", "#" %></div>
+                      <div class="listed_btns">
+                        <span class="category"><%= link_to "business development", "#" %></span>
+                        <% if user_signed_in? %>
+                          <span class="apply_btn"><%= link_to "apply", "#" %></span>
+                        <% else %>
+                          <span class="apply_notsiginedin_btn" data-open="modal_ministry_application">apply</span>
+                          <span><%= render 'shared/modal_registration_login' %></span>
+                        <% end %>
+                      </div>
                     </div>
                   </li>
 

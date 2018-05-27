@@ -189,6 +189,28 @@
   font-size: 11px;
 }
 
+.content_careersvolunteerspg_section .jobpost_content .apply_notsiginedin_btn {
+  background-color: #a1355b;
+  color: #fff !important;
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 11px;
+  text-transform: capitalize;
+  outline: none !important;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_careersvolunteerspg_section .jobpost_content .apply_notsiginedin_btn:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
 .content_careersvolunteerspg_section .jobpost_content .minor_info {
   margin: 3px 0px;
 }
