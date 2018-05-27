@@ -1,69 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Firstname:</strong>
-  <%= @launchministry.firstname %>
-</p>
-
-<p>
-  <strong>Lastname:</strong>
-  <%= @launchministry.lastname %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @launchministry.email %>
-</p>
-
-<p>
-  <strong>Mobile:</strong>
-  <%= @launchministry.mobile %>
-</p>
-
-<p>
-  <strong>Homenumber:</strong>
-  <%= @launchministry.homenumber %>
-</p>
-
-<p>
-  <strong>Worknumber:</strong>
-  <%= @launchministry.worknumber %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @launchministry.address %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @launchministry.city %>
-</p>
-
-<p>
-  <strong>Postcode:</strong>
-  <%= @launchministry.postcode %>
-</p>
-
-<p>
-  <strong>Mininstryidea:</strong>
-  <%= @launchministry.mininstryidea %>
-</p>
-
-<p>
-  <strong>Mininstrydescription:</strong>
-  <%= @launchministry.mininstrydescription %>
-</p>
-
-<p>
-  <strong>Ministryneed:</strong>
-  <%= @launchministry.ministryneed %>
-</p>
-
-<p>
-  <strong>Ministrymission:</strong>
-  <%= @launchministry.ministrymission %>
-</p>
-
-<%= link_to 'Edit', edit_launchministry_path(@launchministry) %> |
-<%= link_to 'Back', launchministries_path %>
+<% provide(:title, "@launchministry.name") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header' %></div>
+  <%= render 'show' %>
+  <%= render 'shared/footer' %>
+</div>
