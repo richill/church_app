@@ -262,7 +262,21 @@
   }
 }
 
+.discussionshow_section .view_link {
+  color: #a1355b !important;
+  cursor: pointer;
+  outline: none !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
 
+.discussionshow_section .view_link:hover {
+  text-decoration: underline;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
 
 
 

@@ -1,0 +1,9 @@
+<div class="reveal modal_general_design" id="<%= dom_id(@discussion) %>_discussion_content" data-reveal>
+  <div class="modal_header">forum | <%= truncate("#{@discussion.topic}", length: 40) %></div>
+  <div class="modal_content">
+    <div><%= @discussion.description %></div>
+  </div>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
