@@ -212,8 +212,6 @@
   }
 }
 
-
-
 .galleryshow_section .view_all {
   display: inline-block;
   background-color: rgba(42, 44, 73, 0.05);
@@ -262,6 +260,10 @@
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+}
+
+.galleryshow_section .date_category {
+  color: #2A2C49;
 }
 
 

@@ -19,11 +19,11 @@
             <div class="page_header"><%= @gallery.name %></div>
             <div class="date_category">
               <span>
-                <span class="evt_subheader">event date:</span>
+                <span class="evt_subheader"><b>Created date:</b></span>
                 <span><%= @gallery.date.strftime("%b %d %Y") %></span>
                 <span class="listgallery_divider">|</span>
                 <span><b>Time:</b></span>
-                <span>9:00AM - 06:00PM<%# "#{event.start_time.strftime("%I:%M%p")}" %>  <%# "#{event.end_time.strftime("%I:%M%p")}" %></span>
+                <span><%= "#{@gallery.created_at.strftime("%I:%M%p")}" %></span>
               </span>
             </div>
             <div class="paragraph_content">
