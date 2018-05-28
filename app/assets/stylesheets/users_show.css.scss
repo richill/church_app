@@ -143,6 +143,23 @@
 // ----------------------
 //   workings
 // ----------------------
+
+
+.link_btn a {
+  background-color: #E8E9EB;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+
+
+.link_btn a:hover {
+  background-color: #2A2C49 !important;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+
 .username_header {
   border: 1px solid rgba(42, 44, 73, 0.03);
   padding: 15px;
