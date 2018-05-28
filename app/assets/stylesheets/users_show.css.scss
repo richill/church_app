@@ -140,7 +140,26 @@
 }
 
 
+// ----------------------
+//   workings
+// ----------------------
+.username_header {
+  border: 1px solid rgba(42, 44, 73, 0.03);
+  padding: 15px;
+  text-align: center;
+  color: #2A2C49;
+}
 
+.user_name {
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.member_date {
+  text-transform: capitalize;
+  font-size: 10px;
+}
 
 
 
