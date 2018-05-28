@@ -21,15 +21,17 @@
             </div>
             <!-- top_section -->
 
-            <!-- left_section -->
-            <div class="user_left_section"></div>
-            <!-- left_section -->
+            <div class="medium-12 columns user_deatils">
+              <!-- left_section -->
+              <div class="medium-4 columns user_left_section">user_left_section</div>
+              <!-- left_section -->
 
-            <!-- right_section -->
-            <div class="user_right_section"></div>
-            <!-- right_section -->
+              <!-- right_section -->
+              <div class="medium-8 columns user_right_section">user_right_section</div>
+              <!-- right_section -->
+            </div>
 
-            <div class="old_content">
+            <div class="old_content hide">
               <h1>Hello <%= @user.firstname %> <%= @user.lastname %>!</h1>
               <div class="hide">
                 <% if current_user == @user || current_user.admin? %>
