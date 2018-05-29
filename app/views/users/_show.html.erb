@@ -21,7 +21,7 @@
             <div class="user_top_section">
               <div class="username_header">
                 <div class="user_name"><%= "#{@user.firstname} #{@user.lastname}" %></div>
-                <div class="member_date">(member since: jul 27, 2016)</div>
+                <div class="member_date">(member since: <%= @user.created_at.strftime("%b %d, %Y") %>)</div>
               </div>
             </div>
             <!-- top_section -->
