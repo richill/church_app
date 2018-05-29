@@ -70,29 +70,12 @@
                           <div class="user_link_info" data-open="modal_ministry_application"><span class="count">4</span><span class="colonicon">:</span><span class="count_info">suggested solution provided to members</span></div>
                           <div><%= render 'shared/modal_ministry_application' %></div>
                         </div>
-
-                   
-
-
-
-
-                       
                       </div>
                     </li>
                   </ul>
                 </div>
               </div>
               <!-- right_section -->
-            </div>
-
-            <div class="old_content hide">
-              <h1>Hello <%= @user.firstname %> <%= @user.lastname %>!</h1>
-              <div class="hide">
-                <% if current_user == @user || current_user.admin? %>
-                <%= link_to 'Edit', edit_user_path(@user) %> |
-                <% end %>
-                <%= link_to 'Back', users_path %>
-              </div>   
             </div>
           </div>
 
@@ -101,6 +84,7 @@
         <!-- info_left_content -->
 
         <!-- info_right_content -->
+        <%= render 'shared/content_user_options' %>
         <%= render 'shared/content_service_times' %>
         <!-- info_right_content -->
       </div>

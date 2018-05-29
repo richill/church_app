@@ -1,0 +1,117 @@
+/*===================================================
+    Page: service times info
+    File: views/shared/_content_user_options.html.erb
+  ===================================================*/
+
+.right_info_user_options {
+  padding: 0px !important;
+  background-color: transparent;
+}
+@media only screen and (max-width: 1160px) {
+  .right_info_user_options {
+    width: 100% !important;
+    padding: 0px 15px !important;
+  }
+}
+
+.right_info_user_options .side_information {
+  padding: 0px 30px 30px 60px;
+  color: #2A2C49;
+}
+@media only screen and (max-width: 1160px) {
+  .right_info_user_options .side_information {
+    padding: 30px 0px;
+    border-top: 1px solid rgba(42, 44, 73, 0.03);
+    margin-top: 15px;
+  }
+}
+
+.right_info_user_options .serv_title {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.right_info_user_options .serv_day {
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.right_info_user_options .serv_info {
+  margin-bottom: 25px;
+}
+
+.right_info_user_options .page_button {
+  background-color: #2A2C49;
+  padding-bottom: 5px;
+  border-radius: 6px;
+  width: 170px;
+}
+
+.right_info_user_options .page_button a {
+  display: inline-block;
+  background: linear-gradient(#57738E, #9DC6EB);
+  color: #fff !important;
+  padding: 15px 0px;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 170px;
+  text-align: center;
+}
+
+.right_info_user_options .page_button a:hover {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.right_info_user_options .page_button:hover {
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.right_info_user_options .weblink a {
+  color: #a1355b !important;
+}
+
+.right_info_user_options .user_links {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #E8E9EB;
+}
+
+.right_info_user_options .user_links a {
+  display: inline-block;
+  background-color: #2A2C49;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 5px;
+  color: #fff !important;
+  padding: 11px;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.right_info_user_options .user_links a:hover {
+  background-color: #E8E9EB !important;
+  color: #2A2C49 !important;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+
+
+
+
+
