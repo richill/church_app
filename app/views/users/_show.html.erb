@@ -30,7 +30,14 @@
               <!-- left_section -->
 
               <!-- right_section -->
-              <div class="medium-8 columns user_right_section">user_right_section</div>
+              <div class="medium-8 columns user_right_section">
+                <div class="user_details">
+                  <ul>
+                    <li><i class="fa fa-user"></i><%= "#{@user.firstname} #{@user.lastname}" %></li>
+                    <li><i class="fa fa-envelope"></i></i><%= "#{@user.email}" %></li>
+                  </ul>
+                </div>
+              </div>
               <!-- right_section -->
             </div>
 

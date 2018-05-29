@@ -184,13 +184,14 @@
 }
 
 .user_left_section {
-  background-color: red;
+  background-color: transparent;
   padding: 0px !important;
 }
 
 .user_right_section {
-  background-color: green;
-  padding: 0px !important;
+  background-color: transparent;
+  padding: 0px 15px !important;
+
 }
 
 .user_img_cover {
@@ -199,8 +200,31 @@
   overflow: hidden;
 }
 
+.user_details {
+  color: #2A2C49;
+}
 
+.user_details ul {
+  margin: 0px !important;
+  list-style-type: none;
+}
 
+.user_details ul li {
+  margin-bottom: 10px;
+}
+
+.user_details i {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.user_details .fa-user {
+  font-size: 25px !important;
+}
 
 
 
