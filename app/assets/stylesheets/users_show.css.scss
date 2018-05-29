@@ -139,81 +139,73 @@
   width: 200px;
 }
 
-
-// ----------------------
-//   workings
-// ----------------------
-
-
-.link_btn a {
+.usershow_section .link_btn a {
   background-color: #E8E9EB;
   padding: 10px 15px;
-  margin-left: 10px;
+  margin-left: 5px;
   border-radius: 3px;
 }
 
-
-.link_btn a:hover {
+.usershow_section .link_btn a:hover {
   background-color: #2A2C49 !important;
   color: #fff !important;
   text-decoration: none;
 }
 
-
-.username_header {
+.usershow_section .user_top_section .username_header {
   border: 1px solid rgba(42, 44, 73, 0.03);
+  background-color: rgba(42, 44, 73, 0.02);
   padding: 15px;
   text-align: center;
   color: #2A2C49;
 }
 
-.user_name {
+.usershow_section .user_top_section .user_name {
   font-size: 25px;
   font-weight: bold;
   text-transform: capitalize;
 }
 
-.member_date {
+.usershow_section .user_top_section .member_date {
   text-transform: capitalize;
   font-size: 10px;
 }
 
-.user_deatils {
+.usershow_section .user_deatils {
   margin-top: 15px;
   padding: 0px !important;
 }
 
-.user_left_section {
+.usershow_section .user_left_section {
   background-color: transparent;
   padding: 0px !important;
 }
 
-.user_right_section {
-  background-color: transparent;
-  padding: 0px 15px !important;
-
-}
-
-.user_img_cover {
-  border: 1px solid red;
+.usershow_section .user_left_section .user_img_cover {
+  border: 1px solid #2A2C49;
   height: 253px;
   overflow: hidden;
 }
 
-.user_details {
+.usershow_section .user_right_section .user_right_section {
+  background-color: transparent;
+  padding: 15px 0px 15px 15px !important;
+}
+
+.usershow_section .user_right_section .user_details {
   color: #2A2C49;
 }
 
-.user_details ul {
+.usershow_section .user_right_section .user_details ul {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.user_details ul li {
+.usershow_section .user_right_section .user_details ul li {
   margin-bottom: 10px;
 }
 
-.user_details i {
+.usershow_section .user_right_section .user_details i {
   width: 25px;
   height: 25px;
   background-color: transparent;
@@ -222,12 +214,55 @@
   font-size: 20px;
 }
 
-.user_details .fa-user {
+.usershow_section .user_right_section .user_details .fa-user {
   font-size: 25px !important;
+  text-align: left;
+  margin-left: 7px;
+  margin-right: 2px;
 }
 
+.usershow_section .user_right_section .username {
+  text-transform: capitalize;
+}
 
+.usershow_section .user_right_section .userwork {
+  text-transform: capitalize;
+}
 
+.usershow_section .user_right_section .count {
+  width: 30px;
+  display: inline-block;
+  background-color: #E8E9EB;
+  font-size: 10px;
+  padding: 0px 5px;
+  margin-right: 2px;
+  text-align: center;
+}
+
+.usershow_section .user_right_section .colonicon {
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.usershow_section .user_right_section .complete_stats {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(42, 44, 73, 0.03);
+  background-color: rgba(42, 44, 73, 0.02);
+}
+
+.usershow_section .user_right_section .listed_stats {
+  margin-bottom: 5px;
+}
+
+.usershow_section .user_right_section .user_link_info {
+  outline: none;
+  cursor: pointer;
+}
+
+.usershow_section .user_right_section .user_link_info:hover {
+  text-decoration: underline;
+}
 
 
 
