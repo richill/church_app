@@ -33,7 +33,7 @@
               <div class="medium-8 columns user_right_section">
                 <div class="user_details">
                   <ul>
-                    <li><i class="fa fa-envelope"></i><span class="useremail"><%= "#{@user.email}" %></span></li>
+                    <li><i class="fa fa-envelope"></i><span class="useremail"><%= mail_to "#{@user.email}" %></span></li>
                     <li><i class="fa fa-briefcase"></i><span class="userwork"><%= "software engineer" %></span></li>
                     <li>
                       <div class="complete_stats">
@@ -67,10 +67,7 @@
                           <div><%= render 'shared/modal_ministry_application' %></div>
                         </div>
 
-                        <div class="listed_stats">
-                          <div class="user_link_info" data-open="modal_ministry_application"><span class="count">2</span><span class="colonicon">:</span><span class="count_info">events you are attending</span></div>
-                          <div><%= render 'shared/modal_ministry_application' %></div>
-                        </div>
+                   
 
 
 

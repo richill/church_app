@@ -27,7 +27,7 @@
 .usershow_section .tree_line {
   font-size: 10px;
   text-transform: capitalize;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 @media only screen and (max-width: 1160px) {
   .usershow_section .tree_line {
@@ -140,24 +140,32 @@
 }
 
 .usershow_section .link_btn a {
-  background-color: #E8E9EB;
-  padding: 10px 15px;
+  padding: 8px 15px;
   margin-left: 5px;
   border-radius: 3px;
+  color: #fff !important;
+  background-color: #2A2C49 !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .usershow_section .link_btn a:hover {
-  background-color: #2A2C49 !important;
-  color: #fff !important;
+  background-color: #E8E9EB !important;
+  color: #2A2C49 !important;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .usershow_section .user_top_section .username_header {
-  border: 1px solid rgba(42, 44, 73, 0.03);
+  border: 1px solid #E8E9EB;
   background-color: rgba(42, 44, 73, 0.02);
   padding: 15px;
   text-align: center;
   color: #2A2C49;
+  margin-bottom: 20px;
 }
 
 .usershow_section .user_top_section .user_name {
@@ -182,14 +190,14 @@
 }
 
 .usershow_section .user_left_section .user_img_cover {
-  border: 1px solid #2A2C49;
+  border: 1px solid #E8E9EB;
   height: 253px;
   overflow: hidden;
 }
 
-.usershow_section .user_right_section .user_right_section {
+.usershow_section .user_right_section {
   background-color: transparent;
-  padding: 15px 0px 15px 15px !important;
+  padding-right: 0px !important;
 }
 
 .usershow_section .user_right_section .user_details {
@@ -245,9 +253,9 @@
 }
 
 .usershow_section .user_right_section .complete_stats {
-  padding: 15px;
+  padding: 18px;
   border-radius: 5px;
-  border: 1px solid rgba(42, 44, 73, 0.03);
+  border: 1px solid #E8E9EB;
   background-color: rgba(42, 44, 73, 0.02);
 }
 
@@ -262,6 +270,10 @@
 
 .usershow_section .user_right_section .user_link_info:hover {
   text-decoration: underline;
+}
+
+.usershow_section .useremail a {
+  color: #2A2C49 !important;
 }
 
 
