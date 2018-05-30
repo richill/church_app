@@ -1,0 +1,15 @@
+<%= simple_form_for(@job) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :location %>
+    <%= f.input :description %>
+    <%= f.input :close %>
+    <%= f.input :approve %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
