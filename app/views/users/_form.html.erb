@@ -1,13 +1,48 @@
-<%= simple_form_for(@user) do |f| %>
-  <%= f.error_notification %>
+<div class="pages_boarder"></div>
+<div class="medium-12 columns usershow_section">
+  <div class="usershow_inner_section">
+    <div class="medium-12 columns usershow_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "profile", user_path(@user) %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">update info</span>
+      </div>
 
-  <div class="form-inputs">
-    <%= f.input :firstname %>
-    <%= f.input :lastname %>
-    <%= f.input :job %>
-  </div>
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="medium-12 columns user_deatils">
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+              <%= simple_form_for(@user) do |f| %>
+                <%= f.error_notification %>
+
+                <div class="form-inputs">
+                  <%= f.input :firstname %>
+                  <%= f.input :lastname %>
+                  <%= f.input :job %>
+                </div>
+
+                <div class="form-actions">
+                  <%= f.button :submit, "update" %>
+                </div>
+              <% end %>
+
+            
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_user_options' %>
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
   </div>
-<% end %>
+</div>
+
