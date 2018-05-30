@@ -12,7 +12,7 @@ class JobsController < ApplicationController
   def new
     # @job = Job.new
     @user = User.friendly.find(params[:user_id])
-    @job = @user.photos.build
+    @job = @user.jobs.build
   end
 
   def edit
