@@ -1,7 +1,7 @@
 <div class="pages_boarder"></div>
-<div class="medium-12 columns usershow_section">
-  <div class="usershow_inner_section">
-    <div class="medium-12 columns usershow_content">
+<div class="medium-12 columns userform_section">
+  <div class="userform_inner_section">
+    <div class="medium-12 columns userform_content">
       <div class="tree_line">
         <span><%= link_to "home", root_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
@@ -14,7 +14,8 @@
         <!-- info_left_content -->
         <div class="medium-8 columns info_left_content">
           <div class="page_information">
-            <div class="medium-12 columns user_deatils">
+            <div class="medium-12 columns user_form_deatils">
+
 
               <%= simple_form_for(@user) do |f| %>
                 <%= f.error_notification %>
