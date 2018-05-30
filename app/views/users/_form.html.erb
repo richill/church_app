@@ -21,9 +21,16 @@
                 <%= f.error_notification %>
 
                 <div class="form-inputs">
-                  <%= f.input :firstname %>
-                  <%= f.input :lastname %>
-                  <%= f.input :job %>
+                  <div class="info_sub_content">
+                    <ul>
+                      <li class="form_left"><%= f.input :firstname, label: false, placeholder: "First Name" %></li>
+                      <li class="form_right"><%= f.input :lastname, label: false, placeholder: "Last Name" %></li>
+                    </ul>
+                  </div>
+                  <div class="clear"></div>
+
+                  <div class=""><%= f.input :job, placeholder: "project manager", label: false %></div>
+                  <div class="clear"></div>
                 </div>
 
                 <div class="form-actions">

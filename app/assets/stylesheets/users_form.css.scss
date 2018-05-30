@@ -277,5 +277,96 @@
 }
 
 
+.userform_section .form-inputs {
+  margin-bottom: 50px;
+}
+
+
+.userform_section .info_sub_content ul {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.userform_section .info_sub_content ul li {
+  width: 375px;
+}
+@media only screen and (max-width: 1160px) {
+  .userform_section .info_sub_content ul li {
+    width: 100% !important;
+  }
+}
+
+.userform_section .form_left {
+  float: left;
+  margin-right: 10px;
+}
+
+.userform_section .form_right {
+  float: right;
+}
+
+
+
+
+
+.userform_section [type='text'] {
+  border: transparent;
+  box-shadow: none !important;
+  border-bottom: 1px solid #E8E9EB;
+  color: #2A2C49 !important;
+  margin-bottom: 0px;
+  margin-top: 15px;
+}
+
+.userform_section [type='text']:focus {
+  border: transparent;
+  border-bottom: 1px solid #a1355b;
+  box-shadow: none !important;
+  font-size: 13px;
+  color: #2A2C49 !important;
+}
+
+.userform_section [type='email'] {
+  border: transparent;
+  box-shadow: none !important;
+  border-bottom: 1px solid #E8E9EB;
+  color: #2A2C49 !important;
+  margin-bottom: 0px;
+  margin-top: 15px;
+}
+
+
+.userform_section input[type="submit"] {
+  text-transform: uppercase;
+  width: 100%;
+  background-color: #a1355b !important;
+  border-radius: 3px;
+  height: 50px;
+  margin-top: 17px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+@media only screen and (max-width: 1160px) {
+  .userform_section input[type="submit"] {
+    width: 100% !important;
+  }
+}
+
+.userform_section input[type="submit"]:hover {
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.userform_section a {
+  color: #a07b35 !important;
+}
+
+#user_job {
+  margin-top: 40px;
+}
+
 
 

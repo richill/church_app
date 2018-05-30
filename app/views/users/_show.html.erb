@@ -38,7 +38,14 @@
                 <div class="user_details">
                   <ul>
                     <li><i class="fa fa-envelope"></i><span class="useremail"><%= mail_to "#{@user.email}" %></span></li>
-                    <li><i class="fa fa-briefcase"></i><span class="userwork"><%= "software engineer" %></span></li>
+                    <li>
+                      <i class="fa fa-briefcase"></i>
+                      <% if @user.job.present? %>
+                        <span class="userwork"><%= "software engineer" %></span>
+                      <% else %>
+                        <span class="uncomplete_info"><%= link_to "currently not completed profile", edit_user_path(@user) %></span>
+                      <% end %>
+                    </li>
                     <li>
                       <div class="complete_stats">
                         <div class="listed_stats">
