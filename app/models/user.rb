@@ -10,6 +10,8 @@ class User < ApplicationRecord
   # acts_as_commentable
   has_many :comments, as: :commentable, dependent: :destroy
 
+  has_many :jobs
+
   def slug_users
     [
       :firstname
