@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180531133546) do
+ActiveRecord::Schema.define(version: 20180531135321) do
 
   create_table "category_countries", force: :cascade do |t|
     t.string   "name"
@@ -123,6 +123,7 @@ ActiveRecord::Schema.define(version: 20180531133546) do
     t.integer  "category_job_id"
     t.integer  "category_joblevel_id"
     t.integer  "category_jobtype_id"
+    t.string   "address"
   end
 
   create_table "launchministries", force: :cascade do |t|

@@ -3,7 +3,8 @@
 
   <div class="form-inputs">
     <%= f.input :title %>
-    <%= f.input :location %>
+    <%= f.input :location, placeholder: "UK/London", label: "Country/City" %>
+    <%= f.input :address %>
     <%= f.input :description %>
     <%= f.association :category_job, collection: CategoryJob.all, prompt: "select a category", label: "Job Category" %>
     <%= f.association :category_joblevel, collection: CategoryJoblevel.all, prompt: "select a job level", label: "Job Category" %>
