@@ -19,6 +19,23 @@ ce05 = CategoryEvent.create!(name:'Leadership Forum Event')
 ce06 = CategoryEvent.create!(name:'Baptism Class Event')
 ce07 = CategoryEvent.create!(name:'Bible Study Event')
 
+CategoryJoblevel.delete_all
+cjl01 = CategoryCareerlevel.create!(name:'Intern')
+cjl02 = CategoryCareerlevel.create!(name:'Apprentice')
+cjl03 = CategoryCareerlevel.create!(name:'Entry Level')
+cjl04 = CategoryCareerlevel.create!(name:'Graduate')
+cjl05 = CategoryCareerlevel.create!(name:'Experienced (non-manager)')
+cjl06 = CategoryCareerlevel.create!(name:'Management')
+cjl07 = CategoryCareerlevel.create!(name:'Senior Executive')
+cjl08 = CategoryCareerlevel.create!(name:'Volunteer')
+
+
+CategoryJobtype.delete_all
+cjt01 = CategoryJobtype.create!(name:'Full Time Hours')
+cjt02 = CategoryJobtype.create!(name:'Part Time Hours')
+cjt03 = CategoryJobtype.create!(name:'Contract')
+
+
 CategoryJob.delete_all
 cj01 = CategoryJob.create!(name:'Accountancy')
 cj02 = CategoryJob.create!(name:'Accountancy (Qualified)')
