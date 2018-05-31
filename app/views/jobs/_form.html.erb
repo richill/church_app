@@ -8,6 +8,7 @@
     <%= f.input :description %>
     <%= f.input :close %>
     <%= f.input :approve %>
+    <%= f.association :category_job, collection: CategoryJob.all, prompt: "select a category", label: "Job Category" %>
   </div>
 
   <div class="form-actions">

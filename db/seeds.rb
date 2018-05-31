@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+CategoryCountry.delete_all
+cc01 = CategoryCountry.create!(name:'United Kingdom')
+
 CategoryEvent.delete_all
 ce01 = CategoryEvent.create!(name:'Youth Event')
 ce02 = CategoryEvent.create!(name:'Church Event')
@@ -16,6 +19,7 @@ ce05 = CategoryEvent.create!(name:'Leadership Forum Event')
 ce06 = CategoryEvent.create!(name:'Baptism Class Event')
 ce07 = CategoryEvent.create!(name:'Bible Study Event')
 
-
-CategoryCountry.delete_all
-cc01 = CategoryCountry.create!(name:'United Kingdom')
+CategoryJob.delete_all
+cj01 = CategoryJob.create!(name:'Youth')
+cj02 = CategoryJob.create!(name:'Youth')
+cj03 = CategoryJob.create!(name:'Youth')
