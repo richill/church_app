@@ -20,19 +20,21 @@ class StaticPagesController < ApplicationController
   def broadfieldresoucepg 
   end
 
+  # ----------------- jobs -----------------
   def careerjobspg
-    @jobs = Job.church_jobs.desc_order
+    @jobs = Job.career_jobs.desc_order
   end
 
   def churchjobspg
     @jobs = Job.church_jobs.desc_order
   end
 
-  def contactpg  
-  end
-
   def careersvolunteerspg  
     @jobs = Job.desc_order
+  end
+  # ----------------- jobs -----------------
+
+  def contactpg  
   end
 
   def contactlistpg  

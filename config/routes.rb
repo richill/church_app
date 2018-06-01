@@ -49,7 +49,10 @@ Rails.application.routes.draw do
   get     'contact-list',             to: 'static_pages#contactlistpg'
   get     'connect',                  to: 'static_pages#connectdpg'
   get     'children-teenage-corner',  to: 'static_pages#childrenteenpg'
-  get     'church-jobs',                  to: 'static_pages#churchjobspg'
+  get     'church-jobs',              to: 'static_pages#churchjobspg'
+  get     'career-jobs',              to: 'static_pages#careerjobspg'
+
+
   get     'directions',               to: 'static_pages#directionpg'
   get     'donations',                to: 'static_pages#donatepg'
   get     'forum',                    to: 'static_pages#forumpg'
