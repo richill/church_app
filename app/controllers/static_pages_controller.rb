@@ -21,7 +21,7 @@ class StaticPagesController < ApplicationController
   end
 
   def churchjobspg
-    @jobs = Job.desc_order
+    @jobs = Job.church_jobs.desc_order
   end
 
   def contactpg  
