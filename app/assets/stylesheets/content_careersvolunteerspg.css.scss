@@ -242,11 +242,49 @@
 //   workings
 // ---------------------
 
+.job_tabs {
+  background-color: transparent;
+  height: 30px;
+  margin-bottom: 20px;
+}
 
 
+.job_tabs ul {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.job_tabs ul li {
+  float: left;
+}
+
+.job_tabs ul li a {
+  background: linear-gradient(#57738E, #9DC6EB);
+  display: inline-block;
+  height: 30px;
+  margin-right: 10px;
+  color: #fff !important;
+  padding: 5px 15px;
+  border: 2px;
+  border-bottom: 2px solid #2A2C49;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.job_tabs ul li a:hover {
+  opacity: 0.5;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
 
 
-
+.job_tabs .active {
+  background: #a07b35 !important;
+  border-bottom: 2px solid #a07b35 !important;
+}
 
 
 
