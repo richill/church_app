@@ -9,8 +9,12 @@
     <%= f.association :category_job, collection: CategoryJob.all, prompt: "select a category", label: "Job Category" %>
     <%= f.association :category_joblevel, collection: CategoryJoblevel.all, prompt: "select a job level", label: "Job Category" %>
     <%= f.association :category_jobtype, collection: CategoryJobtype.all, prompt: "select a job type", label: "Job Category" %>
-    <%= f.input :close %>
-    <%= f.input :approve %>
+    
+    <% if current_user.admin? %>
+      <%= f.input :close %>
+      <%= f.input :approve %>
+      <%= f.input :churchjob, label: "Tick if this is a church job" %>
+    <% end %>
   </div>
 
   <div class="form-actions">

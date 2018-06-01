@@ -24,7 +24,7 @@ class StaticPagesController < ApplicationController
   end
 
   def careersvolunteerspg  
-    @jobs = Job.all
+    @jobs = Job.desc_order
   end
 
   def contactlistpg  
