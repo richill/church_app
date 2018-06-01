@@ -20,6 +20,10 @@ class StaticPagesController < ApplicationController
   def broadfieldresoucepg 
   end
 
+  def careerjobspg
+    @jobs = Job.church_jobs.desc_order
+  end
+
   def churchjobspg
     @jobs = Job.church_jobs.desc_order
   end

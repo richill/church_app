@@ -5,6 +5,9 @@ class Job < ApplicationRecord
   belongs_to :category_joblevel, dependent: :destroy
   belongs_to :category_jobtype, dependent: :destroy
 
+  scope :closed_jobs, -> {where(['close = ?', true])}
+  scope :aprroved_jobs, -> {where(['approve = ?', true])}
+
   scope :church_jobs, -> {where(['churchjob = ?', true])}
   scope :non_church_jobs, -> {where(['churchjob = ?', true])}
   scope :career_jobs, -> { joins(:category_careerlevel).where("category_careerlevels.name IN (?)", ["Internship", "Apprenticeship", "Entry Level", "Graduate", "Experienced (non-manager)", "Management", "Senior Executive"]) }
