@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  location: MyString
+  description: MyText
+  close: false
+  approve: false
+  user_id: 1
+  category_job_id: 1
+  category_jobtype_id: 1
+
+two:
+  title: MyString
+  location: MyString
+  description: MyText
+  close: false
+  approve: false
+  user_id: 1
+  category_job_id: 1
+  category_jobtype_id: 1

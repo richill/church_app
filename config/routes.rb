@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :practicalneeds
   resources :jobs
   resources :smallgroups
   resources :recommendedreadings

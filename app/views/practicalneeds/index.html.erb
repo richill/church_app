@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Practicalneeds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Location</th>
+      <th>Description</th>
+      <th>Close</th>
+      <th>Approve</th>
+      <th>User</th>
+      <th>Category job</th>
+      <th>Category jobtype</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @practicalneeds.each do |practicalneed| %>
+      <tr>
+        <td><%= practicalneed.title %></td>
+        <td><%= practicalneed.location %></td>
+        <td><%= practicalneed.description %></td>
+        <td><%= practicalneed.close %></td>
+        <td><%= practicalneed.approve %></td>
+        <td><%= practicalneed.user_id %></td>
+        <td><%= practicalneed.category_job_id %></td>
+        <td><%= practicalneed.category_jobtype_id %></td>
+        <td><%= link_to 'Show', practicalneed %></td>
+        <td><%= link_to 'Edit', edit_practicalneed_path(practicalneed) %></td>
+        <td><%= link_to 'Destroy', practicalneed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Practicalneed', new_practicalneed_path %>
