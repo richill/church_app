@@ -6,7 +6,6 @@
     <%= f.input :location %>
     <%= f.input :description %>
     <%= f.association :category_job, collection: CategoryJob.all, prompt: "select a category", label: "Job Category" %>
-    <%= f.association :category_jobtype, collection: CategoryJobtype.all, prompt: "select a need type", label: "Job Category" %>
 
     <% if current_user.admin? %>
       <%= f.input :close %>
