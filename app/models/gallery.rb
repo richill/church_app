@@ -3,7 +3,7 @@ class Gallery < ApplicationRecord
   friendly_id :slug_galleries, use: :slugged
 
 
-  has_many :photos
+  has_many :photos, dependent: :destroy
 
   def slug_galleries
     [

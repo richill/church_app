@@ -3,11 +3,11 @@ class Job < ApplicationRecord
   friendly_id :slug_jobs, use: :slugged
 
 
-  belongs_to :user, dependent: :destroy
-  belongs_to :category_job, dependent: :destroy
+  belongs_to :user
+  belongs_to :category_job
 
-  belongs_to :category_joblevel, dependent: :destroy
-  belongs_to :category_jobtype, dependent: :destroy
+  belongs_to :category_joblevel
+  belongs_to :category_jobtype
 
   scope :closed_jobs, -> {where(['close = ?', true])}
   scope :aprroved_jobs, -> {where(['approve = ?', true])}
