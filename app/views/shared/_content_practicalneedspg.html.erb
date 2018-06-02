@@ -1,3 +1,4 @@
+<!-- CSS File: content_careersvolunteerspg.css.scss -->
 <div class="pages_boarder"></div>
 <div class="medium-12 columns content_careersvolunteerspg_section">
   <div class="content_careersvolunteerspg_inner_section">
@@ -18,40 +19,33 @@
             <div class="paragraph_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
             <div class="divider"></div>
 
-            <div class="job_tabs">
-              <ul>
-                <li><%= link_to "all jobs", careers_and_volunteers_path, class: "active" %></li>
-                <li><%= link_to "church jobs", church_jobs_path %></li>
-                <li><%= link_to "career jobs", career_jobs_path %></li>
-                <li><%= link_to "volunteer job", volunteer_jobs_path %></li>
-              </ul>
-            </div>
-
-            <% if @launchministries.present? %>
-              <!-- no_listed_info -->
-              <div class="hide"><%= render "shared/no_listed_content" %></div>
-              <!-- no_listed_info -->
-            <% else %>
+            <% if @practicalneeds.present? %>
               <!-- listed jobs -->
               <div class="paragraph_content listed_readings_links">
                 <ul>
-                  <% @jobs.each do |job| %>
+                  <% @practicalneeds.each do |pracneed| %>
                   <li class="file">
                     <div class="jobpost_content">
-                      <div class="header"><%= link_to "#{job.title}", job_path(job) %></div>
+                      <div class="header"><%= link_to "#{pracneed.title}", practicalneed_path(pracneed) %></div>
                       <div class="minor_info">
-                        <span class="min_header">posted:</span><span class="min_content"><%= time_ago_in_words(job.created_at) %> ago</span>
+                        <span class="min_header">posted:</span><span class="min_content"><%= time_ago_in_words(pracneed.created_at) %> ago</span>
                         <span class="min_divider">|</span>
-                        <span class="min_header">location:</span><span class="min_content"><%= job.location %></span>
+                        <span class="min_header">location:</span><span class="min_content"><%= pracneed.location %></span>
                         <span class="min_divider">|</span>
-                        <span class="min_header">position:</span><span class="min_content"><%= job.category_jobtype.name %> Hours</span>
+                        <span class="min_header">posted by:</span>
+                        <span class="min_content">
+                          <% if current_user.admin? %>
+                            <%= link_to "#{pracneed.user.firstname} #{pracneed.user.lastname}", user_path(pracneed.user), class: "username" %>
+                          <% else %>
+                            <%= "#{pracneed.user.firstname}" %>
+                          <% end %>
+                        </span>
                       </div>
-                      <div class="content"><%= link_to truncate("#{job.description}", length: 200), job_path(job) %> <span class="view"><%= link_to "view", job_path(job) %></span></div>
+                      <div class="content"><%= link_to truncate("#{pracneed.description}", length: 200), practicalneed_path(pracneed) %> <span class="view"><%= link_to "view", practicalneed_path(pracneed) %></span></div>
                       <div class="listed_btns">
-                        <span class="category"><%= link_to "#{job.category_job.name}", job_path(job) %></span>
-                        <span class="category joblevel"><%= link_to "#{job.category_joblevel.name}", job_path(job) %></span>
+                        <span class="category"><%= link_to "#{pracneed.category_job.name}", practicalneed_path(pracneed) %></span>
                         <% if user_signed_in? %>
-                          <span class="apply_btn"><%= link_to "apply", job_path(job) %></span>
+                          <span class="apply_btn"><%= link_to "provide solution", practicalneed_path(pracneed) %></span>
                         <% else %>
                           <span class="apply_notsiginedin_btn" data-open="modal_ministry_application">apply</span>
                           <span><%= render 'shared/modal_registration_login' %></span>
@@ -63,6 +57,10 @@
                 </ul>
               </div>
               <!-- listed jobs -->
+            <% else %>
+              <!-- no_listed_info -->
+              <div><%= render "shared/no_listed_content" %></div>
+              <!-- no_listed_info -->
             <% end %>
 
           </div>

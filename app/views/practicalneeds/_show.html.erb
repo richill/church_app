@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @practicalneed.title %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @practicalneed.location %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @practicalneed.description %>
+</p>
+
+<p>
+  <strong>Close:</strong>
+  <%= @practicalneed.close %>
+</p>
+
+<p>
+  <strong>Approve:</strong>
+  <%= @practicalneed.approve %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @practicalneed.user_id %>
+</p>
+
+<p>
+  <strong>Category job:</strong>
+  <%= @practicalneed.category_job_id %>
+</p>
+
+<p>
+  <strong>Category jobtype:</strong>
+  <%= @practicalneed.category_jobtype_id %>
+</p>
+
+<%= link_to 'Edit', edit_practicalneed_path(@practicalneed) %> |
+<%= link_to 'Back', practicalneeds_path %>
