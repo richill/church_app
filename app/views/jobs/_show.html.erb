@@ -18,16 +18,34 @@
           <div class="page_information">
             <!-- top_section -->
             <div class="user_top_section">
-              <div class="username_header">
+              <div class="content_cover">
                 <div class="user_name"><%= "#{@job.title}" %></div>
                 <div class="member_date">(posted: <%= @job.created_at.strftime("%b %d, %Y") %>)</div>
               </div>
             </div>
             <!-- top_section -->
 
+            <!-- bottom_section -->
             <div class="medium-12 columns job_deatils">
-              <div>content</div>
+              <div class="content_cover">
+                <div class="info_content">
+                  <strong>Location:</strong>
+                  <%= @job.location %>
+                </div>
+
+                <div class="info_content">
+                  <strong>Description:</strong>
+                  <%= @job.description %>
+                </div>
+          
+                <div class="listed_btns">
+                  <span class="category"><%= link_to "#{@job.category_job.name}", job_path(@job) %></span>
+                  <span class="category joblevel"><%= link_to "#{@job.category_joblevel.name}", job_path(@job) %></span>
+                </div>
+         
+              </div>
             </div>
+            <!-- bottom_section -->
           </div>
 
 
@@ -44,39 +62,5 @@
   </div>
 </div>
 
-
-
-
-<div class="hide">
-  <p id="notice"><%= notice %></p>
-
-  <p>
-    <strong>Title:</strong>
-    <%= @job.title %>
-  </p>
-
-  <p>
-    <strong>Location:</strong>
-    <%= @job.location %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= @job.description %>
-  </p>
-
-  <p>
-    <strong>Close:</strong>
-    <%= @job.close %>
-  </p>
-
-  <p>
-    <strong>Approve:</strong>
-    <%= @job.approve %>
-  </p>
-
-  <%= link_to 'Edit', edit_job_path(@job) %> |
-  <%= link_to 'Back', jobs_path %>
-</div>
 
 

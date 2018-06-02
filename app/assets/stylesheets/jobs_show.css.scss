@@ -159,7 +159,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.jobshow_section .user_top_section .username_header {
+.jobshow_section .user_top_section .content_cover {
   border: 1px solid #E8E9EB;
   background-color: rgba(42, 44, 73, 0.02);
   padding: 15px;
@@ -278,6 +278,39 @@
 
 .jobshow_section .uncomplete_info a {
   color: #a1355b !important;
+}
+
+.jobshow_section .content_cover {
+  border: 1px solid #E8E9EB;
+  background-color: rgba(42, 44, 73, 0.02);
+  padding: 15px;
+  text-align: left;
+  color: #2A2C49;
+  margin-bottom: 20px;
+}
+
+.jobshow_section .category a {
+  background-color: #2A2C49;
+  color: #fff !important;
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 11px;
+}
+
+.jobshow_section .joblevel a {
+  background-color: #57738E;
+}
+
+.jobshow_section .apply_btn a {
+  background-color: #a1355b;
+  color: #fff !important;
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 11px;
+}
+
+.jobshow_section .info_content {
+  margin: 20px 0px;
 }
 
 

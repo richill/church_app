@@ -7,7 +7,7 @@ class JobsController < ApplicationController
   end
 
   def show
-    @user = @job.user
+    @user = current_user
   end
 
   def new
