@@ -6,12 +6,12 @@
       <div>
         <span class="weblink"><%= mail_to "#{@job.user.firstname}", 
                                           "apply for this job", 
-                                          cc: "#{current_user.firstname} #{current_user.lastname}",
-                                          subject: "#{current_user.firstname} #{current_user.lastname} | Job: #{@job.title}",
-                                          body: "Hi #{@job.user.firstname}, my name is #{current_user.firstname} #{current_user.lastname} and I am currently applying for the job as a #{@job.title} [job link: #{request.original_url}] that was posted by you on the Openheavens Website. I look foward to hearing from you. Thank you , Kind regards #{current_user.firstname}", class: "apply_btn" %>
+                                          cc: "#{@user.firstname} #{@user.lastname}",
+                                          subject: "#{@user.firstname} #{@user.lastname} | Job: #{@job.title}",
+                                          body: "Hi #{@job.user.firstname}, my name is #{@user.firstname} #{@user.lastname} and I am currently applying for the job as a #{@job.title} [job link: #{request.original_url}] that was posted by you on the Openheavens Website. I look foward to hearing from you. Thank you , Kind regards #{@user.firstname}", class: "apply_btn" %>
         </span>
       </div>
-      <% if @job.user == current_user || current_user.admin? %>
+      <% if @job.user == @user || @user.admin? %>
         <div><%= link_to "edit job", edit_user_job_path(@user) %></div>
         <div><%= link_to 'delete this job', job_path(@job, @job.user), method: :delete, data: { confirm: 'Are you sure?' } %></div>
       <% end %>
