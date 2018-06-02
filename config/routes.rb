@@ -51,6 +51,7 @@ Rails.application.routes.draw do
   get     'children-teenage-corner',  to: 'static_pages#childrenteenpg'
   get     'church-jobs',              to: 'static_pages#churchjobspg'
   get     'career-jobs',              to: 'static_pages#careerjobspg'
+  get     'volunteer-jobs',              to: 'static_pages#volunteerpg'
 
 
   get     'directions',               to: 'static_pages#directionpg'

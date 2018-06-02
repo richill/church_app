@@ -21,16 +21,20 @@ class StaticPagesController < ApplicationController
   end
 
   # ----------------- jobs -----------------
-  def careerjobspg
-    @jobs = Job.career_jobs.desc_order
+  def careersvolunteerspg  
+    @jobs = Job.desc_order
   end
 
   def churchjobspg
     @jobs = Job.church_jobs.desc_order
   end
 
-  def careersvolunteerspg  
-    @jobs = Job.desc_order
+  def careerjobspg
+    @jobs = Job.career_jobs.desc_order
+  end
+
+  def volunteerpg
+    @jobs = Job.volunteer_jobs.desc_order
   end
   # ----------------- jobs -----------------
 
