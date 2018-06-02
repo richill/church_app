@@ -1,0 +1,285 @@
+/*===================================================
+    Page: user profile page
+    File: views/users/_show.html.erb
+  ===================================================*/
+
+.jobshow_section {
+  padding: 0px !important;
+}
+
+.jobshow_section .jobshow_inner_section {
+  width: 1150px;
+  margin: auto;
+  background-color: rgba(42, 44, 73, 0.1);
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 1160px) {
+  .jobshow_section .jobshow_inner_section {
+    width: 100% !important;
+  }
+}
+
+.jobshow_section .jobshow_content {
+  margin-bottom: 30px;
+  padding: 0px !important;
+}
+
+.jobshow_section .tree_line {
+  font-size: 10px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+@media only screen and (max-width: 1160px) {
+  .jobshow_section .tree_line {
+    margin-top: 25px;
+    padding: 0px 15px !important;
+  }
+}
+
+.jobshow_section .tree_line a {
+  color: #2A2C49 !important;
+}
+
+.jobshow_section .current_page {
+  color: #a07b35;
+}
+
+.jobshow_section .page_main_content {
+  padding: 0px !important;
+}
+
+.jobshow_section .info_left_content {
+  padding: 0px !important;
+}
+@media only screen and (max-width: 1160px) {
+  .jobshow_section .info_left_content {
+    width: 100% !important;
+    padding: 0px 15px !important;
+  }
+}
+
+.jobshow_section .info_left_content .page_header {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #2A2C49;
+}
+
+.jobshow_section .info_left_content .page_img {
+  margin-bottom: 15px;
+  opacity: 0.8;
+  overflow: hidden;
+}
+
+.jobshow_section .info_left_content .paragraph_content {
+  margin-bottom: 15px;
+  color: #2A2C49;
+}
+
+.jobshow_section .info_left_content .paragraph_content .sub_header {
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 3px;
+}
+
+.jobshow_section .info_left_content .paragraph_content ul {
+  margin: 0px;
+}
+
+.jobshow_section .info_left_content .paragraph_content ul li {
+  margin-bottom: 5px;
+}
+
+.jobshow_section .info_left_content .paragraph_content .weblink {
+  color: #a1355b !important;
+}
+
+.jobshow_section .info_left_content .paragraph_content .weblink a {
+  color: #a1355b !important;
+}
+
+.jobshow_section .listed_donation_links ul li {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.jobshow_section .listed_donation_links ul li {
+  margin-bottom: 5px !important;
+}
+
+.jobshow_section .listed_donation_links ul li a {
+  background: linear-gradient(#57738E, #9DC6EB);
+  color: #fff !important;
+  height: 50px;
+  display: inherit;
+  padding: 17px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.jobshow_section .listed_donation_links ul li a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.jobshow_section .pymt_img {
+  margin: 30px 0px 10px;
+}
+
+.jobshow_section .pymt_img img {
+  width: 200px;
+}
+
+.jobshow_section .link_btn a {
+  padding: 8px 15px;
+  margin-left: 5px;
+  border-radius: 3px;
+  color: #fff !important;
+  background-color: #2A2C49 !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.jobshow_section .link_btn a:hover {
+  background-color: #E8E9EB !important;
+  color: #2A2C49 !important;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.jobshow_section .user_top_section .username_header {
+  border: 1px solid #E8E9EB;
+  background-color: rgba(42, 44, 73, 0.02);
+  padding: 15px;
+  text-align: center;
+  color: #2A2C49;
+  margin-bottom: 20px;
+}
+
+.jobshow_section .user_top_section .user_name {
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.jobshow_section .user_top_section .member_date {
+  text-transform: capitalize;
+  font-size: 10px;
+}
+
+.jobshow_section .job_deatils {
+  margin-top: 15px;
+  padding: 0px !important;
+}
+
+.jobshow_section .user_left_section {
+  background-color: transparent;
+  padding: 0px !important;
+}
+
+.jobshow_section .user_left_section .user_img_cover {
+  border: 1px solid #E8E9EB;
+  height: 253px;
+  overflow: hidden;
+}
+
+.jobshow_section .user_right_section {
+  background-color: transparent;
+  padding-right: 0px !important;
+}
+
+.jobshow_section .user_right_section .user_details {
+  color: #2A2C49;
+}
+
+.jobshow_section .user_right_section .user_details ul {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.jobshow_section .user_right_section .user_details ul li {
+  margin-bottom: 10px;
+}
+
+.jobshow_section .user_right_section .user_details i {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.jobshow_section .user_right_section .user_details .fa-user {
+  font-size: 25px !important;
+  text-align: left;
+  margin-left: 7px;
+  margin-right: 2px;
+}
+
+.jobshow_section .user_right_section .username {
+  text-transform: capitalize;
+}
+
+.jobshow_section .user_right_section .userwork {
+  text-transform: capitalize;
+}
+
+.jobshow_section .user_right_section .count {
+  width: 30px;
+  display: inline-block;
+  background-color: #E8E9EB;
+  font-size: 10px;
+  padding: 0px 5px;
+  margin-right: 2px;
+  text-align: center;
+}
+
+.jobshow_section .user_right_section .colonicon {
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.jobshow_section .user_right_section .complete_stats {
+  padding: 18px;
+  border-radius: 5px;
+  border: 1px solid #E8E9EB;
+  background-color: rgba(42, 44, 73, 0.02);
+}
+
+.jobshow_section .user_right_section .listed_stats {
+  margin-bottom: 5px;
+}
+
+.jobshow_section .user_right_section .user_link_info {
+  outline: none;
+  cursor: pointer;
+}
+
+.jobshow_section .user_right_section .user_link_info:hover {
+  text-decoration: underline;
+}
+
+.jobshow_section .useremail a {
+  color: #2A2C49 !important;
+}
+
+.jobshow_section .uncomplete_info a {
+  color: #a1355b !important;
+}
+
+
+
+
