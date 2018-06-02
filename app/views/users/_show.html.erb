@@ -49,8 +49,9 @@
                     <li>
                       <div class="complete_stats">
                         <div class="listed_stats">
-                          <div class="user_link_info" data-open="modal_ministry_application"><span class="count"><%= @user.jobs.count %></span><span class="colonicon">:</span><span class="count_info">posted jobs</span></div>
-                          <div><%= render 'shared/modal_ministry_application' %></div>
+                          <div class="user_link_info" data-open="modal_user_postedjobs"><span class="count"><%= @user.jobs.count %></span><span class="colonicon">:</span><span class="count_info">posted jobs</span></div>
+                          <div><%# render 'shared/modal_ministry_application' %></div>
+                          <div><%= render 'shared/modal_user_posted_jobs' %></div>
                         </div>
 
                         <div class="listed_stats">

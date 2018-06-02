@@ -1,0 +1,67 @@
+/*===================================================
+    Page: modal register/signin
+    File: views/shared/_modal_user_posted_jobs.html.erb
+  ===================================================*/
+
+.modal_general_design_all {
+  background-color: #E8E9EB;
+  padding-bottom: 30px !important;
+  outline: none !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.modal_general_design_all .modal_header {
+  background: #57738E;
+  border-bottom: 1px solid #2A2C49;
+  color: #fff;
+  padding: 15px;
+  font-size: 20px;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+.modal_general_design_all .modal_content {
+  background-color: #fff;
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #D4D4D4 !important;
+  border-radius: 2px !important;
+}
+
+.modal_general_design_all .weblink {
+  color: #a1355b !important;
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+.modal_general_design_all ul {
+  margin: 0px;
+  list-style-type: none;
+}
+
+.modal_general_design_all ul li {
+  margin-bottom: 5px;
+}
+
+.subcontent {
+  margin-bottom: 15px;
+  border: 1px solid #E8E9EB;
+  background-color: rgba(42, 44, 73, 0.02);
+  padding: 5px;
+  text-align: center;
+  color: #2A2C49;
+  font-weight: bold;
+}
+
+.modal_content {
+  color: #2A2C49 !important;
+}
+
+.modal_content a {
+  color: #a1355b !important;
+}
+
+
+
+
