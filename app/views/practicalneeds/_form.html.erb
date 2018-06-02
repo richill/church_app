@@ -1,15 +1,17 @@
-<%= simple_form_for(@practicalneed) do |f| %>
+<%= simple_form_for [@user, @practicalneed] do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :title %>
     <%= f.input :location %>
     <%= f.input :description %>
-    <%= f.input :close %>
-    <%= f.input :approve %>
-    <%= f.input :user_id %>
-    <%= f.input :category_job_id %>
-    <%= f.input :category_jobtype_id %>
+    <%= f.association :category_job, collection: CategoryJob.all, prompt: "select a category", label: "Job Category" %>
+    <%= f.association :category_jobtype, collection: CategoryJobtype.all, prompt: "select a need type", label: "Job Category" %>
+
+    <% if current_user.admin? %>
+      <%= f.input :close %>
+      <%= f.input :approve %>
+    <% end %>
   </div>
 
   <div class="form-actions">

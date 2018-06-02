@@ -6,21 +6,24 @@ class PracticalneedsController < ApplicationController
   end
 
   def show
+    @user = current_user
   end
 
   def new
-    @practicalneed = Practicalneed.new
+    @user = User.friendly.find(params[:user_id])
+    @practicalneed = @user.practicalneeds.build
   end
 
   def edit
+    @user = current_user
   end
 
   def create
-    @practicalneed = Practicalneed.new(practicalneed_params)
-
+    @user = User.friendly.find(params[:user_id])
+    @practicalneed = @user.practicalneeds.create(practicalneed_params)
     respond_to do |format|
       if @practicalneed.save
-        format.html { redirect_to @practicalneed, notice: 'Practicalneed was successfully created.' }
+        format.html { redirect_to @practicalneed, notice: 'Practical need was successfully created.' }
         format.json { render :show, status: :created, location: @practicalneed }
       else
         format.html { render :new }
@@ -30,9 +33,19 @@ class PracticalneedsController < ApplicationController
   end
 
   def update
+    # respond_to do |format|
+    #   if @practicalneed.update(practicalneed_params)
+    #     format.html { redirect_to @practicalneed, notice: 'Practicalneed was successfully updated.' }
+    #     format.json { render :show, status: :ok, location: @practicalneed }
+    #   else
+    #     format.html { render :edit }
+    #     format.json { render json: @practicalneed.errors, status: :unprocessable_entity }
+    #   end
+    # end
+
     respond_to do |format|
-      if @practicalneed.update(practicalneed_params)
-        format.html { redirect_to @practicalneed, notice: 'Practicalneed was successfully updated.' }
+      if @practicalneed.update_attributes(practicalneed_params)
+        format.html { redirect_to @practicalneed, notice: 'Practical need was successfully updated.' }
         format.json { render :show, status: :ok, location: @practicalneed }
       else
         format.html { render :edit }
@@ -42,16 +55,15 @@ class PracticalneedsController < ApplicationController
   end
 
   def destroy
+    @user = current_user
+    @practicalneed = @user.practicalneeds.friendly.find(params[:id])
     @practicalneed.destroy
-    respond_to do |format|
-      format.html { redirect_to practicalneeds_url, notice: 'Practicalneed was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to user_path(@user)
   end
 
   private
     def set_practicalneed
-      @practicalneed = Practicalneed.find(params[:id])
+      @practicalneed = Practicalneed.friendly.find(params[:id])
     end
 
     def practicalneed_params

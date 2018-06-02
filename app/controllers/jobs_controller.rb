@@ -45,12 +45,11 @@ class JobsController < ApplicationController
     end
   end
 
-
   def destroy
     @user = current_user
     @job = @user.jobs.friendly.find(params[:id])
     @job.destroy
-    redirect_to careers_and_volunteers_path
+    redirect_to user_path(@user)
   end
 
   private
