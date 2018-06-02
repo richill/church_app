@@ -3,12 +3,20 @@
 <div class="medium-4 columns right_info_user_options">
   <div class="side_information">
     <div class="user_links">
+      <div><%= link_to "view all events", events_path %></div>
       <div><%= link_to "useful services", useful_services_path %></div>
-      <div><%= link_to "volunteering positions", careers_and_volunteers_path %></div>
+
+      <div class="divider"></div>
+
+      <div><%= link_to "view all jobs", careers_and_volunteers_path %></div>
+      <div><%= link_to "church jobs", church_jobs_path %></div>
+      <div><%= link_to "view practical needs", practical_needs_path %></div>
+
+      <div class="divider"></div>
+
       <div><%= link_to "post a job", new_user_job_path(@user) %></div>
       <div><%= link_to "post a partical need", "#" %></div>
-      <div><%= link_to "view all events", events_path %></div>
-      <div><%= link_to "join a small group", small_groups_path %></div>
+      
     </div>
   </div>
 </div>
