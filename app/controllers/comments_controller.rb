@@ -18,7 +18,14 @@ class CommentsController < ApplicationController
   def create
     @comment = @commentable.comments.new(comment_params)
     @comment.user = current_user
-    @discussion = Discussion.friendly.find(params[:discussion_id])
+
+    # if controller_name == 'discussion'
+    if @discussion
+      @discussion = Discussion.friendly.find(params[:discussion_id])
+    elsif @practicalneed
+    # elif controller_name == 'practicalneed'
+      @practicalneed = Practicalneeds.new(:practicalneed_id)
+    end
 
     respond_to do |format|
       if @comment.save

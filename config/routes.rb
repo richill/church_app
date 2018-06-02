@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :practicalneeds
+  resources :practicalneeds  do
+    resources :comments, only: [:create, :destroy] 
+  end
   resources :jobs
   resources :smallgroups
   resources :recommendedreadings

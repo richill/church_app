@@ -1,13 +1,13 @@
 <div class="pages_boarder"></div>
-<div class="medium-12 columns discussionshow_section">
-  <div class="discussionshow_inner_section">
-    <div class="medium-12 columns discussionshow_content">
+<div class="medium-12 columns praticalneedshow_section">
+  <div class="praticalneedshow_inner_section">
+    <div class="medium-12 columns praticalneedshow_content">
       <div class="tree_line">
         <span><%= link_to "home", root_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span><%= link_to "connect", connect_path %></span>
+        <span><%= link_to "resources", resources_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span><%= link_to "forum", forum_path %></span>
+        <span><%= link_to "pratical needs", practical_needs_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
         <span class="current_page"><%= @practicalneed.title %></span>
       </div>
@@ -25,7 +25,10 @@
                 <span><b>Created Time:</b></span>
                 <span><%= @practicalneed.created_at.strftime("%I:%M%p") %></span>
                 <span class="listpage_divider">|</span>
-                <span><i class="fa fa-comments"></i> <span><%# @practicalneed.comments.count %> comments</span></span>
+                <span class="page_subheader"><b>Posted by:</b></span>
+                <span><%= "#{@practicalneed.user.firstname}" %></span>
+                <span class="listpage_divider">|</span>
+                <span><i class="fa fa-comments"></i> <span><%= @practicalneed.comments.count %> comments</span></span>
               </span>
             </div>
             <div class="paragraph_content">
@@ -34,7 +37,6 @@
               <span>
                 <span class="view_link" data-open="<%= dom_id(@practicalneed) %>_practicalneed_content">view</span>
                 <span><%= render 'shared/modal_praticalneed_info', locals: { practicalneed: @practicalneed } %></span>
-                <span><%# render 'shared/modal_discussion_info', locals: { practicalneed: @practicalneed } %></span>
               </span>
 
               <div class="action_btn hide">
@@ -47,8 +49,9 @@
               <div class="discussions_content">
                 <div>
                   <div class="comment_header"><i class="fa fa-comments"></i> <span>comments</span></div>
-                  <%# render "shared/content_comment_form" %>
-                  <%# render "shared/content_comments" %>
+                  <%= render "shared/content_comment_form" %>
+                  <%= render "shared/content_comments" %>
+                  <%# render "shared/content_comments_praticalneeds" %>
                 </div>
               </div>
               <!-- listed comments photos -->

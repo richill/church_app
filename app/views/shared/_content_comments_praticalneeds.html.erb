@@ -15,7 +15,7 @@
             <span class="comment"><%= comment.content %></span>
           </div>
           <span class="minor_links">Posted: <%= time_ago_in_words(comment.created_at) %> ago</span>
-          <div class="minor_links hide"><%# link_to "delete comment", discussion_comment_path(comment), method: :delete %></div>
+          <div class="minor_links hide"><%= link_to "delete comment", discussion_comment_path(comment), method: :delete %></div>
         </div>
         <div class="clear"></div>
       </li><br/>

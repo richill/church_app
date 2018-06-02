@@ -1,64 +1,64 @@
 /*===================================================
-    Page: discussions show page
-    File: views/discussions/_show.html.erb
+    Page: praticalneeds show page
+    File: views/praticalneeds/_show.html.erb
   ===================================================*/
 
-.discussionshow_section {
+.praticalneedshow_section {
   padding: 0px !important;
 }
 
-.discussionshow_section .discussionshow_inner_section {
+.praticalneedshow_section .praticalneedshow_inner_section {
   width: 1150px;
   margin: auto;
   background-color: rgba(42, 44, 73, 0.1);
   margin-bottom: 30px;
 }
 @media only screen and (max-width: 1160px) {
-  .discussionshow_section .discussionshow_inner_section {
+  .praticalneedshow_section .praticalneedshow_inner_section {
     width: 100% !important;
   }
 }
 
-.discussionshow_section .discussionshow_content {
+.praticalneedshow_section .praticalneedshow_content {
   margin-bottom: 30px;
   padding: 0px !important;
 }
 
-.discussionshow_section .tree_line {
+.praticalneedshow_section .tree_line {
   font-size: 10px;
   text-transform: capitalize;
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 1160px) {
-  .discussionshow_section .tree_line {
+  .praticalneedshow_section .tree_line {
     margin-top: 25px;
     padding: 0px 15px !important;
   }
 }
 
-.discussionshow_section .tree_line a {
+.praticalneedshow_section .tree_line a {
   color: #2A2C49 !important;
 }
 
-.discussionshow_section .current_page {
+.praticalneedshow_section .current_page {
   color: #a07b35;
 }
 
-.discussionshow_section .page_main_content {
+.praticalneedshow_section .page_main_content {
   padding: 0px !important;
 }
 
-.discussionshow_section .info_left_content {
+.praticalneedshow_section .info_left_content {
   padding: 0px !important;
 }
 @media only screen and (max-width: 1160px) {
-  .discussionshow_section .info_left_content {
+  .praticalneedshow_section .info_left_content {
     width: 100% !important;
     padding: 0px 15px !important;
   }
 }
 
-.discussionshow_section .info_left_content .page_header {
+.praticalneedshow_section .info_left_content .page_header {
   font-size: 30px;
   font-weight: bold;
   text-transform: capitalize;
@@ -67,56 +67,56 @@
   line-height: 35px;
 }
 
-.discussionshow_section .info_left_content .page_img {
+.praticalneedshow_section .info_left_content .page_img {
   margin-bottom: 15px;
   opacity: 0.8;
   overflow: hidden;
 }
 
-.discussionshow_section .info_left_content .paragraph_content {
+.praticalneedshow_section .info_left_content .paragraph_content {
   margin-bottom: 15px;
   color: #2A2C49;
 }
 
-.discussionshow_section .info_left_content .paragraph_content .sub_header {
+.praticalneedshow_section .info_left_content .paragraph_content .sub_header {
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 3px;
 }
 
-.discussionshow_section .info_left_content .paragraph_content .weblink {
+.praticalneedshow_section .info_left_content .paragraph_content .weblink {
   color: #a1355b !important;
 }
 
-.discussionshow_section .info_left_content .paragraph_content .weblink a {
+.praticalneedshow_section .info_left_content .paragraph_content .weblink a {
   color: #a1355b !important;
 }
 
-.discussionshow_section .pymt_img {
+.praticalneedshow_section .pymt_img {
   margin: 30px 0px 10px;
 }
 
-.discussionshow_section .pymt_img img {
+.praticalneedshow_section .pymt_img img {
   width: 200px;
 }
 
-.discussionshow_section .calendar-heading {
+.praticalneedshow_section .calendar-heading {
   margin: 15px 0px;
 }
 
-.discussionshow_section .calendar-title {
+.praticalneedshow_section .calendar-title {
   font-size: 20px;
   font-weight: bold;
   margin: 0px 50px;
   display: inline-block;
 }
 
-.discussionshow_section .gallery_section ul {
+.praticalneedshow_section .gallery_section ul {
   margin: 0px;
   list-style-type: none;
 }
 
-.discussionshow_section .gallery_section ul li a {
+.praticalneedshow_section .gallery_section ul li a {
   margin: 0px;
   font-size: 9px !important;
   text-transform: capitalize;
@@ -127,65 +127,65 @@
   padding: 5px;
 }
 
-.discussionshow_section .discussions_content .cover_section {
+.praticalneedshow_section .discussions_content .cover_section {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.discussionshow_section .discussions_content .cover_section .main_list {
+.praticalneedshow_section .discussions_content .cover_section .main_list {
   float: left;
 }
 
-.discussionshow_section .first_section {
+.praticalneedshow_section .first_section {
   margin-right: 8px;
 }
 
-.discussionshow_section .second_section {
+.praticalneedshow_section .second_section {
   width: 125px;
   padding: 0px 7px;
   height: 424px;
   overflow: hidden;
 }
 
-.discussionshow_section .gallery_photos_inner_content ul {
+.praticalneedshow_section .gallery_photos_inner_content ul {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.discussionshow_section .gallery_photos_inner_content ul li {
+.praticalneedshow_section .gallery_photos_inner_content ul li {
   float: left;
   margin-right: 10px;
 }
 
-.discussionshow_section .gallery_photos_inner_content ul li:last-child {
+.praticalneedshow_section .gallery_photos_inner_content ul li:last-child {
   margin-right: 0px;
 }
 
-.discussionshow_section .gallery_photo_outter_img {
+.praticalneedshow_section .gallery_photo_outter_img {
   padding: 5px;
   border: 1px solid #E8E9EB;
   margin-bottom: 9px;
 }
 
-.discussionshow_section .gallery_photo_img {
+.praticalneedshow_section .gallery_photo_img {
   height: 65px;
   width: 100px;
   overflow: hidden; 
 }
 
-.discussionshow_section .gallery_photo_intial_outter_img {
+.praticalneedshow_section .gallery_photo_intial_outter_img {
   padding: 5px;
   border: 1px solid #E8E9EB;
   margin-bottom: 10px;
 }
 
-.discussionshow_section .gallery_photo_intial_img {
+.praticalneedshow_section .gallery_photo_intial_img {
   width: 620px;
   height: 409px;
   overflow: hidden;
 }
 
-.discussionshow_section .view_all {
+.praticalneedshow_section .view_all {
   display: inline-block;
   background-color: rgba(42, 44, 73, 0.05);
   color: #2A2C49 !important;
@@ -201,7 +201,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.discussionshow_section .view_all:hover {
+.praticalneedshow_section .view_all:hover {
   background-color: rgba(42, 44, 73, 0.1);
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
@@ -209,15 +209,15 @@
   -o-transition: all 0.3s ease;
 }
 
-.discussionshow_section .listpage_divider {
+.praticalneedshow_section .listpage_divider {
   margin: 0px 5px;
 }
 
-.discussionshow_section .action_btn {
+.praticalneedshow_section .action_btn {
   margin-top: 5px;
 }
 
-.discussionshow_section .action_btn a {
+.praticalneedshow_section .action_btn a {
   margin: 0px;
   font-size: 9px !important;
   text-transform: capitalize;
@@ -233,7 +233,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.discussionshow_section .action_btn a:hover {
+.praticalneedshow_section .action_btn a:hover {
   opacity: 0.8;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
@@ -241,11 +241,11 @@
   -o-transition: all 0.3s ease;
 }
 
-.discussionshow_section .discussions_content {
+.praticalneedshow_section .discussions_content {
   border-top: 1px solid rgba(42, 44, 73, 0.05);
 }
 
-.discussionshow_section .comment_header {
+.praticalneedshow_section .comment_header {
   font-size: 11px !important;
   color: #2A2C49;
   margin: 15px 0px 5px;
@@ -253,16 +253,16 @@
   font-weight: bold;
 }
 
-.discussionshow_section .page_information {
+.praticalneedshow_section .page_information {
   padding: 0px !important;
 }
 @media only screen and (max-width: 1160px) {
-  .discussionshow_section .page_information {
+  .praticalneedshow_section .page_information {
     width: 100% !important;
   }
 }
 
-.discussionshow_section .view_link {
+.praticalneedshow_section .view_link {
   color: #a1355b !important;
   cursor: pointer;
   outline: none !important;
@@ -271,14 +271,14 @@
   -o-transition: all 0.3s ease;
 }
 
-.discussionshow_section .view_link:hover {
+.praticalneedshow_section .view_link:hover {
   text-decoration: underline;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.discussionshow_section .date_category {
+.praticalneedshow_section .date_category {
   margin-bottom: 10px;
   color: #2A2C49;
 }

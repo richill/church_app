@@ -1,31 +1,23 @@
 class DiscussionsController < ApplicationController
   before_action :set_discussion, only: [:show, :edit, :update, :destroy]
 
-  # GET /discussions
-  # GET /discussions.json
   def index
     @discussions = Discussion.all
   end
 
-  # GET /discussions/1
-  # GET /discussions/1.json
   def show
     @commentable = @discussion
     @comment = Comment.new
     @comments = @commentable.comments
   end
 
-  # GET /discussions/new
   def new
     @discussion = Discussion.new
   end
 
-  # GET /discussions/1/edit
   def edit
   end
 
-  # POST /discussions
-  # POST /discussions.json
   def create
     @discussion = Discussion.new(discussion_params)
 
@@ -40,8 +32,6 @@ class DiscussionsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /discussions/1
-  # PATCH/PUT /discussions/1.json
   def update
     respond_to do |format|
       if @discussion.update(discussion_params)
@@ -54,8 +44,6 @@ class DiscussionsController < ApplicationController
     end
   end
 
-  # DELETE /discussions/1
-  # DELETE /discussions/1.json
   def destroy
     @discussion.destroy
     respond_to do |format|
@@ -65,12 +53,10 @@ class DiscussionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_discussion
       @discussion = Discussion.friendly.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def discussion_params
       params.require(:discussion).permit(:topic, :image, :description)
     end

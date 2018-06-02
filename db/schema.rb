@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180602145655) do
+ActiveRecord::Schema.define(version: 20180602161707) do
 
   create_table "category_countries", force: :cascade do |t|
     t.string   "name"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20180602145655) do
     t.datetime "updated_at"
     t.integer  "discussion_id"
     t.text     "content"
+    t.integer  "practicalneed_id"
     t.index ["commentable_id"], name: "index_comments_on_commentable_id"
     t.index ["commentable_type"], name: "index_comments_on_commentable_type"
     t.index ["user_id"], name: "index_comments_on_user_id"

@@ -6,9 +6,9 @@ class PracticalneedsController < ApplicationController
   end
 
   def show
-    # @commentable = @practicalneeds
-    # @comment = Comment.new
-    # @comments = @commentable.comments
+    @commentable = @practicalneed
+    @comment = Comment.new
+    @comments = @commentable.comments
   end
 
   def new
@@ -21,6 +21,7 @@ class PracticalneedsController < ApplicationController
   end
 
   def create
+    #@practicalneed = Practicalneeds.new(practicalneed_params)
     @user = User.friendly.find(params[:user_id])
     @practicalneed = @user.practicalneeds.create(practicalneed_params)
     respond_to do |format|
@@ -35,16 +36,6 @@ class PracticalneedsController < ApplicationController
   end
 
   def update
-    # respond_to do |format|
-    #   if @practicalneed.update(practicalneed_params)
-    #     format.html { redirect_to @practicalneed, notice: 'Practicalneed was successfully updated.' }
-    #     format.json { render :show, status: :ok, location: @practicalneed }
-    #   else
-    #     format.html { render :edit }
-    #     format.json { render json: @practicalneed.errors, status: :unprocessable_entity }
-    #   end
-    # end
-
     respond_to do |format|
       if @practicalneed.update_attributes(practicalneed_params)
         format.html { redirect_to @practicalneed, notice: 'Practical need was successfully updated.' }
