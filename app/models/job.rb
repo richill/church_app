@@ -30,4 +30,8 @@ class Job < ApplicationRecord
   def self.asc_order
     order('created_at ASC')
   end
+
+  def original_url
+    base_url + original_fullpath
+  end
 end

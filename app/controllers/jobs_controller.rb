@@ -47,10 +47,10 @@ class JobsController < ApplicationController
 
 
   def destroy
-    @user = User.friendly.find(params[:user_id])
-    @job = @user.jobs.find(params[:id])
+    @user = current_user
+    @job = @user.jobs.friendly.find(params[:id])
     @job.destroy
-    redirect_to jobs_path
+    redirect_to careers_and_volunteers_path
   end
 
   private
