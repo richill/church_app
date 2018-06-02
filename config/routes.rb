@@ -45,15 +45,12 @@ Rails.application.routes.draw do
   get     'bible-and-you',            to: 'static_pages#bibleandyoupg'
   get     'broadfields-resource',     to: 'static_pages#broadfieldresoucepg'
   get     'careers-and-volunteers',   to: 'static_pages#careersvolunteerspg'
+  get     'career-jobs',              to: 'static_pages#careerjobspg'
   get     'contact',                  to: 'static_pages#contactpg'
   get     'contact-list',             to: 'static_pages#contactlistpg'
   get     'connect',                  to: 'static_pages#connectdpg'
   get     'children-teenage-corner',  to: 'static_pages#childrenteenpg'
   get     'church-jobs',              to: 'static_pages#churchjobspg'
-  get     'career-jobs',              to: 'static_pages#careerjobspg'
-  get     'volunteer-jobs',              to: 'static_pages#volunteerpg'
-
-
   get     'directions',               to: 'static_pages#directionpg'
   get     'donations',                to: 'static_pages#donatepg'
   get     'forum',                    to: 'static_pages#forumpg'
@@ -81,6 +78,7 @@ Rails.application.routes.draw do
   get     'thank-you',                to: 'static_pages#thankyoupg'
   get     'the-bible',                to: 'static_pages#thebiblepg'
   get     'useful-services',          to: 'static_pages#usefulservicespg'
+  get     'volunteer-jobs',           to: 'static_pages#volunteerpg'
   get     'youth',                    to: 'static_pages#youthpg'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
