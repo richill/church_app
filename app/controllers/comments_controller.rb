@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
       @discussion = Discussion.friendly.find(params[:discussion_id])
     elsif @practicalneed
     # elif controller_name == 'practicalneed'
-      @practicalneed = Practicalneeds.new(:practicalneed_id)
+      @practicalneed = Practicalneed.friendly.find(params[:practicalneed_id])
     end
 
     respond_to do |format|
@@ -51,7 +51,12 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @discussion = Discussion.friendly.find(params[:discussion_id])
+    if @discussion
+      @discussion = Discussion.friendly.find(params[:discussion_id])
+    elsif @practicalneed
+      @practicalneed = Practicalneed.friendly.find(params[:practicalneed_id])
+    end
+  
     @comment = @discussion.comment.find(params[:id])
 
     @comment.destroy

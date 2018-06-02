@@ -28,7 +28,7 @@
                 <span class="page_subheader"><b>Posted by:</b></span>
                 <span><%= "#{@practicalneed.user.firstname}" %></span>
                 <span class="listpage_divider">|</span>
-                <span><i class="fa fa-comments"></i> <span><%= @practicalneed.comments.count %> comments</span></span>
+                <span><i class="fa fa-comments"></i> <span><%= @practicalneed.comments.count %> solutions</span></span>
               </span>
             </div>
             <div class="paragraph_content">
@@ -48,10 +48,9 @@
               <!-- listed comments photos -->
               <div class="discussions_content">
                 <div>
-                  <div class="comment_header"><i class="fa fa-comments"></i> <span>comments</span></div>
+                  <div class="comment_header"><i class="fa fa-comments"></i> <span>solutions</span></div>
                   <%= render "shared/content_comment_form" %>
                   <%= render "shared/content_comments" %>
-                  <%# render "shared/content_comments_praticalneeds" %>
                 </div>
               </div>
               <!-- listed comments photos -->

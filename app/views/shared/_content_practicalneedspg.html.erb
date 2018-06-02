@@ -40,6 +40,8 @@
                             <%= "#{pracneed.user.firstname}" %>
                           <% end %>
                         </span>
+                        <span class="min_divider">|</span>
+                        <span class="min_header"><i class="fa fa-comments"></i> <span class="prac_comment"><%= pracneed.comments.count %> solutions</span></span>
                       </div>
                       <div class="content"><%= link_to truncate("#{pracneed.description}", length: 200), practicalneed_path(pracneed) %> <span class="view"><%= link_to "view", practicalneed_path(pracneed) %></span></div>
                       <div class="listed_btns">
