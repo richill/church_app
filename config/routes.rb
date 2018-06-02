@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users do
     resources :jobs
+    resources :practicalneeds
     resources :comments, only: [:create, :destroy] 
     member do
       get 'dashboard'

@@ -1,28 +1,20 @@
 class PracticalneedsController < ApplicationController
   before_action :set_practicalneed, only: [:show, :edit, :update, :destroy]
 
-  # GET /practicalneeds
-  # GET /practicalneeds.json
   def index
     @practicalneeds = Practicalneed.all
   end
 
-  # GET /practicalneeds/1
-  # GET /practicalneeds/1.json
   def show
   end
 
-  # GET /practicalneeds/new
   def new
     @practicalneed = Practicalneed.new
   end
 
-  # GET /practicalneeds/1/edit
   def edit
   end
 
-  # POST /practicalneeds
-  # POST /practicalneeds.json
   def create
     @practicalneed = Practicalneed.new(practicalneed_params)
 
@@ -37,8 +29,6 @@ class PracticalneedsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /practicalneeds/1
-  # PATCH/PUT /practicalneeds/1.json
   def update
     respond_to do |format|
       if @practicalneed.update(practicalneed_params)
@@ -51,8 +41,6 @@ class PracticalneedsController < ApplicationController
     end
   end
 
-  # DELETE /practicalneeds/1
-  # DELETE /practicalneeds/1.json
   def destroy
     @practicalneed.destroy
     respond_to do |format|
@@ -62,12 +50,10 @@ class PracticalneedsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_practicalneed
       @practicalneed = Practicalneed.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def practicalneed_params
       params.require(:practicalneed).permit(:title, :location, :description, :close, :approve, :user_id, :category_job_id, :category_jobtype_id)
     end
