@@ -1,44 +1,116 @@
-<p id="notice"><%= notice %></p>
+<div class="pages_boarder"></div>
+<div class="medium-12 columns discussionshow_section">
+  <div class="discussionshow_inner_section">
+    <div class="medium-12 columns discussionshow_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "connect", connect_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "forum", forum_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page"><%= @practicalneed.title %></span>
+      </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @practicalneed.title %>
-</p>
+      <div class="page_main_content">
+        <!-- info_left_content -->
+        <div class="info_left_content">
+          <div class="medium-8 columns page_information">
+            <div class="page_header"><%= @practicalneed.title %></div>
+            <div class="date_category">
+              <span>
+                <span class="page_subheader"><b>Created date:</b></span>
+                <span><%= @practicalneed.created_at.strftime("%b %d %Y") %></span>
+                <span class="listpage_divider">|</span>
+                <span><b>Created Time:</b></span>
+                <span><%= @practicalneed.created_at.strftime("%I:%M%p") %></span>
+                <span class="listpage_divider">|</span>
+                <span><i class="fa fa-comments"></i> <span><%# @practicalneed.comments.count %> comments</span></span>
+              </span>
+            </div>
+            <div class="paragraph_content">
+              <span><%= truncate("#{@practicalneed.description}", length: 300) %></span>
+              
+              <span>
+                <span class="view_link" data-open="<%= dom_id(@practicalneed) %>_practicalneed_content">view</span>
+                <span><%= render 'shared/modal_praticalneed_info', locals: { practicalneed: @practicalneed } %></span>
+                <span><%# render 'shared/modal_discussion_info', locals: { practicalneed: @practicalneed } %></span>
+              </span>
 
-<p>
-  <strong>Location:</strong>
-  <%= @practicalneed.location %>
-</p>
+              <div class="action_btn hide">
+                <span><%= link_to "edit practicalneed topic", edit_discussion_path(@practicalneed) %></span>
+                <span><%= link_to "delete practicalneed topic", "#" %></span>
+              </div>
+            </div>
+            <div class="discussions_section">
+              <!-- listed comments photos -->
+              <div class="discussions_content">
+                <div>
+                  <div class="comment_header"><i class="fa fa-comments"></i> <span>comments</span></div>
+                  <%# render "shared/content_comment_form" %>
+                  <%# render "shared/content_comments" %>
+                </div>
+              </div>
+              <!-- listed comments photos -->
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
 
-<p>
-  <strong>Description:</strong>
-  <%= @practicalneed.description %>
-</p>
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
 
-<p>
-  <strong>Close:</strong>
-  <%= @practicalneed.close %>
-</p>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Approve:</strong>
-  <%= @practicalneed.approve %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= @practicalneed.user_id %>
-</p>
 
-<p>
-  <strong>Category job:</strong>
-  <%= @practicalneed.category_job_id %>
-</p>
+<div class="hide">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Category jobtype:</strong>
-  <%= @practicalneed.category_jobtype_id %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @practicalneed.title %>
+  </p>
 
-<%= link_to 'Edit', edit_practicalneed_path(@practicalneed) %> |
-<%= link_to 'Back', practicalneeds_path %>
+  <p>
+    <strong>Location:</strong>
+    <%= @practicalneed.location %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @practicalneed.description %>
+  </p>
+
+  <p>
+    <strong>Close:</strong>
+    <%= @practicalneed.close %>
+  </p>
+
+  <p>
+    <strong>Approve:</strong>
+    <%= @practicalneed.approve %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= @practicalneed.user_id %>
+  </p>
+
+  <p>
+    <strong>Category job:</strong>
+    <%= @practicalneed.category_job_id %>
+  </p>
+
+  <p>
+    <strong>Category jobtype:</strong>
+    <%= @practicalneed.category_jobtype_id %>
+  </p>
+
+  <%= link_to 'Edit', edit_practicalneed_path(@practicalneed) %> |
+  <%= link_to 'Back', practicalneeds_path %>
+</div>

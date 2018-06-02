@@ -6,7 +6,9 @@ class PracticalneedsController < ApplicationController
   end
 
   def show
-    @user = current_user
+    # @commentable = @practicalneeds
+    # @comment = Comment.new
+    # @comments = @commentable.comments
   end
 
   def new

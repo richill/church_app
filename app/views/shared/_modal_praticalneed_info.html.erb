@@ -1,0 +1,9 @@
+<div class="reveal modal_general_design" id="<%= dom_id(@practicalneed) %>_practicalneed_content" data-reveal>
+  <div class="modal_header">Pratical Need | <%= truncate("#{@practicalneed.title}", length: 40) %></div>
+  <div class="modal_content">
+    <div><%= @practicalneed.description %></div>
+  </div>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

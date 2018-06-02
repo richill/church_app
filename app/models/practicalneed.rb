@@ -6,6 +6,9 @@ class Practicalneed < ApplicationRecord
   belongs_to :category_job
   belongs_to :category_jobtype
 
+  # acts_as_commentable
+  has_many :comments, as: :commentable, dependent: :destroy
+
   def slug_practicalneeds
     [
       :title
