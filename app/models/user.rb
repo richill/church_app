@@ -10,6 +10,7 @@ class User < ApplicationRecord
   # acts_as_commentable
   has_many :comments, as: :commentable, dependent: :destroy
 
+  has_many :practicalneeds, dependent: :destroy
   has_many :jobs, dependent: :destroy
   #note: if you destroy the user, automatically destroy all jobs belonging to that specific user 
 
