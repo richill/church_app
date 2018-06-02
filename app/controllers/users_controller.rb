@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @user_discussion_comments = Comment.order("created_at desc").where(user_id: current_user).where("commentable_type IN (?)", ["Discussion"]) 
-    # @user_practicalneed_comments = 
+    @user_practicalneed_comments = Comment.order("created_at desc").where(user_id: current_user).where("commentable_type IN (?)", ["Practicalneed"]) 
   end
 
   def new
