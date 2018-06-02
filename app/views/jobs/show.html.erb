@@ -1,29 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @job.location %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @job.description %>
-</p>
-
-<p>
-  <strong>Close:</strong>
-  <%= @job.close %>
-</p>
-
-<p>
-  <strong>Approve:</strong>
-  <%= @job.approve %>
-</p>
-
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<% provide(:title, "#{@job.title}") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header' %></div>
+  <%= render 'show' %>
+  <%= render 'shared/footer' %>
+</div>

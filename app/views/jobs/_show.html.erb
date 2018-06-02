@@ -1,0 +1,82 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns usershow_section">
+  <div class="usershow_inner_section">
+    <div class="medium-12 columns usershow_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "resources", resources_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "careers & volunteers", church_jobs_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page"><%= @job.title %></span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <!-- top_section -->
+            <div class="user_top_section">
+              <div class="username_header">
+                <div class="user_name"><%= "#{@job.title}" %></div>
+                <div class="member_date">(posted: <%= @job.created_at.strftime("%b %d, %Y") %>)</div>
+              </div>
+            </div>
+            <!-- top_section -->
+
+            <div class="medium-12 columns user_deatils">
+              <div>content</div>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_user_options' %>
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="hide">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Title:</strong>
+    <%= @job.title %>
+  </p>
+
+  <p>
+    <strong>Location:</strong>
+    <%= @job.location %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @job.description %>
+  </p>
+
+  <p>
+    <strong>Close:</strong>
+    <%= @job.close %>
+  </p>
+
+  <p>
+    <strong>Approve:</strong>
+    <%= @job.approve %>
+  </p>
+
+  <%= link_to 'Edit', edit_job_path(@job) %> |
+  <%= link_to 'Back', jobs_path %>
+</div>
+
+
