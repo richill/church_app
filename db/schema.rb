@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180601132022) do
+ActiveRecord::Schema.define(version: 20180602114129) do
 
   create_table "category_countries", force: :cascade do |t|
     t.string   "name"
@@ -125,6 +125,8 @@ ActiveRecord::Schema.define(version: 20180601132022) do
     t.integer  "category_jobtype_id"
     t.string   "address"
     t.boolean  "churchjob"
+    t.string   "slug"
+    t.index ["slug"], name: "index_jobs_on_slug", unique: true
   end
 
   create_table "launchministries", force: :cascade do |t|

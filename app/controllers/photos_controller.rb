@@ -22,7 +22,6 @@ class PhotosController < ApplicationController
     @photo = @gallery.photos.create(photo_params)
     respond_to do |format|
       if @photo.save
-        # format.html { redirect_to([@photo.gallery, @photo], notice: 'photo was successfully created.') }
         format.html { redirect_to(gallery_path(@gallery), notice: 'photo was successfully created.') }
         format.json  { render json: @photo, status: :created, location: @photo }
       else
@@ -57,7 +56,6 @@ class PhotosController < ApplicationController
     @photo = Photo.find(params[:id])
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
   def photo_params
     params.require(:photo).permit(:description, :image, :gallery_id)
   end
