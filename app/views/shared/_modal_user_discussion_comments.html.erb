@@ -3,15 +3,27 @@
   <div class="modal_content">
     <div class="subcontent">Listed comments provided for discusions topics you</div>
     <div>
-      <ul>
+
+
+
+
+
+
+      <ul class="">
         <% @user_discussion_comments.each do |discussion| %>
           <li>
             <div>
-              <span><%= link_to "#{discussion.title}", "#" %></span>
+              <ul>
+                <li><%= discussion.content %></li>
+              </ul>
+            </div>
+
+            <div>
+              <span><%= link_to "#{discussion.commentable.topic}", "#" %></span>
               <span>|</span>
               <span>posted:</span>
               <span><%= discussion.created_at.strftime("%b %d, %Y") %></span>
-            </div>
+            </div><br/>
           </li>
         <% end %>
       </ul>
