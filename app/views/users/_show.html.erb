@@ -67,19 +67,7 @@
                           <div class="user_link_info" data-open="modal_ministry_application"><span class="count"><%= @user_practicalneed_comments.count %></span><span class="colonicon">:</span><span class="count_info">suggested solutions provided to members</span></div>
                           <div><%= render 'shared/modal_ministry_application' %></div>
                         </div>
-
-                        <div>-----------------</div>
-                        <% @user_discussion_comments.each do |comment| %>
-                          <ul>
-                            <li>
-                              <div><%= comment.content %></div>
-                              <div>>><%= comment.commentable_type %></div>
-                              <div>>><%= comment.user.firstname %></div>
-                            </li>
-                          </ul>
-                        <% end %>
-                        <div>-----------------</div>
-
+                        
                       </div>
                     </li>
                   </ul>

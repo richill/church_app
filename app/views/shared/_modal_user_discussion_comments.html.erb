@@ -1,30 +1,40 @@
 <div class="reveal modal_general_design_all" id="modal_user_postedcomments_disc" data-reveal>
   <div class="modal_header"><%= @user.firstname %> posted comments in discussion [<%= @user_discussion_comments.count %>]</div>
   <div class="modal_content">
-    <div class="subcontent">Listed comments provided by you for discusions topics</div>
-    <div>
-      <ul class="listed_content">
-        <% @user_discussion_comments.each do |discussion| %>
-          <li class="main_content" style="margin-bottom: 20px;">
-            <div>
-              <ul>
-                <li class="content">
-                  <span class="username"><%= discussion.user.firstname %></span>
-                  <span><%= discussion.content %></span>
-                </li>
-              </ul>
-            </div>
+    
+    <% if @user_discussion_comments.present? %>
+      <!-- listed contents -->
+      <div class="subcontent">Listed comments provided by you for discusions topics</div>
+      <div>
+        <ul class="listed_content">
+          <% @user_discussion_comments.each do |discussion| %>
+            <li class="main_content" style="margin-bottom: 20px;">
+              <div>
+                <ul>
+                  <li class="content">
+                    <span class="username"><%= discussion.user.firstname %></span>
+                    <span><%= discussion.content %></span>
+                  </li>
+                </ul>
+              </div>
 
-            <div class="topic">
-              <span><%= link_to "Topic: #{discussion.commentable.topic}", discussion_path(discussion.commentable) %></span>
-              <span>|</span>
-              <span>posted:</span>
-              <span><%= discussion.created_at.strftime("%b %d, %Y") %></span>
-            </div>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+              <div class="topic">
+                <span><%= link_to "Topic: #{discussion.commentable.topic}", discussion_path(discussion.commentable) %></span>
+                <span>|</span>
+                <span>posted:</span>
+                <span><%= discussion.created_at.strftime("%b %d, %Y") %></span>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <!-- listed contents -->
+    <% else %>
+      <!-- no_listed_info -->
+        <div><%= render "shared/no_listed_content" %></div>
+      <!-- no_listed_info -->
+    <% end %>
+
   </div>
   <button class="close-button" data-close aria-label="Close modal" type="button">
     <span aria-hidden="true">&times;</span>
