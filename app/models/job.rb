@@ -14,7 +14,9 @@ class Job < ApplicationRecord
   scope :church_jobs, -> {where(['churchjob = ?', true])}
   scope :non_church_jobs, -> {where(['churchjob = ?', true])}
   scope :career_jobs, -> { joins(:category_joblevel).where("Category_joblevels.name IN (?)", ["Internship", "Apprenticeship", "Entry Level", "Graduate", "Experienced (non-manager)", "Management", "Senior Executive"]) }
-  scope :volunteer_jobs, ->() { joins(:category_joblevel).where('Category_joblevels.name' => "Volunteer") } 
+  scope :volunteer_jobs, -> { joins(:category_joblevel).where("Category_joblevels.name IN (?)", ["Volunteer"]) }
+
+
   
   def slug_jobs
     [
