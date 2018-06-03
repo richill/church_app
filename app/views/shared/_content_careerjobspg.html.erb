@@ -37,7 +37,7 @@
               <!-- listed jobs -->
               <div class="paragraph_content listed_readings_links">
                 <ul>
-                  <% @jobs.desc_order.each do |job| %>
+                  <% @jobs.each do |job| %>
                   <li class="file">
                     <div class="jobpost_content">
                       <div class="header"><%= link_to "#{job.title}", job_path(job) %></div>
