@@ -30,7 +30,12 @@
             </div>
             <div class="paragraph_content">
               <span><%= truncate("#{@smallgroup.descriptin}", length: 300) %></span>
-              <span><%= link_to "view", "#", class: "weblink" %></span>
+
+              <span>
+                <span class="view_link" data-open="<%= dom_id(@smallgroup) %>_smallgroup_content">view</span>
+                <span><%= render 'shared/modal_smallgroup_info', locals: { smallgroup: @smallgroup } %></span>
+              </span>
+              
               <div class="action_btn">
                 <% if user_signed_in? %>
                   <% if current_user.admin? %>

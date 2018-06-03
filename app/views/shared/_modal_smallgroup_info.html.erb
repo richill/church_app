@@ -1,0 +1,9 @@
+<div class="reveal modal_general_design" id="<%= dom_id(@smallgroup) %>_smallgroup_content" data-reveal>
+  <div class="modal_header">small group | <%= truncate("#{@smallgroup.name}", length: 40) %></div>
+  <div class="modal_content">
+    <div><%= @smallgroup.descriptin %></div>
+  </div>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
