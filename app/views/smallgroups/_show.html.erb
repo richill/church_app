@@ -31,9 +31,14 @@
             <div class="paragraph_content">
               <span><%= truncate("#{@smallgroup.descriptin}", length: 300) %></span>
               <span><%= link_to "view", "#", class: "weblink" %></span>
-              <div class="action_btn hide">
-                <span><%= link_to "edit group name", edit_discussion_path(@smallgroup) %></span>
-                <span><%= link_to "delete group name", "#" %></span>
+              <div class="action_btn">
+                <% if user_signed_in? %>
+                  <% if current_user.admin? %>
+                    <span><%= link_to "edit group name", edit_discussion_path(@smallgroup) %></span>
+                    <span><%= link_to "delete group name", "#" %></span>
+                  <% end %>
+                  <span><%= link_to "join group", "#" %></span>
+                <% end %>
               </div>
             </div>
             <div class="member_section">
@@ -41,8 +46,8 @@
               <div class="member_content">
                 <div>
                   <div class="member_header"><i class="fa fa-users"></i> <span>members</span></div>
-                  <% if user_signed_in? %>
-                    <div class="non_member_join">You need to be a registered member to join group <span><%= link_to "register", "#", class: "weblink" %></span> or <span><%= link_to "login", "#", class: "weblink" %></span></div>
+                  <% unless user_signed_in? %>
+                    <div class="non_member_join">You need to be a registered member to join group <span><%= link_to "register", new_user_registration_path, class: "weblink" %></span> or <span><%= link_to "login", new_user_session_path, class: "weblink" %></span></div>
                   <% end %>
                   <div class="member_container">
                     <ul>

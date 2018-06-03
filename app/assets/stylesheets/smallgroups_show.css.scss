@@ -234,7 +234,8 @@
 }
 
 .smallgroupsshow_section .action_btn a:hover {
-  opacity: 0.8;
+  background-color: #2A2C49 !important;
+  color: #fff !important;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -299,8 +300,14 @@
   margin-bottom: 20px;
 }
 
+.smallgroupsshow_section .non_member_join a {
+  color: #a1355b !important;
+}
 
-
+.smallgroupsshow_section .date_category {
+  margin-bottom: 10px;
+  color: #2A2C49;
+}
 
 
 
