@@ -44,7 +44,7 @@
   margin-bottom: 5px;
 }
 
-.subcontent {
+.modal_general_design_all .subcontent {
   margin-bottom: 15px;
   border: 1px solid #E8E9EB;
   background-color: rgba(42, 44, 73, 0.02);
@@ -54,13 +54,41 @@
   font-weight: bold;
 }
 
-.modal_content {
+.modal_general_design_all .modal_content {
   color: #2A2C49 !important;
 }
 
-.modal_content a {
+.modal_general_design_all .modal_content a {
   color: #a1355b !important;
 }
+
+.modal_general_design_all .content {
+  background-color: rgba(42, 44, 73, 0.07);
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 11px;
+}
+
+.modal_general_design_all .topic {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+.modal_general_design_all .topic a {
+  font-size: 10px;
+}
+
+.modal_general_design_all .listed_content {
+  margin-top: 30px !important;
+}
+
+.username {
+  font-weight: bold;
+  margin-right: 2px;
+}
+
+
+
 
 
 
