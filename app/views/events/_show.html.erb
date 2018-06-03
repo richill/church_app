@@ -106,11 +106,13 @@
                 </div>
               <% end %>
 
-              <% if current_user.admin? %>
-                <div>
-                  <%= link_to 'Edit', edit_event_path(@event) %> |
-                  <%= link_to 'Back', events_path %>
-                </div>
+              <% if user_signed_in? %>
+                <% if current_user.admin? %>
+                  <div>
+                    <%= link_to 'Edit', edit_event_path(@event) %> |
+                    <%= link_to 'Back', events_path %>
+                  </div>
+                <% end %>
               <% end %>
 
             </div>
