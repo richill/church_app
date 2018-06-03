@@ -78,7 +78,7 @@
               </span>
             </div>
 
-            <div class="page_img"><%= image_tag("img_bannerimg.jpg") %></div>
+            <div class="page_img"><%= image_tag("img_default_mainimg.png") %></div>
             <div class="event_section">
 
               <div class="paragraph_content"><%= @event.description %></div>
@@ -106,10 +106,12 @@
                 </div>
               <% end %>
 
-              <div>
-                <%= link_to 'Edit', edit_event_path(@event) %> |
-                <%= link_to 'Back', events_path %>
-              </div>
+              <% if current_user.admin? %>
+                <div>
+                  <%= link_to 'Edit', edit_event_path(@event) %> |
+                  <%= link_to 'Back', events_path %>
+                </div>
+              <% end %>
 
             </div>
           </div>
