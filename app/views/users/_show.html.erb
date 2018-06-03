@@ -59,15 +59,15 @@
                         </div>
 
                         <div class="listed_stats">
-                          <div class="user_link_info" data-open="modal_ministry_application"><span class="count"><%= @user.practicalneeds.count %></span><span class="colonicon">:</span><span class="count_info">posted practical needs</span></div>
-                          <div><%= render 'shared/modal_ministry_application' %></div>
+                          <div class="user_link_info" data-open="modal_user_posted_practicalneeds"><span class="count"><%= @user.practicalneeds.count %></span><span class="colonicon">:</span><span class="count_info">posted practical needs</span></div>
+                          <div><%= render 'shared/modal_user_posted_practicalneeds' %></div>
                         </div>
 
                         <div class="listed_stats">
-                          <div class="user_link_info" data-open="modal_ministry_application"><span class="count"><%= @user_practicalneed_comments.count %></span><span class="colonicon">:</span><span class="count_info">suggested solutions provided to members</span></div>
-                          <div><%= render 'shared/modal_ministry_application' %></div>
+                          <div class="user_link_info" data-open="modal_user_practicalneed_comments"><span class="count"><%= @user_practicalneed_comments.count %></span><span class="colonicon">:</span><span class="count_info">suggested solutions provided to members</span></div>
+                          <div><%= render 'shared/modal_user_practicalneed_comments' %></div>
                         </div>
-                        
+
                       </div>
                     </li>
                   </ul>
