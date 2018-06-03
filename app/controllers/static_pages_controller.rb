@@ -22,19 +22,19 @@ class StaticPagesController < ApplicationController
 
   # ----------------- jobs -----------------
   def careersvolunteerspg  
-    @jobs = Job.order("created_at DESC")
+    @jobs = Job.desc_order
   end
 
   def churchjobspg
-    @jobs = Job.church_jobs.order("created_at DESC")
+    @jobs = Job.church_jobs.desc_order
   end
 
   def careerjobspg
-    @jobs = Job.career_jobs.order("created_at DESC")
+    @jobs = Job.career_jobs.desc_order
   end
 
   def volunteerpg
-    @jobs = Job.volunteer_jobs.order("created_at DESC")
+    @jobs = Job.volunteer_jobs.desc_order
   end
   # ----------------- jobs -----------------
 
