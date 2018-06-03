@@ -1,9 +1,11 @@
 <!-- CSS File: content_user_options.css.scss -->
 <!-- info_right_content -->
-<% if user_signed_in? %>
-  <div class="medium-4 columns right_info_user_options">
-    <div class="side_information">
-      <div class="user_links">
+
+<div class="medium-4 columns right_info_user_options">
+  <div class="side_information">
+    
+    <div class="user_links">
+      <% if user_signed_in? %>
         <div>
           <span class="weblink"><%= mail_to "#{@job.user.firstname}", 
                                             "apply for this job", 
@@ -17,8 +19,13 @@
           <div><%= link_to 'delete this job', job_path(@job, @job.user), method: :delete, data: { confirm: 'Are you sure?' } %></div>
         <% end %>
         <div><%= link_to "post a job", new_user_job_path(@user) %></div>
-      </div>
+      <% else %>
+        <span class="apply_notsiginedin_btn" data-open="modal_ministry_application">apply for this job</span>
+        <span><%= render 'shared/modal_registration_login' %></span>
+      <% end %>
     </div>
+    
+    
   </div>
-<% end %>
+</div>
 <!-- info_right_content -->
