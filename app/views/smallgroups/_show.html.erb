@@ -44,13 +44,12 @@
                   <% end %>
 
 
-
-
                   <!-- working on link -->
-                  <span><%= link_to "join group", "#" %></span>
-                  <span class="social_profile_btn btn_social_attend"><%= link_to 'join group test', attending_groups_path(smallgroup_id: @smallgroup), method: :post %></span>
-                  <span class="social_profile_btn btn_social_unattend"><%= link_to 'leave group test', attending_group_path(@smallgroup), method: :delete %></span>
-
+                  <% unless current_user.attending_groups.exists?(id: @smallgroup.id) %>
+                    <span><%= link_to 'join group test', attending_groups_path(smallgroup_id: @smallgroup), method: :post %></span>
+                  <% else %>
+                    <span><%= link_to 'leave group test', attending_group_path(@smallgroup), method: :delete, style: 'background-color:#2A2C49 !important;color: #fff !important;' %></span>
+                  <% end %>
 
 
                   <!-- working on link -->
