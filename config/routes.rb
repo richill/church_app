@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :jobs
   resources :smallgroups
   resources :recommendedreadings
+  resources :attending_groups, only: [:create, :destroy]
+
   resources :discussions do
     resources :comments, only: [:create, :destroy] 
   end
