@@ -43,22 +43,14 @@
                     <span><%= link_to "delete group name", "#" %></span>
                   <% end %>
 
-
-                  <!-- working on link -->
+                  <!-- join group function -->
                   <% unless current_user.attending_groups.exists?(id: @smallgroup.id) %>
                     <span><%= link_to 'join group test', attending_groups_path(smallgroup_id: @smallgroup), method: :post %></span>
                   <% else %>
                     <span><%= link_to 'leave group test', attending_group_path(@smallgroup), method: :delete, style: 'background-color:#2A2C49 !important;color: #fff !important;' %></span>
                   <% end %>
-
-
-                  <!-- working on link -->
-
-
-
-
-
-
+                  <!-- join group function -->
+                  
                 <% end %>
               </div>
             </div>
