@@ -14,6 +14,9 @@ class User < ApplicationRecord
   has_many :jobs, dependent: :destroy
   #note: if you destroy the user, automatically destroy all jobs belonging to that specific user 
 
+  has_many :attendances, dependent: :destroy
+  has_many :attending_groups, through: :attendances, source: :attendable, source_type: 'Smallgroup', dependent: :destroy
+
   def slug_users
     [
       :firstname
