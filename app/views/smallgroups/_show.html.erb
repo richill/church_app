@@ -65,36 +65,15 @@
                   <div class="member_container">
                     <ul>
 
-                      <li>
-                        <div class="minor_section">
-                          <div><%= link_to (image_tag("img-profile-image-default.png")), "#" %></div>
-                        <div class="username"><%= link_to truncate("richill", length: 9), "#" %></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="minor_section">
-                          <div><%= link_to (image_tag("img-profile-image-default.png")), "#" %></div>
-                          <div class="username"><%= link_to truncate("edem", length: 9), "#" %></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="minor_section">
-                          <div><%= link_to (image_tag("img-profile-image-default.png")), "#" %></div>
-                          <div class="username"><%= link_to truncate("adeola", length: 9), "#" %></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="minor_section">
-                          <div><%= link_to (image_tag("img-profile-image-default.png")), "#" %></div>
-                          <div class="username"><%= link_to truncate("efe", length: 9), "#" %></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="minor_section">
-                          <div><%= link_to (image_tag("img-profile-image-default.png")), "#" %></div>
-                          <div class="username"><%= link_to truncate("amaka", length: 9), "#" %></div>
-                        </div>
-                      </li>
+                      <% @smallgroup.attendances.each do |member| %>
+                        <li>
+                          <div class="minor_section">
+                            <div><%= link_to (image_tag("img-profile-image-default.png")), user_path(member.user) %></div>
+                          <div class="username"><%= link_to truncate("#{member.user.firstname}", length: 9), user_path(member.user) %></div>
+                          </div>
+                        </li>
+                      <% end %>
+                      
                     </ul>
                   </div>
                 </div>
