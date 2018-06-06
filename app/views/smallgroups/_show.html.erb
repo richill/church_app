@@ -25,7 +25,7 @@
                 <span><b>Created Time:</b></span>
                 <span><%= @smallgroup.created_at.strftime("%I:%M%p") %></span>
                 <span class="listpage_divider">|</span>
-                <span><i class="fa fa-users"></i> <span>5 members</span></span>
+                <span><i class="fa fa-users"></i> <span><%= @smallgroup.attendances.count %> members</span></span>
               </span>
             </div>
             <div class="paragraph_content">
@@ -64,10 +64,11 @@
                   <% end %>
                   <div class="member_container">
                     <ul>
+
                       <li>
                         <div class="minor_section">
                           <div><%= link_to (image_tag("img-profile-image-default.png")), "#" %></div>
-                          <div class="username"><%= link_to truncate("richill", length: 9), "#" %></div>
+                        <div class="username"><%= link_to truncate("richill", length: 9), "#" %></div>
                         </div>
                       </li>
                       <li>
