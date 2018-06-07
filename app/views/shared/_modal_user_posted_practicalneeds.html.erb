@@ -1,5 +1,5 @@
 <div class="reveal modal_general_design_all" id="modal_user_posted_practicalneeds" data-reveal>
-  <div class="modal_header"><%= @user.firstname %> posted practical needs [<%= @user.jobs.count %>]</div>
+  <div class="modal_header"><%= "#{@user.firstname}'s" %> posted practical needs [<%= @user.jobs.count %>]</div>
   <div class="modal_content">
 
     <% if @user.practicalneeds.present? %>

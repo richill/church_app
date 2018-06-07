@@ -1,5 +1,5 @@
 <div class="reveal modal_general_design_all" id="modal_user_practicalneed_comments" data-reveal>
-  <div class="modal_header"><%= @user.firstname %> posted comments in practical needs [<%= @user_practicalneed_comments.count %>]</div>
+  <div class="modal_header"><%= "#{@user.firstname}'s" %> posted comments in practical needs [<%= @user_practicalneed_comments.count %>]</div>
   <div class="modal_content">
     
     <% if @user_practicalneed_comments.present? %>

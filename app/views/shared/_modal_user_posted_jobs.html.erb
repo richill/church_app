@@ -1,5 +1,5 @@
 <div class="reveal modal_general_design_all" id="modal_user_postedjobs" data-reveal>
-  <div class="modal_header"><%= @user.firstname %> posted jobs [<%= @user.jobs.count %>]</div>
+  <div class="modal_header"><%= "#{@user.firstname}'s" %> posted jobs [<%= @user.jobs.count %>]</div>
   <div class="modal_content">
 
     <% if @user.jobs.present? %>
