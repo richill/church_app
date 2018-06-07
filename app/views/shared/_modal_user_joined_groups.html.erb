@@ -2,18 +2,21 @@
   <div class="modal_header"><%= "#{@user.firstname}'s" %> groups [<%= @user.attending_groups.count %>]</div>
   <div class="modal_content">
 
-    <% if @user.jobs.present? %>
+    <% if @user.attending_groups.present? %>
       <!-- listed contents -->
-      <div class="subcontent">Listed current jobs posted you</div>
+      <div class="subcontent">Listed groups you have joined <span>|</span> <%= link_to "Small Groups", small_groups_path %></div>
       <div>
         <ul>
-          <% @user.jobs.each do |job| %>
+          <% @user.attending_groups.each do |group| %>
             <li>
               <div>
-                <span><%= link_to "#{job.title}", job_path(job) %></span>
+                <span><%= link_to "#{group.name}", smallgroup_path(group) %></span>
                 <span>|</span>
-                <span>posted:</span>
-                <span><%= job.created_at.strftime("%b %d, %Y") %></span>
+                <span>members:</span>
+                <span><%= group.attendances.count %></span>
+                <span>|</span>
+                <span>created:</span>
+                <span><%= group.created_at.strftime("%b %d, %Y") %></span>
               </div>
             </li>
           <% end %>
