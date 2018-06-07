@@ -4,7 +4,7 @@
     
     <% if @user_discussion_comments.present? %>
       <!-- listed contents -->
-      <div class="subcontent">Listed comments provided by you for discusions topics</div>
+      <div class="subcontent">Posted comments by you in the forum | <%= link_to "Forum", forum_path %></div>
       <div>
         <ul class="listed_content">
           <% @user_discussion_comments.each do |comment| %>
@@ -20,6 +20,9 @@
 
               <div class="topic">
                 <span><%= link_to "Topic: #{comment.commentable.topic}", discussion_path(comment.commentable) %></span>
+                <span>|</span>
+                <span>comments:</span>
+                <span><%= comment.commentable.comments.count %></span>
                 <span>|</span>
                 <span>posted:</span>
                 <span><%= comment.created_at.strftime("%b %d, %Y") %></span>

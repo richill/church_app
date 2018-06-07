@@ -4,7 +4,7 @@
     
     <% if @user_practicalneed_comments.present? %>
       <!-- listed contents -->
-      <div class="subcontent">Listed comments provided by you for pratical needs topics</div>
+      <div class="subcontent">Posted solutions provided by you <span>|</span> <%= link_to "Pratical Needs", practical_needs_path %></div>
       <div>
         <ul class="listed_content">
           <% @user_practicalneed_comments.each do |comment| %>

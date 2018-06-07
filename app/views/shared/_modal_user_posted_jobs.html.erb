@@ -4,7 +4,7 @@
 
     <% if @user.jobs.present? %>
       <!-- listed contents -->
-      <div class="subcontent">Listed current jobs posted you</div>
+      <div class="subcontent">Posted jobs by you <span>|</span> <%= link_to "Career & Volunteer", careers_and_volunteers_path  %></div>
       <div>
         <ul>
           <% @user.jobs.each do |job| %>

@@ -4,7 +4,7 @@
 
     <% if @user.practicalneeds.present? %>
       <!-- listed contents -->
-      <div class="subcontent">Listed current practical needs posted you</div>
+      <div class="subcontent">Posted practical needs by you <span>|</span> <%= link_to "Pratical Needs", practical_needs_path %></div>
       <div>
         <ul>
           <% @user.practicalneeds.each do |praticalneed| %>
