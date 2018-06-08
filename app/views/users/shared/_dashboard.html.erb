@@ -3,63 +3,63 @@
 
     <!-- left_content -->
     <div class="medium-2 columns left_admin_content">
-      <ul>
-        <li>
-          <%= link_to "#" do %>
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <%= link_to "#tab1" do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>dashboard</span>
           <% end %>
         </li>
         <li>
-          <%= link_to "#" do %>
+          <%= link_to "#tab2" do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>content management</span>
           <% end %>
         </li>
         <li>
-          <%= link_to "#" do %>
+          <%= link_to "#tab3" do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>site links</span>
           <% end %>
         </li>
         <li>
-          <%= link_to "#" do %>
+          <%= link_to "#tab4" do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>users</span>
           <% end %>
         </li>
         <li>
-          <%= link_to "#" do %>
+          <%= link_to "#tab5" do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>events</span>
           <% end %>
         </li>
         <li>
-          <%= link_to "#" do %>
+          <%= link_to "#tab6" do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>ministries</span>
           <% end %>
         </li>
         <li>
-          <%= link_to "#" do %>
+          <%= link_to "#tab7" do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>resources</span>
           <% end %>
         </li>
         <li>
-          <%= link_to "#" do %>
+          <%= link_to "#tab8" do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>forum/discussions</span>
           <% end %>
         </li>
         <li>
-          <%= link_to "#" do %>
+          <%= link_to "#tab9" do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>career</span>
           <% end %>
         </li>
         <li>
-          <%= link_to "#" do %>
+          <%= link_to "#tab10" do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>galleries</span>
           <% end %>
@@ -70,7 +70,7 @@
 
     <!-- right_content -->
     <div class="medium-10 columns right_admin_content">
-      <div class="dashboard">
+      <div class="dashboard active" id="tab1">
         <div class="tree_line">
           <span><i class="fa fa-user"></i></span>
           <span><%= link_to "#{current_user.firstname}", user_path(current_user) %></span>
@@ -81,7 +81,7 @@
         </div>
         <div class="dashboard_content">dashboard content</div>
       </div>
-      <div class="content_management">
+      <div class="content_management hide" id="tab2">
         <div class="tree_line">
           <span><i class="fa fa-user"></i></span>
           <span><%= link_to "#{current_user.firstname}", user_path(current_user) %></span>
