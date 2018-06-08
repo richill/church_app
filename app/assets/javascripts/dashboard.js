@@ -1,3 +1,8 @@
+/*===================================================
+    Page: admin panel / tabs
+    File: views/users/shared/_dashboard.html.erb
+  ===================================================*/
+
 $(document).ready(function() {
   $('.nav-tabs > li > a').click(function(event){
   event.preventDefault();//stop browser to take action for clicked anchor
