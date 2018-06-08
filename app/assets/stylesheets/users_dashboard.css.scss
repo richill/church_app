@@ -33,14 +33,6 @@
   padding: 0px !important;
 }
 
-
-
-
-
-// ------------------------------
-//   workings_left
-// ------------------------------
-
 .users_dashboard_section .left_admin_content ul {
   margin: 0px !important;
   list-style-type: none;
@@ -71,8 +63,9 @@
   -o-transition: all 0.3s ease;
 }
 
+
 // ------------------------------
-//   workings_right
+//   right_section
 // ------------------------------
 
 .users_dashboard_section .right_admin_content {
@@ -99,7 +92,7 @@
   color: #a07b35;
 }
 
-.tab_content {
+.users_dashboard_section .right_admin_content .tab_content {
   height: 111px;
   background-color: red !important;
 }
