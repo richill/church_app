@@ -17,10 +17,12 @@
                   <span><%= link_to "Logout", destroy_user_session_path, method: :delete %></span>
                 </li>
                 <% if user_signed_in? %>
-                  <li>
-                    <span><i class="fa fa-cogs"></i></span>
-                    <span><%= link_to "admin panel", dashboard_user_path(current_user) %></span>
-                  </li>
+                  <% if current_user.admin? %>
+                    <li>
+                      <span><i class="fa fa-cogs"></i></span>
+                      <span><%= link_to "admin panel", dashboard_user_path(current_user) %></span>
+                    </li>
+                  <% end %>
                 <% end %>
                 <li>
                   <span><i class="fa fa-credit-card"></i></span>
