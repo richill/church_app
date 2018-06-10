@@ -55,6 +55,9 @@ class UsersController < ApplicationController
   def dashboard  
   end
 
+  def sitelinks  
+  end
+
   private
     def set_user
       @user = User.friendly.find(params[:id])

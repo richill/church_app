@@ -41,6 +41,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy] 
     member do
       get 'dashboard'
+      get 'sitelinks'
     end
   end
   

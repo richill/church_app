@@ -84,6 +84,102 @@ a:hover {
 
 .error {
   color: red !important;
-} 
+}
+
+
+
+/*=========================================
+    admin panel
+  =========================================*/
+.users_admin_panel {
+  padding: 0px !important;
+  border-top: 1px solid #2A2C49;
+}
+
+.users_admin_panel .main_container {
+  padding: 0px !important;
+}
+
+/*// ------------------------------
+//   admin panel - left_section
+// ------------------------------*/
+
+.users_admin_panel .left_admin_content {
+  background-color: #2A2C49;
+  padding: 0px !important;
+}
+
+.users_admin_panel .left_admin_content ul {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.users_admin_panel .left_admin_content li {
+  height: 50px;
+  border-bottom: 1px solid #57738E;
+}
+
+.users_admin_panel .left_admin_content a {
+  color: #fff !important;
+  display: inherit;
+  padding: 16px 28px;
+  text-transform: capitalize;
+  height: 50px;
+  font-size: 12px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.users_admin_panel .left_admin_content a:hover {
+  text-decoration: none;
+  opacity: 0.4 !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+
+/*// ------------------------------
+//   admin panel - right_section
+// ------------------------------*/
+
+.users_admin_panel .right_admin_content {
+  background-color: rgba(42, 44, 73, 0.05);
+  min-height: 500px;
+  padding: 0px !important;
+}
+
+.users_admin_panel .right_admin_content .tree_line {
+  font-size: 11px !important;
+  background-color: #fff;
+  height: 50px;
+  color: #2A2C49;
+  padding: 17px 15px;
+}
+
+.users_admin_panel .right_admin_content .tree_line a {
+  display: inline-block;
+  font-size: 11px !important;
+  color: #2A2C49 !important;
+}
+
+.users_admin_panel .right_admin_content .tree_line .current_page {
+  color: #a07b35;
+}
+
+.users_admin_panel .right_admin_content .admin_tab_content {
+  height: 450px;
+  background-color: #fff !important;
+}
+
+
+
+
+
+
+
+
+
 
 
