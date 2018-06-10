@@ -1,9 +1,7 @@
 /*===================================================
-    Page: admin panel page
-    File: views/users/shared/_admin_sitelinks.html.erb
+    Page: admin panel/sitelinks page
     File: views/users/shared/_content_admin_sitelinks.html.erb
   ===================================================*/
-
 
 .content_admin_sitelinks .page_cover {
   background-color: rgba(42, 44, 73, 0.05);
@@ -17,7 +15,7 @@
   padding: 15px;
 }
 
-.page_title {
+.content_admin_sitelinks .page_title {
   font-size: 20px;
   text-transform: capitalize;
   font-weight: bold;
@@ -25,25 +23,34 @@
   margin-bottom: 2px;
 }
 
-.page_subtitle {
+.content_admin_sitelinks .page_subtitle {
   font-size: 12px;
   margin-bottom: 5px;
   color: #2A2C49;
-  margin-left: 5px;
-}
-
-.page_listedlinks ul {
-  color: #2A2C49;
-  margin: 15px 0px 0px 20px;
-}
-
-.link_title {
   text-transform: capitalize;
 }
 
-.main_link a {
+.content_admin_sitelinks .page_listedlinks ul {
+  color: #2A2C49;
+  margin: 10px 0px 0px 20px;
+}
+
+.content_admin_sitelinks .page_listedlinks li {
+  color: #2A2C49;
+  margin-bottom: 5px;
+}
+
+.content_admin_sitelinks .link_title {
+  text-transform: capitalize;
+}
+
+.content_admin_sitelinks .main_link a {
   color: #E1473E !important;
   text-transform: capitalize;
+}
+
+.content_admin_sitelinks .new_content {
+  margin-top: 30px;
 }
 
 

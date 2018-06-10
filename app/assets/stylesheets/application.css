@@ -62,6 +62,7 @@ a:hover {
 
 .active {
   background-color: rgba(157, 198, 235, 0.6) !important;
+  border-bottom: solid 2px #57738E !important;
   text-decoration: none !important;
 }
 
