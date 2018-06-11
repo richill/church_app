@@ -3,6 +3,67 @@
     File: views/users/shared/_content_admin_stats_users.html.erb
   ===================================================*/
 
+.content_admin_sitelinks .page_cover {
+  background-color: rgba(42, 44, 73, 0.05);
+  padding: 15px;
+}
+
+.content_admin_sitelinks .page_content {
+  background-color: #fff;
+  border: 1px solid #D4D4D4;
+  border-bottom: 2px solid #D4D4D4;
+  padding: 15px;
+}
+
+.content_admin_sitelinks .page_title {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #2A2C49;
+  margin-bottom: 2px;
+}
+
+.content_admin_sitelinks .page_subtitle {
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #2A2C49;
+  text-transform: capitalize;
+}
+
+.content_admin_sitelinks .page_listedlinks ul {
+  color: #2A2C49;
+  margin: 10px 0px 0px 20px;
+}
+
+.content_admin_sitelinks .page_listedlinks li {
+  color: #2A2C49;
+  margin-bottom: 5px;
+}
+
+.content_admin_sitelinks .link_title {
+  text-transform: capitalize;
+}
+
+.content_admin_sitelinks .main_link a {
+  color: #E1473E !important;
+  text-transform: capitalize;
+}
+
+.content_admin_sitelinks .new_content {
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

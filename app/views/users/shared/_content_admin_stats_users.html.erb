@@ -1,1 +1,68 @@
-<div>hello content_admin_stats_users</div>
+<div class="content_admin_sitelinks">
+  <div class="tree_line">
+    <span><i class="fa fa-user"></i></span>
+    <span><%= link_to "#{current_user.firstname}", user_path(current_user) %></span>
+    <span><i class="fa fa-angle-right"></i></span>
+    <span><%= link_to "admin panel", dashboard_user_path %></span>
+    <span><i class="fa fa-angle-right"></i></span>
+    <span class="current_page">users</span>
+  </div>
+  <div class="medium-12 columns admin_tab_content">
+    <div class="page_cover">
+      <div class="page_content">
+        <div class="page_title">
+          <span><i class="fa fa-link"></i></span>
+          <span>homepage links</span>
+        </div>
+
+        <!-- section -->
+        <div class="section">
+          <div class="page_subtitle">find the below links that leads to various website pages on the website</div>
+          <div class="page_listedlinks">
+            <ul>
+              <li>
+                <span class="link_title">homepage:</span>
+                <span class="main_link"><%= link_to "homepage webiste link", root_path, target:"_blank" %></span>
+              </li>
+              <li>
+                <span class="link_title">service times:</span>
+                <span class="main_link"><%= link_to "service times link", service_times_path, target:"_blank" %></span>
+              </li>
+              <li>
+                <span class="link_title">privacy policy:</span>
+                <span class="main_link"><%= link_to "privacy policy link", privacy_path, target:"_blank" %></span>
+              </li>
+              <li>
+                <span class="link_title">GDPR:</span>
+                <span class="main_link"><%= link_to "GDPR link", gdpr_path, target:"_blank" %></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- section -->
+        <div class="section">
+          <div class="page_subtitle new_content">find the below social medis links on the website</div>
+          <div class="page_listedlinks">
+            <li>
+              <span class="link_title">youtube:</span>
+              <span class="main_link"><%= link_to "youtube link", "https://www.youtube.com/channel/UC04lsiRC0cEgW6I_VqGW77A", target:"_blank" %></span>
+            </li>
+            <li>
+              <span class="link_title">facebook:</span>
+              <span class="main_link"><%= link_to "facebook link", "https://www.facebook.com/Open-Heavens-Christian-Centre-Edgware-London-189686507841221/", target:"_blank" %></span>
+            </li>
+            <li>
+              <span class="link_title">twitter:</span>
+              <span class="main_link"><%= link_to "twitter link", "https://twitter.com/OpenHeavensEdg", target:"_blank" %></span>
+            </li>
+            <li>
+              <span class="link_title">instagram:</span>
+              <span class="main_link"><%= link_to "instagram link", "https://www.instagram.com/ohccedgware/", target:"_blank" %></span>
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
