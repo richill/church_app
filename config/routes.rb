@@ -42,6 +42,7 @@ Rails.application.routes.draw do
     member do
       get 'dashboard'
       get 'sitelinks'
+      get 'stats-users'
     end
   end
   
