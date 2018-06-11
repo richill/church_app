@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, :set_user, only: [:show, :edit, :update, :destroy]
+  before_filter :setup_generic
 
   def index
     @users = User.all
@@ -62,6 +63,10 @@ class UsersController < ApplicationController
   end
 
   private
+    def setup_generic
+      @users = User.all
+    end
+
     def set_user
       @user = User.friendly.find(params[:id])
     end

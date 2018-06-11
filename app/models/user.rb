@@ -17,6 +17,10 @@ class User < ApplicationRecord
   has_many :attendances, dependent: :destroy
   has_many :attending_groups, through: :attendances, source: :attendable, source_type: 'Smallgroup', dependent: :destroy
 
+  scope :males, ->() { joins(:category_gender).where('category_genders.name' => "Male") } 
+  scope :females, ->() { joins(:category_gender).where('category_genders.name' => "Female") } 
+
+
   def slug_users
     [
       :firstname
