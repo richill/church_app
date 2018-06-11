@@ -55,6 +55,9 @@ class UsersController < ApplicationController
   def dashboard  
   end
 
+  def stats_users
+  end
+
   def sitelinks  
   end
 
