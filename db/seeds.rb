@@ -35,7 +35,6 @@ cjt01 = CategoryJobtype.create!(name:'Full Time')
 cjt02 = CategoryJobtype.create!(name:'Part Time')
 cjt03 = CategoryJobtype.create!(name:'Contract')
 
-
 CategoryJob.delete_all
 cj01 = CategoryJob.create!(name:'Accountancy')
 cj02 = CategoryJob.create!(name:'Accountancy (Qualified)')
