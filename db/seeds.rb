@@ -19,6 +19,10 @@ ce05 = CategoryEvent.create!(name:'Leadership Forum Event')
 ce06 = CategoryEvent.create!(name:'Baptism Class Event')
 ce07 = CategoryEvent.create!(name:'Bible Study Event')
 
+CategoryGender.delete_all
+cg01 = CategoryGender.create!(name:'Male')
+cg02 = CategoryGender.create!(name:'Female')
+
 CategoryJoblevel.delete_all
 cjl01 = CategoryJoblevel.create!(name:'Internship')
 cjl02 = CategoryJoblevel.create!(name:'Apprenticeship')
@@ -28,7 +32,6 @@ cjl05 = CategoryJoblevel.create!(name:'Experienced (non-manager)')
 cjl06 = CategoryJoblevel.create!(name:'Management')
 cjl07 = CategoryJoblevel.create!(name:'Senior Executive')
 cjl08 = CategoryJoblevel.create!(name:'Volunteer')
-
 
 CategoryJobtype.delete_all
 cjt01 = CategoryJobtype.create!(name:'Full Time')
