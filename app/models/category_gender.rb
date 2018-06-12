@@ -1,0 +1,2 @@
+class CategoryGender < ApplicationRecord
+end
