@@ -20,7 +20,8 @@ class User < ApplicationRecord
   belongs_to :category_gender
 
   scope :males, ->() { joins(:category_gender).where('category_genders.name' => "Male") } 
-  scope :females, ->() { joins(:category_gender).where('category_genders.name' => "Female") } 
+  scope :females, ->() { joins(:category_gender).where('category_genders.name' => "Female") }
+  scope :admins, -> {where(['admin = ?', true])} 
 
 
   def slug_users
