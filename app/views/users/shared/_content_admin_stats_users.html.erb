@@ -10,13 +10,47 @@
   <div class="medium-12 columns admin_tab_content">
 
     <!-- upper_section -->
-    <div class="page_cover upper_section">
-      <div class="page_content">
-        <div class="header_section_cover">
-          data_content
+    <div class="medium-12 columns page_cover upper_section">
+      <div class="medium-12 columns data_main_cover">
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title">all users</div>
+            <div>
+              <span><i class="fa fa-male"></i></span>
+              <span><%= @users.all.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns">
+          <div class="data_stats">
+            <div class="data_title">all users</div>
+            <div>
+              <span><i class="fa fa-male"></i></span>
+              <span><%= @users.males.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns">
+          <div class="data_stats">
+            <div class="data_title">all users</div>
+            <div>
+              <span><i class="fa fa-male"></i></span>
+              <span><%= @users.females.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns">
+          <div class="data_stats">
+            <div class="data_title">all users</div>
+            <div>
+              <span><i class="fa fa-male"></i></span>
+              <span><%= @users.admins.count %></span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="clear"></div>
     <!-- upper_section -->
 
     <!-- bottom_section -->
