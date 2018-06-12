@@ -144,11 +144,11 @@
 }
 
 .user_registrationnew_section .page_main_form label {
-    color: #a1355b;
-    text-transform: capitalize;
-    font-size: 12px;
-    margin-top: 25px;
-    margin-bottom: 10px;
+  color: #a1355b;
+  text-transform: capitalize;
+  font-size: 12px;
+  margin-top: 25px;
+  margin-bottom: 0px;
 }
 
 .user_registrationnew_section .page_main_form .info_sub_content ul {
@@ -311,6 +311,20 @@
 
 .user_registrationnew_section .shared_links a {
   color: #a07b35 !important;
+}
+
+.user_registrationnew_section #user_category_gender_id {
+  font-family: "Lato", sans-serif;
+  box-shadow: none !important;
+  height: 50px;
+  color: #454d53;
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.user_registrationnew_section #user_password {
+  margin-bottom: 0px;
 }
 
 
