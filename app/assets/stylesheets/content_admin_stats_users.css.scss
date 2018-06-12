@@ -53,22 +53,16 @@
   margin-top: 30px;
 }
 
-
-
-
-// -----------------------------
-//   workings
-// -----------------------------
-.upper_section {
+.content_admin_sitelinks .upper_section {
   margin-bottom: 35px;
 }
 
-.header_section_cover {
+.content_admin_sitelinks .header_section_cover {
   background-color: rgba(42, 44, 73, 0.05);
   padding: 15px;
 }
 
-.data_header {
+.content_admin_sitelinks .data_header {
   font-size: 22px;
   text-align: left;
   text-transform: capitalize;
@@ -76,12 +70,12 @@
   color: #2F3F5B;
 }
 
-.header_subtitle {
+.content_admin_sitelinks .header_subtitle {
   font-size: 10px;
   color: #2F3F5B;
 }
 
-.btn {
+.content_admin_sitelinks .btn {
   font-size: 12px;
   background-color: transparent;
   padding: 4px 0px;
@@ -98,24 +92,32 @@
   -o-transition: all 0.3s ease;
 }
 
-.btn:hover {
+.content_admin_sitelinks .btn:hover {
   opacity: 0.7;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.btn_green {
+.content_admin_sitelinks .btn_green {
   background-color: #8ABFA1 !important;
 }
 
-.btn_blue {
+.content_admin_sitelinks .btn_blue {
   background-color: #2A2C49 !important;
 }
 
-.data_main_cover {
+.content_admin_sitelinks .data_main_cover {
   padding: 0px !important;
 }
+
+
+
+
+// -----------------------------
+//   workings
+// -----------------------------
+
 
 .data_stats {
   border: 1px solid #D4D4D4;
