@@ -44,7 +44,17 @@
 
             <div class="paragraph_content">There are several opportunities here to make a difference with your time either by volunteering in a role that fits your gifts, interests, and talents or even pioneer a ministry through your own creativity and innovation.  Find the opportunity you are interested in, and simply email the staff contact and let them know! </div>
 
-            <div class="paragraph_content">Still thinking of where to serve? <%= link_to "Fill out this form", "#", target: "_blank", class: "weblink" %> with your interest areas, skills etc. and a staff member or ministry lead will follow up with you! Maybe you already have inspired ideas you need support and encouragement to implement? Fill out the ministry idea form <%= link_to "here", new_launchministry_path, target: "_blank", class: "weblink" %> and the relevant ministry lead will get in touch with you during the week. 
+            <div class="paragraph_content">Still thinking of where to serve? <%= link_to "Fill out this form", "#", target: "_blank", class: "weblink" %> with your interest areas, skills etc. and a staff member or ministry lead will follow up with you! Maybe you already have inspired ideas you need support and encouragement to implement? Fill out the ministry idea form 
+              <span>
+                <% if user_signed_in? %>
+                  <%= link_to "here", new_launchministry_path, class: "weblink" %> 
+                <% else %>
+                  <span class="weblink" data-open="modal_ministry_application">here</span>
+                  <span><%= render 'shared/modal_ministry_application' %></span>
+                <% end %>
+              </span>
+
+              and the relevant ministry lead will get in touch with you during the week. 
             </div>
 
 
