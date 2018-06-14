@@ -55,7 +55,7 @@
 
     <!-- bottom_section -->
     <div class="page_cover bottom_section">
-      <div class="page_content">
+      <div class="medium-12 columns page_content">
         <div class="header_section_cover">
           <div class="data_contents">
             <span class="data_header">
@@ -73,9 +73,22 @@
           </div>
         </div>
         <div class="divider"></div>
+        <div class="clear"></div>
 
         <!-- all users -->
-        <div></div>
+        <div class="listed_users">
+          <ul>
+            <% @users.all.each do |user| %>
+              <li class="medium-12 columns user_conatiner">
+                <div class="medium-2 columns"><%= image_tag("img-profile-image-default.png") %></div>
+                <div class="medium-10 columns">
+                  <div><%= "#{user.firstname} #{user.lastname}" %></div>
+                </div>
+              </li>
+            <% end %>
+            
+          </ul>
+        </div>
         <!-- all users -->
 
         <!-- males -->
