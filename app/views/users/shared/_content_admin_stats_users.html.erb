@@ -62,16 +62,26 @@
               <span>Total users on the platform</span> 
               <span>[<%= @users.all.count %>]</span>
             </span>
-            <span class="btn btn_blue">all users <span>[<%= @users.all.count %>]</span></span>
-            <span class="btn btn_green">males [<%= @users.males.count %>]</span>
-            <span class="btn btn_green">females [<%= @users.females.count %>]</span>
-            <span class="btn btn_green">admins [<%= @users.admins.count %>]</span>
+            <span class="btn btn_blue" id="userstats_user_tab">all users <span>[<%= @users.all.count %>]</span></span>
+            <span class="btn btn_green" id="userstats_males_tab">males [<%= @users.males.count %>]</span>
+            <span class="btn btn_green" id="userstats_female_tab">females [<%= @users.females.count %>]</span>
+            <span class="btn btn_green" id="userstats_admins_tab">admins [<%= @users.admins.count %>]</span>
           </div>
           <div class="header_subtitle">
             <i class="fa fa-info-circle"></i>
             <span>total number of registered users on the platform</span>
           </div>
         </div>
+        <div class="divider"></div>
+
+        <!-- all users -->
+        <div></div>
+        <!-- all users -->
+
+        <!-- males -->
+        <div></div>
+        <!-- males -->
+
       </div>
     </div>
     <!-- bottom_section -->
