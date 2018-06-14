@@ -143,10 +143,24 @@
 }
 
 
+.listed_users ul .user_conatiner {
+  float: left;
+  padding: 0px;
+  width: 200px;
+  padding: 8px;
+}
+
 .user_conatiner {
   background-color: red;
 }
 
+.user_image {
+  padding: 0px !important;
+}
+
+.user_info {
+  padding: 0px 0px 0px 5px !important;
+}
 
 
 
