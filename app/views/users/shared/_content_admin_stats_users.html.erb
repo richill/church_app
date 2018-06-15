@@ -54,7 +54,7 @@
     <!-- upper_section -->
 
     <!-- bottom_section -->
-    <div class="page_cover bottom_section">
+    <div class="medium-12 columns page_cover bottom_section">
       <div class="medium-12 columns page_content">
         <div class="header_section_cover">
           <div class="data_contents">
@@ -79,6 +79,7 @@
         <div class="listed_users">
           <!-- all users -->
           <div class="listed_users userstats_user_tab_content">
+            <div class="data_list_title">all registered users</div>
             <ul>
               <% @users.all.each do |user| %>
                 <li class="medium-12 columns user_conatiner">
@@ -109,7 +110,8 @@
           <!-- all users -->
 
           <!-- males -->
-          <div class="listed_users_males userstats_males_tab_content">
+          <div class="listed_users_males userstats_males_tab_content hide">
+            <div class="data_list_title">all registered males</div>
             <ul>
               <% @users.males.each do |user| %>
                 <li class="medium-12 columns user_conatiner">
@@ -140,7 +142,8 @@
           <!-- males -->
 
           <!-- females -->
-          <div class="listed_users_females userstats_females_tab_content">
+          <div class="listed_users_females userstats_females_tab_content hide">
+            <div class="data_list_title">all registered females</div>
             <ul>
               <% @users.females.each do |user| %>
                 <li class="medium-12 columns user_conatiner">
@@ -171,7 +174,8 @@
           <!-- females -->
 
           <!-- admin -->
-          <div class="listed_users_admins userstats_admins_tab_content">
+          <div class="listed_users_admins userstats_admins_tab_content hide">
+            <div class="data_list_title">all registered church admins</div>
             <ul>
               <% @users.admins.each do |user| %>
                 <li class="medium-12 columns user_conatiner">
