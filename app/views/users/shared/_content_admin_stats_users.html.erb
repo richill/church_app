@@ -75,39 +75,132 @@
         <div class="divider"></div>
         <div class="clear"></div>
 
-        <!-- all users -->
-        <div class="listed_users">
-          <ul>
-            <% @users.all.each do |user| %>
-              <li class="medium-12 columns user_conatiner">
-                <div class="medium-4 columns user_image"><%= link_to image_tag("img-profile-image-default.png"), user_path(user), target:"_blank" %></div>
-                <div class="medium-8 columns user_info">
-                  <div><%= link_to "#{user.firstname} #{user.lastname}", user_path(user), target:"_blank" %></div>
-                  <div>
-                    <% if user.job.present? %>
-                      <span><%= link_to "#{user.job}", user_path(user), target:"_blank" %></span>
-                    <% else %>
-                      <span class="no_info"><%= "user not added job" %></span>
-                    <% end %>
-                  </div>
-                  <div class="member">
-                    <% if user.category_gender == "Male" %>
-                      <span><i class="fa fa-male"></i>:</span>
-                    <% else %>
-                      <span><i class="fa fa-female"></i>:</span>
-                    <% end %>
-                    <span><%= link_to "#{user.created_at.strftime("%b %d %Y")}", user_path(user), target:"_blank", class: "member_created" %></span>
-                  </div>
-                </div>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-        <!-- all users -->
 
-        <!-- males -->
-        <div></div>
-        <!-- males -->
+        <div class="listed_users">
+          <!-- all users -->
+          <div class="listed_all_users userstats_user_tab">
+            <ul>
+              <% @users.all.each do |user| %>
+                <li class="medium-12 columns user_conatiner">
+                  <div class="medium-4 columns user_image"><%= link_to image_tag("img-profile-image-default.png"), user_path(user), target:"_blank" %></div>
+                  <div class="medium-8 columns user_info">
+                    <div><%= link_to "#{user.firstname} #{user.lastname}", user_path(user), target:"_blank" %></div>
+                    <div>
+                      <% if user.job.present? %>
+                        <span><%= link_to "#{user.job}", user_path(user), target:"_blank" %></span>
+                      <% else %>
+                        <span class="no_info"><%= "user not added job" %></span>
+                      <% end %>
+                    </div>
+                    <div class="member">
+                      <% if user.category_gender == "Male" %>
+                        <span><i class="fa fa-male"></i>:</span>
+                      <% else %>
+                        <span><i class="fa fa-female"></i>:</span>
+                      <% end %>
+                      <span><%= link_to "#{user.created_at.strftime("%b %d %Y")}", user_path(user), target:"_blank", class: "member_created" %></span>
+                    </div>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="clear"></div>
+          <!-- all users -->
+
+          <!-- males -->
+          <div class="listed_all_users userstats_user_tab">
+            <ul>
+              <% @users.males.each do |user| %>
+                <li class="medium-12 columns user_conatiner">
+                  <div class="medium-4 columns user_image"><%= link_to image_tag("img-profile-image-default.png"), user_path(user), target:"_blank" %></div>
+                  <div class="medium-8 columns user_info">
+                    <div><%= link_to "#{user.firstname} #{user.lastname}", user_path(user), target:"_blank" %></div>
+                    <div>
+                      <% if user.job.present? %>
+                        <span><%= link_to "#{user.job}", user_path(user), target:"_blank" %></span>
+                      <% else %>
+                        <span class="no_info"><%= "user not added job" %></span>
+                      <% end %>
+                    </div>
+                    <div class="member">
+                      <% if user.category_gender == "Male" %>
+                        <span><i class="fa fa-male"></i>:</span>
+                      <% else %>
+                        <span><i class="fa fa-female"></i>:</span>
+                      <% end %>
+                      <span><%= link_to "#{user.created_at.strftime("%b %d %Y")}", user_path(user), target:"_blank", class: "member_created" %></span>
+                    </div>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="clear"></div>
+          <!-- males -->
+
+          <!-- females -->
+          <div class="listed_all_users userstats_user_tab">
+            <ul>
+              <% @users.females.each do |user| %>
+                <li class="medium-12 columns user_conatiner">
+                  <div class="medium-4 columns user_image"><%= link_to image_tag("img-profile-image-default.png"), user_path(user), target:"_blank" %></div>
+                  <div class="medium-8 columns user_info">
+                    <div><%= link_to "#{user.firstname} #{user.lastname}", user_path(user), target:"_blank" %></div>
+                    <div>
+                      <% if user.job.present? %>
+                        <span><%= link_to "#{user.job}", user_path(user), target:"_blank" %></span>
+                      <% else %>
+                        <span class="no_info"><%= "user not added job" %></span>
+                      <% end %>
+                    </div>
+                    <div class="member">
+                      <% if user.category_gender == "Male" %>
+                        <span><i class="fa fa-male"></i>:</span>
+                      <% else %>
+                        <span><i class="fa fa-female"></i>:</span>
+                      <% end %>
+                      <span><%= link_to "#{user.created_at.strftime("%b %d %Y")}", user_path(user), target:"_blank", class: "member_created" %></span>
+                    </div>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="clear"></div>
+          <!-- females -->
+
+          <!-- admin -->
+          <div class="listed_all_users userstats_user_tab">
+            <ul>
+              <% @users.admins.each do |user| %>
+                <li class="medium-12 columns user_conatiner">
+                  <div class="medium-4 columns user_image"><%= link_to image_tag("img-profile-image-default.png"), user_path(user), target:"_blank" %></div>
+                  <div class="medium-8 columns user_info">
+                    <div><%= link_to "#{user.firstname} #{user.lastname}", user_path(user), target:"_blank" %></div>
+                    <div>
+                      <% if user.job.present? %>
+                        <span><%= link_to "#{user.job}", user_path(user), target:"_blank" %></span>
+                      <% else %>
+                        <span class="no_info"><%= "user not added job" %></span>
+                      <% end %>
+                    </div>
+                    <div class="member">
+                      <% if user.category_gender == "Male" %>
+                        <span><i class="fa fa-male"></i>:</span>
+                      <% else %>
+                        <span><i class="fa fa-female"></i>:</span>
+                      <% end %>
+                      <span><%= link_to "#{user.created_at.strftime("%b %d %Y")}", user_path(user), target:"_blank", class: "member_created" %></span>
+                    </div>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="clear"></div>
+          <!-- admin -->
+        </div>
 
       </div>
     </div>
