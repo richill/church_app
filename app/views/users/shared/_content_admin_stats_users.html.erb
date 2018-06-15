@@ -62,10 +62,10 @@
               <span>Total users on the platform</span> 
               <span>[<%= @users.all.count %>]</span>
             </span>
-            <span class="btn btn_blue" id="userstats_user_tab">all users <span>[<%= @users.all.count %>]</span></span>
-            <span class="btn btn_green" id="userstats_males_tab">males [<%= @users.males.count %>]</span>
-            <span class="btn btn_green" id="userstats_female_tab">females [<%= @users.females.count %>]</span>
-            <span class="btn btn_green" id="userstats_admins_tab">admins [<%= @users.admins.count %>]</span>
+            <span class="btn btn_blue userstats_user_tab">all users <span>[<%= @users.all.count %>]</span></span>
+            <span class="btn btn_green userstats_males_tab">males [<%= @users.males.count %>]</span>
+            <span class="btn btn_green userstats_female_tab">females [<%= @users.females.count %>]</span>
+            <span class="btn btn_green userstats_admins_tab">admins [<%= @users.admins.count %>]</span>
           </div>
           <div class="header_subtitle">
             <i class="fa fa-info-circle"></i>
@@ -101,7 +101,6 @@
                 </div>
               </li>
             <% end %>
-            
           </ul>
         </div>
         <!-- all users -->

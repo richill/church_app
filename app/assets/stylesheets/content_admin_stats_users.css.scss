@@ -119,31 +119,31 @@
 // -----------------------------
 
 
-.data_stats {
+.content_admin_sitelinks .data_stats {
   border: 1px solid #D4D4D4;
   background-color: #fff;
 }
 
-.data_title {
+.content_admin_sitelinks .data_title {
   padding: 5px;
   background-color: #2A2C49 !important;
   color: #fff;
 }
 
 
-.divider {
+.content_admin_sitelinks .divider {
   border-bottom: 1px solid #D4D4D4;
   margin: 15px 0px;
 } 
 
 
-.listed_users ul {
+.content_admin_sitelinks .listed_users ul {
   list-style-type: none;
   margin: 0px !important;
 }
 
 
-.listed_users ul .user_conatiner {
+.content_admin_sitelinks .listed_users ul .user_conatiner {
   float: left;
   padding: 0px;
   width: 250px;
@@ -152,45 +152,45 @@
   margin-bottom: 15px;
 }
 
-.listed_users ul .user_conatiner:last-child {
+.content_admin_sitelinks .listed_users ul .user_conatiner:last-child {
   float: left;
   margin-right: 0px !important;
 }
 
-.user_conatiner {
+.content_admin_sitelinks .user_conatiner {
   border: 1px solid #D4D4D4;
   border-radius: 2px;
 
 }
 
-.user_image {
+.content_admin_sitelinks .user_image {
   padding: 0px !important;
 }
 
-.user_info {
+.content_admin_sitelinks .user_info {
   padding: 0px 0px 0px 8px !important;
   font-size: 11px;
 }
 
-.user_info a {
+.content_admin_sitelinks .user_info a {
   color: #2A2C49 !important;
   text-transform: capitalize;
 }
 
-.member_created {
+.content_admin_sitelinks .member_created {
   font-size: 10px;
 }
 
-.no_info {
+.content_admin_sitelinks .no_info {
   color: #E1473E;
 }
 
-.member {
+.content_admin_sitelinks .member {
   background-color: rgba(42, 44, 73, 0.05);
   padding: 2px 5px;
 }
 
-.member i {
+.content_admin_sitelinks .member i {
   margin-right: 5px;
 }
 
