@@ -64,7 +64,7 @@
             </span>
             <span class="btn btn_blue userstats_user_tab">all users <span>[<%= @users.all.count %>]</span></span>
             <span class="btn btn_green userstats_males_tab">males [<%= @users.males.count %>]</span>
-            <span class="btn btn_green userstats_female_tab">females [<%= @users.females.count %>]</span>
+            <span class="btn btn_green userstats_females_tab">females [<%= @users.females.count %>]</span>
             <span class="btn btn_green userstats_admins_tab">admins [<%= @users.admins.count %>]</span>
           </div>
           <div class="header_subtitle">
@@ -75,10 +75,10 @@
         <div class="divider"></div>
         <div class="clear"></div>
 
-
+        <!-- listed_users -->
         <div class="listed_users">
           <!-- all users -->
-          <div class="listed_all_users userstats_user_tab">
+          <div class="listed_users userstats_user_tab_content">
             <ul>
               <% @users.all.each do |user| %>
                 <li class="medium-12 columns user_conatiner">
@@ -109,7 +109,7 @@
           <!-- all users -->
 
           <!-- males -->
-          <div class="listed_all_users userstats_user_tab">
+          <div class="listed_users_males userstats_males_tab_content">
             <ul>
               <% @users.males.each do |user| %>
                 <li class="medium-12 columns user_conatiner">
@@ -140,7 +140,7 @@
           <!-- males -->
 
           <!-- females -->
-          <div class="listed_all_users userstats_user_tab">
+          <div class="listed_users_females userstats_females_tab_content">
             <ul>
               <% @users.females.each do |user| %>
                 <li class="medium-12 columns user_conatiner">
@@ -171,7 +171,7 @@
           <!-- females -->
 
           <!-- admin -->
-          <div class="listed_all_users userstats_user_tab">
+          <div class="listed_users_admins userstats_admins_tab_content">
             <ul>
               <% @users.admins.each do |user| %>
                 <li class="medium-12 columns user_conatiner">
@@ -201,6 +201,7 @@
           <div class="clear"></div>
           <!-- admin -->
         </div>
+        <!-- listed_users -->
 
       </div>
     </div>
