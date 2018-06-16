@@ -108,6 +108,7 @@ a:hover {
 .users_admin_panel .left_admin_content {
   background-color: #2A2C49;
   padding: 0px !important;
+  height: 4000px;
 }
 
 .users_admin_panel .left_admin_content ul {
@@ -170,7 +171,6 @@ a:hover {
 }
 
 .users_admin_panel .right_admin_content .admin_tab_content {
-  height: 450px;
   background-color: #fff !important;
 }
 
