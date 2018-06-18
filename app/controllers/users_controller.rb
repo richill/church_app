@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :set_user, only: [:show, :edit, :update, :destroy, :stats_users]
   before_filter :setup_generic
 
   def index

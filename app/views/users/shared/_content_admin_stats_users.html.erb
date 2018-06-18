@@ -115,23 +115,20 @@
                       <span><%= link_to "#{user.created_at.strftime("%b %d %Y")}", user_path(user), target:"_blank", class: "member_created" %></span>
                     </div>
 
+                    <%= debug user %>
+
                     <div class="moreinfo">
-                      <% if user.category_gender == "Male" %>
-                        <span><i class="fa fa-male"></i>:</span>
-                      <% else %>
-                        <span><i class="fa fa-users"></i>:</span>
-                      <% end %>
+                      <span><i class="fa fa-users"></i>:</span>
                       <span>
+
+                        <span class="view_link" data-open="<%= dom_id(user) %>_user_content">view user info</span>
+                        <span><%= render 'shared/modal_admin_user_info', locals: {user: user } %></span>
+
+
+
                         <!-- <span class="view_link" data-open="<%# dom_id(@smallgroup) %>_smallgroup_content">view</span> -->
                         <!-- <span><%# render 'shared/modal_smallgroup_info', locals: { smallgroup: @smallgroup } %></span> -->
 
-                        <span class="view_link" data-open="<%= dom_id(user) %>_user_content">view user info</span>
-                        <span><%= render 'shared/modal_admin_user_info' %></span>
-
-
-                       
-
-                       
                       </span>
                     </div>
 
