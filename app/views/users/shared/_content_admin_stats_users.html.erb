@@ -114,6 +114,16 @@
                       <% end %>
                       <span><%= link_to "#{user.created_at.strftime("%b %d %Y")}", user_path(user), target:"_blank", class: "member_created" %></span>
                     </div>
+
+                    <div class="moreinfo">
+                      <% if user.category_gender == "Male" %>
+                        <span><i class="fa fa-male"></i>:</span>
+                      <% else %>
+                        <span><i class="fa fa-users"></i>:</span>
+                      <% end %>
+                      <span><%= link_to "user info", "#", target:"_blank", class: "member_created" %></span>
+                    </div>
+
                   </div>
                 </li>
               <% end %>
