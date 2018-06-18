@@ -116,14 +116,26 @@
                     </div>
 
                     <div class="moreinfo">
-                      <span><i class="fa fa-users"></i>:</span>
+                      <% if user.category_gender == "Male" %>
+                        <span><i class="fa fa-male"></i>:</span>
+                      <% else %>
+                        <span><i class="fa fa-users"></i>:</span>
+                      <% end %>
                       <span>
-                        <span class="ministry_application_btn" data-open="modal_ministry_application">view user info</span>
-                        <span><%# render 'shared/modal_ministry_application' %></span>
+                        <!-- <span class="view_link" data-open="<%# dom_id(@smallgroup) %>_smallgroup_content">view</span> -->
+                        <!-- <span><%# render 'shared/modal_smallgroup_info', locals: { smallgroup: @smallgroup } %></span> -->
+
+                        <span class="view_link" data-open="<%= dom_id(user) %>_user_content">view user info</span>
                         <span><%= render 'shared/modal_admin_user_info' %></span>
+
+
+                       
+
+                       
                       </span>
-                      <span><%# link_to "user info", "#", target:"_blank", class: "member_created" %></span>
                     </div>
+
+                   
 
                   </div>
                 </li>
