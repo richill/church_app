@@ -78,6 +78,18 @@ a:hover {
   }
 }
 
+@media only screen and (max-width: 1190px) {
+  .left_admin_content {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1190px) {
+  .right_admin_content {
+    width: 100%;
+  }
+}
+
 .pages_boarder {
   border-bottom: 1px solid rgba(42, 44, 73, 0.03);
   margin-bottom: 30px;
