@@ -123,10 +123,7 @@
 
 
                         <span class="view_link" data-reveal-id="<%= dom_id(user) %>_user_content">view hello</span>
-                        <span><%= render 'shared/modal_admin_user_info', locals: {user: user } %></span>
-
-                        <span><a href="#<%= user.id %>" data-reveal-id="<%= dom_id(user) %>_user_content">view test</a></span>
-                        <span><%= render partial: 'shared/modal_admin_user_info', locals: { user: user } %></span>
+                        <span><%# render 'shared/modal_admin_user_info', locals: {user: user } %></span>
 
                     
 
