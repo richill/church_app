@@ -148,19 +148,11 @@
   margin: 0px !important;
 }
 
-
 .content_admin_sitelinks .listed_users ul .user_conatiner {
   float: left;
-  padding: 0px;
-  width: 250px;
-  padding: 8px;
-  margin-right: 15px;
-  margin-bottom: 15px;
-}
-
-.content_admin_sitelinks .listed_users ul .user_conatiner:last-child {
-  float: left;
-  margin-right: 0px !important;
+  width: 251px;
+  padding: 8px 8px 5px;
+  margin: 5px;
 }
 
 .content_admin_sitelinks .user_conatiner {
@@ -170,7 +162,8 @@
 }
 
 .content_admin_sitelinks .user_image {
-  padding: 0px !important;
+  padding: 6px 0px !important;
+  margin-bottom: 5px;
 }
 
 .content_admin_sitelinks .user_info {

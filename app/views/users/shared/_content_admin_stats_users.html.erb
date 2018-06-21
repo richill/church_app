@@ -107,35 +107,27 @@
                       <% end %>
                     </div>
                     <div class="member">
-                      <% if user.category_gender == "Male" %>
-                        <span><i class="fa fa-male"></i>:</span>
-                      <% else %>
-                        <span><i class="fa fa-female"></i>:</span>
+                      <% if user.category_gender.present? %>
+                        <% if user.category_gender.name == "Male" %>
+                          <span><i class="fa fa-male"></i>:</span>
+                        <% elsif user.category_gender.name == "Female" %>
+                          <span><i class="fa fa-female"></i>:</span>
+                        <% end %>
+                      <% elsif user.category_gender_id == nil %>
+                        <span><i class="fa fa-user"></i>:</span>
                       <% end %>
                       <span><%= link_to "#{user.created_at.strftime("%b %d %Y")}", user_path(user), target:"_blank", class: "member_created" %></span>
                     </div>
 
-                    <%# debug user %>
-
                     <div class="moreinfo">
                       <span><i class="fa fa-users"></i>:</span>
                       <span>
-
-
                         <span class="view_link" data-reveal-id="<%= dom_id(user) %>_user_content">view hello</span>
                         <span><%# render 'shared/modal_admin_user_info', locals: {user: user } %></span>
-
-                    
-
-
-
                         <!-- <span class="view_link" data-open="<%# dom_id(@smallgroup) %>_smallgroup_content">view</span> -->
                         <!-- <span><%# render 'shared/modal_smallgroup_info', locals: { smallgroup: @smallgroup } %></span> -->
-
                       </span>
                     </div>
-
-                   
 
                   </div>
                 </li>
@@ -162,13 +154,28 @@
                       <% end %>
                     </div>
                     <div class="member">
-                      <% if user.category_gender == "Male" %>
-                        <span><i class="fa fa-male"></i>:</span>
-                      <% else %>
-                        <span><i class="fa fa-female"></i>:</span>
+                      <% if user.category_gender.present? %>
+                        <% if user.category_gender.name == "Male" %>
+                          <span><i class="fa fa-male"></i>:</span>
+                        <% elsif user.category_gender.name == "Female" %>
+                          <span><i class="fa fa-female"></i>:</span>
+                        <% end %>
+                      <% elsif user.category_gender_id == nil %>
+                        <span><i class="fa fa-user"></i>:</span>
                       <% end %>
                       <span><%= link_to "#{user.created_at.strftime("%b %d %Y")}", user_path(user), target:"_blank", class: "member_created" %></span>
                     </div>
+
+                    <div class="moreinfo">
+                      <span><i class="fa fa-users"></i>:</span>
+                      <span>
+                        <span class="view_link" data-reveal-id="<%= dom_id(user) %>_user_content">view hello</span>
+                        <span><%# render 'shared/modal_admin_user_info', locals: {user: user } %></span>
+                        <!-- <span class="view_link" data-open="<%# dom_id(@smallgroup) %>_smallgroup_content">view</span> -->
+                        <!-- <span><%# render 'shared/modal_smallgroup_info', locals: { smallgroup: @smallgroup } %></span> -->
+                      </span>
+                    </div>
+
                   </div>
                 </li>
               <% end %>
@@ -194,13 +201,28 @@
                       <% end %>
                     </div>
                     <div class="member">
-                      <% if user.category_gender == "Male" %>
-                        <span><i class="fa fa-male"></i>:</span>
-                      <% else %>
-                        <span><i class="fa fa-female"></i>:</span>
+                      <% if user.category_gender.present? %>
+                        <% if user.category_gender.name == "Male" %>
+                          <span><i class="fa fa-male"></i>:</span>
+                        <% elsif user.category_gender.name == "Female" %>
+                          <span><i class="fa fa-female"></i>:</span>
+                        <% end %>
+                      <% elsif user.category_gender_id == nil %>
+                        <span><i class="fa fa-user"></i>:</span>
                       <% end %>
                       <span><%= link_to "#{user.created_at.strftime("%b %d %Y")}", user_path(user), target:"_blank", class: "member_created" %></span>
                     </div>
+
+                    <div class="moreinfo">
+                      <span><i class="fa fa-users"></i>:</span>
+                      <span>
+                        <span class="view_link" data-reveal-id="<%= dom_id(user) %>_user_content">view hello</span>
+                        <span><%# render 'shared/modal_admin_user_info', locals: {user: user } %></span>
+                        <!-- <span class="view_link" data-open="<%# dom_id(@smallgroup) %>_smallgroup_content">view</span> -->
+                        <!-- <span><%# render 'shared/modal_smallgroup_info', locals: { smallgroup: @smallgroup } %></span> -->
+                      </span>
+                    </div>
+
                   </div>
                 </li>
               <% end %>
@@ -226,13 +248,28 @@
                       <% end %>
                     </div>
                     <div class="member">
-                      <% if user.category_gender == "Male" %>
-                        <span><i class="fa fa-male"></i>:</span>
-                      <% else %>
-                        <span><i class="fa fa-female"></i>:</span>
+                      <% if user.category_gender.present? %>
+                        <% if user.category_gender.name == "Male" %>
+                          <span><i class="fa fa-male"></i>:</span>
+                        <% elsif user.category_gender.name == "Female" %>
+                          <span><i class="fa fa-female"></i>:</span>
+                        <% end %>
+                      <% elsif user.category_gender_id == nil %>
+                        <span><i class="fa fa-user"></i>:</span>
                       <% end %>
                       <span><%= link_to "#{user.created_at.strftime("%b %d %Y")}", user_path(user), target:"_blank", class: "member_created" %></span>
                     </div>
+
+                    <div class="moreinfo">
+                      <span><i class="fa fa-users"></i>:</span>
+                      <span>
+                        <span class="view_link" data-reveal-id="<%= dom_id(user) %>_user_content">view hello</span>
+                        <span><%# render 'shared/modal_admin_user_info', locals: {user: user } %></span>
+                        <!-- <span class="view_link" data-open="<%# dom_id(@smallgroup) %>_smallgroup_content">view</span> -->
+                        <!-- <span><%# render 'shared/modal_smallgroup_info', locals: { smallgroup: @smallgroup } %></span> -->
+                      </span>
+                    </div>
+
                   </div>
                 </li>
               <% end %>
