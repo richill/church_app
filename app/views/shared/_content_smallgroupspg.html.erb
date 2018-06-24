@@ -15,6 +15,7 @@
         <div class="medium-8 columns info_left_content">
           <div class="page_information">
             <div class="page_header">small groups</div>
+            <div class="paragraph_content">This is a group consisting of 3 to 12 people who typically gather together in non-church locations such as homes, coffee shops, businesses, or any location that is convenient for the attendees. They meet morning, noon or night, any day of the week to study the Bible or a variety of topics from a biblical perspective, pray, grow in fellowship, have fun and use these smaller communities to reach out non believers and serve their community. For more information email <span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span> or view below to find a Small Group near you.</div>
             <div class="calendar_section">
 
               <% if @smallgroups.present? %>
@@ -55,7 +56,6 @@
                 <div><%= render "shared/no_listed_content" %></div>
                 <!-- no_listed_info -->
               <% end %>
-              
             </div>
           </div>
         </div>
