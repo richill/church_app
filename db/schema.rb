@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180612131434) do
+ActiveRecord::Schema.define(version: 20180624160653) do
 
   create_table "attendances", force: :cascade do |t|
     t.string   "attendable_type"
@@ -209,6 +209,8 @@ ActiveRecord::Schema.define(version: 20180612131434) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "slug"
+    t.string   "address"
+    t.string   "postcode"
     t.index ["slug"], name: "index_smallgroups_on_slug", unique: true
   end
 

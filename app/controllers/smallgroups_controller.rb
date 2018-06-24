@@ -69,6 +69,6 @@ class SmallgroupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def smallgroup_params
-      params.require(:smallgroup).permit(:name, :descriptin, :image)
+      params.require(:smallgroup).permit(:name, :descriptin, :image, :address, :postcode)
     end
 end
