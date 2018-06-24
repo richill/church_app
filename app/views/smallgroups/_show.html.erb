@@ -28,6 +28,10 @@
                 <span><i class="fa fa-users"></i> <span><%= @smallgroup.attendances.count %> members</span></span>
               </span>
             </div>
+            <div class="date_category">
+              <span><b>Address:</b></span>
+              <span><%= @smallgroup.address %></span><span><%= @smallgroup.postcode %></span>
+            </div>
             <div class="paragraph_content">
               <span><%= truncate("#{@smallgroup.descriptin}", length: 300) %></span>
 
