@@ -68,6 +68,7 @@ class UsersController < ApplicationController
   private
     def setup_generic
       @users = User.all
+      @launchministries = Launchministry.all
     end
 
     def set_user

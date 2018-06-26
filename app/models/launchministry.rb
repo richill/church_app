@@ -14,9 +14,15 @@ class Launchministry < ApplicationRecord
   validates_presence_of :ministryneed, presence: true, message: "can't be blank"
   validates_presence_of :ministrymission, presence: true, message: "can't be blank"
 
+  scope :approved_ministries, -> {where(['approve = ?', true])}
+  scope :pending_ministries, -> {where(['approve = ? OR approve IS ?', false, nil])} 
+  
+
   def slug_launchministries
     [
       :mininstryidea
     ]
   end
+
+
 end
