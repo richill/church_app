@@ -1,0 +1,295 @@
+/*===================================================
+    Page: admin panel/stats ministries page
+    File: views/users/shared/_content_admin_stats_ministries.html.erb
+  ===================================================*/
+
+.admin_stats_ministries .page_cover {
+  background-color: rgba(42, 44, 73, 0.05);
+}
+
+.admin_stats_ministries .page_content {
+  background-color: #fff;
+  border: 1px solid #D4D4D4;
+  border-bottom: 2px solid #D4D4D4;
+  padding: 15px;
+}
+
+.admin_stats_ministries .page_title {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #2A2C49;
+  margin-bottom: 2px;
+}
+
+.admin_stats_ministries .page_subtitle {
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #2A2C49;
+  text-transform: capitalize;
+}
+
+.admin_stats_ministries .page_listedlinks ul {
+  color: #2A2C49;
+  margin: 10px 0px 0px 20px;
+}
+
+.admin_stats_ministries .page_listedlinks li {
+  color: #2A2C49;
+  margin-bottom: 5px;
+}
+
+.admin_stats_ministries .link_title {
+  text-transform: capitalize;
+}
+
+.admin_stats_ministries .main_link a {
+  color: #E1473E !important;
+  text-transform: capitalize;
+}
+
+.admin_stats_ministries .new_content {
+  margin-top: 30px;
+}
+
+.admin_stats_ministries .upper_section {
+  margin-bottom: 35px;
+}
+@media only screen and (max-width: 1340px) {
+  .admin_stats_ministries .upper_section {
+    display: none;
+  }
+}
+
+.admin_stats_ministries .header_section_cover {
+  background-color: rgba(42, 44, 73, 0.05);
+  padding: 15px;
+}
+
+.admin_stats_ministries .data_header {
+  font-size: 22px;
+  text-align: left;
+  text-transform: capitalize;
+  font-family: "Lato", sans-serif;
+  color: #2F3F5B;
+}
+
+.admin_stats_ministries .header_subtitle {
+  font-size: 10px;
+  color: #2F3F5B;
+  margin-bottom: 15px;
+}
+
+.admin_stats_ministries .btn {
+  font-size: 12px;
+  background-color: transparent;
+  padding: 4px 0px;
+  color: #fff;
+  border-radius: 2px;
+  margin-right: 5px;
+  width: 120px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+@media only screen and (max-width: 1100px) {
+  .admin_stats_ministries .btn {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+.admin_stats_ministries .btn:hover {
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.admin_stats_ministries .btn_green {
+  background-color: #8ABFA1 !important;
+}
+
+.admin_stats_ministries .btn_blue {
+  background-color: #2A2C49 !important;
+}
+
+.admin_stats_ministries .data_main_cover {
+  padding: 0px !important;
+}
+
+.admin_stats_ministries .data_stats {
+  border: 1px solid #D4D4D4;
+  background-color: #fff;
+}
+
+.admin_stats_ministries .data_title {
+  padding: 5px;
+  background-color: #2A2C49 !important;
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+.admin_stats_ministries .divider {
+  border-bottom: 1px solid #D4D4D4;
+  margin: 15px 0px;
+} 
+
+
+.admin_stats_ministries .listed_users ul {
+  list-style-type: none;
+  margin: 0px !important;
+}
+
+.admin_stats_ministries .listed_users ul .user_conatiner {
+  float: left;
+  width: 251px;
+  padding: 8px 8px 5px;
+  margin: 5px;
+}
+
+.admin_stats_ministries .user_conatiner {
+  border: 1px solid #D4D4D4;
+  border-radius: 2px;
+
+}
+
+.admin_stats_ministries .user_image {
+  padding: 6px 0px !important;
+  margin-bottom: 5px;
+}
+
+.admin_stats_ministries .user_info {
+  padding: 0px 0px 0px 8px !important;
+  font-size: 11px;
+}
+
+.admin_stats_ministries .user_info a {
+  color: #2A2C49 !important;
+  text-transform: capitalize;
+}
+
+.admin_stats_ministries .member_created {
+  font-size: 10px;
+}
+
+.admin_stats_ministries .no_info {
+  color: #E1473E;
+}
+
+.admin_stats_ministries .member {
+  background-color: rgba(42, 44, 73, 0.05);
+  padding: 2px 5px;
+  margin-bottom: 5px;
+  color: #2A2C49;
+}
+
+.admin_stats_ministries .member i {
+  margin-right: 8px;
+  color: #2A2C49;
+}
+
+.admin_stats_ministries .moreinfo {
+  background-color: rgba(42, 44, 73, 0.05);
+  padding: 2px 5px;
+  color: #2A2C49;
+}
+
+.admin_stats_ministries .moreinfo i {
+  margin-right: 5px;
+  color: #2A2C49;
+}
+
+
+.admin_stats_ministries .data_list_title {
+  background-color: rgba(42, 44, 73, 0.05);
+  text-transform: capitalize;
+  color: #2A2C49;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #D4D4D4;
+}
+
+.admin_stats_ministries .data_stats_cover {
+  color: #2A2C49 !important
+}
+
+@media only screen and (max-width: 1100px) {
+  .admin_stats_ministries .data_stats_cover {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.admin_stats_ministries .stats_content {
+  padding: 15px;
+}
+
+.admin_stats_ministries .stats_content i {
+  font-size: 25px;
+}
+
+.admin_stats_ministries .icon_cover {
+  background-color: transparent;
+  width: 50px;
+  display: inline-block;
+}
+@media only screen and (max-width: 1340px) {
+  .admin_stats_ministries .icon_cover{
+    display: none;
+  }
+}
+
+.admin_stats_ministries .icon_inner_cover {
+  margin: auto;
+  display: inline-block;
+  width: 15px;
+  background-color: transparent;
+  margin-left: 17px;
+}
+
+.admin_stats_ministries .main_stats {
+  font-size: 24px;
+  text-align: center;
+  background-color: transparent;
+  width: 73%;
+  display: inline-block;
+  border-left: 2px solid #D4D4D4;
+}
+
+@media only screen and (max-width: 1340px) {
+  .admin_stats_ministries .main_stats {
+    border-left: 0px solid transparent;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

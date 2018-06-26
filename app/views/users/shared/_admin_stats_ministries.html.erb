@@ -1,4 +1,4 @@
-<div class="medium-12 columns users_admin_panel admin_stats_users">
+<div class="medium-12 columns users_admin_panel admin_stats_ministries">
   <div class="medium-12 columns main_container">
 
     <!-- left_content -->
@@ -22,8 +22,8 @@
             <span>site links</span>
           <% end %>
         </li>
-        <li class="active">
-          <%= link_to "#tab4" do %>
+        <li>
+          <%= link_to stats_users_user_path do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>users</span>
           <% end %>
@@ -34,8 +34,8 @@
             <span>events</span>
           <% end %>
         </li>
-        <li>
-          <%= link_to stats_ministries_user_path do %>
+        <li class="active">
+          <%= link_to "#tab6" do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>ministries</span>
           <% end %>
@@ -72,11 +72,12 @@
     <!-- right_content -->
     <div class="medium-10 columns right_admin_content">
 
-      <!-- stats_users -->
+      <!-- stats_ministries -->
       <div class="dashboard active">
-        <%= render 'users/shared/content_admin_stats_users' %>
+        <%# render 'users/shared/content_admin_stats_users' %>
+        <%= render 'users/shared/content_admin_stats_ministries' %>
       </div>
-      <!-- stats_users -->
+      <!-- stats_ministries -->
 
     </div>
     <!-- right_content -->

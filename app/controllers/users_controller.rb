@@ -59,6 +59,9 @@ class UsersController < ApplicationController
   def stats_users
   end
 
+  def stats_ministries
+  end
+
   def sitelinks  
   end
 

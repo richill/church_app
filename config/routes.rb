@@ -43,6 +43,7 @@ Rails.application.routes.draw do
       get 'dashboard'
       get 'sitelinks'
       get 'stats-users'
+      get 'stats_ministries'
     end
   end
   
