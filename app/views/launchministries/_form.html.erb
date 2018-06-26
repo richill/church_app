@@ -73,23 +73,34 @@
                   <div class="info_sub_content"><%= f.input :ministrymission, label: "What is your ministry's mission statement?", placeholder: "Type Your Answer" %></div>
                   <div class="clear"></div>
 
-
-                  
-                
-                  
-            
                 </div>
                 <div class="form_btns">
-                  <ul>
-                    <li class="cancel_btn">
-                      <div><%= link_to "cancel", ministry_idea_path %></div>
-                    </li>
-                    <li>
-                      <div class="form-actions submit_btn">
-                        <%= f.button :submit, "submit form" %>
-                      </div>
-                    </li>
-                  </ul>
+                  <% if user_signed_in? %>
+                    <% if current_user.admin? %>
+                      <ul>
+                        <li class="cancel_btn">
+                          <div><%= link_to "cancel", stats_ministries_user_path(current_user) %></div>
+                        </li>
+                        <li>
+                          <div class="form-actions submit_btn">
+                            <%= f.button :submit, "create ministry" %>
+                          </div>
+                        </li>
+                      </ul>
+                    <% else %>
+                      <ul>
+                        <li class="cancel_btn">
+                          <div><%= link_to "cancel", ministry_idea_path %></div>
+                        </li>
+                        <li>
+                          <div class="form-actions submit_btn">
+                            <%= f.button :submit, "submit form" %>
+                          </div>
+                        </li>
+                      </ul>
+                    <% end %>
+                  <% end %>
+
                 </div>
                 
               <% end %>

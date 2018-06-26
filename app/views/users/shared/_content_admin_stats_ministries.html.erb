@@ -5,7 +5,9 @@
     <span><i class="fa fa-angle-right"></i></span>
     <span><%= link_to "admin panel", dashboard_user_path %></span>
     <span><i class="fa fa-angle-right"></i></span>
-    <span class="current_page">users</span>
+    <span class="current_page">ministries</span>
+    <span class="tree_tab_link"><%= link_to "view ministry page", listed_ministries_launchministries_path, target:"_blank", style: 'color:#FFFFFF !important;' %></span>
+    <span class="tree_tab_link"><%= link_to "create a ministry", new_launchministry_path, target:"_blank", style: 'color:#FFFFFF !important;' %></span>
   </div>
   <div class="medium-12 columns admin_tab_content">
 
@@ -16,7 +18,7 @@
 
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">registered users</div>
+            <div class="data_title">total ministries</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
