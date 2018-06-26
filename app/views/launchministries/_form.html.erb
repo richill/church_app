@@ -9,7 +9,11 @@
         <span><i class="fa fa-angle-right"></i></span>
         <span><%= link_to "got a ministry idea", ministry_idea_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span class="current_page">new minsitry launch</span>
+        <% if action_name == 'new'  %>
+          <span class="current_page">new minsitry launch</span>
+        <% else %>
+          <span class="current_page">update minsitry</span>
+        <% end %>
       </div>
 
       <div class="medium-12 columns page_main_content">
@@ -82,9 +86,15 @@
                           <div><%= link_to "cancel", stats_ministries_user_path(current_user) %></div>
                         </li>
                         <li>
-                          <div class="form-actions submit_btn">
-                            <%= f.button :submit, "create ministry" %>
-                          </div>
+                          <% if action_name == 'new'  %>
+                            <div class="form-actions submit_btn">
+                              <%= f.button :submit, "create ministry" %>
+                            </div>
+                          <% else %>
+                            <div class="form-actions submit_btn">
+                              <%= f.button :submit, "update ministry" %>
+                            </div>
+                          <% end %>
                         </li>
                       </ul>
                     <% else %>
