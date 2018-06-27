@@ -151,6 +151,7 @@
 .admin_stats_ministries .listed_users ul .main_conatiner {
   width: 100%;
   padding: 5px;
+  margin-bottom: 15px;
 }
 
 .admin_stats_ministries .main_conatiner {
@@ -162,14 +163,23 @@
   padding: 0px !important;
 }
 
+.admin_stats_ministries .main_img_inner_cover {
+  background-color: red;
+  height: 60px;
+  overflow: hidden;
+}
+
 .admin_stats_ministries .main_info {
   padding: 0px 0px 0px 8px !important;
   font-size: 11px;
 }
 
 .admin_stats_ministries .main_info a {
-  color: #2A2C49 !important;
   text-transform: capitalize;
+}
+
+.admin_stats_ministries .min_name a {
+  color: #2A2C49 !important;
 }
 
 .admin_stats_ministries .member_created {
@@ -291,7 +301,16 @@
   -o-transition: all 0.3s ease;
 }
 
+.min_name a {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 12px;
+}
 
+.min_content a {
+  color: #E1473E !important;
+  text-transform: lowercase !important;
+}
 
 
 
