@@ -148,30 +148,26 @@
   margin: 0px !important;
 }
 
-.admin_stats_ministries .listed_users ul .user_conatiner {
-  float: left;
-  width: 251px;
-  padding: 8px 8px 5px;
-  margin: 5px;
+.admin_stats_ministries .listed_users ul .main_conatiner {
+  width: 100%;
+  padding: 5px;
 }
 
-.admin_stats_ministries .user_conatiner {
+.admin_stats_ministries .main_conatiner {
   border: 1px solid #D4D4D4;
   border-radius: 2px;
-
 }
 
-.admin_stats_ministries .user_image {
-  padding: 6px 0px !important;
-  margin-bottom: 5px;
+.admin_stats_ministries .main_image {
+  padding: 0px !important;
 }
 
-.admin_stats_ministries .user_info {
+.admin_stats_ministries .main_info {
   padding: 0px 0px 0px 8px !important;
   font-size: 11px;
 }
 
-.admin_stats_ministries .user_info a {
+.admin_stats_ministries .main_info a {
   color: #2A2C49 !important;
   text-transform: capitalize;
 }
