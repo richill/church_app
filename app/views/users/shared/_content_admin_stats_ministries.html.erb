@@ -104,7 +104,20 @@
                     </div>
                   </div>
                   <div class="medium-9 columns main_info">
-                    <div class="min_name"><%= link_to minsitry.mininstryidea, minsitry, target:"_blank" %></div>
+                    <div>
+                      <span class="min_name"><%= link_to minsitry.mininstryidea, minsitry, target:"_blank" %></span>
+                      <span>|</span>
+                      <span>
+                        <span class="subheaders">ministry director:</span>
+                        <span><%= link_to "#{minsitry.firstname} #{minsitry.lastname}", minsitry, target:"_blank", class: "weblink" %></span>
+                      </span>
+                      <span>|</span>
+                      <span>
+                        <span class="subheaders">email:</span>
+                        <span class="weblink"><%= mail_to "#{minsitry.email}" %></span>
+                    </span>
+                    </div>
+                    
                     <div class="min_content">
                       <span><%= truncate("#{minsitry.mininstrydescription}", length: 200) %></span>
                       <span><%= link_to "view", minsitry, target:"_blank" %></span>

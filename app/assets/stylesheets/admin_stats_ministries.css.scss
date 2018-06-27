@@ -167,15 +167,12 @@
   background-color: red;
   height: 60px;
   overflow: hidden;
+  margin-bottom: 5px;
 }
 
 .admin_stats_ministries .main_info {
   padding: 0px 0px 0px 8px !important;
   font-size: 11px;
-}
-
-.admin_stats_ministries .main_info a {
-  text-transform: capitalize;
 }
 
 .admin_stats_ministries .min_name a {
@@ -307,13 +304,29 @@
   font-size: 12px;
 }
 
+.min_content {
+  color: #2A2C49 !important;
+}
+
 .min_content a {
   color: #E1473E !important;
   text-transform: lowercase !important;
 }
 
+.weblink {
+  color: #a1355b !important;
+}
 
 
+.weblink a {
+  color: #a1355b !important;
+}
+
+.subheaders {
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #2A2C49 !important;
+}
 
 
 
