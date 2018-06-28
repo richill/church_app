@@ -115,7 +115,15 @@
                       <span>
                         <span class="subheaders">email:</span>
                         <span class="weblink"><%= mail_to "#{minsitry.email}" %></span>
-                    </span>
+                      </span>
+                      <span>|</span>
+                      <span>
+                        <% if minsitry.approved_ministry %>
+                          <span class="approved"><%= link_to "approved", "#" %></span>
+                        <% elsif minsitry.pending_ministry %>
+                          <span class="pending"><%= link_to "pending", "#" %></span>
+                        <% end %>
+                      </span>
                     </div>
                     
                     <div class="min_content">

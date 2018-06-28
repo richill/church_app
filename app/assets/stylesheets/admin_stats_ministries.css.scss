@@ -328,7 +328,47 @@
   color: #2A2C49 !important;
 }
 
+.approved a {
+  background-color: #8ABFA1 !important;
+  font-size: 10px;
+  color: #fff !important;
+  text-transform: uppercase;
+  padding: 3px 15px;
+  margin-left: 5px;
+  border-radius: 2px;
+  text-decoration: none !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
 
+.approved a:hover {
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.pending a {
+  background-color: #E1473E !important;
+  font-size: 10px;
+  color: #fff !important;
+  text-transform: uppercase;
+  padding: 3px 15px;
+  margin-left: 5px;
+  border-radius: 2px;
+  text-decoration: none !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.pending a:hover {
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
 
 
 
