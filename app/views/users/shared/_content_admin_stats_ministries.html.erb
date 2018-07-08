@@ -18,7 +18,7 @@
 
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">total approved ministries</div>
+            <div class="data_title">total ministries</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
@@ -30,7 +30,7 @@
 
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">total pending ministries</div>
+            <div class="data_title">total approved ministries</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
@@ -42,7 +42,7 @@
 
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">ministries created by users</div>
+            <div class="data_title">approved ministries by users</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
@@ -54,7 +54,7 @@
 
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">ministries created by admins</div>
+            <div class="data_title">approved ministries by admins</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
@@ -81,6 +81,10 @@
               <i class="fa fa-info-circle"></i>
               <span>Total approved ministries on the platform</span>
             </div>
+            <span class="btn btn_blue" id="userstats_user_tab">all ministries <span>[<%# @users.all.count %>]</span></span>
+            <span class="btn btn_green" id="userstats_males_tab">approved ministries [<%# @users.males.count %>]</span>
+            <span class="btn btn_green" id="userstats_females_tab">pending ministries [<%# @users.females.count %>]</span>
+            <span class="btn btn_green" id="userstats_admins_tab">ministries by admin [<%# @users.admins.count %>]</span>
           </div>
         </div>
         <div class="divider"></div>
@@ -105,7 +109,7 @@
                       <span>|</span>
                       <span>
                         <span class="subheaders">ministry director:</span>
-                        <span><%= link_to "#{minsitry.firstname} #{minsitry.lastname}", minsitry, target:"_blank", class: "weblink" %></span>
+                        <span><%= link_to "#{minsitry.firstname} #{minsitry.lastname}", user_path(minsitry.user), target:"_blank", class: "weblink" %></span>
                       </span>
                       <span>|</span>
                       <span>
@@ -137,8 +141,6 @@
           </div>
           <div class="clear"></div>
           <!-- all ministries -->
-
-       
         </div>
         <!-- listed_ministries -->
 
