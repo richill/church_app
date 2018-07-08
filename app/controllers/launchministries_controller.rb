@@ -14,6 +14,7 @@ class LaunchministriesController < ApplicationController
 
   # GET /launchministries/new
   def new
+    @user = current_user
     @launchministry = Launchministry.new
   end
 
@@ -24,6 +25,7 @@ class LaunchministriesController < ApplicationController
   # POST /launchministries
   # POST /launchministries.json
   def create
+    @user = current_user
     @launchministry = Launchministry.new(launchministry_params)
 
     respond_to do |format|

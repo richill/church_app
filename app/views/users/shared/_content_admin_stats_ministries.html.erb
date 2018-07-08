@@ -42,7 +42,7 @@
 
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">approved ministries by users</div>
+            <div class="data_title">approved users ministries</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
@@ -54,7 +54,7 @@
 
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">approved ministries by admins</div>
+            <div class="data_title">approved admin ministries</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
@@ -109,7 +109,7 @@
                       <span>|</span>
                       <span>
                         <span class="subheaders">ministry director:</span>
-                        <span><%= link_to "#{minsitry.firstname} #{minsitry.lastname}", user_path(minsitry.user), target:"_blank", class: "weblink" %></span>
+                        <span><%= link_to "#{minsitry.firstname} #{minsitry.lastname}", minsitry, target:"_blank", class: "weblink" %></span>
                       </span>
                       <span>|</span>
                       <span>
