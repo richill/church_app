@@ -81,19 +81,19 @@
               <i class="fa fa-info-circle"></i>
               <span>Total approved ministries on the platform</span>
             </div>
-            <span class="btn btn_blue" id="userstats_user_tab">all ministries <span>[<%# @users.all.count %>]</span></span>
-            <span class="btn btn_green" id="userstats_males_tab">approved ministries [<%# @users.males.count %>]</span>
-            <span class="btn btn_green" id="userstats_females_tab">pending ministries [<%# @users.females.count %>]</span>
-            <span class="btn btn_green" id="userstats_admins_tab">ministries by admin [<%# @users.admins.count %>]</span>
+            <span class="btn btn_blue" id="ministstats_all_tab">all ministries <span>[<%# @users.all.count %>]</span></span>
+            <span class="btn btn_green" id="ministstats_approved_tab">approved ministries [<%# @users.males.count %>]</span>
+            <span class="btn btn_green" id="ministstats_pending_tab">pending ministries [<%# @users.females.count %>]</span>
+            <span class="btn btn_green" id="ministstats_admin_tab">ministries by admin [<%# @users.admins.count %>]</span>
           </div>
         </div>
         <div class="divider"></div>
         <div class="clear"></div>
 
         <!-- listed_ministries -->
-        <div class="listed_users">
+        <div class="listed_ministries">
           <!-- all ministries -->
-          <div class="listed_users" id="">
+          <div class="listed_ministries" id="">
             <div class="data_list_title">all approved ministries</div>
             <ul>
               <% @launchministries.pending_ministries.each do |minsitry| %>
