@@ -93,8 +93,8 @@
         <!-- listed_ministries -->
         <div class="listed_ministries">
           <!-- all ministries -->
-          <div class="listed_ministries" id="">
-            <div class="data_list_title">all approved ministries</div>
+          <div class="listed_ministries" id="ministstats_all_tab_content">
+            <div class="data_list_title">all ministries</div>
             <ul>
               <% @launchministries.pending_ministries.each do |minsitry| %>
                 <li class="medium-12 columns main_conatiner">
@@ -141,6 +141,36 @@
           </div>
           <div class="clear"></div>
           <!-- all ministries -->
+
+          <!-- approved ministries -->
+          <div class="listed_ministries" id="ministstats_approved_tab_content">
+            <div class="data_list_title">all approved ministries</div>
+            <ul>
+              <li>approved ministries</li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+          <!-- approved ministries -->
+
+          <!-- pending ministries -->
+          <div class="listed_ministries" id="ministstats_pending_tab_content">
+            <div class="data_list_title">all pending ministries</div>
+            <ul>
+              <li>pending ministries</li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+          <!-- pending ministries -->
+
+          <!-- pending ministries -->
+          <div class="listed_ministries" id="ministstats_admin_tab_content">
+            <div class="data_list_title">all admins ministries</div>
+            <ul>
+              <li>admins ministries</li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+          <!-- pending ministries -->
         </div>
         <!-- listed_ministries -->
 
