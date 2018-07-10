@@ -4,34 +4,34 @@
   ===================================================*/
 
 $(document).ready(function() {
-  $("#userstats_males_tab_content").hide();
-  $("#userstats_females_tab_content").hide();
-  $("#userstats_admins_tab_content").hide();
-  $('#userstats_user_tab').click(function() {
-    $("#userstats_user_tab_content").show();
-    $("#userstats_males_tab_content").hide();
-    $("#userstats_females_tab_content").hide();
-    $("#userstats_admins_tab_content").hide();
+  $("#ministstats_approved_tab_content").hide();
+  $("#ministstats_pending_tab_content").hide();
+  $("#ministstats_admin_tab_content").hide();
+  $('#ministstats_all_tab').click(function() {
+    $("#ministstats_all_tab_content").show();
+    $("#ministstats_approved_tab_content").hide();
+    $("#ministstats_pending_tab_content").hide();
+    $("#ministstats_admin_tab_content").hide();
   });
 
-  $('#userstats_males_tab').click(function() {
-    $("#userstats_males_tab_content").show();
-    $("#userstats_user_tab_content").hide();
-    $("#userstats_females_tab_content").hide();
-    $("#userstats_admins_tab_content").hide();
+  $('#ministstats_approved_tab').click(function() {
+    $("#ministstats_approved_tab_content").show();
+    $("#ministstats_all_tab_content").hide();
+    $("#ministstats_pending_tab_content").hide();
+    $("#ministstats_admin_tab_content").hide();
   });
 
-  $('#userstats_females_tab').click(function() {
-    $("#userstats_females_tab_content").show();
-    $("#userstats_males_tab_content").hide();
-    $("#userstats_user_tab_content").hide();
-    $("#userstats_admins_tab_content").hide();
+  $('#ministstats_pending_tab').click(function() {
+    $("#ministstats_pending_tab_content").show();
+    $("#ministstats_approved_tab_content").hide();
+    $("#ministstats_all_tab_content").hide();
+    $("#ministstats_admin_tab_content").hide();
   });
 
-  $('#userstats_admins_tab').click(function() {
-    $("#userstats_admins_tab_content").show();
-    $("#userstats_males_tab_content").hide();
-    $("#userstats_females_tab_content").hide();
-    $("#userstats_user_tab_content").hide();
+  $('#ministstats_admin_tab').click(function() {
+    $("#ministstats_admin_tab_content").show();
+    $("#ministstats_approved_tab_content").hide();
+    $("#ministstats_pending_tab_content").hide();
+    $("#ministstats_all_tab_content").hide();
   });
 });
