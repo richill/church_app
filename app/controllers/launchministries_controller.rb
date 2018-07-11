@@ -1,29 +1,21 @@
 class LaunchministriesController < ApplicationController
   before_action :set_launchministry, only: [:show, :edit, :update, :destroy]
 
-  # GET /launchministries
-  # GET /launchministries.json
   def index
     @launchministries = Launchministry.all
   end
 
-  # GET /launchministries/1
-  # GET /launchministries/1.json
   def show
   end
 
-  # GET /launchministries/new
   def new
     @user = current_user
     @launchministry = Launchministry.new
   end
 
-  # GET /launchministries/1/edit
   def edit
   end
 
-  # POST /launchministries
-  # POST /launchministries.json
   def create
     @user = current_user
     @launchministry = Launchministry.new(launchministry_params)
@@ -39,8 +31,6 @@ class LaunchministriesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /launchministries/1
-  # PATCH/PUT /launchministries/1.json
   def update
     respond_to do |format|
       if @launchministry.update(launchministry_params)
@@ -53,8 +43,6 @@ class LaunchministriesController < ApplicationController
     end
   end
 
-  # DELETE /launchministries/1
-  # DELETE /launchministries/1.json
   def destroy
     @launchministry.destroy
     respond_to do |format|
@@ -68,12 +56,10 @@ class LaunchministriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_launchministry
       @launchministry = Launchministry.friendly.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def launchministry_params
       params.require(:launchministry).permit(:firstname, :lastname, :email, :mobile, :homenumber, :worknumber, :address, :city, :postcode, :mininstryidea, :mininstrydescription, :ministryneed, :ministrymission, :approve, :user_id)
     end

@@ -38,6 +38,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :jobs
     resources :practicalneeds
+    resources :launchministries
     resources :comments, only: [:create, :destroy] 
     member do
       get 'dashboard'
