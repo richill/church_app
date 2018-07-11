@@ -8,21 +8,39 @@ class LaunchministriesController < ApplicationController
   def show
   end
 
+  # def new
+  #   @user = current_user
+  #   @launchministry = Launchministry.new
+  # end
   def new
     @user = current_user
-    @launchministry = Launchministry.new
+    @job = @user.launchministries.build
   end
 
   def edit
   end
 
-  def create
-    @user = current_user
-    @launchministry = Launchministry.new(launchministry_params)
+  # def create
+  #   @user = current_user
+  #   @launchministry = Launchministry.new(launchministry_params)
 
+  #   respond_to do |format|
+  #     if @launchministry.save
+  #       format.html { redirect_to thank_you_path, notice: 'Launchministry was successfully created.' }
+  #       format.json { render :show, status: :created, location: @launchministry }
+  #     else
+  #       format.html { render :new }
+  #       format.json { render json: @launchministry.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
+  def create
+    #@user = User.friendly.find(params[:user_id])
+    @user = current_user
+    @launchministry = @user.launchministries.create(launchministry_params)
     respond_to do |format|
       if @launchministry.save
-        format.html { redirect_to thank_you_path, notice: 'Launchministry was successfully created.' }
+        format.html { redirect_to thank_you_path, notice: 'Ministry was successfully created.' }
         format.json { render :show, status: :created, location: @launchministry }
       else
         format.html { render :new }
@@ -31,9 +49,20 @@ class LaunchministriesController < ApplicationController
     end
   end
 
+  # def update
+  #   respond_to do |format|
+  #     if @launchministry.update(launchministry_params)
+  #       format.html { redirect_to @launchministry, notice: 'Launchministry was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @launchministry }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @launchministry.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
   def update
     respond_to do |format|
-      if @launchministry.update(launchministry_params)
+      if @launchministry.update_attributes(launchministry_params)
         format.html { redirect_to @launchministry, notice: 'Launchministry was successfully updated.' }
         format.json { render :show, status: :ok, location: @launchministry }
       else
@@ -43,12 +72,18 @@ class LaunchministriesController < ApplicationController
     end
   end
 
+  # def destroy
+  #   @launchministry.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to launchministries_url, notice: 'Launchministry was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
   def destroy
+    @user = current_user
+    @launchministry = @user.launchministries.friendly.find(params[:id])
     @launchministry.destroy
-    respond_to do |format|
-      format.html { redirect_to launchministries_url, notice: 'Launchministry was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to user_path(@user)
   end
 
   def ministriespg
