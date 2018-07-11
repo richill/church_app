@@ -132,8 +132,15 @@
                     </div>
                   </div>
                   <div class="medium-2 columns main_action">
-                    <div class="delete_btn"><%= link_to 'delete', minsitry, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-                    action section
+                    <div class="action_section">
+                      <div class="delete_btn"><%= link_to 'delete', minsitry, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                      <div>
+                        <%= simple_form_for(@launchministry) do |f| %>
+                          <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
+                          <%= f.button :submit %>
+                        <% end %>
+                      </div>
+                    </div>
                   </div>
                 </li>
               <% end %>

@@ -60,6 +60,8 @@ class UsersController < ApplicationController
   end
 
   def stats_ministries
+    # @launchministry = Launchministry.friendly.find(params[:id])
+    @launchministry = Launchministry.first
   end
 
   def sitelinks  
