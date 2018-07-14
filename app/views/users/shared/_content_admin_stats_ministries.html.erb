@@ -96,7 +96,8 @@
           <div class="listed_ministries" id="ministstats_all_tab_content">
             <div class="data_list_title">all ministries</div>
             <ul>
-              <% @launchministries.pending_ministries.each do |minsitry| %>
+              <% @launchministries.each do |minsitry| %>
+              <%# @launchministries.pending_ministries.each do |minsitry| %>
                 <li class="medium-12 columns main_conatiner">
                   <div class="medium-1 columns main_image">
                     <div class="main_img_inner_cover">
@@ -109,7 +110,7 @@
                       <span>|</span>
                       <span>
                         <span class="subheaders">ministry director:</span>
-                        <span><%= link_to "#{minsitry.firstname} #{minsitry.lastname}", user_path(minsitry.user), target:"_blank", class: "weblink" %></span>
+                        <span><%= link_to "#{minsitry.firstname} #{minsitry.lastname}", minsitry, target:"_blank", class: "weblink" %></span>
                       </span>
                       <span>|</span>
                       <span>
@@ -135,19 +136,21 @@
                       <span class="min_content"><%= minsitry.created_at.strftime("%b %d %Y") %></span>
                       <span>|</span>
                       <span class="subheaders">creator:</span>
-                      <span class="min_content"><%= link_to "#{minsitry.user.firstname} #{minsitry.user.lastname}" %></span>
+                      <span class="min_content"><%= link_to "#{minsitry.user.firstname} #{minsitry.user.lastname}", user_path(minsitry.user), target:"_blank" %></span>
                     </div>
                   </div>
                   <div class="medium-2 columns main_action">
                     <div class="action_section">
-                      <div class="delete_btn"><%= link_to 'delete', minsitry, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-                      <div class="edit_btn"><%= link_to 'edit', edit_user_launchministry_path(minsitry.user, minsitry), target:"_blank" %></div>
                       <div class="update_section">
-                        <%= simple_form_for [minsitry.user, minsitry] do |f| %>
-                          <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
-                          <%= f.button :submit, "update" %>
+                        <% unless minsitry.approved_ministry %>
+                          <%= simple_form_for [minsitry.user, minsitry] do |f| %>
+                            <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
+                            <%= f.button :submit, "update" %>
+                          <% end %>
                         <% end %>
                       </div>
+                      <div class="edit_btn"><%= link_to 'edit', edit_user_launchministry_path(minsitry.user, minsitry), target:"_blank" %></div>
+                      <div class="delete_btn"><%= link_to 'delete', minsitry, method: :delete, data: { confirm: 'Are you sure?' } %></div>
                     </div>
                   </div>
                 </li>
