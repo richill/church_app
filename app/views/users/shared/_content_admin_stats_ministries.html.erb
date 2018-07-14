@@ -130,14 +130,22 @@
                       <span><%= truncate("#{minsitry.mininstrydescription}", length: 200) %></span>
                       <span><%= link_to "view", minsitry, target:"_blank" %></span>
                     </div>
+                    <div>
+                      <span class="subheaders">created:</span>
+                      <span class="min_content"><%= minsitry.created_at.strftime("%b %d %Y") %></span>
+                      <span>|</span>
+                      <span class="subheaders">creator:</span>
+                      <span class="min_content"><%= link_to "#{minsitry.user.firstname} #{minsitry.user.lastname}" %></span>
+                    </div>
                   </div>
                   <div class="medium-2 columns main_action">
                     <div class="action_section">
                       <div class="delete_btn"><%= link_to 'delete', minsitry, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-                      <div>
+                      <div class="edit_btn"><%= link_to 'edit', edit_user_launchministry_path(minsitry.user, minsitry), target:"_blank" %></div>
+                      <div class="update_section">
                         <%= simple_form_for [minsitry.user, minsitry] do |f| %>
                           <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
-                          <%= f.button :submit %>
+                          <%= f.button :submit, "update" %>
                         <% end %>
                       </div>
                     </div>
