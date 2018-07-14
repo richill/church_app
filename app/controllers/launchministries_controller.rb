@@ -38,13 +38,26 @@ class LaunchministriesController < ApplicationController
     #@user = User.friendly.find(params[:user_id])
     @user = current_user
     @launchministry = @user.launchministries.create(launchministry_params)
-    respond_to do |format|
-      if @launchministry.save
-        format.html { redirect_to thank_you_path, notice: 'Ministry was successfully created.' }
-        format.json { render :show, status: :created, location: @launchministry }
-      else
-        format.html { render :new }
-        format.json { render json: @launchministry.errors, status: :unprocessable_entity }
+
+    if @user.admin?
+      respond_to do |format|
+        if @launchministry.save
+          format.html { redirect_to thank_you_path, notice: 'Ministry was successfully created.' }
+          format.json { render :show, status: :created, location: @launchministry }
+        else
+          format.html { render :new }
+          format.json { render json: @launchministry.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      respond_to do |format|
+        if @launchministry.save
+          format.html { redirect_to stats_ministries_user_path(@user), notice: 'Ministry was successfully created.' }
+          format.json { render :show, status: :created, location: @launchministry }
+        else
+          format.html { render :new }
+          format.json { render json: @launchministry.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
