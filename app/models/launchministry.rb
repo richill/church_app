@@ -33,6 +33,4 @@ class Launchministry < ApplicationRecord
   def pending_ministry
     self.approve == false || self.approve == nil
   end
-
-
 end

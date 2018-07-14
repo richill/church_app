@@ -81,9 +81,9 @@
               <i class="fa fa-info-circle"></i>
               <span>Total approved ministries on the platform</span>
             </div>
-            <span class="btn btn_blue" id="ministstats_all_tab">all ministries <span>[<%# @users.all.count %>]</span></span>
-            <span class="btn btn_green" id="ministstats_approved_tab">approved ministries [<%# @users.males.count %>]</span>
-            <span class="btn btn_green" id="ministstats_pending_tab">pending ministries [<%# @users.females.count %>]</span>
+            <span class="btn btn_blue" id="ministstats_all_tab">all ministries <span>[<%= @launchministries.count %>]</span></span>
+            <span class="btn btn_green" id="ministstats_approved_tab">approved ministries [<%= @launchministries.approved_ministries.count %>]</span>
+            <span class="btn btn_green" id="ministstats_pending_tab">pending ministries [<%= @launchministries.pending_ministries.count %>]</span>
             <span class="btn btn_green" id="ministstats_admin_tab">ministries by admin [<%# @users.admins.count %>]</span>
           </div>
         </div>
