@@ -19,15 +19,16 @@
                 <span>
                   The Connections Ministry serves Christ by helping people finding their place to serve and identifying ways to grow in their faith and thrive at our church by developing meaningful relationships in appropriate ministry settings. We are the bridge between the individual and the numerous ministries of Open Heavens Church.
                 </span>
-                <div><%= link_to "first time visitor registration", new_user_registration_path, class: "registration_btn" %></div>
-                
+                <% unless user_signed_in? %>
+                  <div><%= link_to "first time visitor registration", new_user_registration_path, class: "registration_btn" %></div>
+                <% end %>
               </div>
 
               <div class="paragraph_content">
                 <b>Listed Ministries</b>
                 <ul>
                   <% @launchministries.each do |minstry| %>
-                    <li><%= link_to "#{minstry.mininstryidea}", launchministry_path(minstry), class: "weblink" %></li>
+                    <li><%= link_to truncate(minstry.mininstryidea, length: 30), launchministry_path(minstry), class: "weblink" %></li>
                   <% end %>
                 </ul>
               </div>
