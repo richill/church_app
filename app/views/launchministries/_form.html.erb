@@ -83,7 +83,7 @@
                     <% if current_user.admin? %>
                       <ul>
                         <li class="cancel_btn">
-                          <div><%= link_to "cancel", stats_ministries_user_path(current_user) %></div>
+                          <div><%= link_to "back", stats_ministries_user_path(current_user) %></div>
                         </li>
                         <li>
                           <% if action_name == 'new'  %>

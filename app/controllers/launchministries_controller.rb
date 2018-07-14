@@ -56,13 +56,27 @@ class LaunchministriesController < ApplicationController
   #   end
   # end
   def update
-    respond_to do |format|
-      if @launchministry.update_attributes(launchministry_params)
-        format.html { redirect_to @launchministry, notice: 'Launchministry was successfully updated.' }
-        format.json { render :show, status: :ok, location: @launchministry }
-      else
-        format.html { render :edit }
-        format.json { render json: @launchministry.errors, status: :unprocessable_entity }
+    @user = current_user
+
+    if @user.admin?
+      respond_to do |format|
+        if @launchministry.update_attributes(launchministry_params)
+          format.html { redirect_to stats_ministries_user_path(@user), notice: 'Launchministry was successfully updated.' }
+          format.json { render :show, status: :ok, location: @launchministry }
+        else
+          format.html { render :edit }
+          format.json { render json: @launchministry.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      respond_to do |format|
+        if @launchministry.update_attributes(launchministry_params)
+          format.html { redirect_to @launchministry, notice: 'Launchministry was successfully updated.' }
+          format.json { render :show, status: :ok, location: @launchministry }
+        else
+          format.html { render :edit }
+          format.json { render json: @launchministry.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
