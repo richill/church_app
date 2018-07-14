@@ -45,7 +45,7 @@ class StaticPagesController < ApplicationController
   end
 
   def connectdpg
-    @launchministries = Launchministry.all
+    @launchministries = Launchministry.approved_ministries
   end
 
   def childrenteenpg  
