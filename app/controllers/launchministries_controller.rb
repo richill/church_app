@@ -70,18 +70,11 @@ class LaunchministriesController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @launchministry.destroy
-  #   respond_to do |format|
-  #     format.html { redirect_to launchministries_url, notice: 'Launchministry was successfully destroyed.' }
-  #     format.json { head :no_content }
-  #   end
-  # end
   def destroy
     @user = current_user
     @launchministry = @user.launchministries.friendly.find(params[:id])
     @launchministry.destroy
-    redirect_to user_path(@user)
+    redirect_to stats_ministries_user_path(@user)
   end
 
   def ministriespg

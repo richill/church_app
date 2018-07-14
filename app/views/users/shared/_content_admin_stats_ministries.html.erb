@@ -23,7 +23,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
               </span>
-              <span class="main_stats"><%= @launchministries.approved_ministries.count %></span>
+              <span class="main_stats"><%= @launchministries.all.count %></span>
             </div>
           </div>
         </div>
@@ -35,18 +35,6 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
               </span>
-              <span class="main_stats"><%= @launchministries.pending_ministries.count %></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="medium-3 columns data_stats_cover">
-          <div class="data_stats">
-            <div class="data_title">approved users ministries</div>
-            <div class="stats_content">
-              <span class="icon_cover">
-                <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
-              </span>
               <span class="main_stats"><%= @launchministries.approved_ministries.count %></span>
             </div>
           </div>
@@ -54,7 +42,19 @@
 
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">approved admin ministries</div>
+            <div class="data_title">total pending ministries</div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
+              </span>
+              <span class="main_stats"><%= @launchministries.pending_ministries.count %></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title">admin ministries</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
