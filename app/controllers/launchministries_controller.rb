@@ -14,7 +14,7 @@ class LaunchministriesController < ApplicationController
   # end
   def new
     @user = current_user
-    @job = @user.launchministries.build
+    @launchministry = @user.launchministries.build
   end
 
   def edit
