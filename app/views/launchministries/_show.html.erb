@@ -66,6 +66,27 @@
         <!-- info_left_content -->
 
         <!-- info_right_content -->
+        <% if user_signed_in? %>
+          <% if current_user.admin? %>
+            <div class="medium-4 columns action_btn_main_section">
+              <div class="action_btn">
+
+                <% if @launchministry.approved_ministry %>
+                  <div class="info_box approved">
+                    <span>approved ministry</span>
+                  </div>
+                <% else %>
+                  <div class="info_box pending">
+                    <span>pending ministry</span>
+                  </div>
+                <% end %>
+
+                <div class="info_box_link"><%= link_to 'edit', edit_user_launchministry_path(@launchministry.user, @launchministry), target:"_blank" %></div>
+                <div class="info_box_link"><%= link_to 'delete', @launchministry, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
         <%= render 'shared/content_service_times' %>
         <!-- info_right_content -->
       </div>

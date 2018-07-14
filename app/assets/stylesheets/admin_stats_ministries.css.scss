@@ -298,37 +298,37 @@
   -o-transition: all 0.3s ease;
 }
 
-.min_name a {
+.admin_stats_ministries .min_name a {
   font-weight: bold;
   text-transform: capitalize;
   font-size: 12px;
 }
 
-.min_content {
+.admin_stats_ministries .min_content {
   color: #2A2C49 !important;
 }
 
-.min_content a {
+.admin_stats_ministries .min_content a {
   color: #E1473E !important;
   text-transform: lowercase !important;
 }
 
-.weblink {
+.admin_stats_ministries .weblink {
   color: #a1355b !important;
 }
 
 
-.weblink a {
+.admin_stats_ministries .weblink a {
   color: #a1355b !important;
 }
 
-.subheaders {
+.admin_stats_ministries .subheaders {
   font-weight: bold;
   text-transform: capitalize;
   color: #2A2C49 !important;
 }
 
-.approved a {
+.admin_stats_ministries .approved a {
   background-color: #8ABFA1 !important;
   font-size: 10px;
   color: #fff !important;
@@ -342,14 +342,14 @@
   -o-transition: all 0.3s ease;
 }
 
-.approved a:hover {
+.admin_stats_ministries .approved a:hover {
   opacity: 0.7;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.pending a {
+.admin_stats_ministries .pending a {
   background-color: #E1473E !important;
   font-size: 10px;
   color: #fff !important;
@@ -363,14 +363,14 @@
   -o-transition: all 0.3s ease;
 }
 
-.pending a:hover {
+.admin_stats_ministries .pending a:hover {
   opacity: 0.7;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.delete_btn a {
+.admin_stats_ministries .delete_btn a {
   color: #2A2C49 !important;
   background-color: rgba(42, 44, 73, 0.2);
   font-size: 10px;
@@ -386,7 +386,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.delete_btn a:hover {
+.admin_stats_ministries .delete_btn a:hover {
   background-color: #2A2C49 !important;
   color: #fff !important;
   -webkit-transition: all 0.3s ease;
@@ -394,7 +394,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.edit_btn a {
+.admin_stats_ministries .edit_btn a {
   color: #2A2C49 !important;
   background-color: rgba(42, 44, 73, 0.2);
   font-size: 10px;
@@ -411,7 +411,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.edit_btn a:hover {
+.admin_stats_ministries .edit_btn a:hover {
   background-color: #2A2C49 !important;
   color: #fff !important;
   -webkit-transition: all 0.3s ease;
@@ -419,14 +419,14 @@
   -o-transition: all 0.3s ease;
 }
 
-.update_section {
+.admin_stats_ministries .update_section {
   background-color: rgba(42, 44, 73, 0.05);
   text-align: center;
   padding: 0px 15px;
   margin-bottom: 5px;
 }
 
-.update_section [type='submit'] {
+.admin_stats_ministries .update_section [type='submit'] {
   background-color: #2A2C49 !important;
   font-size: 10px;
   margin-bottom: 5px;
@@ -443,18 +443,18 @@
   -o-transition: all 0.3s ease;
 }
 
-.update_section [type='submit']:hover {
+.admin_stats_ministries .update_section [type='submit']:hover {
   opacity: 0.7;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.update_section #launchministry_approve {
+.admin_stats_ministries .update_section #launchministry_approve {
   margin-bottom: 0px !important;
 }
 
-.launchministry_approve label {
+.admin_stats_ministries .launchministry_approve label {
   font-size: 12px;
   color: #2A2C49 !important;
 }
