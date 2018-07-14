@@ -18,10 +18,7 @@ class Launchministry < ApplicationRecord
 
   scope :approved_ministries, -> {where(['approve = ?', true])}
   scope :pending_ministries, -> {where(['approve = ? OR approve IS ?', false, nil])} 
-  #scope :admin_ministries, -> {where(['approve = ?', true])}
-
-  scope :admin_ministries, -> { joins(:user).where(['users.admin = ?', true]) }
-  #scope :volunteer_jobs, -> { joins(:category_joblevel).where("Category_joblevels.name IN (?)", ["Volunteer"]) }
+  scope :admin_ministries, -> { joins(:user).where(['Users.admin = ?', true]) }
   
 
   def slug_launchministries
