@@ -22,7 +22,7 @@
                 <div class="ministry_content">
                   <div class="ministry_inner_content">
                     <ul>
-                      <% @launchministries.each do |minstry| %>
+                      <% @launchministries.approved_ministries.each do |minstry| %>
                         <li>
                           <div>
                             <span class="ministry_img_section">
@@ -32,7 +32,7 @@
                             </span>
                             <span class="ministry_info_section">
                               <%= link_to launchministry_path(minstry) do %>
-                                <div class="ministry_title"><%= truncate("#{minstry.mininstryidea}", length: 45) %></div>
+                                <div class="ministry_title"><%= truncate("#{minstry.mininstryidea}", length: 40) %></div>
                                 <div class="ministry_minor_info ministry_address"><b>about ministry:</b> <%= truncate("#{minstry.mininstrydescription}", length: 250) %></div>
                                 <div class="ministry_minor_info ministry_address">
                                   <span><b>minstry director:</b></span>

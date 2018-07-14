@@ -77,6 +77,14 @@
                   <div class="info_sub_content"><%= f.input :ministrymission, label: "What is your ministry's mission statement?", placeholder: "Type Your Answer" %></div>
                   <div class="clear"></div>
 
+                  <div class="update_section">
+                    <%= f.input :approve, as: :boolean %>
+                    <div class="minor_info">
+                      <span>By ticking the box you are approving the created ministry. Ministry will be displayed to the public</span> 
+                      <span><%= link_to "here", listed_ministries_launchministries_path, class: "weblink", target:"_blank" %></span>
+                    </div>
+                  </div>
+
                 </div>
                 <div class="form_btns">
                   <% if user_signed_in? %>
