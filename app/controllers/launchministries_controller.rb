@@ -1,5 +1,6 @@
 class LaunchministriesController < ApplicationController
   before_action :set_launchministry, only: [:show, :edit, :update, :destroy]
+  before_filter :setup_generic
 
   def index
     @launchministries = Launchministry.all
@@ -85,6 +86,11 @@ class LaunchministriesController < ApplicationController
   end
 
   private
+    def setup_generic
+      @users = User.all
+      @launchministries = Launchministry.all
+    end
+
     def set_launchministry
       @launchministry = Launchministry.friendly.find(params[:id])
     end

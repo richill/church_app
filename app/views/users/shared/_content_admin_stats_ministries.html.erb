@@ -105,11 +105,11 @@
                   </div>
                   <div class="medium-9 columns main_info">
                     <div>
-                      <span class="min_name"><%= link_to minsitry.mininstryidea, minsitry, target:"_blank" %></span>
+                      <span class="min_name"><%= link_to truncate(minsitry.mininstryidea, length: 30), minsitry, target:"_blank" %></span>
                       <span>|</span>
                       <span>
                         <span class="subheaders">ministry director:</span>
-                        <span><%= link_to "#{minsitry.firstname} #{minsitry.lastname}", minsitry, target:"_blank", class: "weblink" %></span>
+                        <span><%= link_to "#{minsitry.firstname} #{minsitry.lastname}", user_path(minsitry.user), target:"_blank", class: "weblink" %></span>
                       </span>
                       <span>|</span>
                       <span>
@@ -135,7 +135,7 @@
                     <div class="action_section">
                       <div class="delete_btn"><%= link_to 'delete', minsitry, method: :delete, data: { confirm: 'Are you sure?' } %></div>
                       <div>
-                        <%= simple_form_for(@launchministry) do |f| %>
+                        <%= simple_form_for [minsitry.user, minsitry] do |f| %>
                           <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
                           <%= f.button :submit %>
                         <% end %>
