@@ -44,17 +44,6 @@ class LaunchministriesController < ApplicationController
     end
   end
 
-  # def update
-  #   respond_to do |format|
-  #     if @launchministry.update(launchministry_params)
-  #       format.html { redirect_to @launchministry, notice: 'Launchministry was successfully updated.' }
-  #       format.json { render :show, status: :ok, location: @launchministry }
-  #     else
-  #       format.html { render :edit }
-  #       format.json { render json: @launchministry.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
   def update
     @user = current_user
 

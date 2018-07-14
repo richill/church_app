@@ -19,7 +19,6 @@ class Launchministry < ApplicationRecord
   scope :approved_ministries, -> {where(['approve = ?', true])}
   scope :pending_ministries, -> {where(['approve = ? OR approve IS ?', false, nil])} 
   scope :admin_ministries, -> { joins(:user).where(['Users.admin = ?', true]) }
-  
 
   def slug_launchministries
     [
@@ -35,3 +34,5 @@ class Launchministry < ApplicationRecord
     self.approve == false || self.approve == nil
   end
 end
+
+

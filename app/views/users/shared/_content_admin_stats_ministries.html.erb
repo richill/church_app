@@ -47,7 +47,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
               </span>
-              <span class="main_stats"><%= @users.females.count %></span>
+              <span class="main_stats"><%= @launchministries.approved_ministries.count %></span>
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
               </span>
-              <span class="main_stats"><%= @users.admins.count %></span>
+              <span class="main_stats"><%= @launchministries.admin_ministries.count %></span>
             </div>
           </div>
         </div>
@@ -74,8 +74,8 @@
         <div class="header_section_cover">
           <div class="data_contents">
             <span class="data_header">
-              <span>Total users on the platform</span> 
-              <span>[<%= @users.all.count %>]</span>
+              <span>Total created ministries on the platform</span> 
+              <span>[<%= @launchministries.all.count %>]</span>
             </span>
             <div class="header_subtitle">
               <i class="fa fa-info-circle"></i>
@@ -96,60 +96,63 @@
           <div class="listed_ministries" id="ministstats_all_tab_content">
             <div class="data_list_title">all ministries</div>
             <ul>
-              <% @launchministries.each do |minsitry| %>
+              <% @launchministries.each do |ministry| %>
                 <li class="medium-12 columns main_conatiner">
                   <div class="medium-1 columns main_image">
                     <div class="main_img_inner_cover">
-                    <%= link_to image_tag("img_default_ministries.png"), minsitry, target:"_blank" %>
+                    <%= link_to image_tag("img_default_ministries.png"), ministry, target:"_blank" %>
                     </div>
                   </div>
                   <div class="medium-9 columns main_info">
                     <div>
-                      <span class="min_name"><%= link_to truncate(minsitry.mininstryidea, length: 30), minsitry, target:"_blank" %></span>
+                      <span class="min_name"><%= link_to truncate(ministry.mininstryidea, length: 30), ministry, target:"_blank" %></span>
                       <span>|</span>
                       <span>
                         <span class="subheaders">ministry director:</span>
-                        <span><%= link_to "#{minsitry.firstname} #{minsitry.lastname}", minsitry, target:"_blank", class: "weblink" %></span>
+                        <span><%= link_to "#{ministry.firstname} #{ministry.lastname}", ministry, target:"_blank", class: "weblink" %></span>
                       </span>
                       <span>|</span>
                       <span>
                         <span class="subheaders">email:</span>
-                        <span class="weblink"><%= mail_to "#{minsitry.email}" %></span>
+                        <span class="weblink"><%= mail_to "#{ministry.email}" %></span>
                       </span>
                       <span>|</span>
                       <span>
-                        <% if minsitry.approved_ministry %>
-                          <span class="approved"><%= link_to "approved", "#" %></span>
-                        <% elsif minsitry.pending_ministry %>
-                          <span class="pending"><%= link_to "pending", "#" %></span>
+                        <% if ministry.approved_ministry %>
+                          <span class="approved"><%= link_to "approved", ministry, target:"_blank" %></span>
+                        <% elsif ministry.pending_ministry %>
+                          <span class="pending"><%= link_to "pending", ministry, target:"_blank" %></span>
                         <% end %>
                       </span>
                     </div>
                     
                     <div class="min_content">
-                      <span><%= truncate("#{minsitry.mininstrydescription}", length: 200) %></span>
-                      <span><%= link_to "view", minsitry, target:"_blank" %></span>
+                      <span><%= truncate("#{ministry.mininstrydescription}", length: 200) %></span>
+                      <span><%= link_to "view", ministry, target:"_blank" %></span>
                     </div>
                     <div>
                       <span class="subheaders">created:</span>
-                      <span class="min_content"><%= minsitry.created_at.strftime("%b %d %Y") %></span>
+                      <span class="min_content"><%= ministry.created_at.strftime("%b %d %Y") %></span>
                       <span>|</span>
                       <span class="subheaders">creator:</span>
-                      <span class="min_content"><%= link_to "#{minsitry.user.firstname} #{minsitry.user.lastname}", user_path(minsitry.user), target:"_blank" %></span>
+                      <span class="min_content"><%= link_to "#{ministry.user.firstname} #{ministry.user.lastname}", user_path(ministry.user), target:"_blank" %></span>
+                      <% if ministry.user.admin? %>
+                        <span class="min_content">[admin]</span>
+                      <% end %>
                     </div>
                   </div>
                   <div class="medium-2 columns main_action">
                     <div class="action_section">
                       <div class="update_section">
-                        <% unless minsitry.approved_ministry %>
-                          <%= simple_form_for [minsitry.user, minsitry] do |f| %>
+                        <% unless ministry.approved_ministry %>
+                          <%= simple_form_for [ministry.user, ministry] do |f| %>
                             <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
                             <%= f.button :submit, "update" %>
                           <% end %>
                         <% end %>
                       </div>
-                      <div class="edit_btn"><%= link_to 'edit', edit_user_launchministry_path(minsitry.user, minsitry), target:"_blank" %></div>
-                      <div class="delete_btn"><%= link_to 'delete', minsitry, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                      <div class="edit_btn"><%= link_to 'edit', edit_user_launchministry_path(ministry.user, ministry), target:"_blank" %></div>
+                      <div class="delete_btn"><%= link_to 'delete', ministry, method: :delete, data: { confirm: 'Are you sure?' } %></div>
                     </div>
                   </div>
                 </li>
@@ -163,7 +166,67 @@
           <div class="listed_ministries" id="ministstats_approved_tab_content">
             <div class="data_list_title">all approved ministries</div>
             <ul>
-              <li>approved ministries</li>
+              <% @launchministries.approved_ministries.each do |ministry| %>
+                <li class="medium-12 columns main_conatiner">
+                  <div class="medium-1 columns main_image">
+                    <div class="main_img_inner_cover">
+                    <%= link_to image_tag("img_default_ministries.png"), ministry, target:"_blank" %>
+                    </div>
+                  </div>
+                  <div class="medium-9 columns main_info">
+                    <div>
+                      <span class="min_name"><%= link_to truncate(ministry.mininstryidea, length: 30), ministry, target:"_blank" %></span>
+                      <span>|</span>
+                      <span>
+                        <span class="subheaders">ministry director:</span>
+                        <span><%= link_to "#{ministry.firstname} #{ministry.lastname}", ministry, target:"_blank", class: "weblink" %></span>
+                      </span>
+                      <span>|</span>
+                      <span>
+                        <span class="subheaders">email:</span>
+                        <span class="weblink"><%= mail_to "#{ministry.email}" %></span>
+                      </span>
+                      <span>|</span>
+                      <span>
+                        <% if ministry.approved_ministry %>
+                          <span class="approved"><%= link_to "approved", ministry, target:"_blank" %></span>
+                        <% elsif ministry.pending_ministry %>
+                          <span class="pending"><%= link_to "pending", ministry, target:"_blank" %></span>
+                        <% end %>
+                      </span>
+                    </div>
+                    
+                    <div class="min_content">
+                      <span><%= truncate("#{ministry.mininstrydescription}", length: 200) %></span>
+                      <span><%= link_to "view", ministry, target:"_blank" %></span>
+                    </div>
+                    <div>
+                      <span class="subheaders">created:</span>
+                      <span class="min_content"><%= ministry.created_at.strftime("%b %d %Y") %></span>
+                      <span>|</span>
+                      <span class="subheaders">creator:</span>
+                      <span class="min_content"><%= link_to "#{ministry.user.firstname} #{ministry.user.lastname}", user_path(ministry.user), target:"_blank" %></span>
+                      <% if ministry.user.admin? %>
+                        <span class="min_content">[admin]</span>
+                      <% end %>
+                    </div>
+                  </div>
+                  <div class="medium-2 columns main_action">
+                    <div class="action_section">
+                      <div class="update_section">
+                        <% unless ministry.approved_ministry %>
+                          <%= simple_form_for [ministry.user, ministry] do |f| %>
+                            <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
+                            <%= f.button :submit, "update" %>
+                          <% end %>
+                        <% end %>
+                      </div>
+                      <div class="edit_btn"><%= link_to 'edit', edit_user_launchministry_path(ministry.user, ministry), target:"_blank" %></div>
+                      <div class="delete_btn"><%= link_to 'delete', ministry, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                    </div>
+                  </div>
+                </li>
+              <% end %>
             </ul>
           </div>
           <div class="clear"></div>
@@ -173,7 +236,67 @@
           <div class="listed_ministries" id="ministstats_pending_tab_content">
             <div class="data_list_title">all pending ministries</div>
             <ul>
-              <li>pending ministries</li>
+              <% @launchministries.pending_ministries.each do |ministry| %>
+                <li class="medium-12 columns main_conatiner">
+                  <div class="medium-1 columns main_image">
+                    <div class="main_img_inner_cover">
+                    <%= link_to image_tag("img_default_ministries.png"), ministry, target:"_blank" %>
+                    </div>
+                  </div>
+                  <div class="medium-9 columns main_info">
+                    <div>
+                      <span class="min_name"><%= link_to truncate(ministry.mininstryidea, length: 30), ministry, target:"_blank" %></span>
+                      <span>|</span>
+                      <span>
+                        <span class="subheaders">ministry director:</span>
+                        <span><%= link_to "#{ministry.firstname} #{ministry.lastname}", ministry, target:"_blank", class: "weblink" %></span>
+                      </span>
+                      <span>|</span>
+                      <span>
+                        <span class="subheaders">email:</span>
+                        <span class="weblink"><%= mail_to "#{ministry.email}" %></span>
+                      </span>
+                      <span>|</span>
+                      <span>
+                        <% if ministry.approved_ministry %>
+                          <span class="approved"><%= link_to "approved", ministry, target:"_blank" %></span>
+                        <% elsif ministry.pending_ministry %>
+                          <span class="pending"><%= link_to "pending", ministry, target:"_blank" %></span>
+                        <% end %>
+                      </span>
+                    </div>
+                    
+                    <div class="min_content">
+                      <span><%= truncate("#{ministry.mininstrydescription}", length: 200) %></span>
+                      <span><%= link_to "view", ministry, target:"_blank" %></span>
+                    </div>
+                    <div>
+                      <span class="subheaders">created:</span>
+                      <span class="min_content"><%= ministry.created_at.strftime("%b %d %Y") %></span>
+                      <span>|</span>
+                      <span class="subheaders">creator:</span>
+                      <span class="min_content"><%= link_to "#{ministry.user.firstname} #{ministry.user.lastname}", user_path(ministry.user), target:"_blank" %></span>
+                      <% if ministry.user.admin? %>
+                        <span class="min_content">[admin]</span>
+                      <% end %>
+                    </div>
+                  </div>
+                  <div class="medium-2 columns main_action">
+                    <div class="action_section">
+                      <div class="update_section">
+                        <% unless ministry.approved_ministry %>
+                          <%= simple_form_for [ministry.user, ministry] do |f| %>
+                            <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
+                            <%= f.button :submit, "update" %>
+                          <% end %>
+                        <% end %>
+                      </div>
+                      <div class="edit_btn"><%= link_to 'edit', edit_user_launchministry_path(ministry.user, ministry), target:"_blank" %></div>
+                      <div class="delete_btn"><%= link_to 'delete', ministry, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                    </div>
+                  </div>
+                </li>
+              <% end %>
             </ul>
           </div>
           <div class="clear"></div>
@@ -183,7 +306,67 @@
           <div class="listed_ministries" id="ministstats_admin_tab_content">
             <div class="data_list_title">all admins ministries</div>
             <ul>
-              <li>admins ministries</li>
+              <% @launchministries.admin_ministries.each do |ministry| %>
+                <li class="medium-12 columns main_conatiner">
+                  <div class="medium-1 columns main_image">
+                    <div class="main_img_inner_cover">
+                    <%= link_to image_tag("img_default_ministries.png"), ministry, target:"_blank" %>
+                    </div>
+                  </div>
+                  <div class="medium-9 columns main_info">
+                    <div>
+                      <span class="min_name"><%= link_to truncate(ministry.mininstryidea, length: 30), ministry, target:"_blank" %></span>
+                      <span>|</span>
+                      <span>
+                        <span class="subheaders">ministry director:</span>
+                        <span><%= link_to "#{ministry.firstname} #{ministry.lastname}", ministry, target:"_blank", class: "weblink" %></span>
+                      </span>
+                      <span>|</span>
+                      <span>
+                        <span class="subheaders">email:</span>
+                        <span class="weblink"><%= mail_to "#{ministry.email}" %></span>
+                      </span>
+                      <span>|</span>
+                      <span>
+                        <% if ministry.approved_ministry %>
+                          <span class="approved"><%= link_to "approved", ministry, target:"_blank" %></span>
+                        <% elsif ministry.pending_ministry %>
+                          <span class="pending"><%= link_to "pending", ministry, target:"_blank" %></span>
+                        <% end %>
+                      </span>
+                    </div>
+                    
+                    <div class="min_content">
+                      <span><%= truncate("#{ministry.mininstrydescription}", length: 200) %></span>
+                      <span><%= link_to "view", ministry, target:"_blank" %></span>
+                    </div>
+                    <div>
+                      <span class="subheaders">created:</span>
+                      <span class="min_content"><%= ministry.created_at.strftime("%b %d %Y") %></span>
+                      <span>|</span>
+                      <span class="subheaders">creator:</span>
+                      <span class="min_content"><%= link_to "#{ministry.user.firstname} #{ministry.user.lastname}", user_path(ministry.user), target:"_blank" %></span>
+                      <% if ministry.user.admin? %>
+                        <span class="min_content">[admin]</span>
+                      <% end %>
+                    </div>
+                  </div>
+                  <div class="medium-2 columns main_action">
+                    <div class="action_section">
+                      <div class="update_section">
+                        <% unless ministry.approved_ministry %>
+                          <%= simple_form_for [ministry.user, ministry] do |f| %>
+                            <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
+                            <%= f.button :submit, "update" %>
+                          <% end %>
+                        <% end %>
+                      </div>
+                      <div class="edit_btn"><%= link_to 'edit', edit_user_launchministry_path(ministry.user, ministry), target:"_blank" %></div>
+                      <div class="delete_btn"><%= link_to 'delete', ministry, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                    </div>
+                  </div>
+                </li>
+              <% end %>
             </ul>
           </div>
           <div class="clear"></div>
