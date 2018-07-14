@@ -8,10 +8,6 @@ class LaunchministriesController < ApplicationController
   def show
   end
 
-  # def new
-  #   @user = current_user
-  #   @launchministry = Launchministry.new
-  # end
   def new
     @user = current_user
     @launchministry = @user.launchministries.build
@@ -20,29 +16,14 @@ class LaunchministriesController < ApplicationController
   def edit
   end
 
-  # def create
-  #   @user = current_user
-  #   @launchministry = Launchministry.new(launchministry_params)
-
-  #   respond_to do |format|
-  #     if @launchministry.save
-  #       format.html { redirect_to thank_you_path, notice: 'Launchministry was successfully created.' }
-  #       format.json { render :show, status: :created, location: @launchministry }
-  #     else
-  #       format.html { render :new }
-  #       format.json { render json: @launchministry.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
   def create
-    #@user = User.friendly.find(params[:user_id])
     @user = current_user
     @launchministry = @user.launchministries.create(launchministry_params)
 
     if @user.admin?
       respond_to do |format|
         if @launchministry.save
-          format.html { redirect_to thank_you_path, notice: 'Ministry was successfully created.' }
+          format.html { redirect_to stats_ministries_user_path(@user), notice: 'Ministry was successfully created.' }
           format.json { render :show, status: :created, location: @launchministry }
         else
           format.html { render :new }
@@ -52,7 +33,7 @@ class LaunchministriesController < ApplicationController
     else
       respond_to do |format|
         if @launchministry.save
-          format.html { redirect_to stats_ministries_user_path(@user), notice: 'Ministry was successfully created.' }
+          format.html { redirect_to thank_you_path, notice: 'Ministry was successfully created.' }
           format.json { render :show, status: :created, location: @launchministry }
         else
           format.html { render :new }
