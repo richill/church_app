@@ -15,10 +15,9 @@
     <div class="medium-12 columns page_cover upper_section">
       <div class="medium-12 columns data_main_cover">
 
-
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">total ministries</div>
+            <div class="data_title">total events</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
@@ -30,7 +29,7 @@
 
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">total approved ministries</div>
+            <div class="data_title">youth events</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
@@ -42,7 +41,7 @@
 
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">total pending ministries</div>
+            <div class="data_title">church events</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
@@ -54,7 +53,57 @@
 
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">admin ministries</div>
+            <div class="data_title">community events</div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
+              </span>
+              <span class="main_stats"><%= @launchministries.admin_ministries.count %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="medium-12 columns data_main_cover">
+
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title">total events</div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
+              </span>
+              <span class="main_stats"><%= @launchministries.all.count %></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title">youth events</div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
+              </span>
+              <span class="main_stats"><%= @launchministries.approved_ministries.count %></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title">church events</div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
+              </span>
+              <span class="main_stats"><%= @launchministries.pending_ministries.count %></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title">community events</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
