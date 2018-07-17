@@ -145,12 +145,12 @@
 } 
 
 
-.admin_stats_events .listed_ministries ul {
+.admin_stats_events .listed_events ul {
   list-style-type: none;
   margin: 0px !important;
 }
 
-.admin_stats_events .listed_ministries ul .main_conatiner {
+.admin_stats_events .listed_events ul .main_conatiner {
   width: 100%;
   padding: 5px;
   margin-bottom: 15px;
