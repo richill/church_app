@@ -122,10 +122,10 @@
               <i class="fa fa-info-circle"></i>
               <span>Total approved events on the platform</span>
             </div>
-            <span class="btn btn_blue" id="ministstats_all_tab">upcoming events <span>[<%= @launchministries.count %>]</span></span>
-            <span class="btn btn_green" id="ministstats_approved_tab"> pending events [<%= @launchministries.approved_ministries.count %>]</span>
-            <span class="btn btn_green" id="ministstats_pending_tab">past/closed events [<%= @launchministries.pending_ministries.count %>]</span>
-            <span class="btn btn_green" id="ministstats_pending_tab">all created events [<%= @launchministries.pending_ministries.count %>]</span>
+            <span class="btn btn_blue" id="eventstats_upcoming_tab">upcoming events <span>[<%= @launchministries.count %>]</span></span>
+            <span class="btn btn_green" id="eventstats_pending_tab"> pending events [<%= @launchministries.approved_ministries.count %>]</span>
+            <span class="btn btn_green" id="eventstats_past_tab">past/closed events [<%= @launchministries.pending_ministries.count %>]</span>
+            <span class="btn btn_green" id="eventstats_all_tab">all created events [<%= @launchministries.pending_ministries.count %>]</span>
           </div>
         </div>
         <div class="divider"></div>
