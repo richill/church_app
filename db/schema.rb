@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180708133636) do
+ActiveRecord::Schema.define(version: 20180718131200) do
 
   create_table "attendances", force: :cascade do |t|
     t.string   "attendable_type"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 20180708133636) do
     t.integer  "category_country_id"
     t.string   "linkmap"
     t.string   "slug"
+    t.integer  "user_id"
     t.index ["slug"], name: "index_events_on_slug", unique: true
   end
 
