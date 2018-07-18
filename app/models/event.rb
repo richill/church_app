@@ -15,6 +15,7 @@ class Event < ApplicationRecord
   # validates_presence_of :category_country_id, presence: true, message: "can't be blank"
   # validates_presence_of :linkmap, presence: true, message: "can't be blank"
 
+  belongs_to :user
   belongs_to :category_event
   belongs_to :category_country
 
