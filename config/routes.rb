@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users do
     resources :jobs
+    resources :events
     resources :practicalneeds
     resources :launchministries
     resources :comments, only: [:create, :destroy] 
