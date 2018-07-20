@@ -29,6 +29,8 @@ class Event < ApplicationRecord
   scope :baptism_events, ->() { joins(:category_event).where('category_events.name' => "Baptism Class Event") }
   scope :biblestudies_events, ->() { joins(:category_event).where('category_events.name' => "Bible Study Event") }
   scope :listed_events, -> { joins(:category_event).where("category_events.name IN (?)", ["Youth Event", "Church Event", "Community Event", "National Event", "National Event"]) }
+  scope :approved_events, -> {where(['approve = ?', true])}
+  scope :pending_events, -> {where(['approve = ? OR approve IS ?', false, nil])} 
 
   def slug_events
     [
@@ -42,5 +44,13 @@ class Event < ApplicationRecord
 
   def self.asc_order
     order('created_at ASC')
+  end
+
+  def approved_event
+    self.approve == true
+  end
+
+  def pending_event
+    self.approve == false || self.approve == nil
   end  
 end
