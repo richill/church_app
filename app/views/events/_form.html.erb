@@ -14,6 +14,7 @@
     <%= f.association :category_country, collection: CategoryCountry.all, prompt: "select a category", label: "Country Category" %>
     <%= f.input :postcode %>
     <%= f.input :link %>
+    <%= f.input :approve, as: :boolean %>
     <%# f.input :image %>
   </div>
 
