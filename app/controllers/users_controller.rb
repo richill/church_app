@@ -69,6 +69,7 @@ class UsersController < ApplicationController
     def setup_generic
       @users = User.all
       @launchministries = Launchministry.order("created_at desc")
+      @events = Event.all
     end
 
     def set_user

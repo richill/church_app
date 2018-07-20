@@ -21,7 +21,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @launchministries.all.count %></span>
+              <span class="main_stats"><%= @events.approved_events.count %></span>
             </div>
           </div>
         </div>
@@ -32,7 +32,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @launchministries.approved_ministries.count %></span>
+              <span class="main_stats"><%= @events.approved_events.youth_events.count %></span>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @launchministries.pending_ministries.count %></span>
+              <span class="main_stats"><%= @events.approved_events.church_events.count %></span>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @launchministries.admin_ministries.count %></span>
+              <span class="main_stats"><%= @events.approved_events.community_events.count %></span>
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @launchministries.all.count %></span>
+              <span class="main_stats"><%= @events.approved_events.national_events.count %></span>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @launchministries.approved_ministries.count %></span>
+              <span class="main_stats"><%= @events.approved_events.leadership_events.count %></span>
             </div>
           </div>
         </div>
@@ -89,7 +89,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @launchministries.pending_ministries.count %></span>
+              <span class="main_stats"><%= @events.approved_events.baptism_events.count %></span>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @launchministries.admin_ministries.count %></span>
+              <span class="main_stats"><%= @events.approved_events.biblestudies_events.count %></span>
             </div>
           </div>
         </div>
@@ -116,14 +116,14 @@
           <div class="data_contents">
             <span class="data_header">
               <span>Total created events on the platform</span> 
-              <span>[<%= @launchministries.all.count %>]</span>
+              <span>[<%= @events.all.count %>]</span>
             </span>
             <div class="header_subtitle">
               <i class="fa fa-info-circle"></i>
               <span>Total approved events on the platform</span>
             </div>
-            <span class="btn btn_blue" id="eventstats_upcoming_tab">upcoming events <span>[<%= @launchministries.count %>]</span></span>
-            <span class="btn btn_green" id="eventstats_pending_tab"> pending events [<%= @launchministries.approved_ministries.count %>]</span>
+            <span class="btn btn_blue" id="eventstats_upcoming_tab">upcoming events <span>[<%= @events.approved_events.count %>]</span></span>
+            <span class="btn btn_green" id="eventstats_pending_tab"> pending events [<%= @events.pending_events.count %>]</span>
             <span class="btn btn_green" id="eventstats_past_tab">past/closed events [<%= @launchministries.pending_ministries.count %>]</span>
             <span class="btn btn_green" id="eventstats_all_tab">all created events [<%= @launchministries.pending_ministries.count %>]</span>
           </div>
