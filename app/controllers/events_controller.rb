@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.listed_events.asc_order
+    @events = Event.approved_events.listed_events.asc_order
   end
 
   def show
@@ -85,23 +85,23 @@ class EventsController < ApplicationController
   end
 
   def calendareventspg
-    @events = Event.all
+    @events = Event.approved_events
   end
 
   def youtheventspg
-    @events = Event.youth_events
+    @events = Event.approved_events.youth_events
   end
 
   def churcheventspg
-    @events = Event.church_events
+    @events = Event.approved_events.church_events
   end
 
   def communityeventspg
-    @events = Event.community_events
+    @events = Event.approved_events.community_events
   end
 
   def nationaleventspg
-    @events = Event.national_events
+    @events = Event.approved_events.national_events
   end
 
   private
