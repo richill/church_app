@@ -20,6 +20,8 @@ class Event < ApplicationRecord
   belongs_to :category_country
 
   scope :expired_events, -> {where(['end_time < ?', Date.current])}
+  scope :closed_events, -> {where(['close = ?', true])}
+  scope :open_events, -> {where(['close = ? OR close IS ?', false, nil])} 
 
   scope :youth_events, ->() { joins(:category_event).where('category_events.name' => "Youth Event") } 
   scope :church_events, ->() { joins(:category_event).where('category_events.name' => "Church Event") }  
