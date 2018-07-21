@@ -150,11 +150,47 @@
                       <span>|</span>
                       <span>
                         <% if event.approved_event %>
-                          <span class="approved"><%= link_to "approved", event, target:"_blank" %></span>
+                          <span class="status_btn approved"><%= link_to "approved", event, target:"_blank" %></span>
                         <% elsif event.pending_event %>
-                          <span class="pending"><%= link_to "pending", event, target:"_blank" %></span>
+                          <span class="status_btn pending"><%= link_to "pending", event, target:"_blank" %></span>
                         <% end %>
                       </span>
+
+
+
+
+
+
+
+
+                      <!-- event status -->
+                      <span>
+                        <% if event.open_event %>
+                          <% if event.open_event && event.active_event %>
+                            <span class="status_btn approved"><%= link_to "open & active", event, target:"_blank" %></span>
+                            <% elsif event.open_event && event.expired_event %>
+                            <span class="status_btn pending"><%= link_to "open & expired", event, target:"_blank" %></span>
+                          <% end %>
+                        <% elsif event.closed_event %>
+                          <% if event.closed_event && event.active_event %>
+                            <!-- event closed & active -->
+                            <span class="status_btn pending"><%= link_to "closed & active", event, target:"_blank" %></span>
+                          <% elsif event.closed_event && event.expired_event %>
+                            <!-- event closed & expired -->
+                            <span class="status_btn pending"><%= link_to "closed & expired", event, target:"_blank" %></span>
+                          <% end %>
+                          
+                        <% end %>
+                      </span>
+                      <!-- event status -->
+
+
+
+
+
+
+
+
                     </div>
                     <div>
                       <span class="subheaders">event date:</span>

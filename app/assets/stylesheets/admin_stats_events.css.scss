@@ -330,8 +330,7 @@
   color: #2A2C49 !important;
 }
 
-.admin_stats_events .approved a {
-  background-color: #8ABFA1 !important;
+.admin_stats_events .status_btn a {
   font-size: 10px;
   color: #fff !important;
   text-transform: uppercase;
@@ -339,6 +338,10 @@
   margin-left: 5px;
   border-radius: 2px;
   text-decoration: none !important;
+}
+
+.admin_stats_events .approved a {
+  background-color: #8ABFA1 !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -353,13 +356,6 @@
 
 .admin_stats_events .pending a {
   background-color: #E1473E !important;
-  font-size: 10px;
-  color: #fff !important;
-  text-transform: uppercase;
-  padding: 3px 15px;
-  margin-left: 5px;
-  border-radius: 2px;
-  text-decoration: none !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -460,6 +456,25 @@
   font-size: 12px;
   color: #2A2C49 !important;
 }
+
+
+
+
+
+
+.admin_stats_events .closed a {
+  background-color: #8ABFA1 !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+// .admin_stats_events .approved a:hover {
+//   opacity: 0.7;
+//   -webkit-transition: all 0.3s ease;
+//   -moz-transition: all 0.3s ease;
+//   -o-transition: all 0.3s ease;
+// }
 
 
 

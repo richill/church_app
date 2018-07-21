@@ -88,5 +88,24 @@ class Event < ApplicationRecord
 
   def pending_event
     self.approve == false || self.approve == nil
-  end  
+  end 
+
+  def closed_event
+    self.close == true
+  end 
+
+  def open_event
+    self.close == false || self.close == nil
+  end 
+
+  def expired_event
+    self.end_time < Date.current
+  end 
+
+  def active_event
+    self.end_time >= Date.current
+  end 
+
+
+
 end
