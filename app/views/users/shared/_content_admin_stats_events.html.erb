@@ -146,13 +146,8 @@
                   </div>
                   <div class="medium-9 columns main_info">
                     <div>
-                      <span class="min_name"><%= link_to truncate(event.name, length: 30), event, target:"_blank" %></span>
+                      <span class="min_name"><%= link_to truncate(event.name, length: 50), event, target:"_blank" %></span>
                       <span>|</span>
-                      <span>
-                        <span class="subheaders">event date:</span>
-                        <span class="min_content"><%= "#{event.start_time.strftime("%b %d %Y")} [#{event.start_time.strftime("%I:%M%p")}]" %> - <%= "#{event.end_time.strftime("%b %d %Y")} [#{event.end_time.strftime("%I:%M%p")}]" %></span>
-                        <span class="weblink"><%# mail_to "#{event.email}" %></span>
-                      </span>
                       <span>
                         <% if event.approved_event %>
                           <span class="approved"><%= link_to "approved", event, target:"_blank" %></span>
@@ -161,7 +156,14 @@
                         <% end %>
                       </span>
                     </div>
-                    
+                    <div>
+                      <span class="subheaders">event date:</span>
+                      <span class="min_content"><%= "#{event.start_time.strftime("%b %d %Y")} [#{event.start_time.strftime("%I:%M%p")}]" %> - <%= "#{event.end_time.strftime("%b %d %Y")} [#{event.end_time.strftime("%I:%M%p")}]" %></span>
+                    </div>
+                    <div>
+                      <span class="subheaders">address:</span>
+                      <span class="min_content"><%= "#{event.address} | #{event.city} | #{event.postcode}" %></span>
+                    </div>
                     <div class="min_content">
                       <span><%= truncate("#{event.description}", length: 200) %></span>
                       <span><%= link_to "view", event, target:"_blank" %></span>
