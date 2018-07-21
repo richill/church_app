@@ -20,6 +20,7 @@ class Event < ApplicationRecord
   belongs_to :category_country
 
   scope :expired_events, -> {where(['end_time < ?', Date.current])}
+  scope :active_events, -> {where(['end_time >= ?', Date.current])}
   scope :closed_events, -> {where(['close = ?', true])}
   scope :open_events, -> {where(['close = ? OR close IS ?', false, nil])} 
 
@@ -33,6 +34,39 @@ class Event < ApplicationRecord
   scope :listed_events, -> { joins(:category_event).where("category_events.name IN (?)", ["Youth Event", "Church Event", "Community Event", "National Event", "National Event"]) }
   scope :approved_events, -> {where(['approve = ?', true])}
   scope :pending_events, -> {where(['approve = ? OR approve IS ?', false, nil])} 
+
+
+  # ------- event status logic -------
+  # open approved active events
+  # close: false [open_events]
+  # active [active_events]
+  # approved events [approved_events]
+  # events.open_events.approved_events.active_events
+
+
+  # closed events
+  # close: true [closed_events]
+  # active [active_events] || # expired [expired_events]
+  # approved events [approved_events] || pending events [pending_events]
+  # events.closed_events = closed events
+  # events.closed_events.active_events = closed & active events
+  # events.closed_events.expired_events = closed & expired events
+
+  # expired_events
+  # close: true [closed_events] || # close: false [open_events]
+  # expired [expired_events]
+  # approved events [approved_events] || pending events [pending_events]
+  # events.closed_events.expired_events = expired & closed events
+  # events.closed_events = expired & closed events
+
+
+
+
+  # pending_events
+  
+  # ------- event status logic -------
+
+
 
   def slug_events
     [

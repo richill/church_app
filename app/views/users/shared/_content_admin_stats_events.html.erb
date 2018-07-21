@@ -137,47 +137,47 @@
           <div class="listed_events" id="eventstats_upcoming_tab_content">
             <div class="data_list_title">upcoming events</div>
             <ul>
-              <% @launchministries.each do |ministry| %>
+              <% @events.each do |event| %>
                 <li class="medium-12 columns main_conatiner">
                   <div class="medium-1 columns main_image">
                     <div class="main_img_inner_cover">
-                    <%= link_to image_tag("img_default_ministries.png"), ministry, target:"_blank" %>
+                    <%= link_to image_tag("img_default_event.png"), event, target:"_blank" %>
                     </div>
                   </div>
                   <div class="medium-9 columns main_info">
                     <div>
-                      <span class="min_name"><%= link_to truncate(ministry.mininstryidea, length: 30), ministry, target:"_blank" %></span>
-                      <span>|</span>
+                      <span class="min_name"><%= link_to truncate(event.name, length: 30), event, target:"_blank" %></span>
+                      <!-- <span>|</span>
                       <span>
-                        <span class="subheaders">ministry director:</span>
-                        <span><%= link_to "#{ministry.firstname} #{ministry.lastname}", ministry, target:"_blank", class: "weblink" %></span>
+                        <span class="subheaders">event director:</span>
+                        <span><%# link_to "#{event.firstname} #{event.lastname}", event, target:"_blank", class: "weblink" %></span>
                       </span>
                       <span>|</span>
                       <span>
                         <span class="subheaders">email:</span>
-                        <span class="weblink"><%= mail_to "#{ministry.email}" %></span>
-                      </span>
+                        <span class="weblink"><%# mail_to "#{event.email}" %></span>
+                      </span> -->
                       <span>|</span>
                       <span>
-                        <% if ministry.approved_ministry %>
-                          <span class="approved"><%= link_to "approved", ministry, target:"_blank" %></span>
-                        <% elsif ministry.pending_ministry %>
-                          <span class="pending"><%= link_to "pending", ministry, target:"_blank" %></span>
+                        <% if event.approved_event %>
+                          <span class="approved"><%= link_to "approved", event, target:"_blank" %></span>
+                        <% elsif event.pending_event %>
+                          <span class="pending"><%= link_to "pending", event, target:"_blank" %></span>
                         <% end %>
                       </span>
                     </div>
                     
                     <div class="min_content">
-                      <span><%= truncate("#{ministry.mininstrydescription}", length: 200) %></span>
-                      <span><%= link_to "view", ministry, target:"_blank" %></span>
+                      <span><%= truncate("#{event.description}", length: 200) %></span>
+                      <span><%= link_to "view", event, target:"_blank" %></span>
                     </div>
                     <div>
                       <span class="subheaders">created:</span>
-                      <span class="min_content"><%= ministry.created_at.strftime("%b %d %Y") %></span>
+                      <span class="min_content"><%= event.created_at.strftime("%b %d %Y") %></span>
                       <span>|</span>
                       <span class="subheaders">creator:</span>
-                      <span class="min_content"><%= link_to "#{ministry.user.firstname} #{ministry.user.lastname}", user_path(ministry.user), target:"_blank" %></span>
-                      <% if ministry.user.admin? %>
+                      <span class="min_content"><%= link_to "#{event.user.firstname} #{event.user.lastname}", user_path(event.user), target:"_blank" %></span>
+                      <% if event.user.admin? %>
                         <span class="min_content">[admin]</span>
                       <% end %>
                     </div>
@@ -185,15 +185,15 @@
                   <div class="medium-2 columns main_action">
                     <div class="action_section">
                       <div class="update_section">
-                        <% unless ministry.approved_ministry %>
-                          <%= simple_form_for [ministry.user, ministry] do |f| %>
+                        <% unless event.approved_event %>
+                          <%= simple_form_for [event.user, event] do |f| %>
                             <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
                             <%= f.button :submit, "update" %>
                           <% end %>
                         <% end %>
                       </div>
-                      <div class="edit_btn"><%= link_to 'edit', edit_user_launchministry_path(ministry.user, ministry), target:"_blank" %></div>
-                      <div class="delete_btn"><%= link_to 'delete', ministry, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                      <div class="edit_btn"><%= link_to 'edit', edit_user_event_path(event.user, event), target:"_blank" %></div>
+                      <div class="delete_btn"><%= link_to 'delete', event, method: :delete, data: { confirm: 'Are you sure?' } %></div>
                     </div>
                   </div>
                 </li>
