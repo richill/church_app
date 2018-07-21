@@ -22,7 +22,8 @@ class Event < ApplicationRecord
   scope :expired_events, -> {where(['end_time < ?', Date.current])}
   scope :active_events, -> {where(['end_time >= ?', Date.current])}
   scope :closed_events, -> {where(['close = ?', true])}
-  scope :open_events, -> {where(['close = ? OR close IS ?', false, nil])} 
+  scope :open_events, -> {where(['close = ? OR close IS ?', false, nil])}
+  scope :openAndclose_expired_events, -> {where(['close = ?', true] && ['end_time < ?', Date.current] || ['close = ? OR close IS ?', false, nil] && ['end_time < ?', Date.current])} 
 
   scope :youth_events, ->() { joins(:category_event).where('category_events.name' => "Youth Event") } 
   scope :church_events, ->() { joins(:category_event).where('category_events.name' => "Church Event") }  
@@ -36,7 +37,7 @@ class Event < ApplicationRecord
   scope :pending_events, -> {where(['approve = ? OR approve IS ?', false, nil])} 
 
 
-  # ------- event status logic -------
+  # ------- event status logic ------- closed & active
   # open approved active events
   # close: false [open_events]
   # active [active_events]
