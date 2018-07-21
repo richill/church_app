@@ -146,18 +146,13 @@
                   </div>
                   <div class="medium-9 columns main_info">
                     <div>
-                      <span class="min_name"><%= link_to truncate(event.name, length: 50), event, target:"_blank" %></span>
-                      <!-- <span>|</span>
-                      <span>
-                        <span class="subheaders">event director:</span>
-                        <span><%# link_to "#{event.firstname} #{event.lastname}", event, target:"_blank", class: "weblink" %></span>
-                      </span>
+                      <span class="min_name"><%= link_to truncate(event.name, length: 30), event, target:"_blank" %></span>
                       <span>|</span>
                       <span>
-                        <span class="subheaders">email:</span>
+                        <span class="subheaders">event date:</span>
+                        <span class="min_content"><%= "#{event.start_time.strftime("%b %d %Y")} [#{event.start_time.strftime("%I:%M%p")}]" %> - <%= "#{event.end_time.strftime("%b %d %Y")} [#{event.end_time.strftime("%I:%M%p")}]" %></span>
                         <span class="weblink"><%# mail_to "#{event.email}" %></span>
-                      </span> -->
-                      <span>|</span>
+                      </span>
                       <span>
                         <% if event.approved_event %>
                           <span class="approved"><%= link_to "approved", event, target:"_blank" %></span>
@@ -172,6 +167,25 @@
                       <span><%= link_to "view", event, target:"_blank" %></span>
                     </div>
                     <div>
+                      <span class="subheaders">category:</span>
+                      <span class="min_content">
+                        <% if event.category_event.name == "Youth Event" %>
+                          <%= link_to "Youth Events", youth_events_events_path, target:"blank" %>
+                        <% elsif event.category_event.name == "Church Event" %>
+                          <%= link_to "Church Events", church_events_events_path, target:"blank" %>
+                        <% elsif event.category_event.name == "Community Event" %>
+                          <%= link_to "Community Events", community_events_events_path, target:"blank" %>
+                        <% elsif event.category_event.name == "National Event" %>
+                          <%= link_to "National Event", national_events_events_path, target:"blank" %>
+                        <% elsif event.category_event.name == "Leadership Forum Event" %>
+                          <%= link_to "Leadership Forum", leadership_development_path, target:"blank" %>
+                        <% elsif event.category_event.name == "Baptism Class Event" %>
+                          <%= link_to "Baptism", baptism_path, target:"blank" %>
+                        <% elsif event.category_event.name == "Bible Study Event" %>
+                          <%= link_to "Bible Study", bible_and_you_path, target:"blank" %>
+                        <% end %>
+                      </span>
+                      <span>|</span>
                       <span class="subheaders">created:</span>
                       <span class="min_content"><%= event.created_at.strftime("%b %d %Y") %></span>
                       <span>|</span>
