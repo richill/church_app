@@ -47,6 +47,7 @@ Rails.application.routes.draw do
       get 'stats-users'
       get 'stats_ministries'
       get 'stats_events'
+      get 'stats_galleries'
     end
   end
   

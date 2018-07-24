@@ -65,6 +65,9 @@ class UsersController < ApplicationController
   def sitelinks  
   end
 
+  def stats_galleries
+  end
+
   private
     def setup_generic
       @users = User.all
