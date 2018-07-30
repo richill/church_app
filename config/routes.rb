@@ -43,11 +43,15 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy] 
     member do
       get 'dashboard'
+      get 'content-management'
       get 'sitelinks'
       get 'stats-users'
-      get 'stats_ministries'
-      get 'stats_events'
-      get 'stats_galleries'
+      get 'stats-events'
+      get 'stats-ministries'
+      get 'stats-resources'
+      get 'stats-forum'
+      get 'stats-careers'
+      get 'stats-galleries'
     end
   end
   
