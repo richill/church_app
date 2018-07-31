@@ -1,5 +1,6 @@
 /*===================================================
     Page: admin panel/stats galleries page
+    File: views/users/shared/_admin_stats_galleries.html.erb
     File: views/users/shared/_content_admin_stats_galleries.html.erb
   ===================================================*/
 
@@ -120,6 +121,7 @@
 
 .admin_stats_galleries .data_main_cover {
   padding: 0px !important;
+  margin-bottom: 15px;
 }
 
 .admin_stats_galleries .data_stats {
@@ -143,12 +145,12 @@
 } 
 
 
-.admin_stats_galleries .listed_ministries ul {
+.admin_stats_galleries .listed_events ul {
   list-style-type: none;
   margin: 0px !important;
 }
 
-.admin_stats_galleries .listed_ministries ul .main_conatiner {
+.admin_stats_galleries .listed_events ul .main_conatiner {
   width: 100%;
   padding: 5px;
   margin-bottom: 15px;
@@ -328,8 +330,7 @@
   color: #2A2C49 !important;
 }
 
-.admin_stats_galleries .approved a {
-  background-color: #8ABFA1 !important;
+.admin_stats_galleries .status_btn a {
   font-size: 10px;
   color: #fff !important;
   text-transform: uppercase;
@@ -337,6 +338,11 @@
   margin-left: 5px;
   border-radius: 2px;
   text-decoration: none !important;
+  font-weight: 300;
+}
+
+.admin_stats_galleries .approved a {
+  background-color: #8ABFA1 !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -351,13 +357,6 @@
 
 .admin_stats_galleries .pending a {
   background-color: #E1473E !important;
-  font-size: 10px;
-  color: #fff !important;
-  text-transform: uppercase;
-  padding: 3px 15px;
-  margin-left: 5px;
-  border-radius: 2px;
-  text-decoration: none !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -450,14 +449,28 @@
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_galleries .update_section #launchministry_approve {
+.admin_stats_galleries .update_section #event_approve {
   margin-bottom: 0px !important;
 }
 
-.admin_stats_galleries .launchministry_approve label {
+.admin_stats_galleries .event_approve label {
   font-size: 12px;
   color: #2A2C49 !important;
 }
+
+.admin_stats_galleries .closed a {
+  background-color: #8ABFA1 !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+// .admin_stats_galleries .approved a:hover {
+//   opacity: 0.7;
+//   -webkit-transition: all 0.3s ease;
+//   -moz-transition: all 0.3s ease;
+//   -o-transition: all 0.3s ease;
+// }
 
 
 
