@@ -5,16 +5,35 @@
 
 // tab selection conetnt
 $(document).ready(function() {
-  $("#content1").addClass("activecontent");
+  $("#content0").addClass("activecontent");
+  $("#content1_info").hide();
   $("#content2_info").hide();
   $("#content3_info").hide();
   $("#content4_info").hide();
+
+
+  $('#content0').mouseover(function() {
+    $("#content0_info").show();
+    $("#content1_info").hide();
+    $("#content2_info").hide();
+    $("#content3_info").hide();
+    $("#content4_info").hide();
+    $("#content0").addClass("activecontent");
+    $("#content1").removeClass("activecontent");
+    $("#content2").removeClass("activecontent");
+    $("#content3").removeClass("activecontent");
+    $("#content4").removeClass("activecontent");
+  });
+
+
   $('#content1').mouseover(function() {
     $("#content1_info").show();
+    $("#content0_info").hide();
     $("#content2_info").hide();
     $("#content3_info").hide();
     $("#content4_info").hide();
     $("#content1").addClass("activecontent");
+    $("#content0").removeClass("activecontent");
     $("#content2").removeClass("activecontent");
     $("#content3").removeClass("activecontent");
     $("#content4").removeClass("activecontent");
@@ -22,10 +41,12 @@ $(document).ready(function() {
 
   $('#content2').mouseover(function() {
     $("#content2_info").show();
+    $("#content0_info").hide();
     $("#content1_info").hide();
     $("#content3_info").hide();
     $("#content4_info").hide();
     $("#content2").addClass("activecontent");
+    $("#content0").removeClass("activecontent");
     $("#content1").removeClass("activecontent");
     $("#content3").removeClass("activecontent");
     $("#content4").removeClass("activecontent");
@@ -33,10 +54,12 @@ $(document).ready(function() {
 
   $('#content3').mouseover(function() {
     $("#content3_info").show();
+    $("#content0_info").hide();
     $("#content1_info").hide();
     $("#content2_info").hide();
     $("#content4_info").hide();
     $("#content3").addClass("activecontent")
+    $("#content0").removeClass("activecontent");
     $("#content1").removeClass("activecontent");
     $("#content2").removeClass("activecontent");
     $("#content4").removeClass("activecontent");
@@ -44,10 +67,12 @@ $(document).ready(function() {
 
   $('#content4').mouseover(function() {
     $("#content4_info").show();
+    $("#content0_info").hide();
     $("#content1_info").hide();
     $("#content2_info").hide();
     $("#content3_info").hide();
     $("#content4").addClass("activecontent")
+    $("#content0").removeClass("activecontent");
     $("#content1").removeClass("activecontent");
     $("#content2").removeClass("activecontent");
     $("#content3").removeClass("activecontent");

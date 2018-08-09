@@ -83,7 +83,7 @@
   background-color: rgba(42, 44, 73, 0.1);
   width: 100%;
   display: inherit;
-  padding: 19px 15px;
+  padding: 13.4px 15px;
   text-align: left;
   font-size: 10px;
   font-weight: bold;
@@ -126,6 +126,10 @@
   overflow: scroll;
   position: relative;
   height: 265px;
+}
+
+.content_homepg_signedout_section .right_main_content #content0 {
+  color: #2A2C49; 
 }
 
 .content_homepg_signedout_section .right_main_content #content1 {
