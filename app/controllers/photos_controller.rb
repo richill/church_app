@@ -9,16 +9,16 @@ class PhotosController < ApplicationController
   end
 
   def new
-    @gallery = Gallery.find(params[:gallery_id])
+    @gallery = Gallery.friendly.find(params[:gallery_id])
     @photo = @gallery.photos.build
   end
 
   def edit
-    @gallery = gallery.find(params[:gallery_id])
+    @gallery = gallery.friendly.find(params[:gallery_id])
   end
 
   def create
-    @gallery = Gallery.find(params[:gallery_id])
+    @gallery = Gallery.friendly.find(params[:gallery_id])
     @photo = @gallery.photos.create(photo_params)
     respond_to do |format|
       if @photo.save
@@ -44,7 +44,7 @@ class PhotosController < ApplicationController
   end
 
   def destroy
-    @gallery = Gallery.find(params[:gallery_id])
+    @gallery = Gallery.friendly.find(params[:gallery_id])
     @photo = @gallery.photos.find(params[:id])
     @photo.destroy
     redirect_to photos_path

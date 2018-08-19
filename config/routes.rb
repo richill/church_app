@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
   resources :galleries do
     resources :photos
+    member do
+      get 'gallery-photos'
+    end
   end
 
   resources :events do

@@ -52,6 +52,10 @@ class GalleriesController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  def galler_photos
+    # @photos = Gallery.photos.order("created_at desc")
+  end
+
   private
     def set_gallery
       @gallery = Gallery.friendly.find(params[:id])

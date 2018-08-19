@@ -60,7 +60,6 @@
                   <div class="medium-1 columns main_image">
                     <div class="main_img_inner_cover">
                       <%= link_to image_tag("img_default_images.png"), gallery, target:"_blank" %>
-                      <%# link_to image_tag("img_default_event.png"), gallery, target:"_blank" %>
                     </div>
                   </div>
                   <div class="medium-9 columns main_info">
@@ -70,7 +69,9 @@
                     <div>
                       <span class="subheaders">description:</span>
                       <span class="min_content"><%= truncate("#{gallery.description}", length: 200) %></span>
-                      <span><%= link_to "view", gallery, target:"_blank", class: "sitelink" %></span>
+                      <span><%= link_to "view", gallery, target:"_blank", class: "sitelink" %></span> 
+                      <span>|</span>
+                      <span><%= link_to "view photos in gallery", gallery_photos_gallery_path(gallery), target:"_blank", class: "sitelink" %></span> 
                     </div>
                     <div>
                       <span class="subheaders">created:</span>
@@ -90,8 +91,8 @@
                   </div>
                   <div class="medium-2 columns main_action">
                     <div class="action_section">
-                      <div class="edit_btn"><%# link_to 'edit', edit_user_gallery_path(gallery.user, gallery), target:"_blank" %></div>
-                      <div class="edit_btn"><%= link_to 'add photos', "#", target:"_blank" %></div>
+                      <div class="addphotos"><%= link_to 'add photos', new_gallery_photo_path(gallery), target:"_blank" %></div>
+                      <div class="edit_btn"><%= link_to 'edit gallery', edit_user_gallery_path(current_user, gallery), target:"_blank" %></div>
                       <div class="delete_btn"><%= link_to 'delete', gallery, method: :delete, data: { confirm: 'Are you sure?' } %></div>
                     </div>
                   </div>

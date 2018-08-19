@@ -397,6 +397,31 @@
   -o-transition: all 0.3s ease;
 }
 
+.admin_stats_galleries .addphotos a {
+  color: #fff !important;
+  background-color: #8ABFA1 !important;
+  font-size: 10px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  padding: 3px 15px;
+  border-radius: 2px;
+  text-decoration: none !important;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.admin_stats_galleries .addphotos a:hover {
+  background-color: #2A2C49 !important;
+  color: #fff !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
 .admin_stats_galleries .edit_btn a {
   color: #2A2C49 !important;
   background-color: rgba(42, 44, 73, 0.2);
