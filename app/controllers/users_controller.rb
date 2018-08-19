@@ -66,7 +66,7 @@ class UsersController < ApplicationController
   end
 
   def stats_galleries
-    @galleries = Gallery.all
+    @galleries = Gallery.order("created_at desc")
   end
 
   private

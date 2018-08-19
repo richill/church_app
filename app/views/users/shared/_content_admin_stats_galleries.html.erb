@@ -22,7 +22,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-camera"></i></div>
               </span>
-              <span class="main_stats"><%= @events.approved_events.open_events.active_events.count %></span>
+              <span class="main_stats"><%= @galleries.count %></span>
             </div>
           </div>
         </div>
@@ -59,21 +59,27 @@
                 <li class="medium-12 columns main_conatiner">
                   <div class="medium-1 columns main_image">
                     <div class="main_img_inner_cover">
-                    <%= link_to image_tag("img_default_event.png"), gallery, target:"_blank" %>
+                      <%= link_to image_tag("img_default_images.png"), gallery, target:"_blank" %>
+                      <%# link_to image_tag("img_default_event.png"), gallery, target:"_blank" %>
                     </div>
                   </div>
                   <div class="medium-9 columns main_info">
-                    <div><span class="min_name"><%= link_to truncate(gallery.name, length: 50), gallery, target:"_blank" %></span></div>
+                    <div>
+                      <span class="min_name"><%= link_to truncate(gallery.name, length: 50), gallery, target:"_blank" %></span>
+                    </div>
                     <div>
                       <span class="subheaders">description:</span>
-                      <span><%= truncate("#{gallery.description}", length: 200) %></span>
-                      <span><%= link_to "view", gallery, target:"_blank" %></span>
+                      <span class="min_content"><%= truncate("#{gallery.description}", length: 200) %></span>
+                      <span><%= link_to "view", gallery, target:"_blank", class: "sitelink" %></span>
                     </div>
                     <div>
                       <span class="subheaders">created:</span>
                       <span class="min_content"><%= gallery.created_at.strftime("%b %d %Y") %></span>
                       <span>|</span>
-                      <span class="subheaders">creator:</span>
+                      <span class="subheaders">photos:</span>
+                      <span class="min_content"><%= "#{gallery.photos.count}" %></span>
+                      <span>|</span>
+                      <span class="subheaders">created by:</span>
                       <% if gallery.user.present? %>
                         <span class="min_content"><%= link_to "#{gallery.user.firstname} #{gallery.user.lastname}", user_path(gallery.user), target:"_blank" %></span>
                         <% if gallery.user.admin? %>
@@ -84,8 +90,9 @@
                   </div>
                   <div class="medium-2 columns main_action">
                     <div class="action_section">
-                      <div class="edit_btn"><%# link_to 'edit', edit_user_event_path(event.user, event), target:"_blank" %></div>
-                      <div class="delete_btn"><%# link_to 'delete', event, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                      <div class="edit_btn"><%# link_to 'edit', edit_user_gallery_path(gallery.user, gallery), target:"_blank" %></div>
+                      <div class="edit_btn"><%= link_to 'add photos', "#", target:"_blank" %></div>
+                      <div class="delete_btn"><%= link_to 'delete', gallery, method: :delete, data: { confirm: 'Are you sure?' } %></div>
                     </div>
                   </div>
                 </li>
