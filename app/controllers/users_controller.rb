@@ -66,6 +66,7 @@ class UsersController < ApplicationController
   end
 
   def stats_galleries
+    @galleries = Gallery.all
   end
 
   private
