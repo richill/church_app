@@ -40,6 +40,7 @@ Rails.application.routes.draw do
     resources :events
     resources :practicalneeds
     resources :launchministries
+    resources :galleries
     resources :comments, only: [:create, :destroy] 
     member do
       get 'dashboard'
