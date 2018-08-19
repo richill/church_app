@@ -1,0 +1,102 @@
+<div class="content_admin_sitelinks">
+  <div class="tree_line">
+    <span><i class="fa fa-user"></i></span>
+    <span><%= link_to "#{current_user.firstname}", user_path(current_user) %></span>
+    <span><i class="fa fa-angle-right"></i></span>
+    <span><%= link_to "admin panel", dashboard_user_path %></span>
+    <span><i class="fa fa-angle-right"></i></span>
+    <span><%= link_to "galleries", stats_galleries_user_path(current_user) %></span>
+    <span><i class="fa fa-angle-right"></i></span>
+    <span class="current_page"><%= "#{@gallery.name}" %></span>
+    <span>|</span>
+    <span class="current_page"><%= "photos [#{@gallery.photos.count}]" %></span>
+    <span class="tree_tab_link"><%= link_to "edit gallery", edit_user_gallery_path(current_user), target:"_blank", style: 'color:#FFFFFF !important;' %></span>
+    <span class="tree_tab_link"><%= link_to "add photos to gallery", new_gallery_photo_path(@gallery), target:"_blank", style: 'color:#FFFFFF !important;' %></span>
+  </div>
+  <div class="medium-12 columns admin_tab_content">
+
+    <!-- upper_section -->
+    <div class="medium-12 columns page_cover upper_section">
+      <div class="medium-12 columns data_main_cover">
+        <div class="info_content">
+          <span class="title">gallery name:</span>
+          <span class="content"><%= @gallery.name %></span>
+        </div>
+        <div class="info_content">
+          <span class="title">created date:</span>
+          <span class="content"><%= @gallery.created_at.strftime("%b %d %Y") %></span>
+        </div>
+        <div class="info_content last_content">
+          <span class="title">gallery description:</span>
+          <span class="content"><%= @gallery.description %></span>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <!-- upper_section -->
+
+    <!-- bottom_section -->
+    <div class="medium-12 columns page_cover bottom_section">
+      <div class="medium-12 columns page_content">
+        <div class="header_section_cover">
+          <div class="data_contents">
+            <span class="data_header">
+              <span>Total photos in gallery</span> 
+              <span>[<%= @gallery.photos.count %>]</span>
+            </span>
+            <div class="header_subtitle">
+              <i class="fa fa-info-circle"></i>
+              <span>Total approved galleries on the platform</span>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="clear"></div>
+
+        <!-- listed_galleries -->
+        <div class="listed_galleries">
+          <!-- gallery photos -->
+          <div class="listed_galleries" id="">
+            <div class="data_list_title">created galleries</div>
+            <ul>
+              <% @gallery.photos.each do |photo| %>
+                <li class="medium-12 columns main_conatiner">
+                  <div class="medium-1 columns main_image">
+                    <div class="main_img_inner_cover">
+                      <%= link_to image_tag("img_default_images.png"), photo, target:"_blank" %>
+                    </div>
+                  </div>
+                  <div class="medium-9 columns main_info">
+                    <div>
+                      <span class="subheaders">description:</span>
+                      <span class="min_content"><%= truncate("#{photo.description}", length: 200) %></span>
+                      <span><%= link_to "view", photo, target:"_blank", class: "sitelink" %></span> 
+                    </div>
+                    <div>
+                      <span class="subheaders">created:</span>
+                      <span class="min_content"><%= photo.created_at.strftime("%b %d %Y") %></span>
+                    </div>
+                  </div>
+                  <div class="medium-2 columns main_action">
+                    <div class="action_section">
+                      <div class="edit_btn"><%= link_to 'edit photo', edit_user_gallery_path(current_user, photo), target:"_blank" %></div>
+                      <div class="delete_btn"><%= link_to 'delete', photo, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                    </div>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="clear"></div>
+          <!-- gallery photos -->
+        </div>
+        <!-- listed_galleries -->
+
+      </div>
+    </div>
+    <!-- bottom_section -->
+
+
+
+  </div>
+</div>

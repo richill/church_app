@@ -1,1 +1,7 @@
-<h1>gallery photos</h1>
+<% provide(:title, "photos") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header_admin' %></div>
+  <%= render 'content_gallery_photos' %>
+  <%= render 'shared/footer' %>
+</div>

@@ -1,5 +1,5 @@
 class GalleriesController < ApplicationController
-  before_action :set_gallery, only: [:show, :edit, :update, :destroy]
+  before_action :set_gallery, only: [:show, :edit, :update, :destroy, :gallery_photos]
 
   def index
     @galleries = Gallery.desc_order
@@ -52,8 +52,7 @@ class GalleriesController < ApplicationController
     redirect_to user_path(@user)
   end
 
-  def galler_photos
-    # @photos = Gallery.photos.order("created_at desc")
+  def gallery_photos
   end
 
   private
