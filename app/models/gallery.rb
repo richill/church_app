@@ -4,6 +4,7 @@ class Gallery < ApplicationRecord
 
 
   has_many :photos, dependent: :destroy
+  belongs_to :user
 
   def slug_galleries
     [

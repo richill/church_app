@@ -19,6 +19,7 @@ class User < ApplicationRecord
   has_many :attending_groups, through: :attendances, source: :attendable, source_type: 'Smallgroup', dependent: :destroy
 
   has_many :launchministries
+  has_many :galleries
 
   belongs_to :category_gender
 
