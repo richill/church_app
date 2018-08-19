@@ -6,6 +6,7 @@ class GalleriesController < ApplicationController
   end
 
   def show
+    @gallery_photos = @gallery.photos
     @user = current_user
   end
 
