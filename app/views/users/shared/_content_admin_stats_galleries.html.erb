@@ -8,7 +8,6 @@
     <span class="current_page">galleries</span>
     <span class="tree_tab_link"><%= link_to "create an album/gallery", new_gallery_path, target:"_blank", style: 'color:#FFFFFF !important;' %></span>
     <span class="tree_tab_link"><%= link_to "view album/gallery page", galleries_path, target:"_blank", style: 'color:#FFFFFF !important;' %></span>
-    <span class="tree_tab_link"><%= link_to "view photos", photos_path, target:"_blank", style: 'color:#FFFFFF !important;' %></span>
   </div>
   <div class="medium-12 columns admin_tab_content">
 
@@ -53,7 +52,6 @@
         <div class="listed_galleries">
           <!-- galleries -->
           <div class="listed_galleries" id="">
-            <div class="data_list_title">created galleries</div>
             <ul>
               <% @galleries.each do |gallery| %>
                 <li class="medium-12 columns main_conatiner">
