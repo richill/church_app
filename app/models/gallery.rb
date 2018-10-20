@@ -2,6 +2,7 @@ class Gallery < ApplicationRecord
   extend FriendlyId
   friendly_id :slug_galleries, use: :slugged
 
+  mount_uploader :image, ImageUploader
 
   has_many :photos, dependent: :destroy
   belongs_to :user

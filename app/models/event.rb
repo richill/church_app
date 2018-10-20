@@ -2,6 +2,8 @@ class Event < ApplicationRecord
   extend FriendlyId
   friendly_id :slug_events, use: :slugged
 
+  mount_uploader :image, ImageUploader
+
   # validates_presence_of :name, presence: true, message: "can't be blank"
   # validates_presence_of :start_time, presence: true, message: "can't be blank"
   # validates_presence_of :end_time, presence: true, message: "can't be blank"

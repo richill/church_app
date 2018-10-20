@@ -7,6 +7,8 @@ class User < ApplicationRecord
   extend FriendlyId
   friendly_id :slug_users, use: :slugged
 
+  mount_uploader :image, ImageUploader
+
   # acts_as_commentable
   has_many :comments, as: :commentable, dependent: :destroy
 
