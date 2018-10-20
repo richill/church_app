@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180720133718) do
+ActiveRecord::Schema.define(version: 20181020150134) do
 
   create_table "attendances", force: :cascade do |t|
     t.string   "attendable_type"
@@ -242,6 +242,7 @@ ActiveRecord::Schema.define(version: 20180720133718) do
     t.boolean  "approve"
     t.string   "job"
     t.integer  "category_gender_id"
+    t.string   "image"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
