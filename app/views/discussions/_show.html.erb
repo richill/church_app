@@ -36,10 +36,12 @@
                 <span><%= render 'shared/modal_discussion_info', locals: { discussion: @discussion } %></span>
               </span>
 
-              <div class="action_btn hide">
-                <span><%= link_to "edit discussion topic", edit_discussion_path(@discussion) %></span>
-                <span><%= link_to "delete discussion topic", "#" %></span>
-              </div>
+              <% if signed_in? && current_user.admin? %>
+                <div class="action_btn">
+                  <span><%= link_to "edit discussion topic", edit_discussion_path(@discussion) %></span>
+                  <span><%= link_to "delete discussion topic", "#" %></span>
+                </div>
+              <% end %>
             </div>
             <div class="discussions_section">
               <!-- listed comments photos -->

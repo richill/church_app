@@ -78,7 +78,11 @@
               </span>
             </div>
 
-            <div class="page_img"><%= image_tag("img_default_mainimg.png") %></div>
+            <% if @event.image.present? %>
+              <div class="page_img"><%= cl_image_tag("#{@event.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %></div>
+            <% else %>
+              <div class="page_img"><%= image_tag("img_default_mainimg.png") %></div>
+            <% end %>
             <div class="event_section">
 
               <div class="paragraph_content"><%= @event.description %></div>
@@ -109,8 +113,8 @@
               <% if user_signed_in? %>
                 <% if current_user.admin? %>
                   <div>
-                    <%= link_to 'Edit', edit_event_path(@event) %> |
-                    <%= link_to 'Back', events_path %>
+                    <span class="function_btn edit_btn"><%= link_to 'Edit', edit_event_path(@event) %></span>
+                    <span class="function_btn back_btn"><%= link_to 'Back', events_path %></span>
                   </div>
                 <% end %>
               <% end %>
