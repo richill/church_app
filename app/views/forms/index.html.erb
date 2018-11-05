@@ -1,31 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Forms</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Fileattachment</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @forms.each do |form| %>
-      <tr>
-        <td><%= form.title %></td>
-        <td><%= form.fileattachment %></td>
-        <td><%= form.user_id %></td>
-        <td><%= link_to 'Show', form %></td>
-        <td><%= link_to 'Edit', edit_form_path(form) %></td>
-        <td><%= link_to 'Destroy', form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Form', new_form_path %>
+<% provide(:title, "Forms") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header' %></div>
+  <%= render 'index' %>
+  <%= render 'shared/footer' %>
+</div>
