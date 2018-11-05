@@ -141,6 +141,37 @@
 
 
 
+// --------------------------
+//   workings
+// --------------------------
+
+.content_formsindex_section .page_inner_section {
+  margin: 0px !important;
+}
+
+.content_formsindex_section .page_inner_section .listed_form {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.listed_form {
+  border: 1px solid red;
+  width: 150px;
+  height: 150px;
+}
+
+
+.listed_form i {
+  color: #2A2C49 !important;
+  display: inline-block;
+  text-align: center;
+  font-size: 80px;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
 
 
 

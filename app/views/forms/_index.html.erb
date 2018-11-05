@@ -17,9 +17,17 @@
         <div class="medium-8 columns info_left_content">
           <div class="page_information">
             <div class="page_header">list of useful forms</div>
-            <div class="page_img"><%= image_tag("img_default_mainimg.png") %></div>
             <div>
-              content
+              <ul class="page_inner_section">
+
+                <li class="listed_form">
+                  <%= link_to forms_path do %>
+                  <div><i class="fa fa-wpforms" aria-hidden="true"></i></div>
+                  <div class="form_title">registration</div>
+                  <% end %>
+                </li>
+
+              </ul>
             </div>
           </div>
         </div>
