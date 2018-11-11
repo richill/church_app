@@ -9,7 +9,7 @@
           <% if @event.category_event.name == "Youth Event" %>
             <span><%= link_to "events", events_path %></span>
             <span><i class="fa fa-angle-right"></i></span>
-            <span><%= link_to "Youth Events", youth_events_events_path %></span>
+            <span><%= link_to "Young Adult Events", youth_events_events_path %></span>
           <% elsif @event.category_event.name == "Church Event" %>
             <span><%= link_to "events", events_path %></span>
             <span><i class="fa fa-angle-right"></i></span>
@@ -59,7 +59,7 @@
                   <span class="evt_subheader">category:</span>
                   <span class="evt_category">
                     <% if @event.category_event.name == "Youth Event" %>
-                      <%= link_to "Youth Events", youth_events_events_path %>
+                      <%= link_to "Young AdultEvents", youth_events_events_path %>
                     <% elsif @event.category_event.name == "Church Event" %>
                       <%= link_to "Church Events", church_events_events_path %>
                     <% elsif @event.category_event.name == "Community Event" %>
