@@ -84,21 +84,11 @@ Rails.application.routes.draw do
   get     'media-and-communication',  to: 'static_pages#mediaandcomepg'
   get     'ministry-idea',            to: 'static_pages#ministryideapg'
   get     'mission-vision-statement', to: 'static_pages#missionvisionpg'
-
-
   get     'ministry-team-leaders',    to: 'static_pages#ministryteampg'
-
-
-
-
   get     'our-church',               to: 'static_pages#ourchurchpg'
   get     'our-community',            to: 'static_pages#ourcommunitypg'
   get     'our-people',               to: 'static_pages#ourpeoplepg'
-
-
   get     'pastoral-team',            to: 'static_pages#pastoralteampg'
-
-  
   get     'practical-needs',          to: 'static_pages#practicalneedspg'
   get     'privacy',                  to: 'static_pages#privacypg'
   get     'receive-christ',           to: 'static_pages#receivechristpg'
