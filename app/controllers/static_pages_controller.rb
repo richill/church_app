@@ -83,6 +83,9 @@ class StaticPagesController < ApplicationController
   def missionvisionpg
   end
 
+  def ministryteampg
+  end
+
   def nextstepspg 
   end
 
@@ -93,6 +96,9 @@ class StaticPagesController < ApplicationController
   end
 
   def ourpeoplepg
+  end
+
+  def pastoralteampg
   end
 
   def practicalneedspg
