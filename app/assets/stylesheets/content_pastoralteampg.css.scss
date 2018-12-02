@@ -139,14 +139,7 @@
   width: 200px;
 }
 
-
-
-
-// ----------------------------
-//   workings
-// ----------------------------
-
-.teammember_img_info {
+.content_aboutuspg_section .teammember_img_info {
   position: relative;
   height: 67px;
   overflow: hidden;
@@ -154,32 +147,31 @@
 }
 
 
-.profile_bckgrd_img {
+.content_aboutuspg_section .profile_bckgrd_img {
   position: absolute;
   opacity: 0.8;
 }
 
-.team_members ul {
+.content_aboutuspg_section .team_members ul {
   margin: 0px !important;
 }
 
-.team_members ul li {
+.content_aboutuspg_section .team_members ul li {
   margin: 0px !important;
   list-style-type: none;
   margin-bottom: 30px !important;
 }
 
-.team_members ul li a {
+.content_aboutuspg_section .team_members ul li a {
   color: #fff !important;
 }
 
-.team_members ul li a:hover {
+.content_aboutuspg_section .team_members ul li a:hover {
   text-decoration: none !important;
   opacity: 0.5 !important;
 }
 
-.image_cover {
-  // background-color: #fff !important;
+.content_aboutuspg_section .image_cover {
   height: 67px;
   width: 100px;
   overflow: hidden;
@@ -187,18 +179,18 @@
   margin-right: 10px;
 }
 
-.image_cover img {
+.content_aboutuspg_section .image_cover img {
   height: 100% !important;
   width: 100% !important;
 }
 
-.img_content {
+.content_aboutuspg_section .img_content {
   background-color: rgba(42, 44, 73, 0.02);
   float: left;
   padding: 8px 0px;
 }
 
-.member_title {
+.content_aboutuspg_section .member_title {
   font-size: 12px;
   font-weight: bold;
   text-transform: capitalize;
@@ -206,13 +198,13 @@
   margin-left: 2px;
 }
 
-.member_subtitle {
+.content_aboutuspg_section .member_subtitle {
   font-size: 32px;
   font-weight: bold;
   text-transform: capitalize;
 }
 
-.img_outter_cover {
+.content_aboutuspg_section .img_outter_cover {
   position: absolute;
   z-index: 1;
 }
