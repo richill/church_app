@@ -146,21 +146,76 @@
 //   workings
 // ----------------------------
 
+.teammember_img_info {
+  position: relative;
+  height: 67px;
+  overflow: hidden;
+}
+
+
+.profile_bckgrd_img {
+  position: absolute;
+  opacity: 0.8;
+}
 
 .team_members ul {
   margin: 0px !important;
 }
 
-
 .team_members ul li {
   margin: 0px !important;
   list-style-type: none;
+  margin-bottom: 30px !important;
 }
 
-// .team_members ul li {
-//   margin-bottom: 5px !important;
-// }
+.team_members ul li a {
+  color: #fff !important;
+}
 
+.team_members ul li a:hover {
+  text-decoration: none !important;
+  opacity: 0.5 !important;
+}
+
+.image_cover {
+  background-color: rgba(42, 44, 73, 0.05);
+  height: 67px;
+  width: 100px;
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
+}
+
+.image_cover img {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.img_content {
+  background-color: rgba(42, 44, 73, 0.02);
+  height: 100px;
+  float: left;
+  padding: 12px 0px;
+}
+
+.member_title {
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 12px;
+}
+
+.member_subtitle {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-left: 2px;
+}
+
+.img_outter_cover {
+  position: absolute;
+  z-index: 1;
+}
 
 
 
