@@ -223,64 +223,76 @@
 //   workings
 // -------------------------
 
-.member_detail_info .memeber_name {
+.members_main_scetion .member_detail_info .memeber_name {
   font-size: 30px;
   font-weight: bold;
   text-transform: capitalize;
   color: #2A2C49 !important;
+  margin-bottom: 10px;
 }
 
 
-.member_img_info {
+.members_main_scetion .member_img_info {
   position: relative;
-  height: 67px;
+  height: 182px;
   overflow: hidden;
   border: 1px solid rgba(42, 44, 73, 0.1);
 }
 
-.member_img_info .img_outter_cover {
+.members_main_scetion .member_img_info .img_outter_cover {
   position: absolute;
   z-index: 1;
+  padding: 15px;
 }
 
 
-.member_img_info .image_cover {
-  height: 67px;
-  width: 100px;
+.members_main_scetion .member_img_info .image_cover {
+  height: 150px;
+  width: 150px;
   overflow: hidden;
   float: left;
   margin-right: 10px;
 }
 
-.member_img_info .image_cover img {
+.members_main_scetion .member_img_info .image_cover img {
   height: 100% !important;
   width: 100% !important;
 }
 
-.member_img_info .img_content {
+.members_main_scetion .member_img_info .img_content {
   background-color: rgba(42, 44, 73, 0.02);
   float: left;
   padding: 8px 0px;
 }
 
-.member_img_info .member_title {
-  font-size: 12px;
+.members_main_scetion .member_img_info .member_title {
+  font-size: 25px;
   font-weight: bold;
   text-transform: capitalize;
-  margin-bottom: 5px;
   margin-left: 2px;
+  margin-top: 10px;
 }
 
-.member_img_info .member_subtitle {
-  font-size: 32px;
+.members_main_scetion .member_img_info .member_subtitle {
+  font-size: 50px;
   font-weight: bold;
   text-transform: capitalize;
 }
 
 
-.member_img_info .profile_bckgrd_img {
+.members_main_scetion .member_img_info .profile_bckgrd_img {
   position: absolute;
   opacity: 0.8;
+}
+
+.members_main_scetion .member_img_info .img_inner_content {
+  color: #fff;
+}
+
+
+.members_main_scetion .member_about p {
+  color: #2A2C49 !important;
+  margin: 15px 0px;
 }
 
 
