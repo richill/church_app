@@ -1,1 +1,58 @@
-<h1>daniel-akhazema</h1>
+<!-- css file: content_memberteampg.css.scss -->
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_aboutuspg_section members_main_scetion">
+  <div class="content_aboutuspg_inner_section members_inner_scetion">
+    <div class="medium-12 columns aboutuspg_content">
+
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "about us", about_us_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "our people", our_people_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "pastoral team", pastoral_team_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">Daniel Akhazema</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <!-- member -->
+          <div class="member_detail_info">
+            <div class="memeber_name">daniel akhazema</div>
+
+
+
+            <div class="member_img_info">
+              <div class="img_outter_cover">
+                <div class="image_cover"><%= cl_image_tag("https://res.cloudinary.com/openheavensuk/image/upload/v1543761450/pastoral%20team%20images/pst-daniel.png") %></div>
+                <div class="img_content">
+                  <div class="img_inner_content">
+                    <div class="member_title">pastor</div>
+                    <div class="member_subtitle">daniel akhazema</div>
+                  </div>
+                </div>
+              </div>
+              <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+            </div>
+
+
+
+
+          </div>
+          <!-- member -->
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      
+      </div>
+
+    </div>
+  </div>
+</div>
