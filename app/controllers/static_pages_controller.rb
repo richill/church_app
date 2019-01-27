@@ -60,6 +60,28 @@ class StaticPagesController < ApplicationController
 
   def deacononepg
   end
+
+
+
+
+
+  def teamleaderonepg
+  end
+
+  def teamleadertwopg
+  end
+
+  def teamleaderthreepg
+  end
+
+  def teamleaderfourpg
+  end
+
+  def teamleaderfivepg
+  end
+
+  def teamleadersixpg
+  end
   # ---------------- members ----------------
 
   def contactpg  

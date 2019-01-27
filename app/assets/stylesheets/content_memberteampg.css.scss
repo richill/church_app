@@ -8,6 +8,8 @@
     File: views/shared/_content_pastorfivepg.html.erb   [funke-olusanye]
     File: views/shared/_content_pastorsixpg.html.erb    [uche-olayinka]
     File: views/shared/_content_deacononepg.html.erb    [wale-kuye]
+
+    File: File: views/shared/_content_ministryteampg.html.erb
   ===================================================*/
 
 .members_main_scetion {
@@ -216,13 +218,6 @@
   z-index: 1;
 }
 
-
-
-
-// -------------------------
-//   workings
-// -------------------------
-
 .members_main_scetion .member_detail_info .memeber_name {
   font-size: 30px;
   font-weight: bold;
@@ -230,7 +225,6 @@
   color: #2A2C49 !important;
   margin-bottom: 10px;
 }
-
 
 .members_main_scetion .member_img_info {
   position: relative;
@@ -244,7 +238,6 @@
   z-index: 1;
   padding: 15px;
 }
-
 
 .members_main_scetion .member_img_info .image_cover {
   height: 150px;
@@ -279,7 +272,6 @@
   text-transform: capitalize;
 }
 
-
 .members_main_scetion .member_img_info .profile_bckgrd_img {
   position: absolute;
   opacity: 0.8;
@@ -288,7 +280,6 @@
 .members_main_scetion .member_img_info .img_inner_content {
   color: #fff;
 }
-
 
 .members_main_scetion .member_about p {
   color: #2A2C49 !important;
