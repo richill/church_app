@@ -1,6 +1,276 @@
-<h1>content_ministryteampg</h1>
+<!-- css file: content_memberteampg.css.scss -->
 <div class="pages_boarder"></div>
-<div class="medium-12 columns content_aboutuspg_section">
+<div class="medium-12 columns content_aboutuspg_section members_main_scetion">
+  <div class="content_aboutuspg_inner_section members_inner_scetion">
+    <div class="medium-12 columns aboutuspg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "about us", about_us_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "our people", our_people_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">ministry team leaders</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">ministry team leaders</div>
+            <div class="paragraph_content">Meet the Open Heaven's Ministry Team leaders</div>
+            <div class="team_members">
+              <ul>
+
+                <li>
+                  <%= link_to helen_daniel_path do %>
+                    <div class="teammember_img_info">
+                      <div class="img_outter_cover">
+                        <div class="image_cover"><%= image_tag("img-profile-image-default.png", class: "img_featured_01") %></div>
+                        <div class="img_content_new">
+                          <div class="img_inner_content">
+                            <div class="member_title">pastor</div>
+                            <div class="member_subtitle_new">helen daniel</div>
+                            <div class="member_title_new">Care Ministry</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+                    </div>
+                    <div class="clear"></div>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to uche_olayinka_path do %>
+                    <div class="teammember_img_info">
+                      <div class="img_outter_cover">
+                        <div class="image_cover"><%= image_tag("img-profile-image-default.png", class: "img_featured_01") %></div>
+                        <div class="img_content_new">
+                          <div class="img_inner_content">
+                            <div class="member_title">pastor</div>
+                            <div class="member_subtitle_new">uche olayinka</div>
+                            <div class="member_title_new">Children and Teenage Ministry</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+                    </div>
+                    <div class="clear"></div>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to jason_ejimadu_path do %>
+                    <div class="teammember_img_info">
+                      <div class="img_outter_cover">
+                        <div class="image_cover"><%= image_tag("img-profile-image-default.png", class: "img_featured_01") %></div>
+                        <div class="img_content_new">
+                          <div class="img_inner_content">
+                            <div class="member_title">deacon</div>
+                            <div class="member_subtitle_new">Jason Ejimadu</div>
+                            <div class="member_title_new">Comms & Media Ministry</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+                    </div>
+                    <div class="clear"></div>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to shaiye_daniel_path do %>
+                    <div class="teammember_img_info">
+                      <div class="img_outter_cover">
+                        <div class="image_cover"><%= cl_image_tag("https://res.cloudinary.com/openheavensuk/image/upload/v1542980646/pastoral%20team%20images/pastor_shaiye_-_parish_pastor.jpg", class: "img_featured_01") %></div>
+                        <div class="img_content_new">
+                          <div class="img_inner_content">
+                            <div class="member_title">pastor</div>
+                            <div class="member_subtitle">shaiye daniel</div>
+                            <div class="member_title_new">Finance & Admin Ministry</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+                    </div>
+                    <div class="clear"></div>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to emmanuel_adjei_ofosu_path do %>
+                    <div class="teammember_img_info">
+                      <div class="img_outter_cover">
+                        <div class="image_cover"><%= image_tag("img-profile-image-default.png", class: "img_featured_01") %></div>
+                        <div class="img_content_new">
+                          <div class="img_inner_content">
+                            <div class="member_title">brother</div>
+                            <div class="member_subtitle_new">Emmanuel Adjei-Ofosu</div>
+                            <div class="member_title_new">First Impression Ministry</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+                    </div>
+                    <div class="clear"></div>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to eunice_akhazema_path do %>
+                    <div class="teammember_img_info">
+                      <div class="img_outter_cover">
+                        <div class="image_cover"><%= cl_image_tag("https://res.cloudinary.com/openheavensuk/image/upload/v1543762601/pastoral%20team%20images/Pst_Eunice.png", class: "img_featured_01") %></div>
+                        <div class="img_content_new">
+                          <div class="img_inner_content">
+                            <div class="member_title">pastor</div>
+                            <div class="member_subtitle_new">Eunice akhazema</div>
+                            <div class="member_title_new">Growth Ministry</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+                    </div>
+                    <div class="clear"></div>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to gbenga_omole_path do %>
+                    <div class="teammember_img_info">
+                      <div class="img_outter_cover">
+                        <div class="image_cover"><%= image_tag("img-profile-image-default.png", class: "img_featured_01") %></div>
+                        <div class="img_content_new">
+                          <div class="img_inner_content">
+                            <div class="member_title">deacon</div>
+                            <div class="member_subtitle_new">Gbenga Omole</div>
+                            <div class="member_title_new">Men's Ministry</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+                    </div>
+                    <div class="clear"></div>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to funke_olusanye_path do %>
+                    <div class="teammember_img_info">
+                      <div class="img_outter_cover">
+                        <div class="image_cover"><%= image_tag("img-profile-image-default.png", class: "img_featured_01") %></div>
+                        <div class="img_content_new">
+                          <div class="img_inner_content">
+                            <div class="member_title">pastor</div>
+                            <div class="member_subtitle_new">funke olusanye</div>
+                            <div class="member_title_new">OHCC Family & Province Relations Ministry</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+                    </div>
+                    <div class="clear"></div>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to michael_oyelere_path do %>
+                    <div class="teammember_img_info">
+                      <div class="img_outter_cover">
+                        <div class="image_cover"><%= image_tag("img-profile-image-default.png", class: "img_featured_01") %></div>
+                        <div class="img_content_new">
+                          <div class="img_inner_content">
+                            <div class="member_title">brother</div>
+                            <div class="member_subtitle_new">Michael Oyelere</div>
+                            <div class="member_title_new">Prayer Ministry</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+                    </div>
+                    <div class="clear"></div>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to pat_ogbomon_path do %>
+                    <div class="teammember_img_info">
+                      <div class="img_outter_cover">
+                        <div class="image_cover"><%= image_tag("img-profile-image-default.png", class: "img_featured_01") %></div>
+                        <div class="img_content_new">
+                          <div class="img_inner_content">
+                            <div class="member_title">deacon</div>
+                            <div class="member_subtitle_new">Pat Ogbomon</div>
+                            <div class="member_title_new">Women's Ministry</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+                    </div>
+                    <div class="clear"></div>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to nkoyo_patrick_nkereuwem_path do %>
+                    <div class="teammember_img_info">
+                      <div class="img_outter_cover">
+                        <div class="image_cover"><%= image_tag("img-profile-image-default.png", class: "img_featured_01") %></div>
+                        <div class="img_content_new">
+                          <div class="img_inner_content">
+                            <div class="member_title">sister</div>
+                            <div class="member_subtitle_new">Nkoyo Patrick-Nkereuwem</div>
+                            <div class="member_title_new">Worship Ministry</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+                    </div>
+                    <div class="clear"></div>
+                  <% end %>
+                </li>
+
+                <li>
+                  <%= link_to wale_kuye_path do %>
+                    <div class="teammember_img_info">
+                      <div class="img_outter_cover">
+                        <div class="image_cover"><%= image_tag("img-profile-image-default.png", class: "img_featured_01") %></div>
+                        <div class="img_content_new">
+                          <div class="img_inner_content">
+                            <div class="member_title">deacon</div>
+                            <div class="member_subtitle_new">wale kuye</div>
+                            <div class="member_title_new">Youth Ministry</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+                    </div>
+                    <div class="clear"></div>
+                  <% end %>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- old content -->
+<div class="medium-12 columns content_aboutuspg_section hide">
   <div class="content_aboutuspg_inner_section">
     <div class="medium-12 columns aboutuspg_content">
       <div class="tree_line">
@@ -49,3 +319,4 @@
     </div>
   </div>
 </div>
+<!-- old content -->

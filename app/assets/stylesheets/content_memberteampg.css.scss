@@ -199,6 +199,12 @@
   padding: 8px 0px;
 }
 
+.members_main_scetion .img_content_new {
+  background-color: rgba(42, 44, 73, 0.02);
+  float: left;
+  padding: 2px 0px;
+}
+
 .members_main_scetion .member_title {
   font-size: 12px;
   font-weight: bold;
@@ -209,6 +215,12 @@
 
 .members_main_scetion .member_subtitle {
   font-size: 32px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.members_main_scetion .member_subtitle_new {
+  font-size: 25px;
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -258,8 +270,8 @@
   padding: 8px 0px;
 }
 
-.members_main_scetion .member_img_info .member_title {
-  font-size: 25px;
+.members_main_scetion .member_img_info .member_title_new {
+  font-size: 10px;
   font-weight: bold;
   text-transform: capitalize;
   margin-left: 2px;
@@ -267,7 +279,7 @@
 }
 
 .members_main_scetion .member_img_info .member_subtitle {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -284,6 +296,13 @@
 .members_main_scetion .member_about p {
   color: #2A2C49 !important;
   margin: 15px 0px;
+}
+
+.members_main_scetion .member_title_new {
+  margin-top: 4px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 
