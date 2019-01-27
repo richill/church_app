@@ -61,6 +61,14 @@ Rails.application.routes.draw do
   end
   
   root    'static_pages#homepg'
+
+  get     'daniel-akhazema',          to: 'static_pages#pastoronepg'
+  get     'eunice-akhazema',          to: 'static_pages#pastortwopg'
+  get     'shaiye-daniel',            to: 'static_pages#pastorthreepg'
+  get     'helen-daniel',             to: 'static_pages#pastorfourpg'
+  get     'funke-olusanye',           to: 'static_pages#pastorfivepg'
+  get     'uche-olayinka',            to: 'static_pages#pastorsixpg'
+  
   get     'about-us',                 to: 'static_pages#aboutuspg'
   get     'around-the-world',         to: 'static_pages#aroundworldpg'
   get     'baptism',                  to: 'static_pages#baptismpg'

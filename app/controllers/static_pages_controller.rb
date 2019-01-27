@@ -38,6 +38,30 @@ class StaticPagesController < ApplicationController
   end
   # ----------------- jobs -----------------
 
+
+  # ---------------- members ----------------
+  def pastoronepg
+  end
+
+  def pastortwopg
+  end
+
+  def pastorthreepg
+  end
+
+  def pastorfourpg
+  end
+
+  def pastorfivepg
+  end
+
+  def pastorsixpg
+  end
+
+  def deacononepg
+  end
+  # ---------------- members ----------------
+
   def contactpg  
   end
 
