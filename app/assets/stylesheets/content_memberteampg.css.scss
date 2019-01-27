@@ -252,6 +252,11 @@
   color: #2A2C49 !important;
   margin-bottom: 10px;
 }
+@media only screen and (max-width: 550px) {
+  .members_main_scetion .member_detail_info .memeber_name {
+    font-size: 20px !important;
+  }
+}
 
 .members_main_scetion .member_img_info {
   position: relative;
@@ -307,6 +312,12 @@
 .members_main_scetion .member_img_info .img_inner_content {
   color: #fff;
 }
+@media only screen and (max-width: 550px) {
+  .members_main_scetion .member_img_info .img_inner_content {
+    display: none;
+  }
+}
+
 
 .members_main_scetion .member_about p {
   color: #2A2C49 !important;
