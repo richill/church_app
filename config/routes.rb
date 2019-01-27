@@ -70,6 +70,13 @@ Rails.application.routes.draw do
   get     'uche-olayinka',            to: 'static_pages#pastorsixpg'
   get     'wale-kuye',                to: 'static_pages#deacononepg'
   
+  get     'jason-ejimadu',            to: 'static_pages#teamleaderonepg'
+  get     'emmanuel-adjei-ofosu',     to: 'static_pages#teamleadertwopg'
+  get     'gbenga-omole',             to: 'static_pages#teamleaderthreepg'
+  get     'michael-oyelere',          to: 'static_pages#teamleaderfourpg'
+  get     'pat-ogbomon',              to: 'static_pages#teamleaderfivepg'
+  get     'nkoyo-patrick-nkereuwem',  to: 'static_pages#teamleadersixpg'
+  
   get     'about-us',                 to: 'static_pages#aboutuspg'
   get     'around-the-world',         to: 'static_pages#aroundworldpg'
   get     'baptism',                  to: 'static_pages#baptismpg'

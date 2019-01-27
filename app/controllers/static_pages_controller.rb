@@ -61,10 +61,6 @@ class StaticPagesController < ApplicationController
   def deacononepg
   end
 
-
-
-
-
   def teamleaderonepg
   end
 
