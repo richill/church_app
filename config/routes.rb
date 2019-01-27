@@ -68,6 +68,7 @@ Rails.application.routes.draw do
   get     'helen-daniel',             to: 'static_pages#pastorfourpg'
   get     'funke-olusanye',           to: 'static_pages#pastorfivepg'
   get     'uche-olayinka',            to: 'static_pages#pastorsixpg'
+  get     'wale-kuye',                to: 'static_pages#deacononepg'
   
   get     'about-us',                 to: 'static_pages#aboutuspg'
   get     'around-the-world',         to: 'static_pages#aroundworldpg'
