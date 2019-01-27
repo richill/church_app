@@ -1,1 +1,55 @@
-<h1>funke-olusanye</h1>
+<!-- css file: content_memberteampg.css.scss -->
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_aboutuspg_section members_main_scetion">
+  <div class="content_aboutuspg_inner_section members_inner_scetion">
+    <div class="medium-12 columns aboutuspg_content">
+
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "about us", about_us_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "our people", our_people_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "pastoral team", pastoral_team_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">funke olusanye</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <!-- member -->
+          <div class="member_detail_info">
+            <div class="memeber_name">funke olusanye</div>
+            <div class="member_img_info">
+              <div class="img_outter_cover">
+                <div class="image_cover"><%= image_tag("img-profile-image-default.png", class: "img_featured_01") %></div>
+                <div class="img_content">
+                  <div class="img_inner_content">
+                    <div class="member_title">pastor</div>
+                    <div class="member_subtitle">funke olusanye</div>
+                  </div>
+                </div>
+              </div>
+              <div class="profile_bckgrd_img"><%= image_tag("img_profile_bckgrd.jpg") %></div>
+            </div>
+            <div class="member_about">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+          <!-- member -->
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      
+      </div>
+    </div>
+  </div>
+</div>
