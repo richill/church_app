@@ -3,111 +3,111 @@
     File: views/shared/_content_pastoralteampg.html.erb
   ===================================================*/
 
-.content_aboutuspg_section {
+.members_main_scetion {
   padding: 0px !important;
 }
 
-.content_aboutuspg_section .content_aboutuspg_inner_section {
+.members_main_scetion .members_inner_scetion {
   width: 1150px;
   margin: auto;
   background-color: rgba(42, 44, 73, 0.1);
   margin-bottom: 30px;
 }
 @media only screen and (max-width: 1160px) {
-  .content_aboutuspg_section .content_aboutuspg_inner_section {
+  .members_main_scetion .members_inner_scetion {
     width: 100% !important;
   }
 }
 
-.content_aboutuspg_section .aboutuspg_content {
+.members_main_scetion .aboutuspg_content {
   margin-bottom: 30px;
   padding: 0px !important;
 }
 
-.content_aboutuspg_section .tree_line {
+.members_main_scetion .tree_line {
   font-size: 10px;
   text-transform: capitalize;
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 1160px) {
-  .content_aboutuspg_section .tree_line {
+  .members_main_scetion .tree_line {
     margin-top: 25px;
     padding: 0px 15px !important;
   }
 }
 
-.content_aboutuspg_section .tree_line a {
+.members_main_scetion .tree_line a {
   color: #2A2C49 !important;
 }
 
-.content_aboutuspg_section .current_page {
+.members_main_scetion .current_page {
   color: #a07b35;
 }
 
-.content_aboutuspg_section .page_main_content {
+.members_main_scetion .page_main_content {
   padding: 0px !important;
 }
 
-.content_aboutuspg_section .info_left_content {
+.members_main_scetion .info_left_content {
   padding: 0px !important;
 }
 @media only screen and (max-width: 1160px) {
-  .content_aboutuspg_section .info_left_content {
+  .members_main_scetion .info_left_content {
     width: 100% !important;
     padding: 0px 15px !important;
   }
 }
 
-.content_aboutuspg_section .info_left_content .page_header {
+.members_main_scetion .info_left_content .page_header {
   font-size: 30px;
   font-weight: bold;
   text-transform: capitalize;
   color: #2A2C49;
 }
 
-.content_aboutuspg_section .info_left_content .page_img {
+.members_main_scetion .info_left_content .page_img {
   margin-bottom: 15px;
   opacity: 0.8;
   overflow: hidden;
 }
 
-.content_aboutuspg_section .info_left_content .paragraph_content {
+.members_main_scetion .info_left_content .paragraph_content {
   margin-bottom: 15px;
   color: #2A2C49;
 }
 
-.content_aboutuspg_section .info_left_content .paragraph_content .sub_header {
+.members_main_scetion .info_left_content .paragraph_content .sub_header {
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 3px;
 }
 
-.content_aboutuspg_section .info_left_content .paragraph_content ul {
+.members_main_scetion .info_left_content .paragraph_content ul {
   margin: 0px;
 }
 
-.content_aboutuspg_section .info_left_content .paragraph_content ul li {
+.members_main_scetion .info_left_content .paragraph_content ul li {
   margin-bottom: 5px;
 }
 
-.content_aboutuspg_section .info_left_content .paragraph_content .weblink {
+.members_main_scetion .info_left_content .paragraph_content .weblink {
   color: #a1355b !important;
 }
 
-.content_aboutuspg_section .info_left_content .paragraph_content .weblink a {
+.members_main_scetion .info_left_content .paragraph_content .weblink a {
   color: #a1355b !important;
 }
 
-.content_aboutuspg_section .listed_donation_links ul li {
+.members_main_scetion .listed_donation_links ul li {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.content_aboutuspg_section .listed_donation_links ul li {
+.members_main_scetion .listed_donation_links ul li {
   margin-bottom: 5px !important;
 }
 
-.content_aboutuspg_section .listed_donation_links ul li a {
+.members_main_scetion .listed_donation_links ul li a {
   background: linear-gradient(#57738E, #9DC6EB);
   color: #fff !important;
   height: 50px;
@@ -123,7 +123,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.content_aboutuspg_section .listed_donation_links ul li a:hover {
+.members_main_scetion .listed_donation_links ul li a:hover {
   opacity: 0.8;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
@@ -131,15 +131,15 @@
   -o-transition: all 0.3s ease;
 }
 
-.content_aboutuspg_section .pymt_img {
+.members_main_scetion .pymt_img {
   margin: 30px 0px 10px;
 }
 
-.content_aboutuspg_section .pymt_img img {
+.members_main_scetion .pymt_img img {
   width: 200px;
 }
 
-.content_aboutuspg_section .teammember_img_info {
+.members_main_scetion .teammember_img_info {
   position: relative;
   height: 67px;
   overflow: hidden;
@@ -147,31 +147,31 @@
 }
 
 
-.content_aboutuspg_section .profile_bckgrd_img {
+.members_main_scetion .profile_bckgrd_img {
   position: absolute;
   opacity: 0.8;
 }
 
-.content_aboutuspg_section .team_members ul {
+.members_main_scetion .team_members ul {
   margin: 0px !important;
 }
 
-.content_aboutuspg_section .team_members ul li {
+.members_main_scetion .team_members ul li {
   margin: 0px !important;
   list-style-type: none;
   margin-bottom: 30px !important;
 }
 
-.content_aboutuspg_section .team_members ul li a {
+.members_main_scetion .team_members ul li a {
   color: #fff !important;
 }
 
-.content_aboutuspg_section .team_members ul li a:hover {
+.members_main_scetion .team_members ul li a:hover {
   text-decoration: none !important;
   opacity: 0.5 !important;
 }
 
-.content_aboutuspg_section .image_cover {
+.members_main_scetion .image_cover {
   height: 67px;
   width: 100px;
   overflow: hidden;
@@ -179,18 +179,18 @@
   margin-right: 10px;
 }
 
-.content_aboutuspg_section .image_cover img {
+.members_main_scetion .image_cover img {
   height: 100% !important;
   width: 100% !important;
 }
 
-.content_aboutuspg_section .img_content {
+.members_main_scetion .img_content {
   background-color: rgba(42, 44, 73, 0.02);
   float: left;
   padding: 8px 0px;
 }
 
-.content_aboutuspg_section .member_title {
+.members_main_scetion .member_title {
   font-size: 12px;
   font-weight: bold;
   text-transform: capitalize;
@@ -198,13 +198,13 @@
   margin-left: 2px;
 }
 
-.content_aboutuspg_section .member_subtitle {
+.members_main_scetion .member_subtitle {
   font-size: 32px;
   font-weight: bold;
   text-transform: capitalize;
 }
 
-.content_aboutuspg_section .img_outter_cover {
+.members_main_scetion .img_outter_cover {
   position: absolute;
   z-index: 1;
 }
