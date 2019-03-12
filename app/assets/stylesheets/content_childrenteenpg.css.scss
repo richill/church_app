@@ -69,6 +69,26 @@
   margin-bottom: 15px;
   opacity: 0.8;
   overflow: hidden;
+  position: relative;
+}
+@media only screen and (min-width: 630px) {
+  .content_childrenteenpg_section .info_left_content .page_img {
+    height: 230.64px;
+  }
+}
+
+.content_childrenteenpg_section .info_left_content .page_img img {
+  position: absolute;
+  top: -114px;
+}
+@media only screen and (max-width: 1160px) {
+  .content_childrenteenpg_section .info_left_content .page_img img {
+    width: 100% !important;
+  }
+}
+
+.content_childrenteenpg_section .info_left_content .img_border {
+  border: 1px solid #2A2C49;
 }
 
 .content_childrenteenpg_section .info_left_content .paragraph_content {
