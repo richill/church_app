@@ -1,73 +1,81 @@
 class SmallgroupsController < ApplicationController
   before_action :set_smallgroup, only: [:show, :edit, :update, :destroy]
 
-  # GET /smallgroups
-  # GET /smallgroups.json
   def index
-    @smallgroups = Smallgroup.all
+    if user_signed_in? && current_user.admin
+      @smallgroups = Smallgroup.all
+    else
+      redirect_to error_path
+    end
   end
 
-  # GET /smallgroups/1
-  # GET /smallgroups/1.json
   def show
   end
 
-  # GET /smallgroups/new
   def new
-    @smallgroup = Smallgroup.new
+    if user_signed_in? && current_user.admin
+      @smallgroup = Smallgroup.new
+    else
+      redirect_to error_path
+    end
   end
 
-  # GET /smallgroups/1/edit
   def edit
+    unless user_signed_in? && current_user.admin
+      redirect_to error_path
+    end
   end
 
-  # POST /smallgroups
-  # POST /smallgroups.json
   def create
-    @smallgroup = Smallgroup.new(smallgroup_params)
-
-    respond_to do |format|
-      if @smallgroup.save
-        format.html { redirect_to @smallgroup, notice: 'Smallgroup was successfully created.' }
-        format.json { render :show, status: :created, location: @smallgroup }
-      else
-        format.html { render :new }
-        format.json { render json: @smallgroup.errors, status: :unprocessable_entity }
+    if user_signed_in? && current_user.admin
+      @smallgroup = Smallgroup.new(smallgroup_params)
+      respond_to do |format|
+        if @smallgroup.save
+          format.html { redirect_to @smallgroup, notice: 'Smallgroup was successfully created.' }
+          format.json { render :show, status: :created, location: @smallgroup }
+        else
+          format.html { render :new }
+          format.json { render json: @smallgroup.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to error_path
     end
   end
 
-  # PATCH/PUT /smallgroups/1
-  # PATCH/PUT /smallgroups/1.json
   def update
-    respond_to do |format|
-      if @smallgroup.update(smallgroup_params)
-        format.html { redirect_to @smallgroup, notice: 'Smallgroup was successfully updated.' }
-        format.json { render :show, status: :ok, location: @smallgroup }
-      else
-        format.html { render :edit }
-        format.json { render json: @smallgroup.errors, status: :unprocessable_entity }
+    if user_signed_in? && current_user.admin
+      respond_to do |format|
+        if @smallgroup.update(smallgroup_params)
+          format.html { redirect_to @smallgroup, notice: 'Smallgroup was successfully updated.' }
+          format.json { render :show, status: :ok, location: @smallgroup }
+        else
+          format.html { render :edit }
+          format.json { render json: @smallgroup.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to error_path
     end
   end
 
-  # DELETE /smallgroups/1
-  # DELETE /smallgroups/1.json
   def destroy
-    @smallgroup.destroy
-    respond_to do |format|
-      format.html { redirect_to smallgroups_url, notice: 'Smallgroup was successfully destroyed.' }
-      format.json { head :no_content }
+    if user_signed_in? && current_user.admin
+      @smallgroup.destroy
+      respond_to do |format|
+        format.html { redirect_to smallgroups_url, notice: 'Smallgroup was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to error_path
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_smallgroup
       @smallgroup = Smallgroup.friendly.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def smallgroup_params
       params.require(:smallgroup).permit(:name, :descriptin, :image, :address, :postcode)
     end

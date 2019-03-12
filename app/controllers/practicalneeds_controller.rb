@@ -2,56 +2,84 @@ class PracticalneedsController < ApplicationController
   before_action :set_practicalneed, only: [:show, :edit, :update, :destroy]
 
   def index
-    @practicalneeds = Practicalneed.all
+    if user_signed_in? && current_user.admin
+      @practicalneeds = Practicalneed.all
+    else
+      redirect_to error_path
+    end
   end
 
   def show
-    @commentable = @practicalneed
-    @comment = Comment.new
-    @comments = @commentable.comments
+    if user_signed_in?
+      @commentable = @practicalneed
+      @comment = Comment.new
+      @comments = @commentable.comments
+    else
+      redirect_to error_path
+    end
   end
 
   def new
-    @user = User.friendly.find(params[:user_id])
-    @practicalneed = @user.practicalneeds.build
+    if user_signed_in?
+      @user = User.friendly.find(params[:user_id])
+      @practicalneed = @user.practicalneeds.build
+    else
+      redirect_to error_path
+    end
   end
 
   def edit
-    @user = current_user
+    if user_signed_in? && current_user.admin
+      @user = current_user
+    else
+      redirect_to error_path
+    end
   end
 
   def create
-    #@practicalneed = Practicalneeds.new(practicalneed_params)
-    @user = User.friendly.find(params[:user_id])
-    @practicalneed = @user.practicalneeds.create(practicalneed_params)
-    respond_to do |format|
-      if @practicalneed.save
-        format.html { redirect_to @practicalneed, notice: 'Practical need was successfully created.' }
-        format.json { render :show, status: :created, location: @practicalneed }
-      else
-        format.html { render :new }
-        format.json { render json: @practicalneed.errors, status: :unprocessable_entity }
+    if user_signed_in?
+      #@practicalneed = Practicalneeds.new(practicalneed_params)
+      @user = User.friendly.find(params[:user_id])
+      @practicalneed = @user.practicalneeds.create(practicalneed_params)
+      respond_to do |format|
+        if @practicalneed.save
+          format.html { redirect_to @practicalneed, notice: 'Practical need was successfully created.' }
+          format.json { render :show, status: :created, location: @practicalneed }
+        else
+          format.html { render :new }
+          format.json { render json: @practicalneed.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to error_path
     end
   end
 
   def update
-    respond_to do |format|
-      if @practicalneed.update_attributes(practicalneed_params)
-        format.html { redirect_to @practicalneed, notice: 'Practical need was successfully updated.' }
-        format.json { render :show, status: :ok, location: @practicalneed }
-      else
-        format.html { render :edit }
-        format.json { render json: @practicalneed.errors, status: :unprocessable_entity }
+    if user_signed_in? && current_user.admin
+      respond_to do |format|
+        if @practicalneed.update_attributes(practicalneed_params)
+          format.html { redirect_to @practicalneed, notice: 'Practical need was successfully updated.' }
+          format.json { render :show, status: :ok, location: @practicalneed }
+        else
+          format.html { render :edit }
+          format.json { render json: @practicalneed.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to error_path
     end
   end
 
   def destroy
-    @user = current_user
-    @practicalneed = @user.practicalneeds.friendly.find(params[:id])
-    @practicalneed.destroy
-    redirect_to user_path(@user)
+    if user_signed_in? && current_user.admin
+      @user = current_user
+      @practicalneed = @user.practicalneeds.friendly.find(params[:id])
+      @practicalneed.destroy
+      redirect_to user_path(@user)
+    else
+      redirect_to error_path
+    end
   end
 
   private
