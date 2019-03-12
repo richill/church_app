@@ -187,4 +187,7 @@ class StaticPagesController < ApplicationController
 
   def youthpg
   end
+
+  def errorpg
+  end
 end

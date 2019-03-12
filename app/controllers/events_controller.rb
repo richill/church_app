@@ -9,32 +9,25 @@ class EventsController < ApplicationController
   end
 
   def new
-    #@event = Event.new
-    @user = current_user
-    @event = @user.events.build
+    if user_signed_in? && current_user.admin
+      @user = current_user
+      @event = @user.events.build
+    else
+      redirect_to error_path
+    end
   end
 
   def edit
+    unless user_signed_in? && current_user.admin
+      redirect_to error_path
+    end
   end
 
-  # def create
-  #   @event = Event.new(event_params)
-
-  #   respond_to do |format|
-  #     if @event.save
-  #       format.html { redirect_to @event, notice: 'Event was successfully created.' }
-  #       format.json { render :show, status: :created, location: @event }
-  #     else
-  #       format.html { render :new }
-  #       format.json { render json: @event.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
   def create
-    @user = current_user
-    @event = @user.events.create(event_params)
-
-    respond_to do |format|
+    if user_signed_in? && current_user.admin
+      @user = current_user
+      @event = @user.events.create(event_params)
+      respond_to do |format|
         if @event.save
           format.html { redirect_to stats_events_user_path(@user), notice: 'Event was successfully created.' }
           format.json { render :show, status: :created, location: @event }
@@ -43,23 +36,15 @@ class EventsController < ApplicationController
           format.json { render json: @event.errors, status: :unprocessable_entity }
         end
       end
+    else
+      redirect_to error_path
+    end
   end
 
-  # def update
-  #   respond_to do |format|
-  #     if @event.update(event_params)
-  #       format.html { redirect_to @event, notice: 'Event was successfully updated.' }
-  #       format.json { render :show, status: :ok, location: @event }
-  #     else
-  #       format.html { render :edit }
-  #       format.json { render json: @event.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
   def update
-    @user = current_user
-
-    respond_to do |format|
+    if user_signed_in? && current_user.admin
+      @user = current_user
+      respond_to do |format|
         if @event.update_attributes(event_params)
           format.html { redirect_to stats_events_user_path(@user), notice: 'Event was successfully updated.' }
           format.json { render :show, status: :ok, location: @event }
@@ -68,20 +53,20 @@ class EventsController < ApplicationController
           format.json { render json: @event.errors, status: :unprocessable_entity }
         end
       end
+    else
+      redirect_to error_path
+    end
   end
 
-  # def destroy
-  #   @event.destroy
-  #   respond_to do |format|
-  #     format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
-  #     format.json { head :no_content }
-  #   end
-  # end
   def destroy
-    @user = current_user
-    @event = @user.events.friendly.find(params[:id])
-    @event.destroy
-    redirect_to stats_events_user_path(@user)
+    if user_signed_in? && current_user.admin
+      @user = current_user
+      @event = @user.events.friendly.find(params[:id])
+      @event.destroy
+      redirect_to stats_events_user_path(@user)
+    else
+      redirect_to error_path
+    end
   end
 
   def calendareventspg

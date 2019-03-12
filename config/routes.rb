@@ -91,6 +91,7 @@ Rails.application.routes.draw do
   get     'church-jobs',              to: 'static_pages#churchjobspg'
   get     'directions',               to: 'static_pages#directionpg'
   get     'donations',                to: 'static_pages#donatepg'
+  get     'error',                    to: 'static_pages#errorpg'
   get     'forum',                    to: 'static_pages#forumpg'
   get     'get-connected',            to: 'static_pages#getconnectedpg'
   get     'gdpr',                     to: 'static_pages#gdprpg'
