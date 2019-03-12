@@ -11,48 +11,71 @@ class GalleriesController < ApplicationController
   end
 
   def new
-    @user = current_user
-    @gallery = @user.galleries.build
+    if user_signed_in? && current_user.admin
+      @user = current_user
+      @gallery = @user.galleries.build
+    else
+      redirect_to error_path
+    end
   end
 
   def edit
-    @user = current_user
+    if user_signed_in? && current_user.admin
+      @user = current_user
+    else
+      redirect_to error_path
+    end
   end
 
   def create
-    @user = User.friendly.find(params[:user_id])
-    @gallery = @user.galleries.create(gallery_params)
-    respond_to do |format|
-      if @gallery.save
-        format.html { redirect_to @gallery, notice: 'Gallery was successfully created.' }
-        format.json { render :show, status: :created, location: @gallery }
-      else
-        format.html { render :new }
-        format.json { render json: @gallery.errors, status: :unprocessable_entity }
+    if user_signed_in? && current_user.admin
+      @user = User.friendly.find(params[:user_id])
+      @gallery = @user.galleries.create(gallery_params)
+      respond_to do |format|
+        if @gallery.save
+          format.html { redirect_to @gallery, notice: 'Gallery was successfully created.' }
+          format.json { render :show, status: :created, location: @gallery }
+        else
+          format.html { render :new }
+          format.json { render json: @gallery.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to error_path
     end
   end
 
   def update
-    respond_to do |format|
-      if @gallery.update_attributes(gallery_params)
-        format.html { redirect_to @gallery, notice: 'Gallery was successfully updated.' }
-        format.json { render :show, status: :ok, location: @gallery }
-      else
-        format.html { render :edit }
-        format.json { render json: @gallery.errors, status: :unprocessable_entity }
+    if user_signed_in? && current_user.admin
+      respond_to do |format|
+        if @gallery.update_attributes(gallery_params)
+          format.html { redirect_to @gallery, notice: 'Gallery was successfully updated.' }
+          format.json { render :show, status: :ok, location: @gallery }
+        else
+          format.html { render :edit }
+          format.json { render json: @gallery.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to error_path
     end
   end
 
   def destroy
-    @user = current_user
-    @gallery = @user.galleries.friendly.find(params[:id])
-    @gallery.destroy
-    redirect_to user_path(@user)
+    if user_signed_in? && current_user.admin
+      @user = current_user
+      @gallery = @user.galleries.friendly.find(params[:id])
+      @gallery.destroy
+      redirect_to user_path(@user)
+    else
+      redirect_to error_path
+    end
   end
 
   def gallery_photos
+    unless user_signed_in? && current_user.admin
+      redirect_to error_path
+    end
   end
 
   private

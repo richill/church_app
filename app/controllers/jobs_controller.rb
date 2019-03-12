@@ -2,7 +2,11 @@ class JobsController < ApplicationController
   before_action :set_job, only: [:show, :edit, :update, :destroy]
 
   def index
-    @jobs = Job.all
+    if user_signed_in? && current_user.admin
+      @jobs = Job.all
+    else
+      redirect_to error_path
+    end
   end
 
   def show
@@ -10,45 +14,65 @@ class JobsController < ApplicationController
   end
 
   def new
-    @user = User.friendly.find(params[:user_id])
-    @job = @user.jobs.build
+    if user_signed_in?
+      @user = User.friendly.find(params[:user_id])
+      @job = @user.jobs.build
+    else
+      redirect_to error_path
+    end
   end
 
   def edit
-    @user = current_user
+    if user_signed_in?
+      @user = current_user
+    else
+      redirect_to error_path
+    end
   end
 
   def create
-    @user = User.friendly.find(params[:user_id])
-    @job = @user.jobs.create(job_params)
-    respond_to do |format|
-      if @job.save
-        format.html { redirect_to @job, notice: 'Job was successfully created.' }
-        format.json { render :show, status: :created, location: @job }
-      else
-        format.html { render :new }
-        format.json { render json: @job.errors, status: :unprocessable_entity }
+    if user_signed_in?
+      @user = User.friendly.find(params[:user_id])
+      @job = @user.jobs.create(job_params)
+      respond_to do |format|
+        if @job.save
+          format.html { redirect_to @job, notice: 'Job was successfully created.' }
+          format.json { render :show, status: :created, location: @job }
+        else
+          format.html { render :new }
+          format.json { render json: @job.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to error_path
     end
   end
 
   def update
-    respond_to do |format|
-      if @job.update_attributes(job_params)
-        format.html { redirect_to @job, notice: 'Job was successfully updated.' }
-        format.json { render :show, status: :ok, location: @job }
-      else
-        format.html { render :edit }
-        format.json { render json: @job.errors, status: :unprocessable_entity }
+    if user_signed_in?
+      respond_to do |format|
+        if @job.update_attributes(job_params)
+          format.html { redirect_to @job, notice: 'Job was successfully updated.' }
+          format.json { render :show, status: :ok, location: @job }
+        else
+          format.html { render :edit }
+          format.json { render json: @job.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to error_path
     end
   end
 
   def destroy
-    @user = current_user
-    @job = @user.jobs.friendly.find(params[:id])
-    @job.destroy
-    redirect_to user_path(@user)
+    if user_signed_in?
+      @user = current_user
+      @job = @user.jobs.friendly.find(params[:id])
+      @job.destroy
+      redirect_to user_path(@user)
+    else
+      redirect_to error_path
+    end
   end
 
   private
