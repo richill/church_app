@@ -7,6 +7,9 @@ class User < ApplicationRecord
   extend FriendlyId
   friendly_id :slug_users, use: :slugged
 
+  validates_presence_of :firstname, presence: true, message: "can't be blank"
+  validates_presence_of :lastname, presence: true, message: "can't be blank"
+
   mount_uploader :image, ImageUploader
 
   # acts_as_commentable
