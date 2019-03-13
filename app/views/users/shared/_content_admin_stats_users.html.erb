@@ -98,7 +98,7 @@
                 <li class="medium-12 columns user_conatiner">
                   <div class="medium-4 columns user_image"><%= link_to image_tag("img-profile-image-default.png"), user_path(user), target:"_blank" %></div>
                   <div class="medium-8 columns user_info">
-                    <div><%= link_to "#{user.firstname} #{user.lastname}", user_path(user), target:"_blank" %></div>
+                    <div class="user_name"><%= link_to "#{user.firstname} #{user.lastname}", user_path(user), target:"_blank" %></div>
                     <div>
                       <% if user.job.present? %>
                         <span><%= link_to "#{user.job}", user_path(user), target:"_blank" %></span>
@@ -121,12 +121,7 @@
 
                     <div class="moreinfo">
                       <span><i class="fa fa-users"></i>:</span>
-                      <span>
-                        <span class="view_link" data-reveal-id="<%= dom_id(user) %>_user_content">view hello</span>
-                        <span><%# render 'shared/modal_admin_user_info', locals: {user: user } %></span>
-                        <!-- <span class="view_link" data-open="<%# dom_id(@smallgroup) %>_smallgroup_content">view</span> -->
-                        <!-- <span><%# render 'shared/modal_smallgroup_info', locals: { smallgroup: @smallgroup } %></span> -->
-                      </span>
+                      <span><%= link_to 'view profile', user %></span>
                     </div>
 
                   </div>
