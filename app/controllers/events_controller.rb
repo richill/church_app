@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.approved_events.listed_events.asc_order
+    @events = Event.approved_events.active_events.open_events.listed_events.asc_order
   end
 
   def show
@@ -29,7 +29,7 @@ class EventsController < ApplicationController
       @event = @user.events.create(event_params)
       respond_to do |format|
         if @event.save
-          format.html { redirect_to stats_events_user_path(@user), notice: 'Event was successfully created.' }
+          format.html { redirect_to event_path(@event), notice: 'Event was successfully created.' }
           format.json { render :show, status: :created, location: @event }
         else
           format.html { render :new }
@@ -46,7 +46,7 @@ class EventsController < ApplicationController
       @user = current_user
       respond_to do |format|
         if @event.update_attributes(event_params)
-          format.html { redirect_to stats_events_user_path(@user), notice: 'Event was successfully updated.' }
+          format.html { redirect_to event_path(@event), notice: 'Event was successfully updated.' }
           format.json { render :show, status: :ok, location: @event }
         else
           format.html { render :edit }
@@ -70,23 +70,23 @@ class EventsController < ApplicationController
   end
 
   def calendareventspg
-    @events = Event.approved_events
+    @events = Event.approved_events.active_events.open_events.listed_events.asc_order
   end
 
   def youtheventspg
-    @events = Event.approved_events.youth_events
+    @events = Event.approved_events.youth_events.active_events.open_events.listed_events.asc_order
   end
 
   def churcheventspg
-    @events = Event.approved_events.church_events
+    @events = Event.approved_events.church_events.active_events.open_events.listed_events.asc_order
   end
 
   def communityeventspg
-    @events = Event.approved_events.community_events
+    @events = Event.approved_events.community_events.active_events.open_events.listed_events.asc_order
   end
 
   def nationaleventspg
-    @events = Event.approved_events.national_events
+    @events = Event.approved_events.national_events.active_events.open_events.listed_events.asc_order
   end
 
   private

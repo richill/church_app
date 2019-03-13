@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def homepg
-    @events = Event.approved_events.all
+    @events = Event.approved_events.active_events.open_events.listed_events.asc_order
   end
 
   def aboutuspg
