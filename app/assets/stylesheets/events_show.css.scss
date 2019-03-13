@@ -74,11 +74,16 @@
   height: 230px;
 }
 
-.eventshow_section .info_left_content .uploade_page_img {
+.eventshow_section .info_left_content .upload_page_img {
   margin-bottom: 15px;
   opacity: 0.8;
   overflow: hidden;
-  height: 628px;
+  background-color: red;
+}
+@media only screen and (min-width: 475px) {
+  .eventshow_section .info_left_content .upload_page_img {
+    height: 628px;
+  }
 }
 
 .eventshow_section .info_left_content .paragraph_content {
