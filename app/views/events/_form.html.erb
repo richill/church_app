@@ -34,6 +34,8 @@
             </div>
             <div class="paragraph_content">
               <span>Do you have a great idea for a new ministry here at Open Heavens Church and the passion to lead it? Completing this New Ministry Launch form begins the application process for new ministries here at Open Heavens Church.</span>
+
+              <span>Create an event page that fits the audience. Customizable event page. free for free events. currency options. attendee profiles. no hidden fees. attendee management. email marketing. payout after ticket sale. sales analytics</span>
             </div>
 
             <div class="event_main_form">
@@ -43,7 +45,7 @@
                 <div class="form-inputs">
                   <div class="update_section">
                     <div class="imgae_title">event image</div>
-                    <%= f.input :link, placeholder: "https://res.cloudinary.com/openheavensuk/image/upload/v1552407583/children%20teenage%20hub/img_08_childrenHub.png", label: false %>
+                    <%= f.input :image_url, placeholder: "https://res.cloudinary.com/openheavensuk/image/upload/v1552407583/children%20teenage%20hub/img_08_childrenHub.png", label: false %>
                     <div class="minor_info" style="margin-bottom:0px">
                       <span>Place in the image URL inorder to display the event image</span> 
                       <span class="image_url_link"><%= link_to "get image url", "https://cloudinary.com/console", target: "_blank" %></span>
@@ -88,6 +90,16 @@
 
                   <div class="update_section date_time">
                     <%= f.input :end_time, label: "Event End Date & Time" %>
+                  </div>
+                  <div class="clear"></div>
+
+
+                  <div class="update_section">
+                    <div class="imgae_title">event URL</div>
+                    <%= f.input :link, placeholder: "https://www.eventbrite.co.uk/e/london-home-show-spring-2019-tickets-54527397915?aff=ehomecard", label: false %>
+                    <div class="minor_info" style="margin-bottom:0px">
+                      <span>If This is an external event created on another platform eg: eventbrite, place URL to direct memebers to the created external event page</span> 
+                    </div>
                   </div>
                   <div class="clear"></div>
 
