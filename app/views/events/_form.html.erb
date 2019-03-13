@@ -8,9 +8,15 @@
     <span><i class="fa fa-angle-right"></i></span>
     <span><%= link_to "admin panel", dashboard_user_path(current_user) %></span>
     <span><i class="fa fa-angle-right"></i></span>
-    <span><%= link_to "stats events", dashboard_user_path(current_user) %></span>
+    <span><%= link_to "stats events", stats_events_user_path(current_user) %></span>
     <span><i class="fa fa-angle-right"></i></span>
-    <span class="current_page">create event</span>
+    <span class="current_page">
+      <% if action_name == 'new'  %>
+        <span>create event</span>
+      <% else %>
+        <span>update event</span>
+      <% end %>
+    </span>
     <span class="tree_tab_link"><%= link_to "view events page", events_path, target:"_blank", style: 'color:#FFFFFF !important;' %></span>
     <span class="tree_tab_link"><%= link_to "create an event", "#", target:"_blank", style: 'color:#FFFFFF !important;' %></span>
       </div>
@@ -40,6 +46,7 @@
                     <%= f.input :link, placeholder: "https://res.cloudinary.com/openheavensuk/image/upload/v1552407583/children%20teenage%20hub/img_08_childrenHub.png", label: false %>
                     <div class="minor_info" style="margin-bottom:0px">
                       <span>Place in the image URL inorder to display the event image</span> 
+                      <span class="image_url_link"><%= link_to "get image url", "https://cloudinary.com/console", target: "_blank" %></span>
                     </div>
 
                     <div class="option_space">or</div>
