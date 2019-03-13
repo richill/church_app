@@ -139,12 +139,6 @@
   width: 200px;
 }
 
-
-
-// --------------------------
-//   workings
-// --------------------------
-
 .content_formsindex_section .page_inner_section {
   margin: 0px !important;
 }
@@ -158,19 +152,18 @@
   text-align: center;
 }
 
-.listed_form {
+.content_formsindex_section .listed_form {
   border: 1px solid trabsparent;
   width: 150px;
   height: 150px;
   margin: 10px 0px;
 }
 
-.listed_form a:hover {
+.content_formsindex_section .listed_form a:hover {
   text-decoration: none !important;
 }
 
-
-.listed_form i {
+.content_formsindex_section .listed_form i {
   color: #2A2C49 !important;
   display: inline-block;
   text-align: center;
@@ -182,7 +175,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.form_title {
+.content_formsindex_section .form_title {
   font-size: 11px;
   color: #a1355b !important;
   -webkit-transition: all 0.3s ease;
@@ -190,7 +183,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.form_title:hover {
+.content_formsindex_section .form_title:hover {
   color: #a07b35;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
