@@ -19,7 +19,13 @@
         <!-- info_left_content -->
         <div class="medium-8 columns info_left_content">
           <div class="page_information">
-            <div class="page_header">create event</div>
+            <div class="page_header">
+              <% if action_name == 'new'  %>
+                <span>create event</span>
+              <% else %>
+                <span>update event</span>
+              <% end %>
+            </div>
             <div class="paragraph_content">
               <span>Do you have a great idea for a new ministry here at Open Heavens Church and the passion to lead it? Completing this New Ministry Launch form begins the application process for new ministries here at Open Heavens Church.</span>
             </div>
@@ -29,6 +35,21 @@
                 <%= f.error_notification %>
 
                 <div class="form-inputs">
+                  <div class="update_section">
+                    <div class="imgae_title">event image</div>
+                    <%= f.input :link, placeholder: "https://res.cloudinary.com/openheavensuk/image/upload/v1552407583/children%20teenage%20hub/img_08_childrenHub.png", label: false %>
+                    <div class="minor_info" style="margin-bottom:0px">
+                      <span>Place in the image URL inorder to display the event image</span> 
+                    </div>
+
+                    <div class="option_space">or</div>
+
+                    <%= f.file_field :image %>
+                    <div class="minor_info">
+                      <span>Upload image inorder to display the event image</span> 
+                    </div>
+                  </div>
+                  <div class="clear"></div>
 
                   <div class="info_sub_content"><%= f.input :name, label: "Event Title", placeholder: "Dance In The Park Dance In The Park" %></div>
                   <div class="clear"></div>
@@ -53,12 +74,23 @@
                   <div><%= f.association :category_country, collection: CategoryCountry.all, prompt: "select country", label: false  %></div>
                   <div class="clear"></div>
 
+                  <div class="update_section date_time">
+                    <%= f.input :start_time, label: "Event Start Date & Time" %>
+                  </div>
+                  <div class="clear"></div>
+
+                  <div class="update_section date_time">
+                    <%= f.input :end_time, label: "Event End Date & Time" %>
+                  </div>
+                  <div class="clear"></div>
+
                   <div class="update_section">
                     <%= f.input :approve, as: :boolean %>
                     <div class="minor_info">
                       <span>By ticking the box you are approving the created event. The event will be displayed to the public</span> 
                     </div>
                   </div>
+                  <div class="clear"></div>
 
                   <div class="update_section">
                     <%= f.input :close, as: :boolean %>
@@ -66,13 +98,10 @@
                       <span>By ticking the box you are closing the event. The event will not be displayed to the public</span> 
                     </div>
                   </div>
-
-                  <div class="update_section">
-                    <%= f.input :start_time, label: "Event Start Date & Time" %>
-                  </div>
+                  <div class="clear"></div>
 
                   <!-- hidden_field -->
-                  <%= f.input :user_id %>
+                  <%= f.hidden_field :user_id %>
                   <!-- hidden_field -->
                 </div>
 
@@ -117,18 +146,4 @@
 
 
 
-<div class="">
-  <%= simple_form_for [@user, @event] do |f| %>
-    <%= f.error_notification %>
 
-    <div class="form-inputs">
-      <%= f.input :end_time %>
-      <%= f.input :link %>
-      <%= f.file_field :image %>
-    </div>
-
-    <div class="form-actions">
-      <%= f.button :submit %>
-    </div>
-  <% end %>
-</div>
