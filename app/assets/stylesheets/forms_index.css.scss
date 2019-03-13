@@ -150,14 +150,23 @@
 }
 
 .content_formsindex_section .page_inner_section .listed_form {
-  margin: 0px !important;
   list-style-type: none;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  background-color: rgba(42, 44, 73, 0.01);
+  text-align: center;
 }
 
 .listed_form {
-  border: 1px solid red;
+  border: 1px solid trabsparent;
   width: 150px;
   height: 150px;
+  margin: 10px 0px;
+}
+
+.listed_form a:hover {
+  text-decoration: none !important;
 }
 
 
@@ -166,7 +175,23 @@
   display: inline-block;
   text-align: center;
   font-size: 80px;
+  margin: 10px 0px;
   text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.form_title {
+  font-size: 11px;
+  color: #a1355b !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.form_title:hover {
+  color: #a07b35;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
