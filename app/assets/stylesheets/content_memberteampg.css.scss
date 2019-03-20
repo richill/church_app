@@ -188,9 +188,12 @@
   margin-right: 10px;
 }
 
-.members_main_scetion .image_cover img {
-  height: 100% !important;
-  width: 100% !important;
+.members_main_scetion .profile_image_cover {
+  height: 67px;
+  // width: 100px;
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
 }
 
 .members_main_scetion .img_content {
@@ -282,6 +285,18 @@
 .members_main_scetion .member_img_info .image_cover img {
   height: 100% !important;
   width: 100% !important;
+}
+
+
+.members_main_scetion .member_img_info .profile_image_cover {
+  height: 150px;
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
+}
+
+.members_main_scetion .member_img_info .profile_image_cover img {
+  height: 100% !important;
 }
 
 .members_main_scetion .member_img_info .img_content {
