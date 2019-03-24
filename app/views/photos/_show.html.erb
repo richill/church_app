@@ -22,7 +22,7 @@
             <div class="date_category">
               <span>
                 <span class="evt_subheader"><b>Created date:</b></span>
-                <span><%# @photo.date.strftime("%b %d %Y") %></span>
+                <span><%= @photo.created_at.strftime("%b %d %Y") %></span>
                 <span class="listgallery_divider">|</span>
                 <span><b>Time:</b></span>
                 <span><%= "#{@photo.created_at.strftime("%I:%M%p")}" %></span>
@@ -38,8 +38,8 @@
               <% if user_signed_in? %>
                 <% if current_user.admin? %>
                   <div>
-                    <span class="function_btn edit_btn"><%= link_to 'Dashboard', "#", target: "_blank" %></span>
-                    <span class="function_btn edit_btn"><%= link_to 'Edit Photo', "#", target: "_blank" %></span>
+                    <span class="function_btn edit_btn"><%= link_to 'Dashboard', gallery_photos_gallery_path(@photo.gallery), target: "_blank" %></span>
+                    <span class="function_btn edit_btn"><%= link_to 'Edit Photo', edit_gallery_photo_path(@photo.gallery, @photo), target: "_blank" %></span>
                   </div>
                 <% end %>
               <% end %>
