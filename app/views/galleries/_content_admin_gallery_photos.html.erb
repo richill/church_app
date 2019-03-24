@@ -12,6 +12,7 @@
     <span class="current_page"><%= "photos [#{@gallery.photos.count}]" %></span>
     <span class="tree_tab_link"><%= link_to "edit gallery", edit_user_gallery_path(current_user), target:"_blank", style: 'color:#FFFFFF !important;' %></span>
     <span class="tree_tab_link"><%= link_to "add photos to gallery", new_gallery_photo_path(@gallery), target:"_blank", style: 'color:#FFFFFF !important;' %></span>
+    <span class="tree_tab_link"><%= link_to "view album/gallery page", gallery_path(@gallery), target:"_blank", style: 'color:#FFFFFF !important;' %></span>
   </div>
   <div class="medium-12 columns admin_tab_content">
 
@@ -23,7 +24,7 @@
           <span class="content"><%= @gallery.name %></span>
         </div>
         <div class="info_content">
-          <span class="title">created date:</span>
+          <span class="title">gallery created date:</span>
           <span class="content"><%= @gallery.created_at.strftime("%b %d %Y") %></span>
         </div>
         <div class="info_content last_content">
@@ -63,7 +64,7 @@
                   <div class="medium-1 columns main_image">
                     <div class="main_img_inner_cover">
                       <% if photo.image.present? %>
-                        <%= link_to(cl_image_tag("#{photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), "#{photo_path(photo)}", target:"_blank") %>
+                        <%= link_to(cl_image_tag("#{photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), "#{photo_path(photo)}") %>
                       <% else %>
                         <%= link_to image_tag("img_default_images.png"), photo, target:"_blank" %>
                         <% end %>
@@ -73,7 +74,7 @@
                     <div>
                       <span class="subheaders">description:</span>
                       <span class="min_content"><%= truncate("#{photo.description}", length: 200) %></span>
-                      <span><%= link_to "view", photo, target:"_blank", class: "sitelink" %></span> 
+                      <span><%= link_to "view", class: "sitelink" %></span> 
                     </div>
                     <div>
                       <span class="subheaders">created:</span>
@@ -82,7 +83,7 @@
                   </div>
                   <div class="medium-2 columns main_action">
                     <div class="action_section">
-                      <div class="edit_btn"><%= link_to 'edit photo', edit_gallery_photo_path(photo.gallery, photo), target:"_blank" %></div>
+                      <div class="edit_btn"><%= link_to 'edit photo', edit_gallery_photo_path(photo.gallery, photo) %></div>
                       <div class="delete_btn"><%= link_to 'delete', photo, method: :delete, data: { confirm: 'Are you sure?' } %></div>
                     </div>
                   </div>
