@@ -59,7 +59,7 @@
                     <% if current_user.admin? %>
                       <ul>
                         <li class="cancel_btn">
-                          <div><%= link_to "back", stats_galleries_user_path(current_user) %></div>
+                          <div><%= link_to "back", gallery_photos_gallery_path(@photo.gallery) %></div>
                         </li>
                         <li>
                           <% if action_name == 'new'  %>

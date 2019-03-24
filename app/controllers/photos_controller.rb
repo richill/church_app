@@ -28,11 +28,6 @@ class PhotosController < ApplicationController
     unless user_signed_in? && current_user.admin
       redirect_to error_path
     end
-    # if user_signed_in? && current_user.admin
-    #   @gallery = gallery.friendly.find(params[:gallery_id])
-    # else
-    #   redirect_to error_path
-    # end
   end
 
   def create
@@ -42,7 +37,7 @@ class PhotosController < ApplicationController
       
       respond_to do |format|
         if @photo.save
-          format.html { redirect_to gallery_photos_gallery_path(@gallery), notice: 'photo was successfully created.' }
+          format.html { redirect_to gallery_photos_gallery_path(@photo.gallery), notice: 'photo was successfully created.' }
           format.json  { render json: @photo, status: :created, location: @photo }
         else
           format.html { render action: "new" }
@@ -59,7 +54,7 @@ class PhotosController < ApplicationController
     if user_signed_in? && current_user.admin
       respond_to do |format|
         if @photo.update_attributes(photo_params)
-          format.html { redirect_to gallery_photos_gallery_path(@gallery), notice: 'photo was successfully updated.' }
+          format.html { redirect_to gallery_photos_gallery_path(@photo.gallery), notice: 'photo was successfully updated.' }
           format.json { head :no_content }
         else
           format.html { render action: "edit" }
