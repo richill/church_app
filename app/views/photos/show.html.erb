@@ -1,14 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @photo.description %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @photo.image %>
-</p>
-
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+<% provide(:title, "Photo | #{@photo.name}") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header' %></div>
+  <%= render 'show' %>
+  <%= render 'shared/footer' %>
+</div>

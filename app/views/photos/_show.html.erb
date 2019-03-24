@@ -1,0 +1,79 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns galleryshow_section">
+  <div class="galleryshow_inner_section">
+    <div class="medium-12 columns galleryshow_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "connect", connect_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "galleries", galleries_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "#{@photo.gallery.name}", gallery_path(@photo.gallery) %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">photo</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">photo</div>
+            <div class="date_category">
+              <span>
+                <span class="evt_subheader"><b>Created date:</b></span>
+                <span><%# @photo.date.strftime("%b %d %Y") %></span>
+                <span class="listgallery_divider">|</span>
+                <span><b>Time:</b></span>
+                <span><%= "#{@photo.created_at.strftime("%I:%M%p")}" %></span>
+              </span>
+            </div>
+            <div class="paragraph_content">
+              <span><%= truncate("#{@photo.description}", length: 300) %></span>
+              <span>
+                <!-- <span class="view_link" data-open="<%# dom_id(@gallery) %>_gallery_content">view</span> -->
+                <span><%# render 'shared/modal_gallery_info', locals: { gallery: @gallery } %></span>
+              </span>
+
+              <% if user_signed_in? %>
+                <% if current_user.admin? %>
+                  <div>
+                    <span class="function_btn edit_btn"><%= link_to 'Dashboard', "#", target: "_blank" %></span>
+                    <span class="function_btn edit_btn"><%= link_to 'Edit Photo', "#", target: "_blank" %></span>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+            <div class="gallery_photos_section">
+              <!-- listed gallery photos -->
+              <div class="gallery_photos_content">
+
+                <ul class="cover_section">
+                  <li class="main_list first_section">
+                    <div class="gallery_photo_intial_outter_img">
+                      <div class="gallery_photo_intial_img">
+                        <% if @photo.image.present? %>
+                          <%= cl_image_tag("#{@photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %>
+                        <% else %>
+                          <%= image_tag("img_default_images.png") %>
+                        <% end %>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- listed gallery photos -->
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
