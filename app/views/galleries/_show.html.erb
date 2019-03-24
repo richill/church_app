@@ -36,8 +36,9 @@
               <% if user_signed_in? %>
                 <% if current_user.admin? %>
                   <div>
-                    <span class="function_btn edit_btn"><%= link_to 'Edit Gallery Info', "#" %></span>
-                    <span class="function_btn back_btn"><%= link_to 'Edit Gallery Photos', "#" %></span>
+                    <span class="function_btn edit_btn"><%= link_to 'Dashboard', stats_galleries_user_path(current_user), target: "_blank" %></span>
+                    <span class="function_btn edit_btn"><%= link_to 'Edit Gallery Info', edit_user_gallery_path(@gallery.user, @gallery), target: "_blank" %></span>
+                    <span class="function_btn back_btn"><%= link_to 'Edit Gallery Photos', gallery_photos_gallery_path(@gallery), target: "_blank" %></span>
                   </div>
                 <% end %>
               <% end %>

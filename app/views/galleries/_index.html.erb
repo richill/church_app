@@ -46,9 +46,7 @@
                                 <% if user_signed_in? %>
                                   <% if current_user.admin? %>
                                     <span class=""><%= link_to "edit gallery", edit_gallery_path(gallery) %></span>
-                                    <span class=""><%= link_to "delete gallery", gallery, method: :delete, data: { confirm: 'Are you sure?' } %></span>
                                     <span class=""><%= link_to "add photos to gallery", new_gallery_photo_path(gallery) %></span>
-                                    <span class=""><%= link_to 'New Gallery', new_gallery_path %></span>
                                   <% else %>
                                     <span class=""><%= link_to "view gallery photos", gallery_path(gallery) %></span>
                                   <% end %>
