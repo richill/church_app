@@ -32,6 +32,20 @@
                 <span class="view_link" data-open="<%= dom_id(@gallery) %>_gallery_content">view</span>
                 <span><%= render 'shared/modal_gallery_info', locals: { gallery: @gallery } %></span>
               </span>
+
+              <% if user_signed_in? %>
+                <% if current_user.admin? %>
+                  <div>
+                    <span class="function_btn edit_btn"><%= link_to 'Edit Gallery Info', "#" %></span>
+                    <span class="function_btn back_btn"><%= link_to 'Edit Gallery Photos', "#" %></span>
+                  </div>
+                <% end %>
+              <% end %>
+
+
+
+
+
             </div>
             <div class="gallery_photos_section">
               <!-- listed gallery photos -->

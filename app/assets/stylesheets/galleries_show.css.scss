@@ -266,6 +266,37 @@
   color: #2A2C49;
 }
 
+.galleryshow_section .edit_btn {
+  margin-right: 5px;
+}
+
+.galleryshow_section .function_btn a {
+  display: inline-block;
+  text-align: center;
+  margin-top: 5px !important;
+  margin: 0px;
+  font-size: 9px !important;
+  text-transform: capitalize;
+  line-height: 14px !important;
+  display: inline-block;
+  background: #fff;
+  color: #2A2C49 !important;
+  height: 23px;
+  padding: 5px 15px !important;
+  background-color: #E8E9EB !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.galleryshow_section .function_btn a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
 
 
 
