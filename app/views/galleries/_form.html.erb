@@ -1,15 +1,105 @@
-<%= simple_form_for [@user, @gallery] do |f| %>
-  <%= f.error_notification %>
+<div class="pages_boarder"></div>
+<div class="medium-12 columns galleryform_section">
+  <div class="galleryform_inner_section">
+    <div class="medium-12 columns galleryform_content">
+      <div class="tree_line">
+        <span><i class="fa fa-user"></i></span>
+        <span><%= link_to "#{current_user.firstname}", user_path(current_user) %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "admin panel", dashboard_user_path(current_user) %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "galleries", stats_galleries_user_path(current_user) %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">
+          <% if action_name == 'new'  %>
+            <span>create gallery</span>
+          <% else %>
+            <span>update gallery</span>
+          <% end %>
+        </span>
+      </div>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :date %>
-    <%= f.input :description %>
-    <%= f.file_field :image %>
-    <%= f.input :user_id %>
-  </div>
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">
+              <% if action_name == 'new'  %>
+                <span>create gallery</span>
+              <% else %>
+                <span>update gallery</span>
+              <% end %>
+            </div>
+            <div class="paragraph_content">
+              <span>Create a gallery to be able to create photos under this gallery.</span>
+            </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+            <div class="event_main_form">
+              <%= simple_form_for [@user, @gallery] do |f| %>
+                <%= f.error_notification %>
+
+                <div class="form-inputs">
+                  <div class="update_section">
+                    <div class="imgae_title">gallery image cover</div>
+                    <div><%= f.file_field :image %></div>
+                    <div class="minor_info">
+                      <span>Upload image cover for the gallery</span> 
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :name, label: "Gallery Title", placeholder: "Dance In The Park Dance In The Park" %></div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :description, label: "Gallery Description", placeholder: "Dance In The Park is a place for all generations and families to come together and worship. We have engaging programmes designed to enable children and youth of all ages to grow in their relationship with Jesus and encounter the presence of God." %></div>
+                  <div class="clear"></div>
+
+                  <div class="update_section date_time">
+                    <%= f.input :date, label: "Date Admin wants the Gallery/Album to be displayed to the public" %>
+                  </div>
+                  <div class="clear"></div>
+
+                  <!-- hidden_field -->
+                  <%= f.hidden_field :user_id %>
+                  <!-- hidden_field -->
+                </div>
+
+                <div class="form_btns">
+                  <% if user_signed_in? %>
+                    <% if current_user.admin? %>
+                      <ul>
+                        <li class="cancel_btn">
+                          <div><%= link_to "back", stats_galleries_user_path(current_user) %></div>
+                        </li>
+                        <li>
+                          <% if action_name == 'new'  %>
+                            <div class="form-actions submit_btn">
+                              <%= f.button :submit, "create gallery" %>
+                            </div>
+                          <% else %>
+                            <div class="form-actions submit_btn">
+                              <%= f.button :submit, "update gallery" %>
+                            </div>
+                          <% end %>
+                        </li>
+                      </ul>
+                    <% end %>
+                  <% end %>
+                </div>
+                
+              <% end %>
+            </div>
+
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
   </div>
-<% end %>
+</div>
+
