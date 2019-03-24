@@ -1,0 +1,9 @@
+<div class="reveal modal_general_design" id="<%= dom_id(@photo) %>_photo_content" data-reveal>
+  <div class="modal_header"><%= truncate("#{@photo.gallery.name}", length: 40) %> | photo</div>
+  <div class="modal_content">
+    <div><%= @photo.description %></div>
+  </div>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>

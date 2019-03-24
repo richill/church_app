@@ -31,8 +31,8 @@
             <div class="paragraph_content">
               <span><%= truncate("#{@photo.description}", length: 300) %></span>
               <span>
-                <!-- <span class="view_link" data-open="<%# dom_id(@gallery) %>_gallery_content">view</span> -->
-                <span><%# render 'shared/modal_gallery_info', locals: { gallery: @gallery } %></span>
+                <span class="view_link" data-open="<%= dom_id(@photo) %>_photo_content">view</span>
+                <span><%= render 'shared/modal_photo_info', locals: { photo: @photo } %></span>
               </span>
 
               <% if user_signed_in? %>
