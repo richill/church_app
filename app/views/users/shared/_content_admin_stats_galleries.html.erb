@@ -73,7 +73,7 @@
                       <span class="min_content"><%= truncate("#{gallery.description}", length: 200) %></span>
                       <span><%= link_to "view", gallery, target:"_blank", class: "sitelink" %></span> 
                       <span>|</span>
-                      <span><%= link_to "view photos in gallery", gallery_photos_gallery_path(gallery), target:"_blank", class: "sitelink" %></span> 
+                      <span><%= link_to "view photos in gallery", gallery_photos_gallery_path(gallery), class: "sitelink" %></span> 
                     </div>
                     <div>
                       <span class="subheaders">created:</span>
