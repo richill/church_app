@@ -10,9 +10,6 @@ class PhotosController < ApplicationController
   end
 
   def show
-    unless user_signed_in? && current_user.admin
-      redirect_to error_path
-    end
   end
 
   def new
