@@ -74,7 +74,7 @@
                     <div>
                       <span class="subheaders">description:</span>
                       <span class="min_content"><%= truncate("#{photo.description}", length: 200) %></span>
-                      <span><%= link_to "view", class: "sitelink" %></span> 
+                      <span><%= link_to "view", photo_path(photo), class: "sitelink" %></span> 
                     </div>
                     <div>
                       <span class="subheaders">created:</span>
