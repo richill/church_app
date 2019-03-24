@@ -14,7 +14,7 @@ class StaticPagesController < ApplicationController
   end
 
   def bibleandyoupg 
-    @events = Event.biblestudies_events  
+    @events = Event.approved_events.active_events.open_events.biblestudies_events.asc_order
   end
 
   def broadfieldresoucepg 
@@ -113,7 +113,7 @@ class StaticPagesController < ApplicationController
   end
 
   def leadershipdevelopmentpg  
-    @events = Event.leadership_events 
+    @events = Event.approved_events.active_events.open_events.leadership_events.asc_order 
   end
 
   def mediaandcomepg
