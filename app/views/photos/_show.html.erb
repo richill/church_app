@@ -1,7 +1,7 @@
 <div class="pages_boarder"></div>
-<div class="medium-12 columns galleryshow_section">
-  <div class="galleryshow_inner_section">
-    <div class="medium-12 columns galleryshow_content">
+<div class="medium-12 columns photoshow_section">
+  <div class="photoshow_inner_section">
+    <div class="medium-12 columns photoshow_content">
       <div class="tree_line">
         <span><%= link_to "home", root_path %></span>
         <span><i class="fa fa-angle-right"></i></span>
@@ -16,7 +16,7 @@
 
       <div class="medium-12 columns page_main_content">
         <!-- info_left_content -->
-        <div class="medium-8 columns info_left_content">
+        <div class="medium-12 columns info_left_content">
           <div class="page_information">
             <div class="page_header">photo</div>
             <div class="date_category">
@@ -44,14 +44,14 @@
                 <% end %>
               <% end %>
             </div>
-            <div class="gallery_photos_section">
-              <!-- listed gallery photos -->
-              <div class="gallery_photos_content">
+            <div class="photos_section">
+              <!-- photo -->
+              <div class="photos_content">
 
                 <ul class="cover_section">
                   <li class="main_list first_section">
                     <div class="gallery_photo_intial_outter_img">
-                      <div class="gallery_photo_intial_img">
+                      <div class="photo_intial_img">
                         <% if @photo.image.present? %>
                           <%= cl_image_tag("#{@photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %>
                         <% else %>
@@ -62,15 +62,11 @@
                   </li>
                 </ul>
               </div>
-              <!-- listed gallery photos -->
+              <!-- photo -->
             </div>
           </div>
         </div>
         <!-- info_left_content -->
-
-        <!-- info_right_content -->
-        <%= render 'shared/content_service_times' %>
-        <!-- info_right_content -->
       </div>
 
     </div>
