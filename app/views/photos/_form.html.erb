@@ -10,7 +10,7 @@
         <span><i class="fa fa-angle-right"></i></span>
         <span><%= link_to "galleries", stats_galleries_user_path(current_user) %></span>
         <span><i class="fa fa-angle-right"></i></span>
-        <span><%= link_to "#{@gallery.name} gallery", gallery_photos_gallery_path(@gallery) %></span>
+        <span><%= link_to "#{@photo.gallery.name} gallery", gallery_photos_gallery_path(@photo.gallery) %></span>
         <span><i class="fa fa-angle-right"></i></span>
         <span class="current_page">
           <% if action_name == 'new'  %>
@@ -33,7 +33,7 @@
               <% end %>
             </div>
             <div class="paragraph_content">
-              <span>Add photos to the gallery <%= "#{@gallery.name}" %></span>
+              <span>Add photos to the gallery <%= "#{@photo.gallery.name}" %></span>
             </div>
 
             <div class="event_main_form">

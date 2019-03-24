@@ -1,6 +1,7 @@
-<h1>Editing Photo</h1>
-
-<%= render 'form', photo: @photo %>
-
-<%= link_to 'Show', @photo %> |
-<%= link_to 'Back', photos_path %>
+<% provide(:title, "Update Photo") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header' %></div>
+  <%= render 'form', photo: @photo %>
+  <%= render 'shared/footer' %>
+</div>

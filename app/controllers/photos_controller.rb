@@ -25,11 +25,14 @@ class PhotosController < ApplicationController
   end
 
   def edit
-    if user_signed_in? && current_user.admin
-      @gallery = gallery.friendly.find(params[:gallery_id])
-    else
+    unless user_signed_in? && current_user.admin
       redirect_to error_path
     end
+    # if user_signed_in? && current_user.admin
+    #   @gallery = gallery.friendly.find(params[:gallery_id])
+    # else
+    #   redirect_to error_path
+    # end
   end
 
   def create
@@ -82,7 +85,7 @@ class PhotosController < ApplicationController
 
   private
   def set_photo
-    @photo = Photo.find(params[:id])
+    @photo = Photo.friendly.find(params[:id])
   end
 
   def photo_params
