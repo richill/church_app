@@ -1,6 +1,7 @@
-<h1>Editing Gallery</h1>
-
-<%= render 'form', gallery: @gallery %>
-
-<%= link_to 'Show', @gallery %> |
-<%= link_to 'Back', galleries_path %>
+<% provide(:title, "Update Gallery") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header' %></div>
+  <%= link_to 'Show', @gallery %>
+  <%= render 'shared/footer' %>
+</div>

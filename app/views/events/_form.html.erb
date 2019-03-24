@@ -4,21 +4,21 @@
     <div class="medium-12 columns eventform_content">
       <div class="tree_line">
         <span><i class="fa fa-user"></i></span>
-    <span><%= link_to "#{current_user.firstname}", user_path(current_user) %></span>
-    <span><i class="fa fa-angle-right"></i></span>
-    <span><%= link_to "admin panel", dashboard_user_path(current_user) %></span>
-    <span><i class="fa fa-angle-right"></i></span>
-    <span><%= link_to "stats events", stats_events_user_path(current_user) %></span>
-    <span><i class="fa fa-angle-right"></i></span>
-    <span class="current_page">
-      <% if action_name == 'new'  %>
-        <span>create event</span>
-      <% else %>
-        <span>update event</span>
-      <% end %>
-    </span>
-    <span class="tree_tab_link"><%= link_to "view events page", events_path, target:"_blank", style: 'color:#FFFFFF !important;' %></span>
-    <span class="tree_tab_link"><%= link_to "create an event", "#", target:"_blank", style: 'color:#FFFFFF !important;' %></span>
+        <span><%= link_to "#{current_user.firstname}", user_path(current_user) %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "admin panel", dashboard_user_path(current_user) %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "stats events", stats_events_user_path(current_user) %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">
+          <% if action_name == 'new'  %>
+            <span>create event</span>
+          <% else %>
+            <span>update event</span>
+          <% end %>
+        </span>
+        <span class="tree_tab_link"><%= link_to "view events page", events_path, target:"_blank", style: 'color:#FFFFFF !important;' %></span>
+        <span class="tree_tab_link"><%= link_to "create an event", "#", target:"_blank", style: 'color:#FFFFFF !important;' %></span>
       </div>
 
       <div class="medium-12 columns page_main_content">
