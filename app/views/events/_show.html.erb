@@ -77,6 +77,16 @@
                 <% end %> 
               </span>
             </div>
+            <div>
+              <% if user_signed_in? %>
+                <% if current_user.admin? %>
+                  <div>
+                    <span class="function_btn edit_btn"><%= link_to 'Dashboard', stats_events_user_path(current_user), target: "_blank" %></span>
+                    <span class="function_btn edit_btn"><%= link_to 'Edit Event', edit_user_event_path(@event.user, @event), target: "_blank" %></span>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
 
             <% if @event.image.present? %>
               <div class="upload_page_img"><%= cl_image_tag("#{@event.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %></div>
@@ -108,15 +118,6 @@
                   <span class="evt_map">see map:</span>
                   <span class="evt_maplink"><%= link_to "View Map", "#{@event.linkmap}", target:"_blank" %></span>
                 </div>
-              <% end %>
-
-              <% if user_signed_in? %>
-                <% if current_user.admin? %>
-                  <div>
-                    <span class="function_btn edit_btn"><%= link_to 'Edit', edit_event_path(@event) %></span>
-                    <span class="function_btn back_btn"><%= link_to 'Back', events_path %></span>
-                  </div>
-                <% end %>
               <% end %>
 
             </div>
