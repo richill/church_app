@@ -58,9 +58,9 @@
                   <div class="medium-1 columns main_image">
                     <div class="main_img_inner_cover">
                       <% if gallery.image.present? %>
-                        <div class="gallery_img"><%= link_to(cl_image_tag("#{gallery.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), gallery_path(gallery)) %></div>
+                        <div class="gallery_img"><%= link_to(cl_image_tag("#{gallery.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), gallery_path(gallery), target:"_blank") %></div>
                       <% else %>
-                        <div class="gallery_img"><%= link_to (image_tag("img_default_images.png")), gallery_path(gallery) %></div>
+                        <div class="gallery_img"><%= link_to (image_tag("img_default_images.png")), gallery_path(gallery), target:"_blank" %></div>
                       <% end %>
                     </div>
                   </div>
