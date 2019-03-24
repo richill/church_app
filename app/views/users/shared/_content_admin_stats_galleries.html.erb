@@ -57,7 +57,11 @@
                 <li class="medium-12 columns main_conatiner">
                   <div class="medium-1 columns main_image">
                     <div class="main_img_inner_cover">
-                      <%= link_to image_tag("img_default_images.png"), gallery, target:"_blank" %>
+                      <% if gallery.image.present? %>
+                        <div class="gallery_img"><%= link_to(cl_image_tag("#{gallery.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), gallery_path(gallery)) %></div>
+                      <% else %>
+                        <div class="gallery_img"><%= link_to (image_tag("img_default_images.png")), gallery_path(gallery) %></div>
+                      <% end %>
                     </div>
                   </div>
                   <div class="medium-9 columns main_info">
