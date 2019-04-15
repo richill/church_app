@@ -1,5 +1,8 @@
-<h1>New Discussion</h1>
+<% provide(:title, "Create Forum/Discussion") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header' %></div>
+  <%= render 'form', discussion: @discussion %>
+  <%= render 'shared/footer' %>
+</div>
 
-<%= render 'form', discussion: @discussion %>
-
-<%= link_to 'Back', discussions_path %>

@@ -1,6 +1,7 @@
-<h1>Editing Discussion</h1>
-
-<%= render 'form', discussion: @discussion %>
-
-<%= link_to 'Show', @discussion %> |
-<%= link_to 'Back', discussions_path %>
+<% provide(:title, "Update Forum/Discussion") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header' %></div>
+  <%= render 'form', discussion: @discussion %>
+  <%= render 'shared/footer' %>
+</div>
