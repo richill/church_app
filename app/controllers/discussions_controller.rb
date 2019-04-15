@@ -67,7 +67,7 @@ class DiscussionsController < ApplicationController
     if user_signed_in? && current_user.admin
       @discussion.destroy
       respond_to do |format|
-        format.html { redirect_to discussions_url, notice: 'Discussion was successfully destroyed.' }
+        format.html { redirect_to stats_forum_user_path(current_user), notice: 'Discussion was successfully destroyed.' }
         format.json { head :no_content }
       end
     else
