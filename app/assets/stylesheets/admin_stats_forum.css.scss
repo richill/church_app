@@ -136,19 +136,17 @@
   font-size: 12px;
 }
 
-
 .admin_stats_forum .divider {
   border-bottom: 1px solid #D4D4D4;
   margin: 15px 0px;
 } 
 
-
-.admin_stats_forum .listed_ministries ul {
+.admin_stats_forum .listed_discussions ul {
   list-style-type: none;
   margin: 0px !important;
 }
 
-.admin_stats_forum .listed_ministries ul .main_conatiner {
+.admin_stats_forum .listed_discussions ul .main_conatiner {
   width: 100%;
   padding: 5px;
   margin-bottom: 15px;
@@ -164,7 +162,7 @@
 }
 
 .admin_stats_forum .main_img_inner_cover {
-  background-color: red;
+  background-color: transparent !important;
   height: 60px;
   overflow: hidden;
   margin-bottom: 5px;
@@ -264,7 +262,7 @@
   font-size: 24px;
   text-align: center;
   background-color: transparent;
-  width: 73%;
+  width: 90% !important;
   display: inline-block;
   border-left: 2px solid #D4D4D4;
 }

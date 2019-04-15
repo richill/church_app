@@ -123,6 +123,7 @@ class UsersController < ApplicationController
       @launchministries = Launchministry.order("created_at desc")
       @events = Event.all
       @gallries = Gallery.all
+      @discussions = Discussion.all
     end
 
     def set_user
