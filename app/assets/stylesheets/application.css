@@ -155,7 +155,6 @@ a:hover {
 // ------------------------------*/
 
 .users_admin_panel .right_admin_content {
-  background-color: rgba(42, 44, 73, 0.05);
   min-height: 500px;
   padding: 0px !important;
 }
