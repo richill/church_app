@@ -42,10 +42,6 @@ body {
   display: none; 
 }
 
-a {
-  color: #4d85b0 !important;
-}
-
 a:focus,
 input:focus,
 select:focus,
