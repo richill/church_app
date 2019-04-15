@@ -150,6 +150,17 @@
   border-bottom: none !important;
 }
 
+.nav_section .logo_special img {
+  position: absolute;
+  left: 0;
+  height: 26px;
+  opacity: 0.7;
+}
+
+.nav_section .logo_special img:hover {
+  opacity: 0.4;
+}
+
 
 // ------- link_aboutus -------
 .nav_section #linkContainer_aboutus {
@@ -283,6 +294,8 @@
   background-color: transparent;
   height: 48px !important;
 }
+
+
 
 
 
