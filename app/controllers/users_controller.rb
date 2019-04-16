@@ -110,7 +110,14 @@ class UsersController < ApplicationController
 
   def stats_forum
     if user_signed_in? && current_user.admin
-      # @galleries = Gallery.order("created_at desc")
+      @user = current_user
+    else
+      redirect_to error_path
+    end
+  end
+
+  def stats_careers
+    if user_signed_in? && current_user.admin
       @user = current_user
     else
       redirect_to error_path
