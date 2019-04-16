@@ -17,46 +17,23 @@
         <div class="medium-8 columns info_left_content">
           <div class="page_information">
             <div class="page_header">list of useful forms</div>
-            <div>
-              <ul class="page_inner_section">
-
-                <li class="listed_form">
-                  <%= link_to forms_path do %>
-                  <div><i class="fa fa-wpforms" aria-hidden="true"></i></div>
-                  <div class="form_title"><%= truncate("enim ad minima veniam enim ad minima veniam enim ad minima veniam", length: 45) %></div>
+            
+            <% if @forms.present? %>
+              <div class="form_content">
+                <ul class="page_inner_section">
+                  <% @forms.each do |form| %>
+                    <li class="listed_form">
+                      <%= link_to "#{form.fileattachment}", target:"_blank" do %>
+                      <div><i class="fa fa-wpforms" aria-hidden="true"></i></div>
+                      <div class="form_title"><%= truncate("#{form.title}", length: 45) %></div>
+                      <% end %>
+                    </li>
                   <% end %>
-                </li>
-
-                <li class="listed_form">
-                  <%= link_to forms_path do %>
-                  <div><i class="fa fa-wpforms" aria-hidden="true"></i></div>
-                  <div class="form_title"><%= truncate("enim ad minima veniam enim ad minima veniam enim ad minima veniam", length: 45) %></div>
-                  <% end %>
-                </li>
-
-                <li class="listed_form">
-                  <%= link_to forms_path do %>
-                  <div><i class="fa fa-wpforms" aria-hidden="true"></i></div>
-                  <div class="form_title"><%= truncate("enim ad minima veniam enim ad minima veniam enim ad minima veniam", length: 45) %></div>
-                  <% end %>
-                </li>
-
-                <li class="listed_form">
-                  <%= link_to forms_path do %>
-                  <div><i class="fa fa-wpforms" aria-hidden="true"></i></div>
-                  <div class="form_title"><%= truncate("enim ad minima veniam enim ad minima veniam enim ad minima veniam", length: 45) %></div>
-                  <% end %>
-                </li>
-
-                <li class="listed_form">
-                  <%= link_to forms_path do %>
-                  <div><i class="fa fa-wpforms" aria-hidden="true"></i></div>
-                  <div class="form_title"><%= truncate("enim ad minima veniam enim ad minima veniam enim ad minima veniam", length: 45) %></div>
-                  <% end %>
-                </li>
-
-              </ul>
-            </div>
+                </ul>
+              </div>
+            <% else %>
+              <div><%= render "shared/no_listed_content" %></div>
+            <% end %>
           </div>
         </div>
         <!-- info_left_content -->
