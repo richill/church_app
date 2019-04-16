@@ -27,7 +27,7 @@ class FormsController < ApplicationController
       @form = Form.new(form_params)
       respond_to do |format|
         if @form.save
-          format.html { redirect_to @form, notice: 'Form was successfully created.' }
+          format.html { redirect_to stats_forms_user_path(current_user), notice: 'Form was successfully created.' }
           format.json { render :show, status: :created, location: @form }
         else
           format.html { render :new }
@@ -43,7 +43,7 @@ class FormsController < ApplicationController
     if user_signed_in? && current_user.admin
       respond_to do |format|
         if @form.update(form_params)
-          format.html { redirect_to @form, notice: 'Form was successfully updated.' }
+          format.html { redirect_to stats_forms_user_path(current_user), notice: 'Form was successfully updated.' }
           format.json { render :show, status: :ok, location: @form }
         else
           format.html { render :edit }
