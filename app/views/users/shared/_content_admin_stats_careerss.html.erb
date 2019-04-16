@@ -22,7 +22,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @events.approved_events.open_events.active_events.count %></span>
+              <span class="main_stats"><%= @jobs.aprroved_jobs.opened_jobs.count %></span>
             </div>
           </div>
         </div>
@@ -33,7 +33,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @events.approved_events.open_events.active_events.youth_events.count %></span>
+              <span class="main_stats"><%= @jobs.aprroved_jobs.opened_jobs.church_jobs.count %></span>
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @events.approved_events.open_events.active_events.church_events.count %></span>
+              <span class="main_stats"><%= @jobs.aprroved_jobs.opened_jobs.career_jobs.count %></span>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @events.approved_events.open_events.active_events.community_events.count %></span>
+              <span class="main_stats"><%= @jobs.aprroved_jobs.opened_jobs.volunteer_jobs.count %></span>
             </div>
           </div>
         </div>
@@ -70,110 +70,65 @@
         <div class="header_section_cover">
           <div class="data_contents">
             <span class="data_header">
-              <span>Total created events on the platform</span> 
-              <span>[<%= @events.all.count %>]</span>
+              <span>Total created jobs on the platform</span> 
+              <span>[<%= @jobs.aprroved_jobs.opened_jobs.count %>]</span>
             </span>
             <div class="header_subtitle">
               <i class="fa fa-info-circle"></i>
-              <span>Total approved events on the platform</span>
+              <span>Total approved jobs on the platform</span>
             </div>
-            <span class="btn btn_blue" id="eventstats_upcoming_tab">upcoming events <span>[<%= @events.approved_events.open_events.active_events.count %>]</span></span>
-            <span class="btn btn_green" id="eventstats_pending_tab"> pending events [<%= @events.pending_events.open_events.active_events.count %>]</span>
-            <span class="btn btn_green" id="eventstats_past_tab">closed/expired events [<%= @events.openAndcloseExpired_events_and_closedActive_events.count %>]</span>
-            <span class="btn btn_green" id="eventstats_all_tab">all created events [<%= @events.count %>]</span>
+            <span class="btn btn_blue" id="careerstats_all_tab">all jobs <span>[<%= @jobs.aprroved_jobs.opened_jobs.count %>]</span></span>
+            <span class="btn btn_blue" id="careerstats_unapproved_tab">unapproved jobs <span>[<%= @jobs.unapproved_jobs.opened_jobs.count %>]</span></span>
+            <span class="btn btn_green" id="careerstats_church_tab">church jobs <span>[<%= @jobs.aprroved_jobs.opened_jobs.church_jobs.count %>]</span></span>
+            <span class="btn btn_green" id="careerstats_career_tab">career jobs <span>[<%= @jobs.aprroved_jobs.opened_jobs.career_jobs.count %>]</span></span>
+            <span class="btn btn_green" id="careerstats_volunteer_tab">volunteer jobs <span>[<%= @jobs.aprroved_jobs.opened_jobs.volunteer_jobs.count %>]</span></span>
           </div>
         </div>
         <div class="divider"></div>
         <div class="clear"></div>
 
-        <!-- listed_events -->
-        <div class="listed_events">
-          <!-- upcoming events -->
-          <div class="listed_events" id="eventstats_upcoming_tab_content">
-            <div class="data_list_title">upcoming events</div>
+        <!-- listed_jobs -->
+        <div class="listed_ministries">
+          <!-- all jobs -->
+          <div class="listed_ministries" id="">
+            <div class="data_list_title">all approved jobs</div>
             <ul>
-              <% @events.approved_events.open_events.active_events.each do |event| %>
+              <% @jobs.aprroved_jobs.opened_jobs.each do |job| %>
                 <li class="medium-12 columns main_conatiner">
-                  <div class="medium-1 columns main_image">
-                    <div class="main_img_inner_cover">
-                      <% if event.image.present? %>
-                        <%= link_to(cl_image_tag("#{event.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), event) %>
-                      <% else %>
-                        <%= link_to (image_tag("img_default_event.png")), event_path(event) %>
-                      <% end %>
-                    </div>
-                  </div>
                   <div class="medium-9 columns main_info">
                     <div>
-                      <span class="min_name"><%= link_to truncate(event.name, length: 50), event, target:"_blank" %></span>
+                      <span class="min_name"><%= link_to truncate(job.title, length: 30), job, target:"_blank" %></span>
                       <span>|</span>
                       <span>
-                        <% if event.approved_event %>
-                          <span data-tooltip tabindex="2" title="Event has been approved by admin" class="top status_btn approved"><%= link_to "approved", event, target:"_blank" %></span>
-                        <% elsif event.pending_event %>
-                          <span data-tooltip tabindex="2" title="Event has 'not' been approved by admin"  class="top status_btn pending"><%= link_to "pending", event, target:"_blank" %></span>
-                        <% end %>
+                        <span class="subheaders">created by:</span>
+                        <span><%= link_to "#{job.user.firstname} #{job.user.lastname}", job, target:"_blank", class: "weblink" %></span>
                       </span>
-
-                      <!-- event status -->
+                      <span>|</span>
                       <span>
-                        <% if event.open_event %>
-                          <% if event.open_event && event.active_event %>
-                            <span data-tooltip tabindex="2" title="Event status is open & the Event is active" class="top status_btn approved"><%= link_to "open & active", event, target:"_blank" %></span>
-                            <% elsif event.open_event && event.expired_event %>
-                            <span data-tooltip tabindex="2" title="Event status is open & the Event has expired" class="top status_btn pending"><%= link_to "open & expired", event, target:"_blank" %></span>
-                          <% end %>
-                        <% elsif event.closed_event %>
-                          <% if event.closed_event && event.active_event %>
-                            <!-- event closed & active -->
-                            <span data-tooltip tabindex="2" title="Event has been closed & the Event is active [has not expired]" class="top status_btn pending"><%= link_to "closed & active", event, target:"_blank" %></span>
-                          <% elsif event.closed_event && event.expired_event %>
-                            <!-- event closed & expired -->
-                            <span data-tooltip tabindex="2" title="Event has been closed & the Event has expired"  class="status_btn pending"><%= link_to "closed & expired", event, target:"_blank" %></span>
-                          <% end %>
+                        <span class="subheaders">email:</span>
+                        <span class="weblink"><%= mail_to "#{job.user.email}" %></span>
+                      </span>
+                      <span>|</span>
+                      <span>
+                        <% if job.open_job && job.approved_job %>
+                          <span class="approved"><%= link_to "approved", job, target:"_blank" %></span>
+                        <% elsif job.unapproved_job %>
+                          <span class="pending"><%= link_to "unapproved", job, target:"_blank" %></span>
                         <% end %>
                       </span>
-                      <!-- event status -->
-
                     </div>
-                    <div>
-                      <span class="subheaders">event date:</span>
-                      <span class="min_content"><%= "#{event.start_time.strftime("%b %d %Y")} [#{event.start_time.strftime("%I:%M%p")}]" %> - <%= "#{event.end_time.strftime("%b %d %Y")} [#{event.end_time.strftime("%I:%M%p")}]" %></span>
-                    </div>
-                    <div>
-                      <span class="subheaders">address:</span>
-                      <span class="min_content"><%= "#{event.address} | #{event.city} | #{event.postcode}" %></span>
-                    </div>
+                    
                     <div class="min_content">
-                      <span><%= truncate("#{event.description}", length: 200) %></span>
-                      <span><%= link_to "view", event, target:"_blank" %></span>
+                      <span><%= truncate("#{job.description}", length: 200) %></span>
+                      <span><%= link_to "view", job, target:"_blank" %></span>
                     </div>
                     <div>
-                      <span class="subheaders">category:</span>
-                      <span class="min_content">
-                        <% if event.category_event.name == "Youth Event" %>
-                          <%= link_to "Young Adult Events", youth_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Church Event" %>
-                          <%= link_to "Church Events", church_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Community Event" %>
-                          <%= link_to "Community Events", community_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "National Event" %>
-                          <%= link_to "National Event", national_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Leadership Forum Event" %>
-                          <%= link_to "Leadership Forum", leadership_development_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Baptism Class Event" %>
-                          <%= link_to "Baptism", baptism_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Bible Study Event" %>
-                          <%= link_to "Bible Study", bible_and_you_path, target:"blank" %>
-                        <% end %>
-                      </span>
-                      <span>|</span>
                       <span class="subheaders">created:</span>
-                      <span class="min_content"><%= event.created_at.strftime("%b %d %Y") %></span>
+                      <span class="min_content"><%= job.created_at.strftime("%b %d %Y") %></span>
                       <span>|</span>
                       <span class="subheaders">creator:</span>
-                      <span class="min_content"><%= link_to "#{event.user.firstname} #{event.user.lastname}", user_path(event.user), target:"_blank" %></span>
-                      <% if event.user.admin? %>
+                      <span class="min_content"><%= link_to "#{job.user.firstname} #{job.user.lastname}", user_path(job.user), target:"_blank" %></span>
+                      <% if job.user.admin? %>
                         <span class="min_content">[admin]</span>
                       <% end %>
                     </div>
@@ -181,15 +136,15 @@
                   <div class="medium-2 columns main_action">
                     <div class="action_section">
                       <div class="update_section">
-                        <% unless event.approved_event %>
-                          <%= simple_form_for [event.user, event] do |f| %>
+                        <% unless job.approved_job %>
+                          <%= simple_form_for [@user, @job] do |f| %>
                             <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
                             <%= f.button :submit, "update" %>
                           <% end %>
                         <% end %>
                       </div>
-                      <div class="edit_btn"><%= link_to 'edit', edit_user_event_path(event.user, event), target:"_blank" %></div>
-                      <div class="delete_btn"><%= link_to 'delete', event, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                      <div class="edit_btn"><%= link_to 'edit', edit_user_job_path(job.user, job), target:"_blank" %></div>
+                      <div class="delete_btn"><%= link_to 'delete', job, method: :delete, data: { confirm: 'Are you sure?' } %></div>
                     </div>
                   </div>
                 </li>
@@ -197,331 +152,11 @@
             </ul>
           </div>
           <div class="clear"></div>
-          <!-- upcoming events -->
+          <!-- all jobs -->
 
-          <!-- pending events -->
-          <div class="listed_events" id="eventstats_pending_tab_content">
-            <div class="data_list_title">pending events</div>
-            <ul>
-              <% @events.pending_events.open_events.active_events.each do |event| %>
-                <li class="medium-12 columns main_conatiner">
-                  <div class="medium-1 columns main_image">
-                    <div class="main_img_inner_cover">
-                    <%= link_to image_tag("img_default_event.png"), event, target:"_blank" %>
-                    </div>
-                  </div>
-                  <div class="medium-9 columns main_info">
-                    <div>
-                      <span class="min_name"><%= link_to truncate(event.name, length: 50), event, target:"_blank" %></span>
-                      <span>|</span>
-                      <span>
-                        <% if event.approved_event %>
-                          <span data-tooltip tabindex="2" title="Event has been approved by admin" class="top status_btn approved"><%= link_to "approved", event, target:"_blank" %></span>
-                        <% elsif event.pending_event %>
-                          <span data-tooltip tabindex="2" title="Event has 'not' been approved by admin"  class="top status_btn pending"><%= link_to "pending", event, target:"_blank" %></span>
-                        <% end %>
-                      </span>
-
-                      <!-- event status -->
-                      <span>
-                        <% if event.open_event %>
-                          <% if event.open_event && event.active_event %>
-                            <span data-tooltip tabindex="2" title="Event status is open & the Event is active" class="top status_btn approved"><%= link_to "open & active", event, target:"_blank" %></span>
-                            <% elsif event.open_event && event.expired_event %>
-                            <span data-tooltip tabindex="2" title="Event status is open & the Event has expired" class="top status_btn pending"><%= link_to "open & expired", event, target:"_blank" %></span>
-                          <% end %>
-                        <% elsif event.closed_event %>
-                          <% if event.closed_event && event.active_event %>
-                            <!-- event closed & active -->
-                            <span data-tooltip tabindex="2" title="Event has been closed & the Event is active [has not expired]" class="top status_btn pending"><%= link_to "closed & active", event, target:"_blank" %></span>
-                          <% elsif event.closed_event && event.expired_event %>
-                            <!-- event closed & expired -->
-                            <span data-tooltip tabindex="2" title="Event has been closed & the Event has expired"  class="status_btn pending"><%= link_to "closed & expired", event, target:"_blank" %></span>
-                          <% end %>
-                        <% end %>
-                      </span>
-                      <!-- event status -->
-
-                    </div>
-                    <div>
-                      <span class="subheaders">event date:</span>
-                      <span class="min_content"><%= "#{event.start_time.strftime("%b %d %Y")} [#{event.start_time.strftime("%I:%M%p")}]" %> - <%= "#{event.end_time.strftime("%b %d %Y")} [#{event.end_time.strftime("%I:%M%p")}]" %></span>
-                    </div>
-                    <div>
-                      <span class="subheaders">address:</span>
-                      <span class="min_content"><%= "#{event.address} | #{event.city} | #{event.postcode}" %></span>
-                    </div>
-                    <div class="min_content">
-                      <span><%= truncate("#{event.description}", length: 200) %></span>
-                      <span><%= link_to "view", event, target:"_blank" %></span>
-                    </div>
-                    <div>
-                      <span class="subheaders">category:</span>
-                      <span class="min_content">
-                        <% if event.category_event.name == "Youth Event" %>
-                          <%= link_to "Young Adult Events", youth_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Church Event" %>
-                          <%= link_to "Church Events", church_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Community Event" %>
-                          <%= link_to "Community Events", community_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "National Event" %>
-                          <%= link_to "National Event", national_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Leadership Forum Event" %>
-                          <%= link_to "Leadership Forum", leadership_development_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Baptism Class Event" %>
-                          <%= link_to "Baptism", baptism_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Bible Study Event" %>
-                          <%= link_to "Bible Study", bible_and_you_path, target:"blank" %>
-                        <% end %>
-                      </span>
-                      <span>|</span>
-                      <span class="subheaders">created:</span>
-                      <span class="min_content"><%= event.created_at.strftime("%b %d %Y") %></span>
-                      <span>|</span>
-                      <span class="subheaders">creator:</span>
-                      <span class="min_content"><%= link_to "#{event.user.firstname} #{event.user.lastname}", user_path(event.user), target:"_blank" %></span>
-                      <% if event.user.admin? %>
-                        <span class="min_content">[admin]</span>
-                      <% end %>
-                    </div>
-                  </div>
-                  <div class="medium-2 columns main_action">
-                    <div class="action_section">
-                      <div class="update_section">
-                        <% unless event.approved_event %>
-                          <%= simple_form_for [event.user, event] do |f| %>
-                            <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
-                            <%= f.button :submit, "update" %>
-                          <% end %>
-                        <% end %>
-                      </div>
-                      <div class="edit_btn"><%= link_to 'edit', edit_user_event_path(event.user, event), target:"_blank" %></div>
-                      <div class="delete_btn"><%= link_to 'delete', event, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-                    </div>
-                  </div>
-                </li>
-              <% end %>
-            </ul>
-          </div>
-          <div class="clear"></div>
-          <!-- pending events -->
-
-          <!-- past/closed events -->
-          <div class="listed_events" id="eventstats_past_tab_content">
-            <div class="data_list_title">closed & expired events</div>
-            <ul>
-              <% @events.openAndcloseExpired_events_and_closedActive_events.each do |event| %>
-                <li class="medium-12 columns main_conatiner">
-                  <div class="medium-1 columns main_image">
-                    <div class="main_img_inner_cover">
-                    <%= link_to image_tag("img_default_event.png"), event, target:"_blank" %>
-                    </div>
-                  </div>
-                  <div class="medium-9 columns main_info">
-                    <div>
-                      <span class="min_name"><%= link_to truncate(event.name, length: 50), event, target:"_blank" %></span>
-                      <span>|</span>
-                      <span>
-                        <% if event.approved_event %>
-                          <span data-tooltip tabindex="2" title="Event has been approved by admin" class="top status_btn approved"><%= link_to "approved", event, target:"_blank" %></span>
-                        <% elsif event.pending_event %>
-                          <span data-tooltip tabindex="2" title="Event has 'not' been approved by admin"  class="top status_btn pending"><%= link_to "pending", event, target:"_blank" %></span>
-                        <% end %>
-                      </span>
-
-                      <!-- event status -->
-                      <span>
-                        <% if event.open_event %>
-                          <% if event.open_event && event.active_event %>
-                            <span data-tooltip tabindex="2" title="Event status is open & the Event is active" class="top status_btn approved"><%= link_to "open & active", event, target:"_blank" %></span>
-                            <% elsif event.open_event && event.expired_event %>
-                            <span data-tooltip tabindex="2" title="Event status is open & the Event has expired" class="top status_btn pending"><%= link_to "open & expired", event, target:"_blank" %></span>
-                          <% end %>
-                        <% elsif event.closed_event %>
-                          <% if event.closed_event && event.active_event %>
-                            <!-- event closed & active -->
-                            <span data-tooltip tabindex="2" title="Event has been closed & the Event is active [has not expired]" class="top status_btn pending"><%= link_to "closed & active", event, target:"_blank" %></span>
-                          <% elsif event.closed_event && event.expired_event %>
-                            <!-- event closed & expired -->
-                            <span data-tooltip tabindex="2" title="Event has been closed & the Event has expired"  class="status_btn pending"><%= link_to "closed & expired", event, target:"_blank" %></span>
-                          <% end %>
-                        <% end %>
-                      </span>
-                      <!-- event status -->
-
-                    </div>
-                    <div>
-                      <span class="subheaders">event date:</span>
-                      <span class="min_content"><%= "#{event.start_time.strftime("%b %d %Y")} [#{event.start_time.strftime("%I:%M%p")}]" %> - <%= "#{event.end_time.strftime("%b %d %Y")} [#{event.end_time.strftime("%I:%M%p")}]" %></span>
-                    </div>
-                    <div>
-                      <span class="subheaders">address:</span>
-                      <span class="min_content"><%= "#{event.address} | #{event.city} | #{event.postcode}" %></span>
-                    </div>
-                    <div class="min_content">
-                      <span><%= truncate("#{event.description}", length: 200) %></span>
-                      <span><%= link_to "view", event, target:"_blank" %></span>
-                    </div>
-                    <div>
-                      <span class="subheaders">category:</span>
-                      <span class="min_content">
-                        <% if event.category_event.name == "Youth Event" %>
-                          <%= link_to "Young Adult Events", youth_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Church Event" %>
-                          <%= link_to "Church Events", church_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Community Event" %>
-                          <%= link_to "Community Events", community_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "National Event" %>
-                          <%= link_to "National Event", national_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Leadership Forum Event" %>
-                          <%= link_to "Leadership Forum", leadership_development_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Baptism Class Event" %>
-                          <%= link_to "Baptism", baptism_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Bible Study Event" %>
-                          <%= link_to "Bible Study", bible_and_you_path, target:"blank" %>
-                        <% end %>
-                      </span>
-                      <span>|</span>
-                      <span class="subheaders">created:</span>
-                      <span class="min_content"><%= event.created_at.strftime("%b %d %Y") %></span>
-                      <span>|</span>
-                      <span class="subheaders">creator:</span>
-                      <span class="min_content"><%= link_to "#{event.user.firstname} #{event.user.lastname}", user_path(event.user), target:"_blank" %></span>
-                      <% if event.user.admin? %>
-                        <span class="min_content">[admin]</span>
-                      <% end %>
-                    </div>
-                  </div>
-                  <div class="medium-2 columns main_action">
-                    <div class="action_section">
-                      <div class="update_section">
-                        <% unless event.approved_event %>
-                          <%= simple_form_for [event.user, event] do |f| %>
-                            <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
-                            <%= f.button :submit, "update" %>
-                          <% end %>
-                        <% end %>
-                      </div>
-                      <div class="edit_btn"><%= link_to 'edit', edit_user_event_path(event.user, event), target:"_blank" %></div>
-                      <div class="delete_btn"><%= link_to 'delete', event, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-                    </div>
-                  </div>
-                </li>
-              <% end %>
-            </ul>
-          </div>
-          <div class="clear"></div>
-          <!-- past/closed events -->
-
-          <!-- all events -->
-          <div class="listed_events" id="eventstats_all_tab_content">
-            <div class="data_list_title">all events</div>
-            <ul>
-              <% @events.each do |event| %>
-                <li class="medium-12 columns main_conatiner">
-                  <div class="medium-1 columns main_image">
-                    <div class="main_img_inner_cover">
-                    <%= link_to image_tag("img_default_event.png"), event, target:"_blank" %>
-                    </div>
-                  </div>
-                  <div class="medium-9 columns main_info">
-                    <div>
-                      <span class="min_name"><%= link_to truncate(event.name, length: 50), event, target:"_blank" %></span>
-                      <span>|</span>
-                      <span>
-                        <% if event.approved_event %>
-                          <span data-tooltip tabindex="2" title="Event has been approved by admin" class="top status_btn approved"><%= link_to "approved", event, target:"_blank" %></span>
-                        <% elsif event.pending_event %>
-                          <span data-tooltip tabindex="2" title="Event has 'not' been approved by admin"  class="top status_btn pending"><%= link_to "pending", event, target:"_blank" %></span>
-                        <% end %>
-                      </span>
-
-                      <!-- event status -->
-                      <span>
-                        <% if event.open_event %>
-                          <% if event.open_event && event.active_event %>
-                            <span data-tooltip tabindex="2" title="Event status is open & the Event is active" class="top status_btn approved"><%= link_to "open & active", event, target:"_blank" %></span>
-                            <% elsif event.open_event && event.expired_event %>
-                            <span data-tooltip tabindex="2" title="Event status is open & the Event has expired" class="top status_btn pending"><%= link_to "open & expired", event, target:"_blank" %></span>
-                          <% end %>
-                        <% elsif event.closed_event %>
-                          <% if event.closed_event && event.active_event %>
-                            <!-- event closed & active -->
-                            <span data-tooltip tabindex="2" title="Event has been closed & the Event is active [has not expired]" class="top status_btn pending"><%= link_to "closed & active", event, target:"_blank" %></span>
-                          <% elsif event.closed_event && event.expired_event %>
-                            <!-- event closed & expired -->
-                            <span data-tooltip tabindex="2" title="Event has been closed & the Event has expired"  class="status_btn pending"><%= link_to "closed & expired", event, target:"_blank" %></span>
-                          <% end %>
-                        <% end %>
-                      </span>
-                      <!-- event status -->
-
-                    </div>
-                    <div>
-                      <span class="subheaders">event date:</span>
-                      <span class="min_content"><%= "#{event.start_time.strftime("%b %d %Y")} [#{event.start_time.strftime("%I:%M%p")}]" %> - <%= "#{event.end_time.strftime("%b %d %Y")} [#{event.end_time.strftime("%I:%M%p")}]" %></span>
-                    </div>
-                    <div>
-                      <span class="subheaders">address:</span>
-                      <span class="min_content"><%= "#{event.address} | #{event.city} | #{event.postcode}" %></span>
-                    </div>
-                    <div class="min_content">
-                      <span><%= truncate("#{event.description}", length: 200) %></span>
-                      <span><%= link_to "view", event, target:"_blank" %></span>
-                    </div>
-                    <div>
-                      <span class="subheaders">category:</span>
-                      <span class="min_content">
-                        <% if event.category_event.name == "Youth Event" %>
-                          <%= link_to "Young Adult Events", youth_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Church Event" %>
-                          <%= link_to "Church Events", church_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Community Event" %>
-                          <%= link_to "Community Events", community_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "National Event" %>
-                          <%= link_to "National Event", national_events_events_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Leadership Forum Event" %>
-                          <%= link_to "Leadership Forum", leadership_development_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Baptism Class Event" %>
-                          <%= link_to "Baptism", baptism_path, target:"blank" %>
-                        <% elsif event.category_event.name == "Bible Study Event" %>
-                          <%= link_to "Bible Study", bible_and_you_path, target:"blank" %>
-                        <% end %>
-                      </span>
-                      <span>|</span>
-                      <span class="subheaders">created:</span>
-                      <span class="min_content"><%= event.created_at.strftime("%b %d %Y") %></span>
-                      <span>|</span>
-                      <span class="subheaders">creator:</span>
-                      <span class="min_content"><%= link_to "#{event.user.firstname} #{event.user.lastname}", user_path(event.user), target:"_blank" %></span>
-                      <% if event.user.admin? %>
-                        <span class="min_content">[admin]</span>
-                      <% end %>
-                    </div>
-                  </div>
-                  <div class="medium-2 columns main_action">
-                    <div class="action_section">
-                      <div class="update_section">
-                        <% unless event.approved_event %>
-                          <%= simple_form_for [event.user, event] do |f| %>
-                            <%= f.input :approve, as: :boolean, checked_value: true, unchecked_value: false %>
-                            <%= f.button :submit, "update" %>
-                          <% end %>
-                        <% end %>
-                      </div>
-                      <div class="edit_btn"><%= link_to 'edit', edit_user_event_path(event.user, event), target:"_blank" %></div>
-                      <div class="delete_btn"><%= link_to 'delete', event, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-                    </div>
-                  </div>
-                </li>
-              <% end %>
-            </ul>
-          </div>
-          <div class="clear"></div>
-          <!-- all events -->
-
+       
         </div>
-        <!-- listed_events -->
+        <!-- listed_jobs -->
 
       </div>
     </div>

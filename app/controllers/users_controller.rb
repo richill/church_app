@@ -131,6 +131,7 @@ class UsersController < ApplicationController
       @events = Event.all
       @gallries = Gallery.all
       @discussions = Discussion.all
+      @jobs = Job.all
     end
 
     def set_user
