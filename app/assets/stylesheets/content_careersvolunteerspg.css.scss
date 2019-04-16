@@ -129,7 +129,6 @@
 .content_careersvolunteerspg_section .file i {
   font-size: 16px;
   color: #2A2C49 !important;
-  // position: absolute;
 }
 
 .content_careersvolunteerspg_section .prac_comment {
@@ -248,27 +247,22 @@
   margin-left: 30px !important;  
 }
 
-// ---------------------
-//   workings
-// ---------------------
-
-.job_tabs {
+.content_careersvolunteerspg_section .job_tabs {
   background-color: transparent;
   height: 30px;
   margin-bottom: 20px;
 }
 
-
-.job_tabs ul {
+.content_careersvolunteerspg_section .job_tabs ul {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.job_tabs ul li {
+.content_careersvolunteerspg_section .job_tabs ul li {
   float: left;
 }
 
-.job_tabs ul li a {
+.content_careersvolunteerspg_section .job_tabs ul li a {
   background: linear-gradient(#57738E, #9DC6EB);
   display: inline-block;
   height: 30px;
@@ -282,7 +276,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.job_tabs ul li a:hover {
+.content_careersvolunteerspg_section .job_tabs ul li a:hover {
   opacity: 0.7;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
@@ -290,8 +284,7 @@
   -o-transition: all 0.3s ease;
 }
 
-
-.job_tabs .active {
+.content_careersvolunteerspg_section .job_tabs .active {
   background: #a07b35 !important;
   border-bottom: 2px solid #a07b35 !important;
 }
