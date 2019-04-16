@@ -34,6 +34,15 @@
 
                   <div><%= f.association :category_gender, collection: CategoryGender.all, prompt: "select gender", label: false %></div>
                   <div class="clear"></div>
+
+                  <% if current_user.admin %>
+                    <div class="update_section">
+                      <%= f.input :admin, as: :boolean %>
+                      <div class="minor_info">
+                        <span>Tick box to make user an admin. This section is only displayed to admins of the church</span> 
+                      </div>
+                    </div>
+                  <% end %>
                 </div>
 
                 <div class="form-actions">

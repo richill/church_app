@@ -121,7 +121,13 @@
 
                     <div class="moreinfo">
                       <span><i class="fa fa-users"></i>:</span>
-                      <span><%= link_to 'view profile', user %></span>
+                      <span>
+                        <% if user.admin? %>
+                          <%= link_to 'admin', edit_user_path(user) %>
+                        <% else %>
+                          <%= link_to 'make user admin', edit_user_path(user) %>
+                        <% end %>
+                      </span>
                     </div>
 
                   </div>
@@ -164,13 +170,13 @@
                     <div class="moreinfo">
                       <span><i class="fa fa-users"></i>:</span>
                       <span>
-                        <span class="view_link" data-reveal-id="<%= dom_id(user) %>_user_content">view hello</span>
-                        <span><%# render 'shared/modal_admin_user_info', locals: {user: user } %></span>
-                        <!-- <span class="view_link" data-open="<%# dom_id(@smallgroup) %>_smallgroup_content">view</span> -->
-                        <!-- <span><%# render 'shared/modal_smallgroup_info', locals: { smallgroup: @smallgroup } %></span> -->
+                        <% if user.admin? %>
+                          <%= link_to 'admin', edit_user_path(user) %>
+                        <% else %>
+                          <%= link_to 'make user admin', edit_user_path(user) %>
+                        <% end %>
                       </span>
                     </div>
-
                   </div>
                 </li>
               <% end %>
@@ -211,10 +217,11 @@
                     <div class="moreinfo">
                       <span><i class="fa fa-users"></i>:</span>
                       <span>
-                        <span class="view_link" data-reveal-id="<%= dom_id(user) %>_user_content">view hello</span>
-                        <span><%# render 'shared/modal_admin_user_info', locals: {user: user } %></span>
-                        <!-- <span class="view_link" data-open="<%# dom_id(@smallgroup) %>_smallgroup_content">view</span> -->
-                        <!-- <span><%# render 'shared/modal_smallgroup_info', locals: { smallgroup: @smallgroup } %></span> -->
+                        <% if user.admin? %>
+                          <%= link_to 'admin', edit_user_path(user) %>
+                        <% else %>
+                          <%= link_to 'make user admin', edit_user_path(user) %>
+                        <% end %>
                       </span>
                     </div>
 
@@ -258,10 +265,9 @@
                     <div class="moreinfo">
                       <span><i class="fa fa-users"></i>:</span>
                       <span>
-                        <span class="view_link" data-reveal-id="<%= dom_id(user) %>_user_content">view hello</span>
-                        <span><%# render 'shared/modal_admin_user_info', locals: {user: user } %></span>
-                        <!-- <span class="view_link" data-open="<%# dom_id(@smallgroup) %>_smallgroup_content">view</span> -->
-                        <!-- <span><%# render 'shared/modal_smallgroup_info', locals: { smallgroup: @smallgroup } %></span> -->
+                        <% if user.admin? %>
+                          <%= link_to 'admin | edit', edit_user_path(user) %>
+                        <% end %>
                       </span>
                     </div>
 
