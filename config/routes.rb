@@ -107,6 +107,7 @@ Rails.application.routes.draw do
   get     'our-people',               to: 'static_pages#ourpeoplepg'
   get     'pastoral-team',            to: 'static_pages#pastoralteampg'
   get     'practical-needs',          to: 'static_pages#practicalneedspg'
+  get     'prayer',                   to: 'static_pages#prayerpg'
   get     'privacy',                  to: 'static_pages#privacypg'
   get     'receive-christ',           to: 'static_pages#receivechristpg'
   get     'recommeded-reading-plan',  to: 'static_pages#recreadingplanpg'

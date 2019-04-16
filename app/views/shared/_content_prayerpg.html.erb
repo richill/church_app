@@ -1,0 +1,51 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_prayerpg_section">
+  <div class="content_prayerpg_inner_section">
+    <div class="medium-12 columns prayerpg_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">prayer</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">prayer times</div>
+            <div class="page_img"><%= image_tag("img_default_mainimg.png") %></div>
+            <div>
+              <div class="paragraph_content">
+                <div><b>Webinars</b></div>
+                <div><b>Every Wednesday</b></div>
+                <div>6:00 AM – 6:30 AM</div><br/>
+                <div><b>Every Saturday</b></div>
+                <div>7:00 AM – 8:00 AM</div>
+              </div><br/>
+
+              <div class="paragraph_content">
+                <div><b>Monthly Night Virgil prayer meeting</b></div>
+                <div>Our monthly Night Virgil prayer sessions take place on the first Friday of every month. Everyone is welcome. It is a time of fellowship when we hear from God and speak to Him about our concerns and expectations.</div><br/>
+                <div><b>Time: </b><span>12:00 AM – 3:00 AM</span></div>
+                <div><b>Venue: </b><span>OHCC Edgware </span></div>
+              </div><br/>
+
+              <div class="paragraph_content">
+                <div><b>Group Prayer Meetings</b></div>
+                <div>We also organise group webinar prayer meeting to cater for members’ needs. These meetings run during the week days, mostly between 6:00 PM and 10:00 PM. Please contact the church office for details of these meeting.</div><br/>
+                <div><b>Time: </b><span>between 6:00 PM and 10:00 PM</span></div>
+                <div><b>Contact: </b><span>church office at </span><span class="weblink"><%= mail_to "info@openheavens.org.uk" %></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>

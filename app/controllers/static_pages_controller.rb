@@ -58,6 +58,9 @@ class StaticPagesController < ApplicationController
   def pastorsixpg
   end
 
+  def prayerpg
+  end
+
   def deacononepg
   end
 
