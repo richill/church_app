@@ -41,11 +41,7 @@
               </ul>
             </div>
 
-            <% if @launchministries.present? %>
-              <!-- no_listed_info -->
-              <div class="hide"><%= render "shared/no_listed_content" %></div>
-              <!-- no_listed_info -->
-            <% else %>
+            <% if @jobs.opened_jobs.aprroved_jobs.volunteer_jobs.present? %>
               <!-- listed jobs -->
               <div class="paragraph_content listed_readings_links">
                 <ul>
@@ -77,6 +73,10 @@
                 </ul>
               </div>
               <!-- listed jobs -->
+            <% else %>
+              <!-- no_listed_info -->
+              <div><%= render "shared/no_listed_content" %></div>
+              <!-- no_listed_info -->
             <% end %>
 
           </div>
