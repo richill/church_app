@@ -11,137 +11,6 @@
     <div class="page_cover">
       <div class="page_content">
 
-        <!-- section -->
-        <div class="content_section">
-          <div class="page_title">
-            <span><i class="fa fa-link"></i></span>
-            <span>homepage links</span>
-          </div>
-          <div class="page_subtitle">find the below links that leads to various website pages on the website</div>
-          <div class="content_section_details">
-            <ul class="section_info">
-              <li class="box selected_bkgrd">
-                <div class="box_inner">
-                  <div class="sub_header"><%= link_to "homepage", root_path, target:"_blank" %></div>
-                  <div class="minor_links">
-                    <ul>
-                      <li><%= link_to "prayer", "#", target:"_blank" %></li>
-                      <li>
-                        <%= link_to "giving", donations_path, target:"_blank" %>
-                        <ul class="mini_links">
-                          <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= link_to "tithe", "#", target:"_blank" %></li>
-                          <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= link_to "offerings", "#", target:"_blank" %></li>
-                          <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= link_to "thanks giving", "#", target:"_blank" %></li>
-                          <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= link_to "welfare", "#", target:"_blank" %></li>
-                          <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= link_to "blessed to be a blessing", "#", target:"_blank" %></li>
-                          <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= link_to "others", "#", target:"_blank" %></li>
-                        </ul>
-                      </li>
-                      <li><%= link_to "OH radio", "#", target:"_blank" %></li>
-                      <li><%= link_to "multimedia", media_and_communication_path, target:"_blank" %></li>
-                      <li><%= link_to "small group", small_groups_path, target:"_blank" %></li>
-                      <li><%= link_to "volunteering", careers_and_volunteers_path, target:"_blank" %></li>
-                      <li><%= link_to "forms", forms_path, target:"_blank" %></li>
-                      <li><%= link_to "resources", resources_path, target:"_blank" %></li>
-                      <li><%= link_to "forum", forum_path, target:"_blank" %></li>
-                      <li><%= link_to "ministries", listed_ministries_launchministries_path, target:"_blank" %></li>
-                      <li><%= link_to "events", events_path, target:"_blank" %></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box_inner">
-                  <div class="sub_header"><%= link_to "admin panel", root_path, target:"_blank" %></div>
-                  <div class="minor_links">
-                    <ul>
-                      <li><%= link_to "dashboard", dashboard_user_path(current_user), target:"_blank" %></li>
-                      <li><%= link_to "content management", content_management_user_path(current_user), target:"_blank" %></li>
-                      <li><%= link_to "users", stats_users_user_path(current_user), target:"_blank" %></li>
-                      <li><%= link_to "events", stats_events_user_path(current_user), target:"_blank" %></li>
-                      <li><%= link_to "ministries", stats_ministries_user_path(current_user), target:"_blank" %></li>
-                      <li><%= link_to "resources", stats_resources_user_path(current_user), target:"_blank" %></li>
-                      <li><%= link_to "forum/discussions", stats_forum_user_path(current_user), target:"_blank" %></li>
-                      <li><%= link_to "career", stats_careers_user_path(current_user), target:"_blank" %></li>
-                      <li><%= link_to "galleries", stats_galleries_user_path(current_user), target:"_blank" %></li>
-                      <li><%= link_to "forms", "#", target:"_blank" %></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="box selected_bkgrd">
-                <div class="box_inner">
-                  <div class="sub_header"><%= link_to "header", root_path, target:"_blank" %></div>
-                  <div class="minor_links">
-                    <ul>
-                      <li><%= link_to "homepage", root_path, target:"_blank" %></li>
-                      <li><%= link_to "donate", donations_path, target:"_blank" %></li>
-                      <li><%= link_to "profile", user_path(current_user), target:"_blank" %></li>
-                      <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box_inner">
-                  <div class="sub_header"><%= link_to "privacy", privacy_path, target:"_blank" %></div>
-                  <div class="minor_links">
-                    <ul>
-                      <li><%= link_to "privacy policy", privacy_path, target:"_blank" %></li>
-                      <li><%= link_to "GDPR", gdpr_path, target:"_blank" %></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="box selected_bkgrd">
-                <div class="box_inner">
-                  <div class="sub_header"><%= link_to "footer", root_path, target:"_blank" %></div>
-                  <div class="minor_links">
-                    <ul>
-                      <li><%= link_to "RCCG", "http://rccg.org/", target:"_blank" %></li>
-                      <li><%= link_to "service times", service_times_path, target:"_blank" %></li>
-                      <li><%= link_to "envagelical alliance", "https://www.eauk.org/", target:"_blank" %></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box_inner">
-                  <div class="sub_header"><%= link_to "footer [bottom]", root_path, target:"_blank" %></div>
-                  <div class="minor_links">
-                    <ul>
-                      <li><%= link_to "home", root_path, target:"_blank" %></li>
-                      <li><%= link_to "about us", about_us_path, target:"_blank" %></li>
-                      <li><%= link_to "events", events_path, target:"_blank" %></li>
-                      <li><%= link_to "resources", resources_path, target:"_blank" %></li>
-                      <li><%= link_to "contacts", contact_path, target:"_blank" %></li>
-                      <li><%= link_to "communities & forum", listed_ministries_launchministries_path, target:"_blank" %></li>
-                      <li><%= link_to "multimedi portal", media_and_communication_path, target:"_blank" %></li>
-                      <li><%= link_to "artloedesigns", "https://artloedesigns.herokuapp.com/", target:"_blank" %></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="box selected_bkgrd">
-                <div class="box_inner">
-                  <div class="sub_header"><%= link_to "social links", root_path, target:"_blank" %></div>
-                  <div class="minor_links">
-                    <ul>
-                      <li><%= link_to "youtube", "https://www.youtube.com/channel/UC04lsiRC0cEgW6I_VqGW77A", target:"_blank" %></li>
-                      <li><%= link_to "facebook", "https://www.facebook.com/Open-Heavens-Christian-Centre-Edgware-London-189686507841221/", target:"_blank" %></li>
-                      <li><%= link_to "twitter", "https://twitter.com/OpenHeavensEdg", target:"_blank" %></li>
-                      <li><%= link_to "instagram", "https://www.instagram.com/ohccedgware/", target:"_blank" %></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- section -->
-
-        <div class="clear"></div>
-
         <!-- section -->       
         <div class="content_section">
           <div class="page_title">
@@ -277,6 +146,137 @@
                       <li><%= link_to "get connected", get_connected_path, target:"_blank" %></li>
                       <li><%= link_to "contact list", contact_list_path, target:"_blank" %></li>
                       <li><%= link_to "directions", directions_path, target:"_blank" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- section -->
+
+        <div class="clear"></div>
+
+        <!-- section -->
+        <div class="content_section">
+          <div class="page_title">
+            <span><i class="fa fa-link"></i></span>
+            <span>homepage links</span>
+          </div>
+          <div class="page_subtitle">find the below links that leads to various website pages on the website</div>
+          <div class="content_section_details">
+            <ul class="section_info">
+              <li class="box selected_bkgrd">
+                <div class="box_inner">
+                  <div class="sub_header"><%= link_to "homepage", root_path, target:"_blank" %></div>
+                  <div class="minor_links">
+                    <ul>
+                      <li><%= link_to "prayer", "#", target:"_blank" %></li>
+                      <li>
+                        <%= link_to "giving", donations_path, target:"_blank" %>
+                        <ul class="mini_links">
+                          <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= link_to "tithe", "#", target:"_blank" %></li>
+                          <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= link_to "offerings", "#", target:"_blank" %></li>
+                          <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= link_to "thanks giving", "#", target:"_blank" %></li>
+                          <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= link_to "welfare", "#", target:"_blank" %></li>
+                          <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= link_to "blessed to be a blessing", "#", target:"_blank" %></li>
+                          <li><i class="fa fa-angle-double-right" aria-hidden="true"></i> <%= link_to "others", "#", target:"_blank" %></li>
+                        </ul>
+                      </li>
+                      <li><%= link_to "OH radio", "#", target:"_blank" %></li>
+                      <li><%= link_to "multimedia", media_and_communication_path, target:"_blank" %></li>
+                      <li><%= link_to "small group", small_groups_path, target:"_blank" %></li>
+                      <li><%= link_to "volunteering", careers_and_volunteers_path, target:"_blank" %></li>
+                      <li><%= link_to "forms", forms_path, target:"_blank" %></li>
+                      <li><%= link_to "resources", resources_path, target:"_blank" %></li>
+                      <li><%= link_to "forum", forum_path, target:"_blank" %></li>
+                      <li><%= link_to "ministries", listed_ministries_launchministries_path, target:"_blank" %></li>
+                      <li><%= link_to "events", events_path, target:"_blank" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="box">
+                <div class="box_inner">
+                  <div class="sub_header"><%= link_to "admin panel", root_path, target:"_blank" %></div>
+                  <div class="minor_links">
+                    <ul>
+                      <li><%= link_to "dashboard", dashboard_user_path(current_user), target:"_blank" %></li>
+                      <li><%= link_to "content management", content_management_user_path(current_user), target:"_blank" %></li>
+                      <li><%= link_to "users", stats_users_user_path(current_user), target:"_blank" %></li>
+                      <li><%= link_to "events", stats_events_user_path(current_user), target:"_blank" %></li>
+                      <li><%= link_to "ministries", stats_ministries_user_path(current_user), target:"_blank" %></li>
+                      <li><%= link_to "resources", stats_forms_user_path(current_user), target:"_blank" %></li>
+                      <li><%= link_to "forum/discussions", stats_forum_user_path(current_user), target:"_blank" %></li>
+                      <li><%= link_to "career", stats_careers_user_path(current_user), target:"_blank" %></li>
+                      <li><%= link_to "galleries", stats_galleries_user_path(current_user), target:"_blank" %></li>
+                      <li><%= link_to "forms", "#", target:"_blank" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="box selected_bkgrd">
+                <div class="box_inner">
+                  <div class="sub_header"><%= link_to "header", root_path, target:"_blank" %></div>
+                  <div class="minor_links">
+                    <ul>
+                      <li><%= link_to "homepage", root_path, target:"_blank" %></li>
+                      <li><%= link_to "donate", donations_path, target:"_blank" %></li>
+                      <li><%= link_to "profile", user_path(current_user), target:"_blank" %></li>
+                      <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="box">
+                <div class="box_inner">
+                  <div class="sub_header"><%= link_to "privacy", privacy_path, target:"_blank" %></div>
+                  <div class="minor_links">
+                    <ul>
+                      <li><%= link_to "privacy policy", privacy_path, target:"_blank" %></li>
+                      <li><%= link_to "GDPR", gdpr_path, target:"_blank" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="box selected_bkgrd">
+                <div class="box_inner">
+                  <div class="sub_header"><%= link_to "footer", root_path, target:"_blank" %></div>
+                  <div class="minor_links">
+                    <ul>
+                      <li><%= link_to "RCCG", "http://rccg.org/", target:"_blank" %></li>
+                      <li><%= link_to "service times", service_times_path, target:"_blank" %></li>
+                      <li><%= link_to "envagelical alliance", "https://www.eauk.org/", target:"_blank" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="box">
+                <div class="box_inner">
+                  <div class="sub_header"><%= link_to "footer [bottom]", root_path, target:"_blank" %></div>
+                  <div class="minor_links">
+                    <ul>
+                      <li><%= link_to "home", root_path, target:"_blank" %></li>
+                      <li><%= link_to "about us", about_us_path, target:"_blank" %></li>
+                      <li><%= link_to "events", events_path, target:"_blank" %></li>
+                      <li><%= link_to "resources", resources_path, target:"_blank" %></li>
+                      <li><%= link_to "contacts", contact_path, target:"_blank" %></li>
+                      <li><%= link_to "communities & forum", listed_ministries_launchministries_path, target:"_blank" %></li>
+                      <li><%= link_to "multimedi portal", media_and_communication_path, target:"_blank" %></li>
+                      <li><%= link_to "artloedesigns", "https://artloedesigns.herokuapp.com/", target:"_blank" %></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="box selected_bkgrd">
+                <div class="box_inner">
+                  <div class="sub_header"><%= link_to "social links", root_path, target:"_blank" %></div>
+                  <div class="minor_links">
+                    <ul>
+                      <li><%= link_to "youtube", "https://www.youtube.com/channel/UC04lsiRC0cEgW6I_VqGW77A", target:"_blank" %></li>
+                      <li><%= link_to "facebook", "https://www.facebook.com/Open-Heavens-Christian-Centre-Edgware-London-189686507841221/", target:"_blank" %></li>
+                      <li><%= link_to "twitter", "https://twitter.com/OpenHeavensEdg", target:"_blank" %></li>
+                      <li><%= link_to "instagram", "https://www.instagram.com/ohccedgware/", target:"_blank" %></li>
                     </ul>
                   </div>
                 </div>

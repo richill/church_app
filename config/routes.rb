@@ -53,7 +53,7 @@ Rails.application.routes.draw do
       get 'stats-users'
       get 'stats-events'
       get 'stats-ministries'
-      get 'stats-resources'
+      get 'stats-forms'
       get 'stats-forum'
       get 'stats-careers'
       get 'stats-galleries'
