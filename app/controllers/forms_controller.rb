@@ -59,7 +59,7 @@ class FormsController < ApplicationController
     if user_signed_in? && current_user.admin
       @form.destroy
       respond_to do |format|
-        format.html { redirect_to forms_url, notice: 'Form was successfully destroyed.' }
+        format.html { redirect_to stats_forms_user_path(current_user), notice: 'Form was successfully destroyed.' }
         format.json { head :no_content }
       end
     else

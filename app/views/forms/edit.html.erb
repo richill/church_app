@@ -1,6 +1,8 @@
-<h1>Editing Form</h1>
+<% provide(:title, "Update Form") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header' %></div>
+  <%= render 'form', form: @form %>
+  <%= render 'shared/footer' %>
+</div>
 
-<%= render 'form', form: @form %>
-
-<%= link_to 'Show', @form %> |
-<%= link_to 'Back', forms_path %>
