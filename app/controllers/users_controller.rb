@@ -151,6 +151,7 @@ class UsersController < ApplicationController
       @discussions = Discussion.all
       @jobs = Job.all
       @forms = Form.all
+      @photos = Photo.all
     end
 
     def set_user

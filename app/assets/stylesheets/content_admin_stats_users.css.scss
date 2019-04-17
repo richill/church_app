@@ -137,6 +137,15 @@
   font-size: 12px;
 }
 
+.content_admin_sitelinks .data_title a {
+  padding: 5px;
+  background-color: #2A2C49 !important;
+  color: #fff !important;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 12px;
+}
+
 .content_admin_sitelinks .divider {
   border-bottom: 1px solid #D4D4D4;
   margin: 15px 0px;
@@ -278,6 +287,21 @@
     text-align: center;
   }
 }
+
+.content_admin_sitelinks .main_data_title {
+  margin: 0px 15px;
+  font-size: 20px;
+  text-transform: capitalize;
+  padding: 0px 5px;
+  margin-bottom: 2px;
+  background-color: #8ABFA1 !important;
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 5px;
+}
+
+
+
 
 
 

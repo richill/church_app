@@ -11,13 +11,77 @@
 
     <!-- upper_section -->
     <div class="medium-12 columns page_cover upper_section">
+
+      <!-- users -->
       <div class="medium-12 columns data_main_cover">
+        <div class="main_data_title">users</div>
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">total users</div>
+            <div class="data_title"><%= link_to "total users", stats_users_user_path(current_user) %></div>
             <div class="stats_content">
               <span class="icon_cover">
-                <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
+                <div class="icon_inner_cover"><i class="fa fa-users" aria-hidden="true"></i></div>
+              </span>
+              <span class="main_stats"><%= @users.all.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "registered admins", stats_users_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-user" aria-hidden="true"></i></div>
+              </span>
+              <span class="main_stats"><%= @users.admins.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "registered female users", stats_users_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-female"></i></div>
+              </span>
+              <span class="main_stats"><%= @users.females.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "registered male users", stats_users_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-male"></i></div>
+              </span>
+              <span class="main_stats"><%= @users.males.count %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- users -->
+
+      <!-- events -->
+      <div class="medium-12 columns data_main_cover">
+        <div class="main_data_title">events</div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "total events", stats_events_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+              </span>
+              <span class="main_stats"><%= @events.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "upcoming events", stats_events_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-calendar" aria-hidden="true"></i></div>
               </span>
               <span class="main_stats"><%= @events.approved_events.open_events.active_events.count %></span>
             </div>
@@ -25,58 +89,162 @@
         </div>
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">total events</div>
+            <div class="data_title"><%= link_to "pending events", stats_events_user_path(current_user) %></div>
             <div class="stats_content">
               <span class="icon_cover">
-                <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
+                <div class="icon_inner_cover"><i class="fa fa-calendar" aria-hidden="true"></i></div>
               </span>
-              <span class="main_stats"><%= @events.approved_events.open_events.active_events.youth_events.count %></span>
+              <span class="main_stats"><%= @events.pending_events.open_events.active_events.count %></span>
             </div>
           </div>
         </div>
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">total ministries</div>
+            <div class="data_title"><%= link_to "closed events", stats_events_user_path(current_user) %></div>
             <div class="stats_content">
               <span class="icon_cover">
-                <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
+                <div class="icon_inner_cover"><i class="fa fa-calendar" aria-hidden="true"></i></div>
               </span>
-              <span class="main_stats"><%= @events.approved_events.open_events.active_events.church_events.count %></span>
-            </div>
-          </div>
-        </div>
-        <div class="medium-3 columns data_stats_cover">
-          <div class="data_stats">
-            <div class="data_title">total forums</div>
-            <div class="stats_content">
-              <span class="icon_cover">
-                <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
-              </span>
-              <span class="main_stats"><%= @events.approved_events.open_events.active_events.community_events.count %></span>
+              <span class="main_stats"><%= @events.openAndcloseExpired_events_and_closedActive_events.count %></span>
             </div>
           </div>
         </div>
       </div>
+      <!-- events -->
+
+      <!-- ministries -->
       <div class="medium-12 columns data_main_cover">
+        <div class="main_data_title">ministries</div>
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">total jobs</div>
+            <div class="data_title"><%= link_to "total ministries", stats_ministries_user_path(current_user) %></div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @events.approved_events.open_events.active_events.national_events.count %></span>
+              <span class="main_stats"><%= @launchministries.all.count %></span>
             </div>
           </div>
         </div>
         <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
-            <div class="data_title">total galleries</div>
+            <div class="data_title"><%= link_to "approved ministries", stats_ministries_user_path(current_user) %></div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
               </span>
-              <span class="main_stats"><%= @events.approved_events.open_events.active_events.leadership_events.count %></span>
+              <span class="main_stats"><%= @launchministries.approved_ministries.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "total pending ministries", stats_ministries_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
+              </span>
+              <span class="main_stats"><%= @launchministries.pending_ministries.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "admin ministries", stats_ministries_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
+              </span>
+              <span class="main_stats"><%= @launchministries.admin_ministries.count %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ministries -->
+
+      <!-- careers -->
+      <div class="medium-12 columns data_main_cover">
+        <div class="main_data_title">jobs</div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "total active jobs", stats_careers_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-address-card-o" aria-hidden="true"></i></div>
+              </span>
+              <span class="main_stats"><%= @jobs.aprroved_jobs.opened_jobs.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "total church jobs", stats_careers_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-address-card-o" aria-hidden="true"></i></div>
+              </span>
+              <span class="main_stats"><%= @jobs.aprroved_jobs.opened_jobs.church_jobs.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "total career jobs", stats_careers_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-address-card-o" aria-hidden="true"></i></div>
+              </span>
+              <span class="main_stats"><%= @jobs.aprroved_jobs.opened_jobs.career_jobs.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "total volunteer jobs", stats_careers_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-address-card-o" aria-hidden="true"></i></div>
+              </span>
+              <span class="main_stats"><%= @jobs.aprroved_jobs.opened_jobs.volunteer_jobs.count %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- careers -->
+
+      <!-- others -->
+      <div class="medium-12 columns data_main_cover">
+        <div class="main_data_title">others</div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "total forms", stats_forms_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-wpforms" aria-hidden="true"></i></div>
+              </span>
+              <span class="main_stats"><%= @forms.all.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "total discussions", stats_forum_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-comments" aria-hidden="true"></i></div>
+              </span>
+              <span class="main_stats"><%= @discussions.all.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title"><%= link_to "total galleries", stats_galleries_user_path(current_user) %></div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-camera"></i></div>
+              </span>
+              <span class="main_stats"><%= @gallries.all.count %></span>
             </div>
           </div>
         </div>
@@ -85,30 +253,16 @@
             <div class="data_title">total photos</div>
             <div class="stats_content">
               <span class="icon_cover">
-                <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
+                <div class="icon_inner_cover"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
               </span>
-              <span class="main_stats"><%= @events.approved_events.open_events.active_events.baptism_events.count %></span>
-            </div>
-          </div>
-        </div>
-        <div class="medium-3 columns data_stats_cover">
-          <div class="data_stats">
-            <div class="data_title">total forms</div>
-            <div class="stats_content">
-              <span class="icon_cover">
-                <div class="icon_inner_cover"><i class="fa fa-building"></i></div>
-              </span>
-              <span class="main_stats"><%= @events.approved_events.open_events.active_events.biblestudies_events.count %></span>
+              <span class="main_stats"><%= @photos.all.count %></span>
             </div>
           </div>
         </div>
       </div>
+      <!-- others -->
     </div>
 
-    <ul>
-      <li>total admins</li>
-      <li>total active events</li>
-    </ul>
     <div class="clear"></div>
     <!-- upper_section -->
 
