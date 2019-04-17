@@ -142,6 +142,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def content_management
+    unless user_signed_in? && current_user.admin
+      redirect_to error_path
+    end
+  end
+
   private
     def setup_generic
       @users = User.all
