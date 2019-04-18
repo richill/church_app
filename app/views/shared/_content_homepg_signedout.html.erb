@@ -10,15 +10,25 @@
             <div class="wrapper">
               <div class="carousel">
                 <div class="inner">
-                  <div class="slide active">
-                    <h1>1</h1>
-                  </div>
-                  <div class="slide">
-                    <h1>2</h1>
-                  </div>
-                  <div class="slide">
-                    <h1>3</h1>
-                  </div>
+                  <ul>
+                    <li>
+                      <div class="slide active">
+                        <!-- 770 [767] x 230 [296] -->
+                        <h1><%= link_to(image_tag("img_sample.jpg"), "#") %></h1>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="slide">
+                        <h1>2</h1>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="slide">
+                        <h1>3</h1>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
                 <div class="arrow arrow-left hide"></div>
                 <div class="arrow arrow-right hide"></div>
@@ -78,7 +88,6 @@
               <li>
                 <%= link_to donations_path do %>
                 <div><i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i></div>
-                <!-- <div><i class="fa fa-hand-holding-usd" aria-hidden="true"></i></div> -->
                 <div class="option_header">giving</div>
                 <% end %>
               </li>
@@ -135,7 +144,6 @@
               <li>
                 <%= link_to listed_ministries_launchministries_path do %>
                 <div><i class="fa fa-building" aria-hidden="true"></i></div>
-                <!-- <div><i class="fa fa-building" aria-hidden="true"></i></div> -->
                 <div class="option_header">ministries</div>
                 <% end %>
               </li>
