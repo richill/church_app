@@ -227,9 +227,9 @@
                     <span><i class="fa fa-youtube"></i></span>
                     <span class="vid_responsive">
                       <% if @sitemanagment.videotitle.present? %>
-                        <span><%= @sitemanagment.videotitle %></span>
+                        <span><%= truncate("#{@sitemanagment.videotitle}", length: 60) %></span>
                       <% else %>
-                        <span>Abundant Life Easter Special - Pastor Daniel Akhazemea</span>
+                        <span><%= truncate("Abundant Life Easter Special - Pastor Daniel Akhazemea", length: 25) %></span>
                       <% end %>
                     </span>
                     <span class="vid_non_responsive">
