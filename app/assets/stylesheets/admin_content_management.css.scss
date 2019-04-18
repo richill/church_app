@@ -477,9 +477,11 @@
   margin-bottom: 15px;
 }
 
-.admin_content_management .site_label {
+.admin_content_management .input_content label {
   color: #a1355b;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
 }
 
 .admin_content_management .edit_btn a {
