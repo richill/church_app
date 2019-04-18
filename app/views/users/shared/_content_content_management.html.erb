@@ -39,7 +39,17 @@
             <div class="data_list_title">homepage contents</div>
             <!-- scroll image content -->
             <div class="medium-12 columns scroll_image_content">
-              <div class="hide">left_section size: 770 x 300 | https://cloudinary.com/console/media_library/folders/all/event%20images</div>
+              <div class="instructions">
+                <div>
+                  <span>How to get image URL: </span>
+                  <ul>
+                    <li>[1] image size must be 770 x 300</li>
+                    <li>[2] upload image into cloudinary <%= link_to "click here to link where image must be uploaded", "https://cloudinary.com/console/media_library/folders/all/event%20images", target:"_blank" %></li>
+                    <li>[3] upload image by clicking "upload"</li>
+                    <li>[4] copy url link and paste here</li>
+                  </ul>
+                </div>
+              </div>
               <!-- left_section -->
               <div class="medium-4 columns">
                 <div>
@@ -113,8 +123,25 @@
 
             <!-- video content -->
             <div class="medium-12 columns video_content">
-              <div>video content</div>
-              <div class="medium-4 columns"></div>
+              <div class="instructions">
+                <div>
+                  <span>How to get video URL: </span>
+                  <ul>
+                    <li>[1] got to youtube <%= link_to "https://www.youtube.com", "https://www.youtube.com", target:"_blank" %></li>
+                    <li>[2] copy the URL link of the video and paste here</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="medium-4 columns">
+                <div class="admin_video_frame">
+                  <% if @sitemanagment.homepg_video.present? %>
+                    <div><%= embed(@sitemanagment.homepg_video) %></div>
+                  <% else %>
+                    <div><%= image_tag("img_default_mainimg.png") %></div>
+                  <% end %>
+                </div>
+              </div>
+
               <div class="medium-8 columns">
                 <div class="section_form">
                   <%= simple_form_for(@sitemanagment) do |f| %>
