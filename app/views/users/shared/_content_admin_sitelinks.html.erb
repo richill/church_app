@@ -198,7 +198,7 @@
               </li>
               <li class="box">
                 <div class="box_inner">
-                  <div class="sub_header"><%= link_to "admin panel", root_path, target:"_blank" %></div>
+                  <div class="sub_header"><%= link_to "admin panel", "#", target:"_blank" %></div>
                   <div class="minor_links">
                     <ul>
                       <li><%= link_to "dashboard", dashboard_user_path(current_user), target:"_blank" %></li>
@@ -217,7 +217,7 @@
               </li>
               <li class="box selected_bkgrd">
                 <div class="box_inner">
-                  <div class="sub_header"><%= link_to "header", root_path, target:"_blank" %></div>
+                  <div class="sub_header"><%= link_to "header", "#", target:"_blank" %></div>
                   <div class="minor_links">
                     <ul>
                       <li><%= link_to "homepage", root_path, target:"_blank" %></li>
@@ -241,7 +241,7 @@
               </li>
               <li class="box selected_bkgrd">
                 <div class="box_inner">
-                  <div class="sub_header"><%= link_to "footer", root_path, target:"_blank" %></div>
+                  <div class="sub_header"><%= link_to "footer", "#", target:"_blank" %></div>
                   <div class="minor_links">
                     <ul>
                       <li><%= link_to "RCCG", "http://rccg.org/", target:"_blank" %></li>
@@ -250,10 +250,8 @@
                     </ul>
                   </div>
                 </div>
-              </li>
-              <li class="box">
                 <div class="box_inner">
-                  <div class="sub_header"><%= link_to "footer [bottom]", root_path, target:"_blank" %></div>
+                  <div class="sub_header"><%= link_to "footer [bottom]", "#", target:"_blank" %></div>
                   <div class="minor_links">
                     <ul>
                       <li><%= link_to "home", root_path, target:"_blank" %></li>
@@ -268,9 +266,9 @@
                   </div>
                 </div>
               </li>
-              <li class="box selected_bkgrd">
+              <li class="box ">
                 <div class="box_inner">
-                  <div class="sub_header"><%= link_to "social links", root_path, target:"_blank" %></div>
+                  <div class="sub_header"><%= link_to "social links", "#", target:"_blank" %></div>
                   <div class="minor_links">
                     <ul>
                       <li><%= link_to "youtube", "https://www.youtube.com/channel/UC04lsiRC0cEgW6I_VqGW77A", target:"_blank" %></li>
@@ -281,11 +279,44 @@
                   </div>
                 </div>
               </li>
+              <li class="box selected_bkgrd">
+                <div class="box_inner">
+                  <div class="sub_header"><%= link_to "development links", "#", target:"_blank" %></div>
+                  <div class="minor_links">
+                    <ul>
+                      <li>
+                        <%= link_to "trello", "https://trello.com/b/EfxLjrQB/p07-churchapp", target:"_blank" %>
+                        <ul class="mini_links">
+                          <li><i class="fa fa-info-circle" aria-hidden="true"></i> <%= link_to "dev mgt platform", "https://trello.com/b/EfxLjrQB/p07-churchapp", target:"_blank" %></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <%= link_to "cloudinary", "https://cloudinary.com/", target:"_blank" %>
+                        <ul class="mini_links">
+                          <li><i class="fa fa-info-circle" aria-hidden="true"></i> <%= link_to "image cloud platform", "https://cloudinary.com/", target:"_blank" %></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <%= link_to "heroku", "https://dashboard.heroku.com", target:"_blank" %>
+                        <ul class="mini_links">
+                          <li><i class="fa fa-info-circle" aria-hidden="true"></i> <%= link_to "website server", "https://dashboard.heroku.com", target:"_blank" %></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <%= link_to "github", "https://github.com/richill/church_app", target:"_blank" %>
+                        <ul class="mini_links">
+                          <li><i class="fa fa-info-circle" aria-hidden="true"></i> <%= link_to "code repository", "https://github.com/richill/church_app", target:"_blank" %></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
         <!-- section -->
-        
+
       </div>
     </div>
   </div>
