@@ -37,34 +37,99 @@
           <!-- homepage content -->
           <div class="listed_events" id="eventstats_upcoming_tab_content">
             <div class="data_list_title">homepage contents</div>
-            <div>hello</div>
+            <div class="medium-12 columns">
+
+              <!-- left_section -->
+              <div class="medium-4 columns">
+                <div>left_section size: 770 x 300</div>
+                <div>
+                  <% if @sitemanagment.homepg_img01.present? %>
+                    <div class="upload_page_img"><%= cl_image_tag("#{@sitemanagment.homepg_img01}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %></div>
+                  <% else %>
+                    <div class="upload_page_img"><%= image_tag("img_default_mainimg.png") %></div>
+                  <% end %>
+                </div>
+                <div>
+                  <% if @sitemanagment.homepg_img02.present? %>
+                    <div class="upload_page_img"><%= cl_image_tag("#{@sitemanagment.homepg_img01}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %></div>
+                  <% else %>
+                    <div class="upload_page_img"><%= image_tag("img_default_mainimg.png") %></div>
+                  <% end %>
+                </div>
+                <div>
+                  <% if @sitemanagment.homepg_img03.present? %>
+                    <div class="upload_page_img"><%= cl_image_tag("#{@sitemanagment.homepg_img01}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %></div>
+                  <% else %>
+                    <div class="upload_page_img"><%= image_tag("img_default_mainimg.png") %></div>
+                  <% end %>
+                </div>  
+              </div>
+              
+
+              <!-- right_section -->
+              <div class="medium-8 columns">
+                <div>right_section</div>
+                <div class="section_form">
+                  <%= simple_form_for(@sitemanagment) do |f| %>
+                    <%= f.error_notification %>
+
+                    <div class="form-inputs">
+                      <div class="img_form">
+                        <div class="site_label">1st scroll image</div>
+                        <div>
+                          <%= f.input :homepg_img01, label: false, placeholder: "https://res.cloudinary.com/openheavensuk/image/upload/v1552407583/children%20teenage%20hub/img_08_childrenHub.png" %>
+                        </div>
+                      </div>
+
+                      <div class="img_form">
+                        <div class="site_label">2nd scroll image</div>
+                        <div><%= f.input :homepg_img02, label: false, placeholder: "https://res.cloudinary.com/openheavensuk/image/upload/v1552407583/children%20teenage%20hub/img_08_childrenHub.png" %></div>
+                      </div>
+
+                      <div class="img_form">
+                        <div class="site_label">3rd scroll image</div>
+                        <div><%= f.input :homepg_img03, label: false, placeholder: "https://res.cloudinary.com/openheavensuk/image/upload/v1552407583/children%20teenage%20hub/img_08_childrenHub.png" %></div>
+                      </div>
+
+                      <div><%# f.input :homepg_video %></div>
+                    </div>
+
+                    <div class="form-actions">
+                      <%= f.button :submit, "update scroll images" %>
+                    </div>
+                  <% end %>
+                </div>  
+              </div>
+            </div>
+
+
           </div>
           <div class="clear"></div>
           <!-- homepage content -->
 
-          <!-- pending events -->
+          <!-- tabs_02 -->
           <div class="listed_events" id="eventstats_pending_tab_content">
             <div class="data_list_title">tab 2</div>
             <div>tab 2</div>
           </div>
           <div class="clear"></div>
-          <!-- pending events -->
+          <!-- tabs_02 -->
 
-          <!-- past/closed events -->
+          <!-- tab_03 -->
           <div class="listed_events" id="eventstats_past_tab_content">
             <div class="data_list_title">tab 3</div>
             <div>tab 3</div>
           </div>
           <div class="clear"></div>
-          <!-- past/closed events -->
+          <!-- tab_03 -->
 
-          <!-- all events -->
+          <!-- tab_04 -->
           <div class="listed_events" id="eventstats_all_tab_content">
             <div class="data_list_title">tab 4</div>
             <div>tab 4</div>
           </div>
           <div class="clear"></div>
-          <!-- all events -->
+          <!-- tab_04 -->
 
         </div>
         <!-- listed_events -->

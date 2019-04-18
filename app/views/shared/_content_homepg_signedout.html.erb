@@ -12,16 +12,26 @@
                 <div class="inner">
 
                   <div class="slide active">
-                    <!-- 770 [767] x 230 [296] -->
-                    <h1><%= link_to(image_tag("img_sample.jpg"), "#") %></h1>
+                    <h1>
+                      <% if @sitemanagment.homepg_img01.present? %>
+                        <%= link_to(image_tag("#{@sitemanagment.homepg_img01}"), "#") %>
+                      <% end %>
+                    </h1>
                   </div>
                   <div class="slide">
-                    <h1></h1>
+                    <h1>
+                      <% if @sitemanagment.homepg_img02.present? %>
+                        <%= link_to(image_tag("#{@sitemanagment.homepg_img02}"), "#") %>
+                      <% end %>
+                    </h1>
                   </div>
                   <div class="slide">
-                    <h1></h1>
+                    <h1>
+                      <% if @sitemanagment.homepg_img03.present? %>
+                        <%= link_to(image_tag("#{@sitemanagment.homepg_img03}"), "#") %>
+                      <% end %>
+                    </h1>
                   </div>
-
                 </div>
                 <div class="arrow arrow-left hide"></div>
                 <div class="arrow arrow-right hide"></div>

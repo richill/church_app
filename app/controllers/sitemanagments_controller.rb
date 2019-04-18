@@ -34,7 +34,7 @@ class SitemanagmentsController < ApplicationController
       @sitemanagment = Sitemanagment.new(sitemanagment_params)
       respond_to do |format|
         if @sitemanagment.save
-          format.html { redirect_to @sitemanagment, notice: 'Sitemanagment was successfully created.' }
+          format.html { redirect_to content_management_user_path(current_user), notice: 'Sitemanagment was successfully created.' }
           format.json { render :show, status: :created, location: @sitemanagment }
         else
           format.html { render :new }
@@ -50,7 +50,7 @@ class SitemanagmentsController < ApplicationController
     if user_signed_in? && current_user.admin
       respond_to do |format|
         if @sitemanagment.update(sitemanagment_params)
-          format.html { redirect_to @sitemanagment, notice: 'Sitemanagment was successfully updated.' }
+          format.html { redirect_to content_management_user_path(current_user), notice: 'Sitemanagment was successfully updated.' }
           format.json { render :show, status: :ok, location: @sitemanagment }
         else
           format.html { render :edit }
@@ -76,7 +76,8 @@ class SitemanagmentsController < ApplicationController
 
   private
     def set_sitemanagment
-      @sitemanagment = Sitemanagment.find(params[:id])
+      @sitemanagment = Sitemanagment.first
+      # @sitemanagment = Sitemanagment.find(params[:id])
     end
 
     def sitemanagment_params

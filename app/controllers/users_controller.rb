@@ -143,7 +143,9 @@ class UsersController < ApplicationController
   end
 
   def content_management
-    unless user_signed_in? && current_user.admin
+    if user_signed_in? && current_user.admin
+      # @sitemanagment = Sitemanagment.new
+    else
       redirect_to error_path
     end
   end
@@ -158,6 +160,8 @@ class UsersController < ApplicationController
       @jobs = Job.all
       @forms = Form.all
       @photos = Photo.all
+      @sitemanagment = Sitemanagment.first
+      @user = current_user
     end
 
     def set_user
