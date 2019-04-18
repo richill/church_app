@@ -14,21 +14,21 @@
                   <div class="slide active">
                     <h1>
                       <% if @sitemanagment.homepg_img01.present? %>
-                        <%= link_to(image_tag("#{@sitemanagment.homepg_img01}"), "#") %>
+                        <%= link_to(image_tag("#{@sitemanagment.homepg_img01}"), "#{@sitemanagment.eventlink_img01}") %>
                       <% end %>
                     </h1>
                   </div>
                   <div class="slide">
                     <h1>
                       <% if @sitemanagment.homepg_img02.present? %>
-                        <%= link_to(image_tag("#{@sitemanagment.homepg_img02}"), "#") %>
+                        <%= link_to(image_tag("#{@sitemanagment.homepg_img02}"), "#{@sitemanagment.eventlink_img02}") %>
                       <% end %>
                     </h1>
                   </div>
                   <div class="slide">
                     <h1>
                       <% if @sitemanagment.homepg_img03.present? %>
-                        <%= link_to(image_tag("#{@sitemanagment.homepg_img03}"), "#") %>
+                        <%= link_to(image_tag("#{@sitemanagment.homepg_img03}"), "#{@sitemanagment.eventlink_img0}") %>
                       <% end %>
                     </h1>
                   </div>
@@ -224,16 +224,44 @@
               <!-- <div><%# embed(blog.link) %> note:https://stackoverflow.com/questions/5909121/converting-a-regular-youtube-link-into-an-embedded-video</div> -->
               <div class="video_title">
                 <span>
-                  <%= link_to "https://www.youtube.com/embed/vBq9pvvaYoY", target:"_blank" do %>
+
+                  <%# if @sitemanagment.homepg_video.present? %>
+                    <%# link_to "#{@sitemanagment.homepg_video}", "#", target:"_blank" do %>
+                  <%# else %>
+                    <%= link_to "https://www.youtube.com/embed/vBq9pvvaYoY", target:"_blank" do %>
+                  <%# end %>
+
+
                   <span><i class="fa fa-youtube"></i></span>
-                  <span class="vid_responsive">Abundant Life Easter Special - Pastor Daniel Akhazemea</span>
-                  <span class="vid_non_responsive"><%= truncate("Abundant Life Easter Special - Pastor Daniel Akhazemea", length: 25) %></span>
+                  <span class="vid_responsive">
+                    <% if @sitemanagment.videotitle.present? %>
+                      <span><%= @sitemanagment.videotitle %></span>
+                    <% else %>
+                      <span>Abundant Life Easter Special - Pastor Daniel Akhazemea</span>
+                    <% end %>
+                  </span>
+                  <span class="vid_non_responsive">
+                    <% if @sitemanagment.videotitle.present? %>
+                      <span><%= truncate("#{@sitemanagment.videotitle}", length: 25) %></span>
+                    <% else %>
+                      <span><%= truncate("Abundant Life Easter Special - Pastor Daniel Akhazemea", length: 25) %></span>
+                    <% end %>
+                  </span>
                   <% end %>
                 </span>
                 <span class="video_header"><%= link_to "view more videos", "https://www.youtube.com/channel/UC04lsiRC0cEgW6I_VqGW77A/videos", target:"_blank" %></span>
               </div>
-              <div>
-                <iframe src="https://www.youtube.com/embed/vBq9pvvaYoY" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+
+
+
+              <div class="video_section">
+                <% if @sitemanagment.homepg_video.present? %>
+                  <div class="video_frame">
+                    <div><%= embed(@sitemanagment.homepg_video) %></div>
+                  </div>
+                <% else %>
+                  <iframe src="https://www.youtube.com/embed/vBq9pvvaYoY" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+                <% end %>
               </div>
             </div>
           </div>
