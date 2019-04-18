@@ -1,0 +1,2 @@
+class Sitemanagment < ApplicationRecord
+end

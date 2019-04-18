@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sitemanagments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Homepg img01</th>
+      <th>Homepg img02</th>
+      <th>Homepg img03</th>
+      <th>Homepg video</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sitemanagments.each do |sitemanagment| %>
+      <tr>
+        <td><%= sitemanagment.homepg_img01 %></td>
+        <td><%= sitemanagment.homepg_img02 %></td>
+        <td><%= sitemanagment.homepg_img03 %></td>
+        <td><%= sitemanagment.homepg_video %></td>
+        <td><%= link_to 'Show', sitemanagment %></td>
+        <td><%= link_to 'Edit', edit_sitemanagment_path(sitemanagment) %></td>
+        <td><%= link_to 'Destroy', sitemanagment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sitemanagment', new_sitemanagment_path %>

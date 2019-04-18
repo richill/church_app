@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190313162304) do
+ActiveRecord::Schema.define(version: 20190418111625) do
 
   create_table "attendances", force: :cascade do |t|
     t.string   "attendable_type"
@@ -213,6 +213,15 @@ ActiveRecord::Schema.define(version: 20190313162304) do
     t.text     "notes"
     t.string   "filename"
     t.string   "link"
+  end
+
+  create_table "sitemanagments", force: :cascade do |t|
+    t.string   "homepg_img01"
+    t.string   "homepg_img02"
+    t.string   "homepg_img03"
+    t.string   "homepg_video"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "smallgroups", force: :cascade do |t|

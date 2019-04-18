@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sitemanagments
   resources :forms
   resources :practicalneeds  do
     resources :comments, only: [:create, :destroy] 

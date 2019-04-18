@@ -1,0 +1,14 @@
+<%= simple_form_for(@sitemanagment) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :homepg_img01 %>
+    <%= f.input :homepg_img02 %>
+    <%= f.input :homepg_img03 %>
+    <%= f.input :homepg_video %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

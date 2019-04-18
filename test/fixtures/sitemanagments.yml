@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  homepg_img01: 
+  homepg_img02: 
+  homepg_img03: 
+  homepg_video: MyString
+
+two:
+  homepg_img01: 
+  homepg_img02: 
+  homepg_img03: 
+  homepg_video: MyString
