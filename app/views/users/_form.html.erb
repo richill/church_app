@@ -29,8 +29,12 @@
                   </div>
                   <div class="clear"></div>
 
-                  <div class=""><%= f.input :job, placeholder: "job title eg:project manager", label: false %></div>
-                  <div class="clear"></div>
+                  <div class="info_sub_content">
+                    <ul>
+                      <li class="form_left"><%= f.input :job, label: false, placeholder: "job title eg:project manager" %></li>
+                      <li class="form_right"><%= f.input :email, label: false, placeholder: "emma@gmail.com" %></li>
+                    </ul>
+                  </div>
 
                   <div><%= f.association :category_gender, collection: CategoryGender.all, prompt: "select gender", label: false %></div>
                   <div class="clear"></div>
