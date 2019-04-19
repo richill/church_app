@@ -545,9 +545,39 @@
   margin-top: 29px;
 }
 
+.admin_content_management .stream_present {
+  color: #2F3F5B;
+  background-color: rgba(161,53,91, 0.3);
+  text-align: center;
+  padding: 30px;
+  margin-top: 16px;
+  border-radius: 5px;
+}
 
+.admin_content_management .stream_present i {
+  font-size: 100px;
+}
 
+.admin_content_management .stream_present .text {
+  text-transform: capitalize;
+}
 
+.admin_content_management .stream_absent {
+  color: #2F3F5B;
+  background-color: rgba(42, 44, 73, 0.05);
+  text-align: center;
+  padding: 30px;
+  margin-top: 16px;
+  border-radius: 5px;
+}
+
+.admin_content_management .stream_absent i {
+  font-size: 100px;
+}
+
+.admin_content_management .stream_absent .text {
+  text-transform: capitalize;
+}
 
 
 // -----------------------------
@@ -583,46 +613,6 @@
   -o-transition: all 0.3s ease;
 }
 
-
-
-
-// -----------------------------
-//   workings
-// -----------------------------
-
-.stream_present {
-  color: #2F3F5B;
-  background-color: rgba(161,53,91, 0.3);
-  text-align: center;
-  padding: 30px;
-  margin-top: 16px;
-  border-radius: 5px;
-}
-
-.stream_present i {
-  font-size: 100px;
-}
-
-.stream_present .text {
-  text-transform: capitalize;
-}
-
-.stream_absent {
-  color: #2F3F5B;
-  background-color: rgba(42, 44, 73, 0.05);
-  text-align: center;
-  padding: 30px;
-  margin-top: 16px;
-  border-radius: 5px;
-}
-
-.stream_absent i {
-  font-size: 100px;
-}
-
-.stream_absent .text {
-  text-transform: capitalize;
-}
 
 
 
