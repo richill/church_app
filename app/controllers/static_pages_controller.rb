@@ -103,6 +103,9 @@ class StaticPagesController < ApplicationController
   def donatepg
   end
 
+  def faqpg
+  end
+
   def forumpg
     @discussions = Discussion.all
   end

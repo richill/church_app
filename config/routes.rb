@@ -90,6 +90,7 @@ Rails.application.routes.draw do
   get     'connect',                  to: 'static_pages#connectdpg'
   get     'children-teenage-corner',  to: 'static_pages#childrenteenpg'
   get     'church-jobs',              to: 'static_pages#churchjobspg'
+  get     'faqs',                     to: 'static_pages#faqpg'
   get     'directions',               to: 'static_pages#directionpg'
   get     'donations',                to: 'static_pages#donatepg'
   get     'error',                    to: 'static_pages#errorpg'

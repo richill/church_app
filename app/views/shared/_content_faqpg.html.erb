@@ -1,0 +1,33 @@
+<div class="pages_boarder"></div>
+<div class="medium-12 columns content_faqspg_section">
+  <div class="content_faqspg_inner_section">
+    <div class="medium-12 columns faqs_content">
+      <div class="tree_line">
+        <span><%= link_to "home", root_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "resources", resources_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "useful services", useful_services_path %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">FAQs</span>
+      </div>
+
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">frequently asked questions</div>
+            <div class="page_img"><%= image_tag("img_default_mainimg.png") %></div>
+            <h1>awaiting static content</h1>
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
+  </div>
+</div>
