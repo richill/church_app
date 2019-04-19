@@ -58,6 +58,9 @@ Rails.application.routes.draw do
       get 'stats-forum'
       get 'stats-careers'
       get 'stats-galleries'
+      get 'stats-smallgroups'
+      get 'stats-magazines'
+      get 'stats-business'
     end
   end
   

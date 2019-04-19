@@ -43,7 +43,7 @@
               <div class="action_btn">
                 <% if user_signed_in? %>
                   <% if current_user.admin? %>
-                    <span><%= link_to "edit group name", edit_discussion_path(@smallgroup) %></span>
+                    <span><%= link_to "edit group name", edit_smallgroup_path(@smallgroup) %></span>
                     <span><%= link_to "delete group name", "#" %></span>
                   <% end %>
 
