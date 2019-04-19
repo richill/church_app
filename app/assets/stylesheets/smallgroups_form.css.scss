@@ -3,111 +3,111 @@
     File: views/events/_form.html.erb
   ===================================================*/
 
-.eventform_section {
-  padding: 0px !important; 
+.smallgroupsform_section {
+  padding: 0px !important;
 }
 
-.eventform_section .eventform_inner_section {
+.smallgroupsform_section .smallgroupsform_inner_section {
   width: 1150px;
   margin: auto;
   background-color: rgba(42, 44, 73, 0.1);
   margin-bottom: 30px;
 }
 @media only screen and (max-width: 1160px) {
-  .eventform_section .eventform_inner_section {
+  .smallgroupsform_section .smallgroupsform_inner_section {
     width: 100% !important;
   }
 }
 
-.eventform_section .eventform_content {
+.smallgroupsform_section .smallgroupsform_content {
   margin-bottom: 30px;
   padding: 0px !important;
 }
 
-.eventform_section .tree_line {
+.smallgroupsform_section .tree_line {
   font-size: 10px;
   text-transform: capitalize;
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 1160px) {
-  .eventform_section .tree_line {
+  .smallgroupsform_section .tree_line {
     margin-top: 25px;
     padding: 0px 15px !important;
   }
 }
 
-.eventform_section .tree_line a {
+.smallgroupsform_section .tree_line a {
   color: #2A2C49 !important;
 }
 
-.eventform_section .current_page {
+.smallgroupsform_section .current_page {
   color: #a07b35;
 }
 
-.eventform_section .page_main_content {
+.smallgroupsform_section .page_main_content {
   padding: 0px !important;
 }
 
-.eventform_section .info_left_content {
+.smallgroupsform_section .info_left_content {
   padding: 0px !important;
 }
 @media only screen and (max-width: 1160px) {
-  .eventform_section .info_left_content {
+  .smallgroupsform_section .info_left_content {
     width: 100% !important;
     padding: 0px 15px !important;
   }
 }
 
-.eventform_section .info_left_content .page_header {
+.smallgroupsform_section .info_left_content .page_header {
   font-size: 30px;
   font-weight: bold;
   text-transform: capitalize;
   color: #2A2C49;
 }
 
-.eventform_section .info_left_content .page_img {
+.smallgroupsform_section .info_left_content .page_img {
   margin-bottom: 15px;
   opacity: 0.8;
   overflow: hidden;
 }
 
-.eventform_section .info_left_content .paragraph_content {
+.smallgroupsform_section .info_left_content .paragraph_content {
   margin-bottom: 15px;
   color: #2A2C49;
 }
 
-.eventform_section .info_left_content .paragraph_content .sub_header {
+.smallgroupsform_section .info_left_content .paragraph_content .sub_header {
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 3px;
 }
 
-.eventform_section .info_left_content .paragraph_content ul {
+.smallgroupsform_section .info_left_content .paragraph_content ul {
   margin: 0px;
 }
 
-.eventform_section .info_left_content .paragraph_content ul li {
+.smallgroupsform_section .info_left_content .paragraph_content ul li {
   margin-bottom: 5px;
 }
 
-.eventform_section .info_left_content .paragraph_content .weblink {
+.smallgroupsform_section .info_left_content .paragraph_content .weblink {
   color: #a1355b !important;
 }
 
-.eventform_section .info_left_content .paragraph_content .weblink a {
+.smallgroupsform_section .info_left_content .paragraph_content .weblink a {
   color: #a1355b !important;
 }
 
-.eventform_section .listed_donation_links ul li {
+.smallgroupsform_section .listed_donation_links ul li {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.eventform_section .listed_donation_links ul li {
+.smallgroupsform_section .listed_donation_links ul li {
   margin-bottom: 5px !important;
 }
 
-.eventform_section .listed_donation_links ul li a {
+.smallgroupsform_section .listed_donation_links ul li a {
   background: linear-gradient(#57738E, #9DC6EB);
   color: #fff !important;
   height: 50px;
@@ -123,7 +123,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.eventform_section .listed_donation_links ul li a:hover {
+.smallgroupsform_section .listed_donation_links ul li a:hover {
   opacity: 0.8;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
@@ -131,19 +131,19 @@
   -o-transition: all 0.3s ease;
 }
 
-.eventform_section .pymt_img {
+.smallgroupsform_section .pymt_img {
   margin: 30px 0px 10px;
 }
 
-.eventform_section .pymt_img img {
+.smallgroupsform_section .pymt_img img {
   width: 200px;
 }
 
-.eventform_section .event_main_form {
+.smallgroupsform_section .event_main_form {
   margin-top: 30px;
 }
 
-.eventform_section .event_main_form label {
+.smallgroupsform_section .event_main_form label {
     color: #a1355b;
     text-transform: capitalize;
     font-size: 12px;
@@ -151,30 +151,30 @@
     margin-bottom: 10px;
 }
 
-.eventform_section .event_main_form .info_sub_content ul {
+.smallgroupsform_section .event_main_form .info_sub_content ul {
   margin: 0px !important;
   list-style-type: none;
 }
 
-.eventform_section .event_main_form .info_sub_content ul li {
+.smallgroupsform_section .event_main_form .info_sub_content ul li {
   width: 375px;
 }
 @media only screen and (max-width: 1160px) {
-  .eventform_section .event_main_form .info_sub_content ul li {
+  .smallgroupsform_section .event_main_form .info_sub_content ul li {
     width: 100% !important;
   }
 }
 
-.eventform_section .event_main_form .form_left {
+.smallgroupsform_section .event_main_form .form_left {
   float: left;
   margin-right: 10px;
 }
 
-.eventform_section .event_main_form .form_right {
+.smallgroupsform_section .event_main_form .form_right {
   float: right;
 }
 
-.eventform_section .event_main_form [type='text'] {
+.smallgroupsform_section .event_main_form [type='text'] {
   border: transparent;
   box-shadow: none !important;
   border-bottom: 1px solid #E8E9EB;
@@ -183,7 +183,7 @@
   margin-top: 15px;
 }
 
-.eventform_section .event_main_form [type='text']:focus {
+.smallgroupsform_section .event_main_form [type='text']:focus {
   border: transparent;
   border-bottom: 1px solid #a1355b;
   box-shadow: none !important;
@@ -191,7 +191,7 @@
   color: #2A2C49 !important;
 }
 
-.eventform_section .event_main_form [type='email'] {
+.smallgroupsform_section .event_main_form [type='email'] {
   border: transparent;
   box-shadow: none !important;
   border-bottom: 1px solid #E8E9EB;
@@ -200,7 +200,7 @@
   margin-top: 15px;
 }
 
-.eventform_section .event_main_form [type='email']:focus {
+.smallgroupsform_section .event_main_form [type='email']:focus {
   border: transparent;
   border-bottom: 1px solid #a1355b;
   box-shadow: none !important;
@@ -208,20 +208,21 @@
   color: #2A2C49 !important;
 }
 
-.eventform_section .event_description textarea {
+.smallgroupsform_section .event_description textarea {
   height: 150px !important;
   margin-bottom: 30px !important;
 }
 
-.eventform_section .event_main_form textarea {
+.smallgroupsform_section .event_main_form textarea {
   border: transparent;
   border-bottom: 1px solid #E8E9EB;
   box-shadow: none !important;
   color: #2A2C49 !important;
   margin-bottom: 0px;
+  height: 150px;
 }
 
-.eventform_section .event_main_form textarea:focus {
+.smallgroupsform_section .event_main_form textarea:focus {
   border: transparent;
   border-bottom: 1px solid #a1355b;
   box-shadow: none !important;
@@ -229,7 +230,7 @@
   color: #2A2C49 !important;
 }
 
-.eventform_section .event_main_form .form_btns {
+.smallgroupsform_section .event_main_form .form_btns {
   height: 100px;
   font-size: 12px;
   font-weight: bold;
@@ -238,22 +239,22 @@
   margin-top: 50px;
 }
 
-.eventform_section .event_main_form .form_btns ul {
+.smallgroupsform_section .event_main_form .form_btns ul {
   margin: 0px !important;
   list-style-type: none;
 }
 
 @media only screen and (max-width: 1160px) {
-  .eventform_section .event_main_form .form_btns ul li {
+  .smallgroupsform_section .event_main_form .form_btns ul li {
     width: 100% !important;
   }
 }
 
-.eventform_section .event_main_form .form_btns ul .cancel_btn {
+.smallgroupsform_section .event_main_form .form_btns ul .cancel_btn {
   float: left;
 }
 
-.eventform_section .event_main_form .cancel_btn a {
+.smallgroupsform_section .event_main_form .cancel_btn a {
   background-color: #a1355b !important;
   color: #fff !important;
   display: inline-block;
@@ -267,13 +268,13 @@
   -o-transition: all 0.3s ease;
 }
 @media only screen and (max-width: 1160px) {
-  .eventform_section .event_main_form .cancel_btn a {
+  .smallgroupsform_section .event_main_form .cancel_btn a {
     width: 100% !important;
     margin-bottom: 5px;
   }
 }
 
-.eventform_section .event_main_form .cancel_btn a:hover {
+.smallgroupsform_section .event_main_form .cancel_btn a:hover {
   opacity: 0.8;
   text-decoration: none !important;
   -webkit-transition: all 0.3s ease;
@@ -281,11 +282,11 @@
   -o-transition: all 0.3s ease;
 }
 
-.eventform_section .event_main_form .form_btns ul .submit_btn {
+.smallgroupsform_section .event_main_form .form_btns ul .submit_btn {
   float: right;
 }
 @media only screen and (max-width: 1160px) {
-  .eventform_section .event_main_form .form_btns ul .submit_btn {
+  .smallgroupsform_section .event_main_form .form_btns ul .submit_btn {
     width: 100% !important;
   }
 }
@@ -306,18 +307,18 @@
   }
 }
 
-.eventform_section .event_main_form input[type="submit"]:hover {
+.smallgroupsform_section .event_main_form input[type="submit"]:hover {
   opacity: 0.8;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.eventform_section #launchministry_approve {
+.smallgroupsform_section #launchministry_approve {
   margin-bottom: 0px;
 }
 
-.eventform_section .update_section {
+.smallgroupsform_section .update_section {
   background-color: rgba(42, 44, 73, 0.05);
   color: #2A2C49 !important;
   font-size: 12px;
@@ -325,15 +326,15 @@
   margin-top: 25px;
 }
 
-.eventform_section .update_section label {
+.smallgroupsform_section .update_section label {
   margin: 0px !important;
 }
 
-.eventform_section .update_section .weblink {
+.smallgroupsform_section .update_section .weblink {
   color: #a1355b !important;
 }
 
-.eventform_section #event_category_event_id {
+.smallgroupsform_section #event_category_event_id {
   font-family: "Lato", sans-serif;
   box-shadow: none !important;
   height: 50px;
@@ -343,7 +344,7 @@
   margin-bottom: 0px;
 }
 
-.eventform_section #event_category_country_id {
+.smallgroupsform_section #event_category_country_id {
   font-family: "Lato", sans-serif;
   box-shadow: none !important;
   height: 50px;
@@ -353,7 +354,7 @@
   margin-bottom: 0px;
 }
 
-.eventform_section #event_start_time_1i {
+.smallgroupsform_section #event_start_time_1i {
   width: 200px;
   float: left;
   margin-right: 15px;
@@ -364,7 +365,7 @@
   font-size: 15px;
 }
 
-.eventform_section #event_start_time_2i {
+.smallgroupsform_section #event_start_time_2i {
   width: 200px;
   float: left;
   margin-right: 15px;
@@ -375,7 +376,7 @@
   font-size: 15px;
 }
 
-.eventform_section #event_start_time_3i {
+.smallgroupsform_section #event_start_time_3i {
   width: 200px;
   float: left;
   margin-right: 15px;
@@ -386,7 +387,7 @@
   font-size: 15px;
 }
 
-.eventform_section #event_start_time_4i {
+.smallgroupsform_section #event_start_time_4i {
   width: 100px;
   float: left;
   margin-right: 15px;
@@ -397,7 +398,7 @@
   font-size: 15px;
 }
 
-.eventform_section #event_start_time_5i {
+.smallgroupsform_section #event_start_time_5i {
   width: 100px;
   float: left;
   margin-right: 15px;
@@ -408,7 +409,7 @@
   font-size: 15px;
 }
 
-.eventform_section #event_end_time_1i {
+.smallgroupsform_section #event_end_time_1i {
   width: 200px;
   float: left;
   margin-right: 15px;
@@ -419,7 +420,7 @@
   font-size: 15px;
 }
 
-.eventform_section #event_end_time_2i {
+.smallgroupsform_section #event_end_time_2i {
   width: 200px;
   float: left;
   margin-right: 15px;
@@ -430,7 +431,7 @@
   font-size: 15px;
 }
 
-.eventform_section #event_end_time_3i {
+.smallgroupsform_section #event_end_time_3i {
   width: 200px;
   float: left;
   margin-right: 15px;
@@ -441,7 +442,7 @@
   font-size: 15px;
 }
 
-.eventform_section #event_end_time_4i {
+.smallgroupsform_section #event_end_time_4i {
   width: 100px;
   float: left;
   margin-right: 15px;
@@ -452,7 +453,7 @@
   font-size: 15px;
 }
 
-.eventform_section #event_end_time_5i {
+.smallgroupsform_section #event_end_time_5i {
   width: 100px;
   float: left;
   margin-right: 15px;
@@ -463,31 +464,31 @@
   font-size: 15px;
 }
 
-.eventform_section .date_time {
+.smallgroupsform_section .date_time {
   height: 170px;
 }
 @media only screen and (max-width: 505px) {
-  .eventform_section .date_time {
+  .smallgroupsform_section .date_time {
     height: 310px;
   }
 }
 
-.eventform_section .imgae_title {
+.smallgroupsform_section .imgae_title {
   color: #a1355b;
   text-transform: capitalize;
   font-size: 12px;
 }
 
-.eventform_section #event_image {
+.smallgroupsform_section #event_image {
   margin-bottom: 5px;
 }
 
-.eventform_section .option_space {
+.smallgroupsform_section .option_space {
   margin: 15px 0px;
   text-transform: uppercase;
 }
 
-.eventform_section .image_url_link a {
+.smallgroupsform_section .image_url_link a {
   color: #a1355b !important;
 }
 

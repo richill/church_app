@@ -1,6 +1,8 @@
-<h1>Editing Smallgroup</h1>
+<% provide(:title, "Update Small Group") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header' %></div>
+  <%= render 'form', smallgroup: @smallgroup %>
+  <%= render 'shared/footer' %>
+</div>
 
-<%= render 'form', smallgroup: @smallgroup %>
-
-<%= link_to 'Show', @smallgroup %> |
-<%= link_to 'Back', smallgroups_path %>

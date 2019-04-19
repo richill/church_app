@@ -63,7 +63,7 @@ class SmallgroupsController < ApplicationController
     if user_signed_in? && current_user.admin
       @smallgroup.destroy
       respond_to do |format|
-        format.html { redirect_to smallgroups_url, notice: 'Smallgroup was successfully destroyed.' }
+        format.html { redirect_to stats_smallgroups_user_path(current_user), notice: 'Smallgroup was successfully destroyed.' }
         format.json { head :no_content }
       end
     else
