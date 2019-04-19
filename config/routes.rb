@@ -67,6 +67,7 @@ Rails.application.routes.draw do
   get     'eunice-akhazema',          to: 'static_pages#pastortwopg'
   get     'shaiye-daniel',            to: 'static_pages#pastorthreepg'
   get     'helen-daniel',             to: 'static_pages#pastorfourpg'
+  get     'funke-olusanya',           to: 'static_pages#pastorfivepg'
   get     'funke-olusanye',           to: 'static_pages#pastorfivepg'
   get     'uche-olayinka',            to: 'static_pages#pastorsixpg'
   get     'wale-kuye',                to: 'static_pages#deacononepg'
