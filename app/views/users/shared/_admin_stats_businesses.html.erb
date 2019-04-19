@@ -1,4 +1,4 @@
-<div class="medium-12 columns users_admin_panel admin_stats_events">
+<div class="medium-12 columns users_admin_panel admin_stats_businesses">
   <div class="medium-12 columns main_container">
 
     <!-- left_content -->
@@ -28,7 +28,7 @@
             <span>users</span>
           <% end %>
         </li>
-        <li class="active">
+        <li>
           <%= link_to stats_events_user_path do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>events</span>
@@ -70,7 +70,7 @@
             <span>small groups</span>
           <% end %>
         </li>
-        <li>
+        <li class="active">
           <%= link_to stats_businesses_user_path do %>
             <span><i class="fa fa-cogs"></i></span>
             <span>church businesses</span>
@@ -91,8 +91,8 @@
     <div class="medium-10 columns right_admin_content">
 
       <!-- stats_ministries -->
-      <div class="dashboard">
-        <%= render 'users/shared/content_admin_stats_events' %>
+      <div class="dashboard active">
+        <%= render 'users/shared/content_admin_stats_businesses' %>
       </div>
       <!-- stats_ministries -->
 

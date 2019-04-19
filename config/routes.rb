@@ -60,7 +60,7 @@ Rails.application.routes.draw do
       get 'stats-galleries'
       get 'stats-smallgroups'
       get 'stats-magazines'
-      get 'stats-business'
+      get 'stats-businesses'
     end
   end
   

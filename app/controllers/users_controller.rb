@@ -156,6 +156,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def stats_businesses
+    unless user_signed_in? && current_user.admin
+      redirect_to error_path
+    end
+  end
+
   private
     def setup_generic
       @users = User.all
