@@ -161,7 +161,8 @@ class UsersController < ApplicationController
       @forms = Form.all
       @photos = Photo.all
       @sitemanagment = Sitemanagment.first
-      @user = current_user
+      @user = User.friendly.find(params[:id])
+      # @user = current_user
     end
 
     def set_user
