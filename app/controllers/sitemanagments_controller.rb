@@ -81,6 +81,6 @@ class SitemanagmentsController < ApplicationController
     end
 
     def sitemanagment_params
-      params.require(:sitemanagment).permit(:homepg_img01, :homepg_img02, :homepg_img03, :homepg_video, :eventlink_img01, :eventlink_img02, :eventlink_img03, :videotitle)
+      params.require(:sitemanagment).permit(:homepg_img01, :homepg_img02, :homepg_img03, :homepg_video, :eventlink_img01, :eventlink_img02, :eventlink_img03, :videotitle, :livestreaming)
     end
 end

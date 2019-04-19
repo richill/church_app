@@ -519,14 +519,14 @@
 }
 
 
-.input_content .section_input {
+.admin_content_management .input_content .section_input {
   float: left;
   width: 308px;
   margin-right: 5px;
 }
 
 
-.instructions {
+.admin_content_management .instructions {
   background-color: rgba(42, 44, 73, 0.05);
   text-transform: capitalize;
   color: #2A2C49;
@@ -535,23 +535,15 @@
   font-size: 12px;
 }
 
-.instructions a {
+.admin_content_management .instructions a {
   color: #a1355b !important;
   text-decoration: underline;
   text-transform: lowercase !important;
 }
 
-.admin_video_frame {
+.admin_content_management .admin_video_frame {
   margin-top: 29px;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -562,7 +554,7 @@
 //   form
 // -----------------------------
 
-.section_form #sitemanagment_homepg_img01, #sitemanagment_homepg_img02, #sitemanagment_homepg_img03, #sitemanagment_eventlink_img01, #sitemanagment_eventlink_img02, #sitemanagment_eventlink_img03, #sitemanagment_videotitle, #sitemanagment_homepg_video  {
+.admin_content_management .section_form #sitemanagment_homepg_img01, #sitemanagment_homepg_img02, #sitemanagment_homepg_img03, #sitemanagment_eventlink_img01, #sitemanagment_eventlink_img02, #sitemanagment_eventlink_img03, #sitemanagment_videotitle, #sitemanagment_homepg_video, #sitemanagment_livestreaming  {
   font-family: "Lato", sans-serif;
   box-shadow: none !important;
   height: 40px;
@@ -572,7 +564,7 @@
   border-radius: 2px;
 }
 
-.section_form input[type="submit"] {
+.admin_content_management .section_form input[type="submit"] {
   text-transform: uppercase;
   width: 100%;
   background-color: #a1355b !important;
@@ -584,7 +576,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.section_form input[type="submit"]:hover {
+.admin_content_management .section_form input[type="submit"]:hover {
   opacity: 0.7;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -594,9 +586,43 @@
 
 
 
+// -----------------------------
+//   workings
+// -----------------------------
 
+.stream_present {
+  color: #2F3F5B;
+  background-color: rgba(161,53,91, 0.3);
+  text-align: center;
+  padding: 30px;
+  margin-top: 16px;
+  border-radius: 5px;
+}
 
+.stream_present i {
+  font-size: 100px;
+}
 
+.stream_present .text {
+  text-transform: capitalize;
+}
+
+.stream_absent {
+  color: #2F3F5B;
+  background-color: rgba(42, 44, 73, 0.05);
+  text-align: center;
+  padding: 30px;
+  margin-top: 16px;
+  border-radius: 5px;
+}
+
+.stream_absent i {
+  font-size: 100px;
+}
+
+.stream_absent .text {
+  text-transform: capitalize;
+}
 
 
 

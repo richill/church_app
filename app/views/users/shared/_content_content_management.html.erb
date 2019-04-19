@@ -164,6 +164,64 @@
                 </div> 
               </div>
             </div>
+
+            <div class="clear"></div>
+
+            <div class="divider"></div>
+
+            <div class="clear"></div>
+
+            <!-- live streaming content -->
+            <div class="medium-12 columns livestreaming_content">
+              <div class="instructions">
+                <div>
+                  <span>How to get video URL: </span>
+                  <ul>
+                    <li>[1] got to youtube <%= link_to "https://www.youtube.com", "https://www.youtube.com", target:"_blank" %></li>
+                    <li>[2] copy the URL link of the video and paste here</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="medium-4 columns">
+                <div class="stream_icon">
+                  <% if @sitemanagment.livestreaming.present? %>
+
+                    <%= link_to "#" do %>
+                      <div class="stream_present">
+                        <i class="fa fa-volume-up" aria-hidden="true"></i>
+                        <div class="text">live streaming link has been added</div>
+                      </div>
+                    <% end %>
+                  <% else %>
+                    <div class="stream_absent">
+                      <i class="fa fa-volume-up" aria-hidden="true"></i>
+                        <div class="text">no live stream link has been added</div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+
+              <div class="medium-8 columns">
+                <div class="section_form">
+                  <%= simple_form_for(@sitemanagment) do |f| %>
+                    <%= f.error_notification %>
+
+                    <div class="form-inputs">
+                      <div class="img_form">
+                        <div class="input_content">
+                          <div class=""><%= f.input :livestreaming, label: "Live Streaming Link", placeholder:"https://soundcloud.com/chancetherapper/lil-yachty-chance-the-rapper-atlanta-house-freestyle" %></div>
+                        </div>
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+
+                    <div class="form-actions">
+                      <%= f.button :submit, "update streaming link" %>
+                    </div>
+                  <% end %>
+                </div> 
+              </div>
+            </div>
           </div>
           <div class="clear"></div>
           <!-- homepage content -->
