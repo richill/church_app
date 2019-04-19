@@ -25,7 +25,9 @@ class UsersController < ApplicationController
   end
 
   def edit
-    unless user_signed_in? && current_user.admin || user_signed_in? && @user == current_user
+    if user_signed_in? && current_user.admin || user_signed_in? && @user == current_user
+      @user = User.friendly.find(params[:id])
+    else
       redirect_to error_path
     end
   end
@@ -143,9 +145,13 @@ class UsersController < ApplicationController
   end
 
   def content_management
-    if user_signed_in? && current_user.admin
-      # @sitemanagment = Sitemanagment.new
-    else
+    unless user_signed_in? && current_user.admin
+      redirect_to error_path
+    end
+  end
+
+  def stats_smallgroups
+    unless user_signed_in? && current_user.admin
       redirect_to error_path
     end
   end
@@ -161,8 +167,8 @@ class UsersController < ApplicationController
       @forms = Form.all
       @photos = Photo.all
       @sitemanagment = Sitemanagment.first
-      @user = User.friendly.find(params[:id])
-      # @user = current_user
+      @user = current_user
+      @smallgroups = Smallgroup.all
     end
 
     def set_user
