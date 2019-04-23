@@ -63,7 +63,7 @@
                 <div>
                   <div class="label">2nd scroll image</div>
                   <% if @sitemanagment.homepg_img02.present? %>
-                    <div class="upload_page_img"><%= cl_image_tag("#{@sitemanagment.homepg_img01}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %></div>
+                    <div class="upload_page_img"><%= cl_image_tag("#{@sitemanagment.homepg_img02}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %></div>
                   <% else %>
                     <div class="upload_page_img"><%= image_tag("img_default_mainimg.png") %></div>
                   <% end %>
@@ -71,7 +71,7 @@
                 <div>
                   <div class="label">3rd scroll image</div>
                   <% if @sitemanagment.homepg_img03.present? %>
-                    <div class="upload_page_img"><%= cl_image_tag("#{@sitemanagment.homepg_img01}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %></div>
+                    <div class="upload_page_img"><%= cl_image_tag("#{@sitemanagment.homepg_img03}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %></div>
                   <% else %>
                     <div class="upload_page_img"><%= image_tag("img_default_mainimg.png") %></div>
                   <% end %>
