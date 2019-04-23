@@ -191,8 +191,8 @@
                             </span>
                             <span class="event_info_section">
                                 <%= link_to event_path(event) do %>
-                                <div class="evt_title"><%= truncate("#{event.name}", length: 19) %></div>
-                                <div class="evt_minor_info evt_address"><%= truncate("#{event.address} #{event.postcode}", length: 48) %></div>
+                                <div class="evt_title"><%= truncate("#{event.name}", length: 27) %></div>
+                                <div class="evt_minor_info evt_address"><%= truncate("#{event.address} #{event.postcode}", length: 40) %></div>
                                 <div class="evt_minor_info evt_time"><%= "#{event.start_time.strftime("%b %d %Y")} - #{event.start_time.strftime("%I:%M%p")}" %> - <span><%= event.city %></span></div>
                                 <div class="evt_minor_info evt_city_country">
                                   <span><%= event.category_country.name %></span>
