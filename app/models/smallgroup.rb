@@ -4,6 +4,11 @@ class Smallgroup < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  validates_presence_of :name, presence: true, message: "can't be blank"
+  validates_presence_of :descriptin, presence: true, message: "can't be blank"
+  validates_presence_of :address, presence: true, message: "can't be blank"
+  validates_presence_of :postcode, presence: true, message: "can't be blank"
+
   has_many :attendances, as: :attendable, dependent: :destroy
 
   def slug_smallgroups

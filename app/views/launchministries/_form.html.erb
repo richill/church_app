@@ -40,8 +40,8 @@
                   
                   <div class="info_sub_content">
                     <ul>
-                      <li class="form_left"><%= f.input :email, label: false, placeholder: "Email" %></li>
-                      <li class="form_right"><%= f.input :mobile, label: false, placeholder: "Mobile" %></li>
+                      <li class="form_left"><%= f.input :email, label: false, placeholder: "Email", input_html: { value: 'info@openheavens.org.uk'} %></li>
+                      <li class="form_right"><%= f.input :mobile, label: false, placeholder: "Mobile", input_html: { value: '+44 78 3234 0634'} %></li>
                     </ul>
                   </div>
                   <div class="clear"></div>
@@ -49,18 +49,18 @@
                   <div class="info_sub_content">
                     <ul>
                       <li class="form_left"><%= f.input :homenumber, label: false, placeholder: "Home Number" %></li>
-                      <li class="form_right"><%= f.input :worknumber, label: false, placeholder: "Work Number" %></li>
+                      <li class="form_right"><%= f.input :worknumber, label: false, placeholder: "Work Number", input_html: { value: '+44 20 8958 4040'} %></li>
                     </ul>
                   </div>
                   <div class="clear"></div>
 
-                  <div class="info_sub_content"><%= f.input :address, label: false, placeholder: "Address" %></div>
+                  <div class="info_sub_content"><%= f.input :address, label: false, placeholder: "Address", input_html: { value: '194-198 Broadfields Ave, Edgware'} %></div>
                   <div class="clear"></div>
 
                   <div class="info_sub_content">
                     <ul>
-                      <li class="form_left"><%= f.input :city, label: false, placeholder: "City" %></li>
-                      <li class="form_right"><%= f.input :postcode, label: false, placeholder: "Postcode" %></li>
+                      <li class="form_left"><%= f.input :city, label: false, placeholder: "City", input_html: { value: 'London'} %></li>
+                      <li class="form_right"><%= f.input :postcode, label: false, placeholder: "Postcode", input_html: { value: 'HA8 8TF'} %></li>
                     </ul>
                   </div>
                   <div class="clear"></div>
