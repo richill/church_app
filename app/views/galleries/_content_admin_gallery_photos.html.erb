@@ -10,9 +10,9 @@
     <span class="current_page"><%= "#{@gallery.name}" %></span>
     <span>|</span>
     <span class="current_page"><%= "photos [#{@gallery.photos.count}]" %></span>
+    <span class="tree_tab_link"><%= link_to "view album/gallery page", gallery_path(@gallery), target:"_blank", style: 'color:#FFFFFF !important;' %></span>
     <span class="tree_tab_link"><%= link_to "edit gallery", edit_user_gallery_path(current_user), target:"_blank", style: 'color:#FFFFFF !important;' %></span>
     <span class="tree_tab_link"><%= link_to "add photos to gallery", new_gallery_photo_path(@gallery), target:"_blank", style: 'color:#FFFFFF !important;' %></span>
-    <span class="tree_tab_link"><%= link_to "view album/gallery page", gallery_path(@gallery), target:"_blank", style: 'color:#FFFFFF !important;' %></span>
   </div>
   <div class="medium-12 columns admin_tab_content">
 
