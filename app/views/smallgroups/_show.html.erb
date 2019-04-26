@@ -30,7 +30,12 @@
             </div>
             <div class="date_category">
               <span><b>Address:</b></span>
-              <span><%= @smallgroup.address %></span><span><%= @smallgroup.postcode %></span>
+              <span><%= @smallgroup.address %></span>
+              <span>
+                <% if @smallgroup.postcode.present? %>
+                  <%= @smallgroup.postcode %>
+                <% end %>
+              </span>
             </div>
             <div class="paragraph_content">
               <span><%= truncate("#{@smallgroup.descriptin}", length: 300) %></span>

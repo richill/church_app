@@ -68,6 +68,16 @@
                   <div class="medium-9 columns main_info">
                     <div>
                       <span class="min_name"><%= link_to truncate(group.name, length: 60), group, target:"_blank" %></span>
+                      <span>|</span>
+                      <span class="smallgroup_address_title">Address: </span>
+                      <span class="smallgroup_address">
+                        <span><%= group.address %></span>
+                        <span>
+                          <% if group.postcode.present? %>
+                            <%= group.postcode %>
+                          <% end %>
+                        </span>
+                      </span>
                     </div>
                     
                     <div class="min_content">

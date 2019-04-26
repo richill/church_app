@@ -43,7 +43,11 @@
                                 <div class="page_minor_info page_time">
                                   <span><b>address:</b></span>
                                   <span><%= group.address %></span>
-                                  <span><%= group.postcode %></span>
+                                  <span>
+                                    <% if group.postcode.present? %>
+                                      <%= group.postcode %>
+                                    <% end %>
+                                  </span>
                                 </div>
                                 <div class="page_minor_info page_description"><%= truncate("#{group.descriptin}", length: 150) %></div>
                               <% end %>
