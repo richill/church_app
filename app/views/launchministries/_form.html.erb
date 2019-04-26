@@ -74,7 +74,7 @@
                   <div class="info_sub_content"><%= f.input :ministryneed, label: "What is the need you would like to meet and how did you identify it?", placeholder: "Type Your Answer" %></div>
                   <div class="clear"></div>
 
-                  <div class="info_sub_content"><%= f.input :ministrymission, label: "What is your ministry's mission statement?", placeholder: "Type Your Answer" %></div>
+                  <div class="info_sub_content"><%= f.input :ministrymission, label: "What is your ministry's mission statement?", placeholder: "Type Your Answer", input_html: { value: 'Providing adequate care for our members'} %></div>
                   <div class="clear"></div>
 
                   <% if current_user.admin? %>
