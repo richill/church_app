@@ -200,6 +200,15 @@
   opacity: 0;
 }
 
+.slide img {
+  width: 100% !important;
+}
+@media only screen and (max-width: 800px) {
+  .slide img {
+    height: 100% !important;
+  }
+}
+
 .content_homepg_signedout_section .slide.active,
 .slide.left,
 .slide.right{
