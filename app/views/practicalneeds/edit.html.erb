@@ -1,6 +1,8 @@
-<h1>Editing Practicalneed</h1>
+<% provide(:title, "Update Practical Need") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header' %></div>
+  <%= render 'form', practicalneed: @practicalneed %>
+  <%= render 'shared/footer' %>
+</div>
 
-<%= render 'form', practicalneed: @practicalneed %>
-
-<%= link_to 'Show', @practicalneed %> |
-<%= link_to 'Back', practicalneeds_path %>

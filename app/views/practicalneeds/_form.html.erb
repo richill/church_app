@@ -1,19 +1,116 @@
-<%= simple_form_for [@user, @practicalneed] do |f| %>
-  <%= f.error_notification %>
+<div class="pages_boarder"></div>
+<div class="medium-12 columns practicalneed_section">
+  <div class="eventform_inner_section">
+    <div class="medium-12 columns practicalneed_content">
+      <div class="tree_line">
+        <span><i class="fa fa-user"></i></span>
+        <span><%= link_to "#{current_user.firstname}", user_path(current_user) %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "admin panel", content_management_user_path(current_user) %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span><%= link_to "stats practical needs", stats_practicalneeds_user_path(current_user) %></span>
+        <span><i class="fa fa-angle-right"></i></span>
+        <span class="current_page">
+          <% if action_name == 'new'  %>
+            <span>create practical need</span>
+          <% else %>
+            <span>update practical need</span>
+          <% end %>
+        </span>
+      </div>
 
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :location %>
-    <%= f.input :description %>
-    <%= f.association :category_job, collection: CategoryJob.all, prompt: "select a category", label: "Job Category" %>
+      <div class="medium-12 columns page_main_content">
+        <!-- info_left_content -->
+        <div class="medium-8 columns info_left_content">
+          <div class="page_information">
+            <div class="page_header">
+              <% if action_name == 'new'  %>
+                <span>create practical need</span>
+              <% else %>
+                <span>update practical need</span>
+              <% end %>
+            </div>
+            <div class="paragraph_content">
+              <span>Create an practical need page that fits the audience. Customizable practical need page.</span>
+            </div>
 
-    <% if current_user.admin? %>
-      <%= f.input :close %>
-      <%= f.input :approve %>
-    <% end %>
+            <div class="pn_main_form">
+              <%= simple_form_for [@user, @practicalneed] do |f| %>
+                <%= f.error_notification %>
+
+                <div class="form-inputs">
+                  <div class="info_sub_content"><%= f.input :title, label: "Title", placeholder: "Need £4'000 For A Business Opportunity" %></div>
+                  <div class="clear"></div>
+
+                  <div><%= f.association :category_job, collection: CategoryJob.all, prompt: "select category", label: false %></div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :description, label: "Practical Need Description", placeholder: "Seeking an investment to develop an argiculture tool that will help enhance farmin. Business and Financial Plan and proposal have all been written. Any advise or investment would be much appreciated." %></div>
+                  <div class="clear"></div>
+
+                  <div class="info_sub_content"><%= f.input :location, label: "Practical Need Location", placeholder: "Open Heavens Christian Centre, 194-198 Broadfields Ave, Edgware, London, HA8 8TF" %></div>
+                  <div class="clear"></div>
+
+                  <% if current_user.admin %>
+                    <div class="update_section">
+                      <%= f.input :approve, as: :boolean %>
+                      <div class="minor_info">
+                        <span>By ticking the box you are approving the created event. The event will be displayed to the public</span> 
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                  <% end %>
+
+                  <div class="update_section">
+                    <%= f.input :close, as: :boolean %>
+                    <div class="minor_info">
+                      <span>By ticking the box you are closing the event. The event will not be displayed to the public</span> 
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+
+                  <!-- hidden_field -->
+                  <%= f.hidden_field :user_id %>
+                  <!-- hidden_field -->
+                </div>
+
+                <div class="form_btns">
+                  <% if user_signed_in? %>
+                    <% if current_user.admin? %>
+                      <ul>
+                        <li class="cancel_btn">
+                          <div><%= link_to "back", stats_events_user_path(current_user) %></div>
+                        </li>
+                        <li>
+                          <% if action_name == 'new'  %>
+                            <div class="form-actions submit_btn">
+                              <%= f.button :submit, "create practical need" %>
+                            </div>
+                          <% else %>
+                            <div class="form-actions submit_btn">
+                              <%= f.button :submit, "update practical need" %>
+                            </div>
+                          <% end %>
+                        </li>
+                      </ul>
+                    <% end %>
+                  <% end %>
+                </div>
+                
+              <% end %>
+            </div>
+
+          </div>
+        </div>
+        <!-- info_left_content -->
+
+        <!-- info_right_content -->
+        <%= render 'shared/content_service_times' %>
+        <!-- info_right_content -->
+      </div>
+
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+
