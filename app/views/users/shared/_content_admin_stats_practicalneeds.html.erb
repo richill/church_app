@@ -95,6 +95,8 @@
                       <span>
                         <% if practicalneed.approved_practicalneed && practicalneed.open_practicalneed %>
                           <span data-tooltip tabindex="2" title="This has been approved by admin" class="top status_btn approved"><%= link_to "approved", practicalneed, target:"_blank" %></span>
+                        <% elsif practicalneed.approved_practicalneed && practicalneed.closed_practicalneed %>
+                          <span data-tooltip tabindex="2" title="This has been approved by admin" class="top status_btn approved"><%= link_to "approved", practicalneed, target:"_blank" %></span>
                         <% elsif practicalneed.unapproved_practicalneed && practicalneed.open_practicalneed %>
                           <span data-tooltip tabindex="2" title="This has 'not' been approved by admin"  class="top status_btn pending"><%= link_to "pending", practicalneed, target:"_blank" %></span>
                         <% end %>
@@ -103,16 +105,19 @@
                       <!-- practical need status -->
                       <span>
                         <% if practicalneed.approved_practicalneed && practicalneed.closed_practicalneed %>
-                          approved + closed ----> closed
-
+                          <span class="hide">approved + closed ----> closed</span>
+                          <span data-tooltip tabindex="2" title="PNeed is approved & status is closed" class="top status_btn pending"><%= link_to "approved & closed", practicalneed, target:"_blank" %></span>
                         <% elsif practicalneed.approved_practicalneed && practicalneed.open_practicalneed %>
-                          approved + opened ----> open
+                          <span class="hide">approved + opened ----> open</span>
+                          <span data-tooltip tabindex="2" title="PNeed is approved & status is open" class="top status_btn approved"><%= link_to "approved & open", practicalneed, target:"_blank" %></span>
 
                         <% elsif practicalneed.unapproved_practicalneed && practicalneed.closed_practicalneed %>
-                          unapproved + closed ----> close
+                          <span class="hide">unapproved + closed ----> close</span>
+                          <span data-tooltip tabindex="2" title="PNeed is unapproved & status is closed" class="top status_btn pending"><%= link_to "unapproved & closed", practicalneed, target:"_blank" %></span>
 
                         <% elsif practicalneed.unapproved_practicalneed && practicalneed.open_practicalneed %>
-                          unapproved + open ----> pending
+                          <span class="hide">unapproved + open ----> pending</span>
+                          <span data-tooltip tabindex="2" title="PNeed is unapproved & status is open" class="top status_btn pending"><%= link_to "unapproved & open", practicalneed, target:"_blank" %></span>
                         <% end %>
                       </span>
                       <!-- practical need status -->
