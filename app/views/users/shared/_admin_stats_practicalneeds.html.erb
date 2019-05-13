@@ -1,0 +1,115 @@
+<div class="medium-12 columns users_admin_panel admin_stats_practicalneeds">
+  <div class="medium-12 columns main_container">
+
+    <!-- left_content -->
+    <div class="medium-2 columns left_admin_content">
+      <ul class="nav nav-tabs">
+        <li class="hide">
+          <%= link_to dashboard_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>dashboard</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to content_management_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>content management</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to sitelinks_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>site links</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to stats_users_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>users</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to stats_events_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>events</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to stats_ministries_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>ministries</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to stats_forms_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>forms</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to stats_forum_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>forum/discussions</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to stats_careers_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>career</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to stats_galleries_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>galleries</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to stats_smallgroups_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>small groups</span>
+          <% end %>
+        </li>
+        <li class="active">
+          <%= link_to stats_practicalneeds_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>practical needs</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to stats_recommendedreading_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>recommended Reading</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to stats_businesses_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>church businesses</span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to stats_magazines_user_path do %>
+            <span><i class="fa fa-cogs"></i></span>
+            <span>church magazines</span>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <!-- left_content -->
+
+
+    <!-- right_content -->
+    <div class="medium-10 columns right_admin_content">
+
+      <!-- stats_ministries -->
+      <div class="dashboard active">
+        <%= render 'users/shared/content_admin_stats_practicalneeds' %>
+      </div>
+      <!-- stats_ministries -->
+
+    </div>
+    <!-- right_content -->
+
+  </div>
+</div>

@@ -152,6 +152,7 @@ class StaticPagesController < ApplicationController
 
   def practicalneedspg
     @practicalneeds = Practicalneed.desc_order
+    # @practicalneeds = Practicalneed.open_practicalneeds.approved_practicalneeds.desc_order
   end
 
   def privacypg

@@ -156,6 +156,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def stats_practicalneeds
+    if user_signed_in? && current_user.admin
+      @practicalneeds = Practicalneed.desc_order
+    else
+      redirect_to error_path
+    end
+  end
+
   def stats_businesses
     unless user_signed_in? && current_user.admin
       redirect_to error_path

@@ -11,6 +11,11 @@ class Practicalneed < ApplicationRecord
   belongs_to :category_job
   belongs_to :category_jobtype
 
+  scope :closed_practicalneeds, -> {where(['close = ?', true])}
+  scope :open_practicalneeds, -> {where(['close = ? OR close IS ?', false, nil])}
+  scope :approved_practicalneeds, -> {where(['approve = ?', true])}
+  scope :unapproved_practicalneeds, -> {where(['approve = ? OR close IS ?', false, nil])}
+
   # acts_as_commentable
   has_many :comments, as: :commentable, dependent: :destroy
 
