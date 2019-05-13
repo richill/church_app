@@ -15,8 +15,7 @@
     <!-- upper_section -->
     <div class="medium-12 columns page_cover upper_section">
       <div class="medium-12 columns data_main_cover">
-
-        <div class="medium-4 columns data_stats_cover">
+        <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
             <div class="data_title">total practical needs</div>
             <div class="stats_content">
@@ -27,25 +26,36 @@
             </div>
           </div>
         </div>
-        <div class="medium-4 columns data_stats_cover">
+        <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
             <div class="data_title">approved practical needs</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-comments" aria-hidden="true"></i></div>
               </span>
-              <span class="main_stats"><%= @practicalneeds.open_practicalneeds.approved_practicalneeds.count %></span>
+              <span class="main_stats"><%= @practicalneeds.approved_practicalneeds.open_practicalneeds.count %></span>
             </div>
           </div>
         </div>
-        <div class="medium-4 columns data_stats_cover">
+        <div class="medium-3 columns data_stats_cover">
+          <div class="data_stats">
+            <div class="data_title">pending practical needs</div>
+            <div class="stats_content">
+              <span class="icon_cover">
+                <div class="icon_inner_cover"><i class="fa fa-comments" aria-hidden="true"></i></div>
+              </span>
+              <span class="main_stats"><%= @practicalneeds.unapproved_practicalneeds.open_practicalneeds.count %></span>
+            </div>
+          </div>
+        </div>
+        <div class="medium-3 columns data_stats_cover">
           <div class="data_stats">
             <div class="data_title">closed practical needs</div>
             <div class="stats_content">
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-comments" aria-hidden="true"></i></div>
               </span>
-              <span class="main_stats"><%= @practicalneeds.closed_practicalneeds.unapproved_practicalneeds.count %></span>
+              <span class="main_stats"><%= @practicalneeds.closed_practicalneeds.count %></span>
             </div>
           </div>
         </div>
@@ -67,10 +77,10 @@
               <i class="fa fa-info-circle"></i>
               <span>Total list of practical needs on the platform</span>
             </div>
-            <span class="btn btn_blue" id="eventstats_upcoming_tab">all practical needs <span>[<%= @practicalneeds.all.count %>]</span></span>
-            <span class="btn btn_green" id="eventstats_pending_tab"> approved needs [<%= @practicalneeds.approved_practicalneeds.open_practicalneeds.count %>]</span>
-            <span class="btn btn_green" id="eventstats_pending_tab"> pending needs [<%= @practicalneeds.unapproved_practicalneeds.open_practicalneeds.count %>]</span>
-            <span class="btn btn_green" id="eventstats_past_tab"> closed needs [<%= @practicalneeds.closed_practicalneeds.count %>]</span>
+            <span class="btn btn_blue" id="pnstats_all_tab">all practical needs <span>[<%= @practicalneeds.all.count %>]</span></span>
+            <span class="btn btn_green" id="pnstats_approved_tab"> approved needs [<%= @practicalneeds.approved_practicalneeds.open_practicalneeds.count %>]</span>
+            <span class="btn btn_green" id="pnstats_pending_tab"> pending needs [<%= @practicalneeds.unapproved_practicalneeds.open_practicalneeds.count %>]</span>
+            <span class="btn btn_green" id="pnstats_closed_tab"> closed needs [<%= @practicalneeds.closed_practicalneeds.count %>]</span>
           </div>
         </div>
         <div class="divider"></div>
@@ -79,7 +89,7 @@
         <!-- listed_parcticalneeds -->
         <div class="listed_parcticalneeds">
           <!-- all practicalneeds -->
-          <div class="listed_parcticalneeds hide" id="">
+          <div class="listed_parcticalneeds" id="pnstats_all_tab_content">
             <div class="data_list_title">all practical needs</div>
             <ul>
               <% @practicalneeds.each do |practicalneed| %>
@@ -153,7 +163,7 @@
           <!-- all practicalneeds -->
 
           <!-- all approved needs -->
-          <div class="listed_parcticalneeds hide" id="">
+          <div class="listed_parcticalneeds" id="pnstats_approved_tab_content">
             <div class="data_list_title">all approved practical needs</div>
             <ul>
               <% @practicalneeds.approved_practicalneeds.open_practicalneeds.each do |practicalneed| %>
@@ -227,7 +237,7 @@
           <!-- all approved needs -->
 
           <!-- all pending needs -->
-          <div class="listed_parcticalneeds hide" id="">
+          <div class="listed_parcticalneeds" id="pnstats_pending_tab_content">
             <div class="data_list_title">all pending practical needs</div>
             <ul>
               <% @practicalneeds.unapproved_practicalneeds.open_practicalneeds.each do |practicalneed| %>
@@ -301,7 +311,7 @@
           <!-- all pending needs -->
 
           <!-- all closed needs -->
-          <div class="listed_parcticalneeds hide" id="">
+          <div class="listed_parcticalneeds" id="pnstats_closed_tab_content">
             <div class="data_list_title">all closed practical needs</div>
             <ul>
               <% @practicalneeds.closed_practicalneeds.each do |practicalneed| %>
