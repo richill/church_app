@@ -1,4 +1,3 @@
-<h1>content_admin_stats_practicalneeds</h1>
 <div class="content_admin_sitelinks">
   <div class="tree_line">
     <span><i class="fa fa-user"></i></span>
@@ -8,7 +7,7 @@
     <span><i class="fa fa-angle-right"></i></span>
     <span class="current_page">stats practical needs</span>
     <span class="tree_tab_link"><%= link_to "view practical needs page", practical_needs_path, target:"_blank", style: 'color:#FFFFFF !important;' %></span>
-    <span class="tree_tab_link"><%= link_to "create a practical need", new_practicalneed_path, target:"_blank", style: 'color:#FFFFFF !important;' %></span>
+    <span class="tree_tab_link"><%= link_to "create a practical need", new_user_practicalneed_path(current_user), target:"_blank", style: 'color:#FFFFFF !important;' %></span>
   </div>
   <div class="medium-12 columns admin_tab_content">
 

@@ -1,13 +1,13 @@
 <div class="reveal modal_general_design_all" id="modal_user_posted_practicalneeds" data-reveal>
-  <div class="modal_header"><%= "#{@user.firstname}'s" %> posted practical needs [<%= @user.jobs.count %>]</div>
+  <div class="modal_header"><%= "#{@user.firstname}'s" %> posted practical needs [<%= @user.practicalneeds.approved_practicalneeds.open_practicalneeds.count %>]</div>
   <div class="modal_content">
 
-    <% if @user.practicalneeds.present? %>
+    <% if @user.practicalneeds.approved_practicalneeds.open_practicalneeds.present? %>
       <!-- listed contents -->
       <div class="subcontent">Posted practical needs by you <span>|</span> <%= link_to "Pratical Needs", practical_needs_path %></div>
       <div>
         <ul>
-          <% @user.practicalneeds.each do |praticalneed| %>
+          <% @user.practicalneeds.approved_practicalneeds.open_practicalneeds.each do |praticalneed| %>
             <li>
               <div>
                 <span><%= link_to "#{praticalneed.title}", practicalneed_path(praticalneed) %></span>
