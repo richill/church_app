@@ -45,7 +45,7 @@
               <span class="icon_cover">
                 <div class="icon_inner_cover"><i class="fa fa-comments" aria-hidden="true"></i></div>
               </span>
-              <span class="main_stats"><%= @practicalneeds.closed_practicalneeds.unapproved_practicalneeds.count %></span>
+              <span class="main_stats"><%= @practicalneeds.closed_practicalneeds.pending_practicalneeds.count %></span>
             </div>
           </div>
         </div>
@@ -69,9 +69,9 @@
               <i class="fa fa-info-circle"></i>
               <span>Total list of practical needs on the platform</span>
             </div>
-            <span class="btn btn_blue" id="eventstats_upcoming_tab">approved needs <span>[<%= @practicalneeds.all.count %>]</span></span>
-            <span class="btn btn_green" id="eventstats_pending_tab"> closed needs [<%= @practicalneeds.unapproved_practicalneeds.closed_practicalneeds.count %>]</span>
-            <span class="btn btn_green" id="eventstats_past_tab"> all practical needs [<%= @practicalneeds.approved_practicalneeds.open_practicalneeds.count %>]</span>
+            <span class="btn btn_blue" id="eventstats_upcoming_tab">all practical needs <span>[<%= @practicalneeds.all.count %>]</span></span>
+            <span class="btn btn_green" id="eventstats_pending_tab"> approved needs [<%= @practicalneeds.pending_practicalneeds.closed_practicalneeds.count %>]</span>
+            <span class="btn btn_green" id="eventstats_past_tab"> closed needs [<%= @practicalneeds.approved_practicalneeds.open_practicalneeds.count %>]</span>
           </div>
         </div>
         <div class="divider"></div>
@@ -91,6 +91,30 @@
                   <div class="medium-9 columns main_info">
                     <div>
                       <span class="min_name"><%= link_to truncate(practicalneed.title, length: 60), practicalneed, target:"_blank" %></span>
+                      <span>|</span>
+                      <span>
+                        <% if practicalneed.approved_practicalneed %>
+                          <span data-tooltip tabindex="2" title="Event has been approved by admin" class="top status_btn approved"><%= link_to "approved", practicalneed, target:"_blank" %></span>
+                        <% elsif practicalneed.pending_practicalneed %>
+                          <span data-tooltip tabindex="2" title="Event has 'not' been approved by admin"  class="top status_btn pending"><%= link_to "pending", practicalneed, target:"_blank" %></span>
+                        <% end %>
+                      </span>
+
+                      <!-- practical need status -->
+                      <span>
+                        approved + closed
+                        ----> closed
+
+                        approved + opened
+                        ----> open
+
+                        unapproved + closed
+                        ----> close
+
+                        unapproved + open
+                        ----> pending
+                      </span>
+                      <!-- practical need status -->
                     </div>
                     
                     <div class="min_content">
