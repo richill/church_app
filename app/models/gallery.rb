@@ -4,6 +4,10 @@ class Gallery < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  validates_presence_of :name, presence: true, message: "can't be blank"
+  validates_presence_of :description, presence: true, message: "can't be blank"
+  validates_presence_of :date, presence: true, message: "can't be blank"
+
   has_many :photos, dependent: :destroy
   belongs_to :user
 

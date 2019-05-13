@@ -4,6 +4,9 @@ class Photo < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  validates_presence_of :image, presence: true, message: "can't be blank"
+  validates_presence_of :description, presence: true, message: "can't be blank"
+
   belongs_to :gallery
 
   def slug_photos

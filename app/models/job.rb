@@ -2,6 +2,14 @@ class Job < ApplicationRecord
   extend FriendlyId
   friendly_id :slug_jobs, use: :slugged
 
+  validates_presence_of :title, presence: true, message: "can't be blank"
+  validates_presence_of :description, presence: true, message: "can't be blank"
+  validates_presence_of :address, presence: true, message: "can't be blank"
+  validates_presence_of :location, presence: true, message: "can't be blank"
+  validates_presence_of :category_job_id, presence: true, message: "can't be blank"
+  validates_presence_of :category_joblevel_id, presence: true, message: "can't be blank"
+  validates_presence_of :category_jobtype_id, presence: true, message: "can't be blank"
+  
   belongs_to :user
   belongs_to :category_job
   belongs_to :category_joblevel

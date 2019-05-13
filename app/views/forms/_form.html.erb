@@ -45,6 +45,7 @@
                     <div class="minor_info">
                       <span>Upload form or file inorder to display to the audience</span> 
                     </div>
+                    <div class="error">can't be blank - must upload an image</div>
                   </div>
                   <div class="clear"></div>
 
@@ -91,32 +92,4 @@
 
     </div>
   </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="hide">
-  <%= simple_form_for(@form) do |f| %>
-    <%= f.error_notification %>
-
-    <div class="form-inputs">
-      <%= f.input :title %>
-      <%= f.input :fileattachment %>
-      <%= f.input :user_id %>
-    </div>
-
-    <div class="form-actions">
-      <%= f.button :submit %>
-    </div>
-  <% end %>
 </div>
