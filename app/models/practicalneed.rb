@@ -14,7 +14,8 @@ class Practicalneed < ApplicationRecord
   scope :closed_practicalneeds, -> {where(['close = ?', true])}
   scope :open_practicalneeds, -> {where(['close = ? OR close IS ?', false, nil])}
   scope :approved_practicalneeds, -> {where(['approve = ?', true])}
-  scope :pending_practicalneeds, -> {where(['approve = ? OR approve IS ?', false, nil])} 
+  scope :unapproved_practicalneeds, -> {where(['approve = ? OR approve IS ?', false, nil])} 
+
 
   # acts_as_commentable
   has_many :comments, as: :commentable, dependent: :destroy
@@ -33,22 +34,19 @@ class Practicalneed < ApplicationRecord
     order('created_at ASC')
   end
 
-
-
-
-  def approved_practicalneed
-    self.approve == true
-  end
-
-  def pending_practicalneed
-    self.approve == false || self.approve == nil
-  end 
-
   def closed_practicalneed
     self.close == true
   end 
 
   def open_practicalneed
     self.close == false || self.close == nil
+  end
+
+  def approved_practicalneed
+    self.approve == true
+  end 
+
+  def unapproved_practicalneed 
+    self.approve == false || self.approve == nil
   end 
 end
