@@ -20,7 +20,7 @@
                 <% if user_signed_in? %>
                   <li>
                     <span><i class="fa fa-cogs"></i></span>
-                    <span><%= link_to "admin panel", dashboard_user_path(current_user) %></span>
+                    <span><%= link_to "admin panel", content_management_user_path(current_user) %></span>
                   </li>
                 <% end %>
                 <li>
