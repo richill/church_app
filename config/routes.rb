@@ -130,5 +130,6 @@ Rails.application.routes.draw do
   get     'volunteer-jobs',           to: 'static_pages#volunteerpg'
   get     'youth',                    to: 'static_pages#youthpg'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # redirects all unknow routes to homepage
+  get '*path' => redirect('/')
 end
