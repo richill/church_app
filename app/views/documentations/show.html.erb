@@ -1,19 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, "#{@documentation.title}") %>
+<div>
+  <div class="header_responsive"><%= render 'shared/responsive_header' %></div>
+  <div class="header_non_responsive"><%= render 'shared/header' %></div>
+  <%= render 'show' %>
+  <%= render 'shared/footer' %>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @documentation.title %>
-</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @documentation.content %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= @documentation.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_documentation_path(@documentation) %> |
-<%= link_to 'Back', documentations_path %>
