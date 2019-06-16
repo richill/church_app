@@ -53,21 +53,21 @@
           <div class="listed_forms" id="">
             <div class="data_list_title">all documents</div>
             <ul>
-              <% @forms.each do |form| %>
+              <% @documents.each do |document| %>
                 <li class="medium-12 columns main_conatiner">
                   <div class="medium-9 columns main_info">
                     <div>
-                      <span class="min_name"><%= link_to truncate(form.title, length: 60), "#{form.fileattachment}", target:"_blank" %></span>
+                      <span class="min_name"><%= link_to truncate(document.title, length: 60), document %></span>
                     </div>
                     <div>
                       <span class="subheaders">created:</span>
-                      <span class="min_content"><%= form.created_at.strftime("%b %d %Y") %></span>
+                      <span class="min_content"><%= document.created_at.strftime("%b %d %Y") %></span>
                     </div>
                   </div>
                   <div class="medium-2 columns main_action">
                     <div class="action_section">
-                      <div class="edit_btn"><%= link_to 'edit', edit_form_path(form) %></div>
-                      <div class="delete_btn"><%= link_to 'delete', form, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                      <div class="edit_btn"><%= link_to 'edit', edit_user_documentation_path(document.user, document) %></div>
+                      <div class="delete_btn"><%= link_to 'delete', document, method: :delete, data: { confirm: 'Are you sure?' } %></div>
                     </div>
                   </div>
                 </li>

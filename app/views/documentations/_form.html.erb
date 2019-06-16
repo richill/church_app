@@ -40,8 +40,11 @@
 
                 <div class="form-inputs">
                   <div class="info_sub_content"><%= f.input :title, label: "Documentation Title", placeholder: "How to create an event" %></div>
+                  
                   <div class="clear"></div>
-                  <div>
+                  
+                  <div class="info_section_content">
+                    <div class="info_label">content</div>
                     <%= javascript_include_tag Ckeditor.cdn_url %>
                     <%= f.cktext_area :content, value: @documentation.content, label: "Documentation Content", id: 'text_01' %>
                   </div> 
