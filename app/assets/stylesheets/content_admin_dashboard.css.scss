@@ -3,18 +3,18 @@
     File: views/users/shared/_content_admin_dashboard.html.erb
   ===================================================*/
 
-.admin_stats_events .page_cover {
+.admin_dashboard_documents_section .page_cover {
   background-color: rgba(42, 44, 73, 0.05);
 }
 
-.admin_stats_events .page_content {
+.admin_dashboard_documents_section .page_content {
   background-color: #fff;
   border: 1px solid #D4D4D4;
   border-bottom: 2px solid #D4D4D4;
   padding: 15px;
 }
 
-.admin_stats_events .page_title {
+.admin_dashboard_documents_section .page_title {
   font-size: 20px;
   text-transform: capitalize;
   font-weight: bold;
@@ -22,51 +22,51 @@
   margin-bottom: 2px;
 }
 
-.admin_stats_events .page_subtitle {
+.admin_dashboard_documents_section .page_subtitle {
   font-size: 12px;
   margin-bottom: 5px;
   color: #2A2C49;
   text-transform: capitalize;
 }
 
-.admin_stats_events .page_listedlinks ul {
+.admin_dashboard_documents_section .page_listedlinks ul {
   color: #2A2C49;
   margin: 10px 0px 0px 20px;
 }
 
-.admin_stats_events .page_listedlinks li {
+.admin_dashboard_documents_section .page_listedlinks li {
   color: #2A2C49;
   margin-bottom: 5px;
 }
 
-.admin_stats_events .link_title {
+.admin_dashboard_documents_section .link_title {
   text-transform: capitalize;
 }
 
-.admin_stats_events .main_link a {
+.admin_dashboard_documents_section .main_link a {
   color: #E1473E !important;
   text-transform: capitalize;
 }
 
-.admin_stats_events .new_content {
+.admin_dashboard_documents_section .new_content {
   margin-top: 30px;
 }
 
-.admin_stats_events .upper_section {
+.admin_dashboard_documents_section .upper_section {
   margin-bottom: 35px;
 }
 @media only screen and (max-width: 1340px) {
-  .admin_stats_events .upper_section {
+  .admin_dashboard_documents_section .upper_section {
     display: none;
   }
 }
 
-.admin_stats_events .header_section_cover {
+.admin_dashboard_documents_section .header_section_cover {
   background-color: rgba(42, 44, 73, 0.05);
   padding: 15px;
 }
 
-.admin_stats_events .data_header {
+.admin_dashboard_documents_section .data_header {
   font-size: 22px;
   text-align: left;
   text-transform: capitalize;
@@ -74,13 +74,13 @@
   color: #2F3F5B;
 }
 
-.admin_stats_events .header_subtitle {
+.admin_dashboard_documents_section .header_subtitle {
   font-size: 10px;
   color: #2F3F5B;
   margin-bottom: 15px;
 }
 
-.admin_stats_events .btn {
+.admin_dashboard_documents_section .btn {
   font-size: 12px;
   background-color: transparent;
   padding: 4px 0px;
@@ -97,38 +97,37 @@
   -o-transition: all 0.3s ease;
 }
 @media only screen and (max-width: 1100px) {
-  .admin_stats_events .btn {
+  .admin_dashboard_documents_section .btn {
     width: 100%;
     margin-bottom: 5px;
   }
 }
 
-.admin_stats_events .btn:hover {
+.admin_dashboard_documents_section .btn:hover {
   opacity: 0.7;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_events .btn_green {
+.admin_dashboard_documents_section .btn_green {
   background-color: #8ABFA1 !important;
 }
 
-.admin_stats_events .btn_blue {
+.admin_dashboard_documents_section .btn_blue {
   background-color: #2A2C49 !important;
 }
 
-.admin_stats_events .data_main_cover {
+.admin_dashboard_documents_section .data_main_cover {
   padding: 0px !important;
-  margin-bottom: 15px;
 }
 
-.admin_stats_events .data_stats {
+.admin_dashboard_documents_section .data_stats {
   border: 1px solid #D4D4D4;
   background-color: #fff;
 }
 
-.admin_stats_events .data_title {
+.admin_dashboard_documents_section .data_title {
   padding: 5px;
   background-color: #2A2C49 !important;
   color: #fff;
@@ -137,81 +136,80 @@
   font-size: 12px;
 }
 
-.admin_stats_events .divider {
+.admin_dashboard_documents_section .divider {
   border-bottom: 1px solid #D4D4D4;
   margin: 15px 0px;
 } 
 
-
-.admin_stats_events .listed_events ul {
+.admin_dashboard_documents_section .listed_forms ul {
   list-style-type: none;
   margin: 0px !important;
 }
 
-.admin_stats_events .listed_events ul .main_conatiner {
+.admin_dashboard_documents_section .listed_forms ul .main_conatiner {
   width: 100%;
   padding: 5px;
   margin-bottom: 15px;
 }
 
-.admin_stats_events .main_conatiner {
+.admin_dashboard_documents_section .main_conatiner {
   border: 1px solid #D4D4D4;
   border-radius: 2px;
 }
 
-.admin_stats_events .main_image {
+.admin_dashboard_documents_section .main_image {
   padding: 0px !important;
 }
 
-.admin_stats_events .main_img_inner_cover {
-  background-color: transparent;
+.admin_dashboard_documents_section .main_img_inner_cover {
+  background-color: transparent !important;
   height: 60px;
   overflow: hidden;
   margin-bottom: 5px;
 }
 
-.admin_stats_events .main_info {
+.admin_dashboard_documents_section .main_info {
   padding: 0px 0px 0px 8px !important;
   font-size: 11px;
 }
 
-.admin_stats_events .min_name a {
+.admin_dashboard_documents_section .min_name a {
   color: #2A2C49 !important;
 }
 
-.admin_stats_events .member_created {
+.admin_dashboard_documents_section .member_created {
   font-size: 10px;
 }
 
-.admin_stats_events .no_info {
+.admin_dashboard_documents_section .no_info {
   color: #E1473E;
 }
 
-.admin_stats_events .member {
+.admin_dashboard_documents_section .member {
   background-color: rgba(42, 44, 73, 0.05);
   padding: 2px 5px;
   margin-bottom: 5px;
   color: #2A2C49;
 }
 
-.admin_stats_events .member i {
+.admin_dashboard_documents_section .member i {
   margin-right: 8px;
   color: #2A2C49;
 }
 
-.admin_stats_events .moreinfo {
+.admin_dashboard_documents_section .moreinfo {
   background-color: rgba(42, 44, 73, 0.05);
   padding: 2px 5px;
   color: #2A2C49;
 }
 
-.admin_stats_events .moreinfo i {
+.admin_dashboard_documents_section .moreinfo i {
   margin-right: 5px;
   color: #2A2C49;
 }
 
 
-.admin_stats_events .data_list_title {
+.admin_dashboard_documents_section .data_list_title {
   background-color: rgba(42, 44, 73, 0.05);
   text-transform: capitalize;
   color: #2A2C49;
@@ -222,37 +220,37 @@
   border-bottom: 1px solid #D4D4D4;
 }
 
-.admin_stats_events .data_stats_cover {
+.admin_dashboard_documents_section .data_stats_cover {
   color: #2A2C49 !important
 }
 
 @media only screen and (max-width: 1100px) {
-  .admin_stats_events .data_stats_cover {
+  .admin_dashboard_documents_section .data_stats_cover {
     width: 100%;
     margin-bottom: 15px;
   }
 }
 
-.admin_stats_events .stats_content {
+.admin_dashboard_documents_section .stats_content {
   padding: 15px;
 }
 
-.admin_stats_events .stats_content i {
+.admin_dashboard_documents_section .stats_content i {
   font-size: 25px;
 }
 
-.admin_stats_events .icon_cover {
+.admin_dashboard_documents_section .icon_cover {
   background-color: transparent;
   width: 50px;
   display: inline-block;
 }
 @media only screen and (max-width: 1340px) {
-  .admin_stats_events .icon_cover{
+  .admin_dashboard_documents_section .icon_cover{
     display: none;
   }
 }
 
-.admin_stats_events .icon_inner_cover {
+.admin_dashboard_documents_section .icon_inner_cover {
   margin: auto;
   display: inline-block;
   width: 15px;
@@ -260,24 +258,24 @@
   margin-left: 17px;
 }
 
-.admin_stats_events .main_stats {
+.admin_dashboard_documents_section .main_stats {
   font-size: 24px;
   text-align: center;
   background-color: transparent;
-  width: 73%;
+  width: 90% !important;
   display: inline-block;
   border-left: 2px solid #D4D4D4;
 }
 
 @media only screen and (max-width: 1340px) {
-  .admin_stats_events .main_stats {
+  .admin_dashboard_documents_section .main_stats {
     border-left: 0px solid transparent;
     width: 100%;
     text-align: center;
   }
 }
 
-.admin_stats_events .tree_tab_link a {
+.admin_dashboard_documents_section .tree_tab_link a {
   background-color: #E1473E;
   color: #fff !important;
   text-transform: capitalize;
@@ -290,7 +288,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_events .tree_tab_link a:hover {
+.admin_dashboard_documents_section .tree_tab_link a:hover {
   opacity: 0.7;
   background-color: #E1473E;
   -webkit-transition: all 0.3s ease;
@@ -298,37 +296,38 @@
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_events .min_name a {
+.admin_dashboard_documents_section .min_name a {
   font-weight: bold;
   text-transform: capitalize;
   font-size: 12px;
 }
 
-.admin_stats_events .min_content {
+.admin_dashboard_documents_section .min_content {
   color: #2A2C49 !important;
 }
 
-.admin_stats_events .min_content a {
+.admin_dashboard_documents_section .min_content a {
   color: #E1473E !important;
   text-transform: lowercase !important;
 }
 
-.admin_stats_events .weblink {
+.admin_dashboard_documents_section .weblink {
   color: #a1355b !important;
 }
 
 
-.admin_stats_events .weblink a {
+.admin_dashboard_documents_section .weblink a {
   color: #a1355b !important;
 }
 
-.admin_stats_events .subheaders {
+.admin_dashboard_documents_section .subheaders {
   font-weight: bold;
   text-transform: capitalize;
   color: #2A2C49 !important;
 }
 
-.admin_stats_events .status_btn a {
+.admin_dashboard_documents_section .approved a {
+  background-color: #8ABFA1 !important;
   font-size: 10px;
   color: #fff !important;
   text-transform: uppercase;
@@ -336,38 +335,40 @@
   margin-left: 5px;
   border-radius: 2px;
   text-decoration: none !important;
-  font-weight: 300;
-}
-
-.admin_stats_events .approved a {
-  background-color: #8ABFA1 !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_events .approved a:hover {
+.admin_dashboard_documents_section .approved a:hover {
   opacity: 0.7;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_events .pending a {
+.admin_dashboard_documents_section .pending a {
   background-color: #E1473E !important;
+  font-size: 10px;
+  color: #fff !important;
+  text-transform: uppercase;
+  padding: 3px 15px;
+  margin-left: 5px;
+  border-radius: 2px;
+  text-decoration: none !important;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_events .pending a:hover {
+.admin_dashboard_documents_section .pending a:hover {
   opacity: 0.7;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_events .delete_btn a {
+.admin_dashboard_documents_section .delete_btn a {
   color: #2A2C49 !important;
   background-color: rgba(42, 44, 73, 0.2);
   font-size: 10px;
@@ -383,7 +384,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_events .delete_btn a:hover {
+.admin_dashboard_documents_section .delete_btn a:hover {
   background-color: #2A2C49 !important;
   color: #fff !important;
   -webkit-transition: all 0.3s ease;
@@ -391,7 +392,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_events .edit_btn a {
+.admin_dashboard_documents_section .edit_btn a {
   color: #2A2C49 !important;
   background-color: rgba(42, 44, 73, 0.2);
   font-size: 10px;
@@ -408,7 +409,7 @@
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_events .edit_btn a:hover {
+.admin_dashboard_documents_section .edit_btn a:hover {
   background-color: #2A2C49 !important;
   color: #fff !important;
   -webkit-transition: all 0.3s ease;
@@ -416,14 +417,14 @@
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_events .update_section {
+.admin_dashboard_documents_section .update_section {
   background-color: rgba(42, 44, 73, 0.05);
   text-align: center;
   padding: 0px 15px;
   margin-bottom: 5px;
 }
 
-.admin_stats_events .update_section [type='submit'] {
+.admin_dashboard_documents_section .update_section [type='submit'] {
   background-color: #2A2C49 !important;
   font-size: 10px;
   margin-bottom: 5px;
@@ -440,59 +441,18 @@
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_events .update_section [type='submit']:hover {
+.admin_dashboard_documents_section .update_section [type='submit']:hover {
   opacity: 0.7;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
 
-.admin_stats_events .update_section #event_approve {
+.admin_dashboard_documents_section .update_section #launchministry_approve {
   margin-bottom: 0px !important;
 }
 
-.admin_stats_events .event_approve label {
+.admin_dashboard_documents_section .launchministry_approve label {
   font-size: 12px;
   color: #2A2C49 !important;
 }
-
-.admin_stats_events .closed a {
-  background-color: #8ABFA1 !important;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
