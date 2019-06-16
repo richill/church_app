@@ -64,6 +64,10 @@
                       <span class="min_content"><%= document.created_at.strftime("%b %d %Y") %></span>
                     </div>
                     <div>
+                      <span class="subheaders">updated:</span>
+                      <span class="min_content"><%= document.updated_at.strftime("%b %d %Y") %></span>
+                    </div>
+                    <div>
                       <span class="subheaders">created by:</span>
                       <span class="min_content"><%= "#{document.user.firstname} #{document.user.lastname}" %></span>
                     </div>

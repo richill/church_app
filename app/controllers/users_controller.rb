@@ -91,7 +91,7 @@ class UsersController < ApplicationController
 
   def dashboard  
     if user_signed_in? && current_user.admin
-      @documents = Documentation.all
+      @documents = Documentation.order("updated_at desc")
     else
       redirect_to error_path
     end
