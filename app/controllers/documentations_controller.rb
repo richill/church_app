@@ -2,49 +2,77 @@ class DocumentationsController < ApplicationController
   before_action :set_documentation, only: [:show, :edit, :update, :destroy]
 
   def index
-    @documentations = Documentation.all
+    if user_signed_in? && current_user.admin
+      @documentations = Documentation.all
+    else
+      redirect_to error_path
+    end
   end
 
   def show
+    if user_signed_in? && current_user.admin
+      @user = current_user
+    else
+      redirect_to error_path
+    end
   end
 
   def new
-    @documentation = Documentation.new
+    if user_signed_in? && current_user.admin
+      @user = current_user
+      @documentation = @user.documentations.build
+    else
+      redirect_to error_path
+    end
   end
 
   def edit
+    if user_signed_in? && current_user.admin
+      @user = current_user
+    else
+      redirect_to error_path
+    end
   end
 
   def create
-    @documentation = Documentation.new(documentation_params)
+    if user_signed_in? && current_user.admin
+      @user = User.friendly.find(params[:user_id])
+      @documentation = @user.documentations.create(documentation_params)
 
-    respond_to do |format|
-      if @documentation.save
-        format.html { redirect_to @documentation, notice: 'Documentation was successfully created.' }
-        format.json { render :show, status: :created, location: @documentation }
-      else
-        format.html { render :new }
-        format.json { render json: @documentation.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @documentation.save
+          format.html { redirect_to dashboard_user_path(current_user), notice: 'Document was successfully created.' }
+          format.json { render :show, status: :created, location: @documentation }
+        else
+          format.html { render :new }
+          format.json { render json: @documentation.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to error_path
     end
   end
 
   def update
-    respond_to do |format|
-      if @documentation.update(documentation_params)
-        format.html { redirect_to @documentation, notice: 'Documentation was successfully updated.' }
-        format.json { render :show, status: :ok, location: @documentation }
-      else
-        format.html { render :edit }
-        format.json { render json: @documentation.errors, status: :unprocessable_entity }
+    if user_signed_in? && current_user.admin
+      respond_to do |format|
+        if @documentation.update(documentation_params)
+          format.html { redirect_to @documentation, notice: 'Document was successfully updated.' }
+          format.json { render :show, status: :ok, location: @documentation }
+        else
+          format.html { render :edit }
+          format.json { render json: @documentation.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to error_path
     end
   end
 
   def destroy
     @documentation.destroy
     respond_to do |format|
-      format.html { redirect_to documentations_url, notice: 'Documentation was successfully destroyed.' }
+      format.html { redirect_to documentations_url, notice: 'Document was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
