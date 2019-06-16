@@ -1,28 +1,20 @@
 class DocumentationsController < ApplicationController
   before_action :set_documentation, only: [:show, :edit, :update, :destroy]
 
-  # GET /documentations
-  # GET /documentations.json
   def index
     @documentations = Documentation.all
   end
 
-  # GET /documentations/1
-  # GET /documentations/1.json
   def show
   end
 
-  # GET /documentations/new
   def new
     @documentation = Documentation.new
   end
 
-  # GET /documentations/1/edit
   def edit
   end
 
-  # POST /documentations
-  # POST /documentations.json
   def create
     @documentation = Documentation.new(documentation_params)
 
@@ -37,8 +29,6 @@ class DocumentationsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /documentations/1
-  # PATCH/PUT /documentations/1.json
   def update
     respond_to do |format|
       if @documentation.update(documentation_params)
@@ -51,8 +41,6 @@ class DocumentationsController < ApplicationController
     end
   end
 
-  # DELETE /documentations/1
-  # DELETE /documentations/1.json
   def destroy
     @documentation.destroy
     respond_to do |format|
@@ -62,12 +50,10 @@ class DocumentationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_documentation
       @documentation = Documentation.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def documentation_params
       params.require(:documentation).permit(:title, :content, :user_id)
     end

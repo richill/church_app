@@ -44,6 +44,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :jobs
     resources :events
+    resources :documentations
     resources :practicalneeds
     resources :launchministries
     resources :galleries

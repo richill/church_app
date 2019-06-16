@@ -3,7 +3,7 @@
     <span><i class="fa fa-user"></i></span>
     <span><%= link_to "#{current_user.firstname}", user_path(current_user) %></span>
     <span><i class="fa fa-angle-right"></i></span>
-    <span><%= link_to "admin panel", content_management_user_path(current_user) %></span>
+    <span><%= link_to "admin panel", dashboard_user_path(current_user) %></span>
     <span><i class="fa fa-angle-right"></i></span>
     <span class="current_page">stats forum/discussion</span>
     <span class="tree_tab_link"><%= link_to "view forum page", forum_path, target:"_blank", style: 'color:#FFFFFF !important;' %></span>

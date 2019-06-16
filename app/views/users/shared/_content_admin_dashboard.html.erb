@@ -3,9 +3,9 @@
     <span><i class="fa fa-user"></i></span>
     <span><%= link_to "#{current_user.firstname}", user_path(current_user) %></span>
     <span><i class="fa fa-angle-right"></i></span>
-    <span><%= link_to "admin panel", content_management_user_path(current_user) %></span>
+    <span><%= link_to "admin panel", dashboard_user_path(current_user) %></span>
     <span><i class="fa fa-angle-right"></i></span>
-    <span class="current_page">dashboard</span>
+    <span class="current_page">documents</span>
   </div>
   <div class="medium-12 columns admin_tab_content">
 
