@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :documentations
   resources :sitemanagments
   resources :forms
   resources :practicalneeds  do

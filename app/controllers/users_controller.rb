@@ -90,7 +90,9 @@ class UsersController < ApplicationController
   end
 
   def dashboard  
-    unless user_signed_in? && current_user.admin
+    if user_signed_in? && current_user.admin
+      @documents = Documentation.all
+    else
       redirect_to error_path
     end
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190419150014) do
+ActiveRecord::Schema.define(version: 20190616143305) do
 
   create_table "attendances", force: :cascade do |t|
     t.string   "attendable_type"
@@ -83,6 +83,14 @@ ActiveRecord::Schema.define(version: 20190419150014) do
     t.string   "image"
     t.text     "description"
     t.index ["slug"], name: "index_discussions_on_slug", unique: true
+  end
+
+  create_table "documentations", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "events", force: :cascade do |t|
