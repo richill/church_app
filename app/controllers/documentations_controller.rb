@@ -70,16 +70,19 @@ class DocumentationsController < ApplicationController
   end
 
   def destroy
-    @documentation.destroy
-    respond_to do |format|
-      format.html { redirect_to documentations_url, notice: 'Document was successfully destroyed.' }
-      format.json { head :no_content }
+    if user_signed_in? && current_user.admin
+      @user = current_user
+      @documentation = @user.documentations.friendly.find(params[:id])
+      @documentation.destroy
+      dashboard_user_path(current_user)
+    else
+      redirect_to error_path
     end
   end
 
   private
     def set_documentation
-      @documentation = Documentation.find(params[:id])
+      @documentation = Documentation.friendly.find(params[:id])
     end
 
     def documentation_params
