@@ -18,6 +18,7 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'acts_as_commentable'
 gem 'carrierwave', '~> 1.0'
 gem 'cloudinary'
+gem 'ckeditor', '~> 4.2'
 
 group :development, :test do
   gem 'byebug', platform: :mri

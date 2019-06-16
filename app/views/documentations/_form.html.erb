@@ -41,7 +41,10 @@
                 <div class="form-inputs">
                   <div class="info_sub_content"><%= f.input :title, label: "Form Title", placeholder: "How to create an event" %></div>
                   <div class="clear"></div>
-                  <div><%= f.input :content, placeholder: "Write OHC documentation here..." %></div>
+                  <div>
+                    <%= javascript_include_tag Ckeditor.cdn_url %>
+                    <%= f.cktext_area :content, value: @documentation.content, label: "Documentation Content", id: 'text_01' %>
+                  </div> 
 
                   <!-- hidden_field -->
                   <%= f.hidden_field :user_id %>
