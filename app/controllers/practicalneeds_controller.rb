@@ -20,7 +20,8 @@ class PracticalneedsController < ApplicationController
   end
 
   def new
-    if user_signed_in?
+    # if user_signed_in?
+    if user_signed_in? && current_user.admin
       @user = User.friendly.find(params[:user_id])
       @practicalneed = @user.practicalneeds.build
     else
@@ -37,7 +38,8 @@ class PracticalneedsController < ApplicationController
   end
 
   def create
-    if user_signed_in?
+    # if user_signed_in?
+    if user_signed_in? && current_user.admin
       #@practicalneed = Practicalneeds.new(practicalneed_params)
       @user = User.friendly.find(params[:user_id])
       @practicalneed = @user.practicalneeds.create(practicalneed_params)

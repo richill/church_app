@@ -14,7 +14,8 @@ class JobsController < ApplicationController
   end
 
   def new
-    if user_signed_in?
+    # if user_signed_in?
+    if user_signed_in? && current_user.admin
       @user = current_user
       @job = @user.jobs.build
     else
@@ -23,7 +24,8 @@ class JobsController < ApplicationController
   end
 
   def edit
-    if user_signed_in?
+    # if user_signed_in?
+    if user_signed_in? && current_user.admin
       @user = current_user
     else
       redirect_to error_path
@@ -31,7 +33,8 @@ class JobsController < ApplicationController
   end
 
   def create
-    if user_signed_in?
+    # if user_signed_in?
+    if user_signed_in? && current_user.admin
       @user = User.friendly.find(params[:user_id])
       @job = @user.jobs.create(job_params)
       if current_user.admin
@@ -61,7 +64,8 @@ class JobsController < ApplicationController
   end
 
   def update
-    if user_signed_in?
+    # if user_signed_in?
+    if user_signed_in? && current_user.admin
       if current_user.admin
         respond_to do |format|
           if @job.update_attributes(job_params)
@@ -89,7 +93,8 @@ class JobsController < ApplicationController
   end
 
   def destroy
-    if user_signed_in?
+    # if user_signed_in?
+    if user_signed_in? && current_user.admin
       @user = current_user
       @job = @user.jobs.friendly.find(params[:id])
       @job.destroy
