@@ -290,6 +290,41 @@
 
 
 
+// ---------------------------
+//   working
+// ---------------------------
+
+
+.listed_photos_container {
+  background-color: transparent;
+  width: 1013px;
+  border: 1px solid #E8E9EB;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.listed_photos_container ul {
+  margin: 0px;
+  list-style-type: none;
+  background-color: #E8E9EB;
+  width: 300%;
+  height: 70px;
+  overflow: hidden;
+}
+
+.listed_photos_container img {
+  width: 107px;
+}
+
+.listed_photos_container ul  li {
+  float: left;
+  margin-right: 5px;
+}
+
+.listed_photos_inner_cover {
+  overflow: hidden;
+  overflow: scroll;
+}
 
 
 
