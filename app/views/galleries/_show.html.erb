@@ -76,7 +76,7 @@
                           </li>
                         <% end %>
                         <% if @gallery_photos.count > 0 %>
-                          <div><%= link_to "view photos", "#", class: "view_all" %></div>
+                          <div><%= link_to "view photos", @gallery.photos.first, class: "view_all" %></div>
                         <% end %>
                       </ul>
                     </div>
