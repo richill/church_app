@@ -46,21 +46,17 @@
             </div>
             <div class="photos_section">
               <!-- listed_photos -->
-                <div class="listed_photos_container">
-                  <div class="listed_photos_inner_cover">
-                    <ul>
-                      <li><%= link_to(cl_image_tag("#{@photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), "#") %></li>
-                      <li><%= link_to(cl_image_tag("#{@photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), "#") %></li>
-                      <li><%= link_to(cl_image_tag("#{@photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), "#") %></li>
-                      <li><%= link_to(cl_image_tag("#{@photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), "#") %></li>
-                      <li><%= link_to(cl_image_tag("#{@photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), "#") %></li>
-                      <li><%= link_to(cl_image_tag("#{@photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), "#") %></li>
-                      <li><%= link_to(cl_image_tag("#{@photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), "#") %></li>
-                      <li><%= link_to(cl_image_tag("#{@photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), "#") %></li>
-                      <li><%= link_to(cl_image_tag("#{@photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), "#") %></li>
-                    </ul>
+                <% if @gallery.photos.count > 0 %>
+                  <div class="listed_photos_container">
+                    <div class="listed_photos_inner_cover">
+                      <ul>
+                        <% @gallery.photos.all.each do |photo| %>
+                          <li><%= link_to(cl_image_tag("#{photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), photo) %></li>
+                        <% end %>
+                      </ul>
+                    </div>
                   </div>
-                </div>
+                <% end %>
               <!-- listed_photos -->
               <!-- photo -->
               <div class="photos_content">

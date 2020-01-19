@@ -10,6 +10,7 @@ class PhotosController < ApplicationController
   end
 
   def show
+    @gallery = @photo.gallery
   end
 
   def new

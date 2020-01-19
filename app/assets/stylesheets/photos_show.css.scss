@@ -288,22 +288,24 @@
   -o-transition: all 0.3s ease;
 }
 
-
-
-// ---------------------------
-//   working
-// ---------------------------
-
-
-.listed_photos_container {
+.photoshow_section .listed_photos_container {
   background-color: transparent;
-  width: 1013px;
   border: 1px solid #E8E9EB;
   padding: 5px;
   margin-bottom: 15px;
 }
+@media only screen and (max-width: 1160px) {
+  .photoshow_section .listed_photos_container {
+    margin-right: 8px;
+  }
+}
+@media only screen and (min-width: 1160px) {
+  .photoshow_section .listed_photos_container {
+    width: 1013px;
+  }
+}
 
-.listed_photos_container ul {
+.photoshow_section .listed_photos_container ul {
   margin: 0px;
   list-style-type: none;
   background-color: #E8E9EB;
@@ -312,16 +314,26 @@
   overflow: hidden;
 }
 
-.listed_photos_container img {
+.photoshow_section .listed_photos_container img {
   width: 107px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
-.listed_photos_container ul  li {
+.photoshow_section .listed_photos_container img:hover {
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.photoshow_section .listed_photos_container ul li {
   float: left;
   margin-right: 5px;
 }
 
-.listed_photos_inner_cover {
+.photoshow_section .listed_photos_inner_cover {
   overflow: hidden;
   overflow: scroll;
 }
