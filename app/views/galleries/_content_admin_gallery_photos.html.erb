@@ -59,7 +59,7 @@
           <!-- gallery photos -->
           <div class="listed_galleries" id="">
             <ul>
-              <% @gallery.photos.each do |photo| %>
+              <% @gallery.photos.order('created_at ASC').each do |photo| %>
                 <li class="medium-12 columns main_conatiner">
                   <div class="medium-1 columns main_image">
                     <div class="main_img_inner_cover">

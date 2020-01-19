@@ -6,7 +6,7 @@ class GalleriesController < ApplicationController
   end
 
   def show
-    @gallery_photos = @gallery.photos
+    @gallery_photos = @gallery.photos.order('created_at ASC')
     @user = current_user
   end
 

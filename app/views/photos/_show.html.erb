@@ -50,7 +50,7 @@
                   <div class="listed_photos_container">
                     <div class="listed_photos_inner_cover">
                       <ul>
-                        <% @gallery.photos.all.each do |photo| %>
+                        <% @gallery.photos.order('created_at ASC').each do |photo| %>
                           <li><%= link_to(cl_image_tag("#{photo.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), photo) %></li>
                         <% end %>
                       </ul>

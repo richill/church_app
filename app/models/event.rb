@@ -74,7 +74,4 @@ class Event < ApplicationRecord
   def active_event
     self.end_time >= Date.current
   end 
-
-
-
 end
