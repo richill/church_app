@@ -96,6 +96,13 @@
               </li>
 
               <li>
+                <%= link_to galleries_path do %>
+                <div><i class="fa fa-file-image-o" aria-hidden="true"></i></div>
+                <div class="option_header">Photos</div>
+                <% end %>
+              </li>
+
+              <li>
                 <%= link_to "#{@sitemanagment.livestreaming}", target:"_blank" do %>
                 <div><i class="fa fa-volume-up" aria-hidden="true"></i></div>
                 <div class="option_header">Live Streaming</div>
@@ -137,7 +144,7 @@
                 <% end %>
               </li>
 
-              <li>
+              <li class="hide">
                 <%= link_to forum_path do %>
                 <div><i class="fa fas fa-comments" aria-hidden="true"></i></div>
                 <div class="option_header">forum</div>
