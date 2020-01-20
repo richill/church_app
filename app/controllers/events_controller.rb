@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.approved_events.active_events.open_events.listed_events.asc_order
+    @events = Event.approved_events.active_events.open_events.listed_events.desc_order
   end
 
   def show
@@ -70,23 +70,23 @@ class EventsController < ApplicationController
   end
 
   def calendareventspg
-    @events = Event.approved_events.active_events.open_events.listed_events.asc_order
+    @events = Event.approved_events.active_events.open_events.listed_events.desc_order
   end
 
   def youtheventspg
-    @events = Event.approved_events.youth_events.active_events.open_events.listed_events.asc_order
+    @events = Event.approved_events.youth_events.active_events.open_events.listed_events.desc_order
   end
 
   def churcheventspg
-    @events = Event.approved_events.church_events.active_events.open_events.listed_events.asc_order
+    @events = Event.approved_events.church_events.active_events.open_events.listed_events.desc_order
   end
 
   def communityeventspg
-    @events = Event.approved_events.community_events.active_events.open_events.listed_events.asc_order
+    @events = Event.approved_events.community_events.active_events.open_events.listed_events.desc_order
   end
 
   def nationaleventspg
-    @events = Event.approved_events.national_events.active_events.open_events.listed_events.asc_order
+    @events = Event.approved_events.national_events.active_events.open_events.listed_events.desc_order
   end
 
   private
