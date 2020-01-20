@@ -189,8 +189,8 @@
                           <div>
                             <span class="evt_img_section">
                               <div class="evt_img_outter">
-                                <% if event.image.present? %>
-                                  <div class="evt_img"><%= link_to(cl_image_tag("#{event.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), event) %></div>
+                                <% if event.link.present? %>
+                                  <div class="evt_img"><%= link_to(cl_image_tag("#{event.link}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), event) %></div>
                                 <% else %>
                                   <div class="evt_img"><%= link_to (image_tag("img_default_event.png")), event_path(event) %></div>
                                 <% end %>
