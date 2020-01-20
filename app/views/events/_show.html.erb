@@ -89,11 +89,15 @@
             </div>
 
             <% if @event.link.present? %>
-              <div class="upload_page_img">url<%= cl_image_tag("#{@event.link}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %></div>
+              <% if @event.linkurl.present? %>
+                <div class="upload_page_img"><%= link_to(cl_image_tag("#{@event.link}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]), @event.linkurl, target:"_blank") %></div>
+              <% else %>
+                <div class="upload_page_img"><%= cl_image_tag("#{@event.link}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %></div>
+              <% end %>
             <% elsif @event.image.present? %>
-              <div class="upload_page_img">image<%= cl_image_tag("#{@event.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %></div>
+              <div class="upload_page_img"><%= cl_image_tag("#{@event.image}", :transformation=>[{:gravity=>"face", :width => 600, :height => 320, :crop=>"fill"}]) %></div>
             <% else %>
-              <div class="page_img">nada<%= image_tag("img_default_mainimg.png") %></div>
+              <div class="page_img"><%= image_tag("img_default_mainimg.png") %></div>
             <% end %>
             <div class="event_section">
 
