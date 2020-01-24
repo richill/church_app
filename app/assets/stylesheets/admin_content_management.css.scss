@@ -465,16 +465,12 @@
   -o-transition: all 0.3s ease;
 }
 
-
-// -----------------------------
-//   workings
-// -----------------------------
-
-
 .admin_content_management .img_form {
   background-color: rgba(42, 44, 73, 0.05);
-  padding: 25px 10px;
+  padding: 40px 10px;
   margin-top: 18px;
+  height: 213px;
+  margin-bottom: 27px;
 }
 
 .admin_content_management .input_content label {
@@ -514,8 +510,12 @@
   margin-bottom: 8px;
 }
 
+.admin_content_management .inner_cover_img {
+  height: 200px;
+  overflow: hidden;
+}
+
 .admin_content_management .upload_page_img img {
-  height: 116px;
   width: 100%
 }
 
@@ -578,7 +578,6 @@
   text-transform: capitalize;
 }
 
-
 // -----------------------------
 //   form
 // -----------------------------
@@ -611,12 +610,3 @@
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
-
-
-
-
-
-
-
-
-
