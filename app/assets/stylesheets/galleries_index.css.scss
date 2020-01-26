@@ -124,6 +124,8 @@
   color: #a1355b !important;
   background: #fff;
   padding: 5px;
+  height: 126px;
+  overflow: hidden;
 }
 
 .galleryindex_section .gallery_content .gallery_img_section {
@@ -141,7 +143,7 @@
 }
 
 .galleryindex_section .gallery_content .gallery_img {
-  height: 140px;
+  height: 133px;
   width: 193px;
   margin-bottom: 10px;
   border: 1px solid #E8E9EB;
@@ -149,7 +151,6 @@
   position: absolute;
   top: 5px;
   left: 5px;
-  overflow: hidden;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
