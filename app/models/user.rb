@@ -9,6 +9,8 @@ class User < ApplicationRecord
 
   validates_presence_of :firstname, presence: true, message: "can't be blank"
   validates_presence_of :lastname, presence: true, message: "can't be blank"
+  validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
+  validate :email_domain_is_allowed
 
   mount_uploader :image, ImageUploader
 
@@ -33,6 +35,15 @@ class User < ApplicationRecord
   scope :females, ->() { joins(:category_gender).where('category_genders.name' => "Female") }
   scope :admins, -> {where(['admin = ?', true])} 
 
+  EXCLUDED_DOMAINS = "mail.ru", ".ru"
+
+  def email_domain_is_allowed
+    email = self.email
+    domain = email.split("@").last
+    if EXCLUDED_DOMAINS.include?(domain)
+      errors.add(:email, "E-mail domain is not allowed")
+    end
+  end
 
   def slug_users
     [
