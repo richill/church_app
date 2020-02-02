@@ -35,7 +35,7 @@ class User < ApplicationRecord
   scope :females, ->() { joins(:category_gender).where('category_genders.name' => "Female") }
   scope :admins, -> {where(['admin = ?', true])} 
 
-  EXCLUDED_DOMAINS = "mail.ru", ".ru"
+  EXCLUDED_DOMAINS = "mail.ru", "thefmail.com"
 
   def email_domain_is_allowed
     email = self.email
