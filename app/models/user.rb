@@ -41,8 +41,7 @@ class User < ApplicationRecord
     email = self.email
     domain = email.split("@").last
     if EXCLUDED_DOMAINS.include?(domain)
-      root_path
-      # errors.add(:email, "E-mail domain is not allowed")
+      errors.add(:email, "E-mail domain is not allowed")
     end
   end
 
