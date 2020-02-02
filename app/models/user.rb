@@ -35,13 +35,14 @@ class User < ApplicationRecord
   scope :females, ->() { joins(:category_gender).where('category_genders.name' => "Female") }
   scope :admins, -> {where(['admin = ?', true])} 
 
-  EXCLUDED_DOMAINS = "mail.ru", "thefmail.com"
+  EXCLUDED_DOMAINS = "mail.ru", "thefmail.com", "yeah.net"
 
   def email_domain_is_allowed
     email = self.email
     domain = email.split("@").last
     if EXCLUDED_DOMAINS.include?(domain)
-      errors.add(:email, "E-mail domain is not allowed")
+      root_path
+      # errors.add(:email, "E-mail domain is not allowed")
     end
   end
 
