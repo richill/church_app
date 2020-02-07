@@ -158,6 +158,8 @@ a:hover {
 .users_admin_panel .right_admin_content {
   min-height: 500px;
   padding: 0px !important;
+  height: 4000px;
+  overflow-x: scroll;
 }
 
 .users_admin_panel .right_admin_content .tree_line {
