@@ -176,7 +176,7 @@ class UsersController < ApplicationController
     def setup_generic
       @users = User.all
       @launchministries = Launchministry.order("created_at desc")
-      @events = Event.all
+      @events = Event.all.order("start_time asc")
       @gallries = Gallery.all
       @discussions = Discussion.all
       @jobs = Job.all
