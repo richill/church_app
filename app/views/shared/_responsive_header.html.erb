@@ -101,17 +101,17 @@
               <li>
                 <%= link_to "admin panel", dashboard_user_path(current_user) %>
                 <ul class="menu vertical nested">
-                  <li><%= link_to "documents", dashboard_user_path %></li>
-                  <li><%= link_to "content management", content_management_user_path %></li>
-                  <li><%= link_to "site links", sitelinks_user_path %></li>
-                  <li><%= link_to "events", stats_events_user_path %></li>
-                  <li><%= link_to "ministries", stats_ministries_user_path %></li>
-                  <li><%= link_to "forms", stats_forms_user_path %></li>
-                  <li><%= link_to "forum/discussions", stats_forum_user_path %></li>
-                  <li><%= link_to "career", stats_careers_user_path %></li>
-                  <li><%= link_to "galleries", stats_galleries_user_path %></li>
-                  <li><%= link_to "small groups", stats_smallgroups_user_path %></li>
-                  <li><%= link_to "practical needs", stats_practicalneeds_user_path %></li>
+                  <li><%= link_to "documents", dashboard_user_path(current_user) %></li>
+                  <li><%= link_to "content management", content_management_user_path(current_user) %></li>
+                  <li><%= link_to "site links", sitelinks_user_path(current_user) %></li>
+                  <li><%= link_to "events", stats_events_user_path(current_user) %></li>
+                  <li><%= link_to "ministries", stats_ministries_user_path(current_user) %></li>
+                  <li><%= link_to "forms", stats_forms_user_path(current_user) %></li>
+                  <li><%= link_to "forum/discussions", stats_forum_user_path(current_user) %></li>
+                  <li><%= link_to "career", stats_careers_user_path(current_user) %></li>
+                  <li><%= link_to "galleries", stats_galleries_user_path(current_user) %></li>
+                  <li><%= link_to "small groups", stats_smallgroups_user_path(current_user) %></li>
+                  <li><%= link_to "practical needs", stats_practicalneeds_user_path(current_user) %></li>
                 </ul>
               </li>
             <% end %>
