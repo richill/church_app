@@ -167,6 +167,12 @@
   height: 425px;
   overflow: hidden;
 }
+@media only screen and (max-width: 800px) {
+  .left_inner_main_content .carousel_section {
+    height: 300px;
+    height: 100% !important;
+  }
+}
 
 
 // -----------------------------
