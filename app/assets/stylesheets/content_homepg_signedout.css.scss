@@ -35,6 +35,7 @@
 }
 @media only screen and (max-width: 1160px) {
   .content_homepg_signedout_section .right_main_content {
+    height: 395px;
     width: 100% !important;
     padding: 15px !important;
     background-color: rgba(42, 44, 73, 0.15);
@@ -205,11 +206,11 @@
 .slide img {
   width: 100% !important;
 }
-@media only screen and (max-width: 800px) {
-  .slide img {
-    height: 100% !important;
-  }
-}
+// @media only screen and (max-width: 800px) {
+//   .slide img {
+//     height: 100% !important;
+//   }
+// }
 
 .content_homepg_signedout_section .slide.active,
 .slide.left,
