@@ -1,0 +1,349 @@
+/*===================================================
+    Page: youth events page
+    File: views/events/_content_youtheventspg.html.erb
+  ===================================================*/
+
+.content_youtheventspg_section {
+  padding: 0px !important;
+}
+
+.content_youtheventspg_section .content_youtheventspg_inner_section {
+  width: 1150px;
+  margin: auto;
+  background-color: rgba(42, 44, 73, 0.1);
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 1160px) {
+  .content_youtheventspg_section .content_youtheventspg_inner_section {
+    width: 100% !important;
+  }
+}
+
+.content_youtheventspg_section .youtheventspg_content {
+  margin-bottom: 30px;
+  padding: 0px !important;
+}
+
+.content_youtheventspg_section .tree_line {
+  font-size: 10px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 1160px) {
+  .content_youtheventspg_section .tree_line {
+    margin-top: 25px;
+    padding: 0px 15px !important;
+  }
+}
+
+.content_youtheventspg_section .tree_line a {
+  color: #2A2C49 !important;
+}
+
+.content_youtheventspg_section .current_page {
+  color: #a07b35;
+}
+
+.content_youtheventspg_section .page_main_content {
+  padding: 0px !important;
+}
+
+.content_youtheventspg_section .info_left_content {
+  padding: 0px !important;
+}
+@media only screen and (max-width: 1160px) {
+  .content_youtheventspg_section .info_left_content {
+    width: 100% !important;
+    padding: 0px 15px !important;
+  }
+}
+
+.content_youtheventspg_section .info_left_content .page_header {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #2A2C49;
+  margin-bottom: 8px;
+}
+
+.content_youtheventspg_section .info_left_content .page_img {
+  margin-bottom: 15px;
+  opacity: 0.8;
+  overflow: hidden;
+}
+
+.content_youtheventspg_section .info_left_content .paragraph_content {
+  margin-bottom: 15px;
+  color: #2A2C49;
+}
+
+.content_youtheventspg_section .info_left_content .paragraph_content .sub_header {
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 3px;
+}
+
+.content_youtheventspg_section .info_left_content .paragraph_content ul {
+  margin: 0px;
+}
+
+.content_youtheventspg_section .info_left_content .paragraph_content ul li {
+  margin-bottom: 5px;
+}
+
+.content_youtheventspg_section .info_left_content .paragraph_content .weblink {
+  color: #a1355b !important;
+}
+
+.content_youtheventspg_section .info_left_content .paragraph_content .weblink a {
+  color: #a1355b !important;
+}
+
+.content_youtheventspg_section .listed_donation_links ul li {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.content_youtheventspg_section .listed_donation_links ul li {
+  margin-bottom: 5px !important;
+}
+
+.content_youtheventspg_section .listed_donation_links ul li a {
+  background: linear-gradient(#57738E, #9DC6EB);
+  color: #fff !important;
+  height: 50px;
+  display: inherit;
+  padding: 17px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_youtheventspg_section .listed_donation_links ul li a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_youtheventspg_section .pymt_img {
+  margin: 30px 0px 10px;
+}
+
+.content_youtheventspg_section .pymt_img img {
+  width: 200px;
+}
+
+.content_youtheventspg_section .calendar-heading {
+  margin: 15px 0px;
+}
+
+.content_youtheventspg_section .calendar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px 50px;
+  display: inline-block;
+}
+
+.content_youtheventspg_section .calendar_section ul {
+  margin: 0px;
+  list-style-type: none;
+}
+
+.content_youtheventspg_section .calendar_section ul li a {
+  margin: 0px;
+  font-size: 9px !important;
+  text-transform: capitalize;
+  line-height: 14px !important;
+  display: inline-block;
+  color: #a1355b !important;
+  background: #fff;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.content_youtheventspg_section .calendar-heading a {
+  background: #2A2C49;
+  font-size: 12px !important;
+  display: inline-block;
+  width: 150px;
+  color: #fff !important;
+  height: 35px;
+  padding: 9px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_youtheventspg_section .calendar-heading a:hover {
+  background: #2A2C49 !important;
+  opacity: 0.8 !important;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_youtheventspg_section .simple-calendar table {
+  border: 2px solid #dddddd !important;
+}
+
+.content_youtheventspg_section .event_content .event_content {
+  background-color: #fff;
+  width: 100%;
+  height: 314px;
+  overflow: scroll;
+  padding: 10px;
+}
+
+.content_youtheventspg_section .event_content .event_content ul {
+  margin: 0px !important;
+  list-style-type: none;
+}
+
+.content_youtheventspg_section .event_content .evt_img_section {
+  float: left;
+}
+@media only screen and (max-width: 1160px) {
+  .content_youtheventspg_section .event_content .evt_img_section {
+    display: none;
+  }
+}
+
+.content_youtheventspg_section .event_content .evt_img_outter {
+  height: 135px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.content_youtheventspg_section .event_content .evt_img {
+  background-color: transparent;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_youtheventspg_section .event_content .evt_img:hover {
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_youtheventspg_section .event_content .event_info_section {
+  height: 105px;
+  display: inline-block;
+  padding: 5px 0px;
+  margin-left: 2px;
+}
+@media only screen and (min-width: 1160px) {
+  .content_youtheventspg_section .event_content .event_info_section {
+    width: 70%;
+  }
+}
+
+.content_youtheventspg_section .event_content .event_info_section a {
+  color: #2A2C49 !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_youtheventspg_section .event_content .event_info_section a:hover {
+  text-decoration: none !important;
+  opacity: 0.6 !important;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.content_youtheventspg_section .event_content .event_info_section .evt_title {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+.content_youtheventspg_section .event_content .evt_title:hover {
+  text-decoration: none !important;
+}
+
+.content_youtheventspg_section .event_content .evt_minor_info {
+  font-size: 13px;
+  margin: 10px 0px;
+  text-transform: capitalize;
+}
+
+.content_youtheventspg_section .event_inner_content ul li {
+  margin-bottom: 19px;
+}
+@media only screen and (min-width: 750px) {
+  .content_youtheventspg_section .event_inner_content ul li {
+    height: 160px;
+    border-bottom: 1px solid rgba(42, 44, 73, 0.05);
+  }
+}
+@media only screen and (max-width: 750px) {
+  .content_youtheventspg_section .event_inner_content ul li {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(42, 44, 73, 0.05);
+  }
+}
+
+.content_youtheventspg_section .listevt_divider {
+  margin: 0px 5px;
+}
+
+.content_youtheventspg_section .evt_category {
+  color: #a1355b !important
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
