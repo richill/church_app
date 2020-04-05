@@ -10,7 +10,7 @@ $(document).ready(function() {
   $("#content2_info").hide();
   $("#content3_info").hide();
   $("#content4_info").hide();
-
+  $("#content5_info").hide();
 
   $('#content0').mouseover(function() {
     $("#content0_info").show();
@@ -18,11 +18,13 @@ $(document).ready(function() {
     $("#content2_info").hide();
     $("#content3_info").hide();
     $("#content4_info").hide();
+    $("#content5_info").hide();
     $("#content0").addClass("activecontent");
     $("#content1").removeClass("activecontent");
     $("#content2").removeClass("activecontent");
     $("#content3").removeClass("activecontent");
     $("#content4").removeClass("activecontent");
+    $("#content5").removeClass("activecontent");
   });
 
 
@@ -32,11 +34,13 @@ $(document).ready(function() {
     $("#content2_info").hide();
     $("#content3_info").hide();
     $("#content4_info").hide();
+    $("#content5_info").hide();
     $("#content1").addClass("activecontent");
     $("#content0").removeClass("activecontent");
     $("#content2").removeClass("activecontent");
     $("#content3").removeClass("activecontent");
     $("#content4").removeClass("activecontent");
+    $("#content5").removeClass("activecontent");
   });
 
   $('#content2').mouseover(function() {
@@ -45,11 +49,13 @@ $(document).ready(function() {
     $("#content1_info").hide();
     $("#content3_info").hide();
     $("#content4_info").hide();
+    $("#content5_info").hide();
     $("#content2").addClass("activecontent");
     $("#content0").removeClass("activecontent");
     $("#content1").removeClass("activecontent");
     $("#content3").removeClass("activecontent");
     $("#content4").removeClass("activecontent");
+    $("#content5").removeClass("activecontent");
   });
 
   $('#content3').mouseover(function() {
@@ -58,11 +64,13 @@ $(document).ready(function() {
     $("#content1_info").hide();
     $("#content2_info").hide();
     $("#content4_info").hide();
+    $("#content5_info").hide();
     $("#content3").addClass("activecontent")
     $("#content0").removeClass("activecontent");
     $("#content1").removeClass("activecontent");
     $("#content2").removeClass("activecontent");
     $("#content4").removeClass("activecontent");
+    $("#content5").removeClass("activecontent");
   });
 
   $('#content4').mouseover(function() {
@@ -71,11 +79,28 @@ $(document).ready(function() {
     $("#content1_info").hide();
     $("#content2_info").hide();
     $("#content3_info").hide();
+    $("#content5_info").hide();
     $("#content4").addClass("activecontent")
     $("#content0").removeClass("activecontent");
     $("#content1").removeClass("activecontent");
     $("#content2").removeClass("activecontent");
     $("#content3").removeClass("activecontent");
+    $("#content5").removeClass("activecontent");
+  });
+
+  $('#content5').mouseover(function() {
+    $("#content5_info").show();
+    $("#content0_info").hide();
+    $("#content1_info").hide();
+    $("#content2_info").hide();
+    $("#content3_info").hide();
+    $("#content4_info").hide();
+    $("#content5").addClass("activecontent")
+    $("#content0").removeClass("activecontent");
+    $("#content1").removeClass("activecontent");
+    $("#content2").removeClass("activecontent");
+    $("#content3").removeClass("activecontent");
+    $("#content4").removeClass("activecontent");
   });
 });
 
