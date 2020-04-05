@@ -1,6 +1,6 @@
 class LaunchministriesController < ApplicationController
   before_action :set_launchministry, only: [:show, :edit, :update, :destroy]
-  before_filter :setup_generic
+  before_action :setup_generic
 
   def index
     if user_signed_in? && current_user.admin

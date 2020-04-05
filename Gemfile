@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0.2'
+gem 'rails', '6.0.2.1'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -31,10 +31,10 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem "better_errors"
+  # gem "better_errors"
   gem 'awesome_print'
   gem 'pry-byebug'
-  gem "binding_of_caller"
+  # gem "binding_of_caller"
 end
 
 group :production do

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, :set_user, only: [:show, :edit, :update, :destroy, :stats_users]
-  before_filter :setup_generic
+  before_action :setup_generic
 
   def index
     if user_signed_in? && current_user.admin

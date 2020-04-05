@@ -10,21 +10,16 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require font-awesome
- *= require_tree .
- *= require_self
- *= require simple_calendar
+
  *= require foundation_and_overrides
+ *= require_self
+ *= require_tree .
+ *= require font-awesome
+ *= require simple_calendar
  *= require foundation
  */
 
-/*=========================================
-    set colour
-  =========================================*/
-  /*-- blue_light:      #9DC6EB   rgb: 157 198 235 --*/
-  /*-- blue_deep:       #57738E   rgb- 87 115 142 --*/
-  /*-- blue_dark_deep:  #2A2C49   rgb: 42 44 73 --*/ 
-  /*-- black:           #20232C   rgb: 32 35 44--*/ 
+
 /*=========================================
     general css content
   =========================================*/
