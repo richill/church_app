@@ -41,7 +41,7 @@
             <div class="medium-12 columns scroll_image_content">
               <div class="instructions">
                 <div>
-                  <span>How to get image URL: </span>
+                  <span><b>How to get image URL: </b></span>
                   <ul>
                     <li>[1] image size must be 770 x 300</li>
                     <li>[2] upload image into cloudinary <%= link_to "click here to link where image must be uploaded", "https://cloudinary.com/console/media_library/folders/all/event%20images", target:"_blank" %></li>
@@ -133,11 +133,45 @@
 
             <div class="clear"></div>
 
+            <!-- churchNotice content -->
+            <div class="medium-12 columns church_notice_content">
+              <div class="instructions">
+                <div>
+                  <span><b>How to update Church Notice: </b></span>
+                  <ul>
+                    <li>[1] write down any updates information in the text box</li>
+                    <li>[2] when completed click the button "UPDATE CHURCH NOTICE"</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="medium-12 columns church_info_form">
+                <div class="section_form">
+                  <%= simple_form_for(@sitemanagment) do |f| %>
+                    <%= f.error_notification %>
+                    <div class="churchnotice_img_form">
+                      <%= javascript_include_tag Ckeditor.cdn_url %>
+                      <%= f.cktext_area :homepg_churchnotice, value: @sitemanagment.homepg_churchnotice, label: "Church Notice" %>
+                    </div>
+                    <div class="form-actions">
+                      <%= f.button :submit, "update church notice" %>
+                    </div>
+                  <% end %>
+                </div> 
+              </div>
+            </div>
+            <!-- churchNotice content -->
+
+            <div class="clear"></div>
+
+            <div class="divider"></div>
+
+            <div class="clear"></div>
+
             <!-- video content -->
             <div class="medium-12 columns video_content">
               <div class="instructions">
                 <div>
-                  <span>How to get video URL: </span>
+                  <span><b>How to get video URL: </b></span>
                   <ul>
                     <li>[1] got to youtube <%= link_to "https://www.youtube.com", "https://www.youtube.com", target:"_blank" %></li>
                     <li>[2] copy the URL link of the video and paste here</li>
@@ -187,7 +221,7 @@
             <div class="medium-12 columns livestreaming_content">
               <div class="instructions">
                 <div>
-                  <span>How to get video URL: </span>
+                  <span><b>How to get video URL:</b></span>
                   <ul>
                     <li>[1] got to youtube <%= link_to "https://www.youtube.com", "https://www.youtube.com", target:"_blank" %></li>
                     <li>[2] copy the URL link of the video and paste here</li>
