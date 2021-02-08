@@ -16,7 +16,7 @@ gem 'devise'
 gem "simple_calendar", "~> 2.0"
 gem 'friendly_id', '~> 5.1.0'
 gem 'acts_as_commentable'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'cloudinary'
 gem 'ckeditor', '~> 4.2'
 
